@@ -213,7 +213,8 @@ PRODUCT_PACKAGES += \
 
 # Lineage-Specific overlays
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayViva
+    LineageApertureOverlayViva \
+    LineageSDKOverlayViva
 
 # Power
 PRODUCT_PACKAGES += \

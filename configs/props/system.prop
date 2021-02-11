@@ -1,3 +1,6 @@
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Radio
 persist.radio.apm_sim_not_pwdn=1
 persist.vendor.mdlog.flush_log_ratio=72340194296137244

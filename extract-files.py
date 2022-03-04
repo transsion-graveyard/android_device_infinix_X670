@@ -34,6 +34,13 @@ namespace_imports = [
     'hardware/xiaomi'
 ]
 
+def fixup_ndk_platform(libname: str) -> tuple[str, str]:
+    """
+    Replace -ndk_platform with -ndk
+    """
+    return (libname, libname.replace("-ndk_platform.so", "-ndk.so"))
+
+patchelf_version = "0_17_2"
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
@@ -57,6 +64,12 @@ blob_fixups: blob_fixups_user_type = {
     ),
     "vendor/lib64/libgoodixhwfingerprint.so": blob_fixup().replace_needed(
         "libvendor.goodix.hardware.biometrics.fingerprint@2.1.so", "vendor.goodix.hardware.biometrics.fingerprint@2.1.so"
+    ),
+    (
+        "vendor/bin/hw/android.hardware.gnss-service.mediatek",
+        "vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so",
+    ): blob_fixup().replace_needed(
+        *fixup_ndk_platform("android.hardware.gnss-V1-ndk_platform.so")
     ),
 }  # fmt: skip
 

@@ -71,6 +71,9 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup().replace_needed(
         *fixup_ndk_platform("android.hardware.gnss-V1-ndk_platform.so")
     ),
+    "vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b": blob_fixup()
+        .patchelf_version(patchelf_version)
+        .replace_needed("libavservices_minijail_vendor.so", "libavservices_minijail.so"),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

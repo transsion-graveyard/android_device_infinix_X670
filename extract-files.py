@@ -85,7 +85,6 @@ blob_fixups: blob_fixups_user_type = {
         "vendor/bin/mnld",
         "vendor/lib64/libaalservice.so",
         "vendor/lib64/libcam.utils.sensorprovider.so",
-        "vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so"
     ): blob_fixup()
         .patchelf_version(patchelf_version)
         .add_needed("android.hardware.sensors@1.0-convert-shared.so"),
@@ -100,6 +99,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .patchelf_version(patchelf_version)
         .add_needed("liblog.so"),
+    "vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so": blob_fixup()
+        .patchelf_version(patchelf_version)
+        .add_needed("android.hardware.sensors@1.0-convert-shared.so")
+        .replace_needed("libutils.so", "libutils-v32.so"),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

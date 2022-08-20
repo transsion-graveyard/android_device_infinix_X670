@@ -103,6 +103,11 @@ blob_fixups: blob_fixups_user_type = {
         .patchelf_version(patchelf_version)
         .add_needed("android.hardware.sensors@1.0-convert-shared.so")
         .replace_needed("libutils.so", "libutils-v32.so"),
+    (
+        "vendor/lib64/libmtkcam_stdutils.so"
+    ): blob_fixup()
+        .patchelf_version(patchelf_version)
+        .replace_needed("libutils.so", "libutils-v32.so"),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -209,6 +209,10 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayViva \
     TelephonyOverlayViva
 
+# Lineage-Specific overlays
+PRODUCT_PACKAGES += \
+    LineageApertureOverlayViva
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr \

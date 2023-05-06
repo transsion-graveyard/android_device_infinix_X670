@@ -58,7 +58,6 @@ ro.camera.sound.forced=0
 # SF / Graphics / ...
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_hwc_vds=0
-graphics.gpu.profiler.support=true
 debug.sf.enable_transaction_tracing=false
 debug.sf.predict_hwc_composition_strategy=0
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
@@ -86,6 +85,7 @@ debug.sf.hwc.min.duration=17000000
 debug.sf.late.app.duration=20000000
 debug.sf.late.sf.duration=27600000
 debug.sf.use_phase_offsets_as_durations=1
+debug.sf.enable_egl_image_tracker=0
 
 # DRM
 drm.service.enabled=true

@@ -209,7 +209,8 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayViva \
     SettingsOverlayViva \
     SystemUIOverlayViva \
-    TelephonyOverlayViva
+    TelephonyOverlayViva \
+    WifiResOverlayViva
 
 # Lineage-Specific overlays
 PRODUCT_PACKAGES += \

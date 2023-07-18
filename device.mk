@@ -17,6 +17,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # AB OTA Configuration
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \

@@ -152,3 +152,6 @@ on post-fs-data && property:ro.boot.product.hardware.sku=nfc
     chmod 0660 /dev/pn557
     chown nfc nfc /dev/pn557
 
+on boot
+    stop console
+

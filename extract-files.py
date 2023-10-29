@@ -75,6 +75,12 @@ blob_fixups: blob_fixups_user_type = {
         .patchelf_version(patchelf_version)
         .replace_needed("libavservices_minijail_vendor.so", "libavservices_minijail.so")
         .add_needed("libstagefright_foundation-v33.so"),
+    (
+        "vendor/lib64/libwvhidl.so",
+        "vendor/lib64/mediadrm/libwvdrmengine.so",
+    ): blob_fixup()
+    .patchelf_version(patchelf_version)
+    .replace_needed("libprotobuf-cpp-lite-3.9.1.so", "libprotobuf-cpp-full-3.9.1.so"),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

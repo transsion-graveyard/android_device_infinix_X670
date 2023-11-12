@@ -81,6 +81,14 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
     .patchelf_version(patchelf_version)
     .replace_needed("libprotobuf-cpp-lite-3.9.1.so", "libprotobuf-cpp-full-3.9.1.so"),
+    (
+        "vendor/bin/mnld",
+        "vendor/lib64/libaalservice.so",
+        "vendor/lib64/libcam.utils.sensorprovider.so",
+        "vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so"
+    ): blob_fixup()
+    .patchelf_version(patchelf_version)
+    .add_needed("android.hardware.sensors@1.0-convert-shared.so"),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

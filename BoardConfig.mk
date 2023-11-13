@@ -118,5 +118,8 @@ BOARD_AVB_BOOT_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_BOOT_ROLLBACK_INDEX := 0
 BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 3
 
+# VNDK                       
+BOARD_VNDK_VERSION := current
+
 # Inherit from the proprietary version
 include vendor/xiaomi/viva/BoardConfigVendor.mk

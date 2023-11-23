@@ -285,9 +285,9 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
-    init.cgroup.rc \
     init.connectivity.rc \
     init.mt6781.rc \
+    init.mt6781.power.rc \
     init.mt6781.usb.rc \
     init.project.rc \
     init.modem.rc \

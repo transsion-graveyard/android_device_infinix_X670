@@ -210,6 +210,7 @@ PRODUCT_PACKAGES += \
     SettingsOverlayViva \
     SystemUIOverlayViva \
     TelephonyOverlayViva \
+    TetheringResOverlayViva \
     WifiResOverlayViva
 
 # Lineage-Specific overlays

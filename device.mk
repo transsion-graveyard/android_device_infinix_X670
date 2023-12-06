@@ -208,6 +208,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayViva \
     FrameworksResOverlayViva \
     SettingsOverlayViva \
+    SystemUIOverlayViva \
     TelephonyOverlayViva
 
 # Lineage-Specific overlays

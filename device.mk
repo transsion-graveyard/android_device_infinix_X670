@@ -205,6 +205,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlayViva \
     FrameworksResOverlayViva \
     TelephonyOverlayViva
 

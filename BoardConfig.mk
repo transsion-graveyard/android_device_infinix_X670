@@ -132,6 +132,9 @@ BOARD_AVB_BOOT_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_BOOT_ROLLBACK_INDEX := 0
 BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 3
 
+# SELinux
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2024-08-01
 

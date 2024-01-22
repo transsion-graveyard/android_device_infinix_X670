@@ -127,6 +127,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     "vendor/lib64/hw/hwcomposer.mt6781.so": blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
+    "vendor/lib64/libmtkcam_featurepolicy.so": blob_fixup()
+        .binary_regex_replace(b"\x34\xE8\x87\x40\xB9", b"\x34\x28\x02\x80\x52")
 }  # fmt: skip
 
 module = ExtractUtilsModule(

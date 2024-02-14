@@ -270,6 +270,9 @@ ro.hardware.kmsetkey=beanpod
 ro.hardware.nfc_nci=pn8x
 ro.hardware.vulkan=mali
 
+# UVC
+ro.usb.uvc.enabled=true
+
 # Verity
 ro.apk_verity.mode=2
 

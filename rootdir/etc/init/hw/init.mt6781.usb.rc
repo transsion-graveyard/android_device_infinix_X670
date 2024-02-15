@@ -23,13 +23,13 @@ on post-fs
     mkdir /config/usb_gadget/g1/functions/ffs.ptp
     mkdir /config/usb_gadget/g1/functions/rndis.gs4
     mkdir /config/usb_gadget/g1/functions/midi.gs5
-    mkdir /config/usb_gadget/g1/functions/ncm.gs6
     mkdir /config/usb_gadget/g1/functions/acm.gs0
     mkdir /config/usb_gadget/g1/functions/acm.gs1
     mkdir /config/usb_gadget/g1/functions/acm.gs2
     mkdir /config/usb_gadget/g1/functions/acm.gs3
     mkdir /config/usb_gadget/g1/functions/mass_storage.usb0
     mkdir /config/usb_gadget/g1/functions/hid.gs0
+    mkdir /config/usb_gadget/g1/functions/ncm.gs9
     mkdir /config/usb_gadget/g1/functions/uvc.0
     mkdir /config/usb_gadget/g1/functions/via_modem.gs0
     mkdir /config/usb_gadget/g1/functions/via_ets.gs0
@@ -47,6 +47,11 @@ on post-fs
     mount functionfs ptp /dev/usb-ffs/ptp rmode=0770,fmode=0660,uid=1024,gid=1024,no_disconnect=1
     setprop sys.usb.mtp.device_type 3
     setprop sys.usb.mtp.batchcancel true
+
+    # ncm function
+    mkdir /config/usb_gadget/g1/functions/ncm.gs9
+    write /config/usb_gadget/g1/functions/ncm.gs9/os_desc/interface.ncm/compatible_id WINNCM
+    write /config/usb_gadget/g1/functions/ncm.gs9/ifname ncm%d
 
     # uvc function
     write /config/usb_gadget/g1/functions/uvc.0/function_name "Android Webcam"
@@ -185,15 +190,15 @@ on post-fs
     chown system system /config/usb_gadget/g1/functions/midi.gs5/index
     chown system system /config/usb_gadget/g1/functions/midi.gs5/out_ports
     chown system system /config/usb_gadget/g1/functions/midi.gs5/qlen
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6/dev_addr
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6/host_addr
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6/ifname
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6/os_desc
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6/os_desc/interface.ncm
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6/os_desc/interface.ncm/compatible_id
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6/os_desc/interface.ncm/sub_compatible_id
-    chown system system /config/usb_gadget/g1/functions/ncm.gs6/qmult
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9/dev_addr
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9/host_addr
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9/ifname
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9/os_desc
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9/os_desc/interface.ncm
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9/os_desc/interface.ncm/compatible_id
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9/os_desc/interface.ncm/sub_compatible_id
+    chown system system /config/usb_gadget/g1/functions/ncm.gs9/qmult
     chown system system /config/usb_gadget/g1/functions/mtp.gs0
     chown system system /config/usb_gadget/g1/functions/mtp.gs0/os_desc
     chown system system /config/usb_gadget/g1/functions/mtp.gs0/os_desc/interface.MTP

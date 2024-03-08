@@ -75,7 +75,14 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/camera-daemon/cpu.uclamp.min 0
     write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
 
-    write /sys/devices/system/cpu/eas/enable 2
-    write /proc/cpufreq/cpufreq_sched_disable 0
-
     write /proc/sys/kernel/sched_migration_cost_ns 200000
+
+service vendor.hwcomposer-2-3 /vendor/bin/hw/android.hardware.graphics.composer@2.3-service
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles HighPerformance
+    override
+

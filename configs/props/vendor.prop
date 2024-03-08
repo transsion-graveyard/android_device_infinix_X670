@@ -270,6 +270,11 @@ ro.hardware.kmsetkey=beanpod
 ro.hardware.nfc_nci=pn8x
 ro.hardware.vulkan=mali
 
+# Power
+vendor.powerhal.interaction.min=10
+vendor.powerhal.interaction.max=50
+vendor.powerhal.interaction.offset=0
+
 # Stop gralloc logspam
 log.tag.gralloc4=S
 

@@ -223,7 +223,8 @@ PRODUCT_PACKAGES += \
     LineageApertureOverlayViva \
     LineageDialerOverlayViva \
     LineageSDKOverlayViva \
-    LineageSettingsOverlayViva
+    LineageSettingsOverlayViva \
+    PowerOffAlarmOverlayViva
 
 # Power
 PRODUCT_PACKAGES += \

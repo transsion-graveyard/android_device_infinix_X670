@@ -7,58 +7,45 @@ on post-fs
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 100"
 
-on init
-
- # Create energy-aware scheduler tuning nodes
-    mkdir /dev/stune/foreground
-    mkdir /dev/stune/background
-    mkdir /dev/stune/top-app
-    mkdir /dev/stune/rt
-    chown system system /dev/stune
-    chown system system /dev/stune/foreground
-    chown system system /dev/stune/background
-    chown system system /dev/stune/top-app
-    chown system system /dev/stune/rt
-    chown system system /dev/stune/tasks
-    chown system system /dev/stune/foreground/tasks
-    chown system system /dev/stune/background/tasks
-    chown system system /dev/stune/top-app/tasks
-    chown system system /dev/stune/rt/tasks
-    chmod 0664 /dev/stune/tasks
-    chmod 0664 /dev/stune/foreground/tasks
-    chmod 0664 /dev/stune/background/tasks
-    chmod 0664 /dev/stune/top-app/tasks
-    chmod 0664 /dev/stune/rt/tasks
-
-    # Reset stune group setting for NNAPI HAL processes
-    write /dev/stune/nnapi-hal/schedtune.boost 0
-    write /dev/stune/nnapi-hal/schedtune.prefer_idle 0
-
-    # create an stune group for camera-specific processes
-    mkdir /dev/stune/camera-daemon
-    write /dev/stune/camera-daemon/schedtune.prefer_idle 0
-    write /dev/stune/camera-daemon/schedtune.boost 0
-    chown system system /dev/stune/camera-daemon
-    chown system system /dev/stune/camera-daemon/tasks
-    chmod 0664 /dev/stune/camera-daemon/tasks
-
-    # create io boost group
-    mkdir /dev/stune/io
-    chown system system /dev/stune/io
-    chown system system /dev/stune/io/tasks
-    chmod 0666 /dev/stune/io/tasks
-
 on property:sys.boot_completed=1
+    # Configure clamps for standard task groups.
+
+    # system-background
+    # cap the max utilisation for system-background tasks to save power.
+    write /dev/cpuctl/system-background/cpu.uclamp.max 40
+    write /dev/cpuctl/system-background/cpu.uclamp.min 0
+    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
+
+    # foreground
+    # cap the max utilisation for foreground tasks to save power.
+    write /dev/cpuctl/foreground/cpu.uclamp.max 80
+    write /dev/cpuctl/foreground/cpu.uclamp.min 10
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
+
+    # top-app
+    write /dev/cpuctl/top-app/cpu.uclamp.max max
+    write /dev/cpuctl/top-app/cpu.uclamp.min 10
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+
+    # background
+    # cap the max utilisation for background tasks to save power.
+    write /dev/cpuctl/background/cpu.uclamp.max 50
+    write /dev/cpuctl/background/cpu.uclamp.min 0
+    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
+
+    # nnapi-hal
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.max max
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 75
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 1
+
+    # camera-daemon
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.max max
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.min 0
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
 
     write /sys/devices/system/cpu/eas/enable 2
     write /proc/cpufreq/cpufreq_sched_disable 0
 
-    chown system system /dev/stune/foreground/schedtune.prefer_idle
-    chown system system /dev/stune/top-app/schedtune.prefer_idle
-    chown system system /dev/stune/rt/schedtune.prefer_idle
-    write /dev/stune/foreground/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.prefer_idle 0
-    write /dev/stune/rt/schedtune.prefer_idle 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
     write /proc/perfmgr/boost_ctrl/eas_ctrl/sched_big_task_rotation 1
 

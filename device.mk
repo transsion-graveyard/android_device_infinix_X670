@@ -159,7 +159,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp/,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy)
 
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek
@@ -170,12 +169,21 @@ $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
+# Wifi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    wpa_supplicant \
+    hostapd \
+    libwifi-hal-wrapper:64
+
+# Wifi configs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
 # Init scripts
 PRODUCT_PACKAGES += \
     init.cgroup.rc \
-    init_connectivity.rc \
     init.connectivity.rc \
-    init.connectivity.common.rc \
     init.mt6781.rc \
     init.mt6781.usb.rc \
     init.project.rc \

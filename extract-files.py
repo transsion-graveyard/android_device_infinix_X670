@@ -79,16 +79,27 @@ blob_fixups: blob_fixups_user_type = {
         "vendor/lib64/libwvhidl.so",
         "vendor/lib64/mediadrm/libwvdrmengine.so",
     ): blob_fixup()
-    .patchelf_version(patchelf_version)
-    .replace_needed("libprotobuf-cpp-lite-3.9.1.so", "libprotobuf-cpp-full-3.9.1.so"),
+        .patchelf_version(patchelf_version)
+        .replace_needed("libprotobuf-cpp-lite-3.9.1.so", "libprotobuf-cpp-full-3.9.1.so"),
     (
         "vendor/bin/mnld",
         "vendor/lib64/libaalservice.so",
         "vendor/lib64/libcam.utils.sensorprovider.so",
         "vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so"
     ): blob_fixup()
-    .patchelf_version(patchelf_version)
-    .add_needed("android.hardware.sensors@1.0-convert-shared.so"),
+        .patchelf_version(patchelf_version)
+        .add_needed("android.hardware.sensors@1.0-convert-shared.so"),
+    (
+        "vendor/lib64/libteei_daemon_vfs.so",
+        "vendor/lib64/lib3a.flash.so",
+        "vendor/lib64/libaaa_ltm.so",
+        "vendor/lib64/lib3a.ae.stat.so",
+        "vendor/lib64/lib3a.sensors.color.so",
+        "vendor/lib64/lib3a.sensors.flicker.so",
+        "vendor/lib64/libSQLiteModule_VER_ALL.so",
+    ): blob_fixup()
+        .patchelf_version(patchelf_version)
+        .add_needed("liblog.so"),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

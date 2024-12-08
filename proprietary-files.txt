@@ -560,7 +560,6 @@ vendor/lib64/libmi_asd.so
 vendor/lib64/libmi_bokehpre.so
 vendor/lib64/libmi_ldc_preview.so
 vendor/lib64/libmi_videofilter.so
-vendor/lib64/libmialgoengine.so
 vendor/lib64/libmibokeh_mt6873.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libmsnr.so
@@ -660,6 +659,11 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+
+# Camera (Algo Engine) - from gale_global 15 AP3A.240905.015.A2 OS2.0.2.0.VGPMIXM release-keys
+vendor/lib64/libmialgoengine.so|0e1c70fb6220154096a9e8c842d20485f4d477a8
+vendor/lib64/libmialgoengine2.so|17f87c6aaf130aa3520eecfd4ee45abd796853da
+vendor/lib64/libcom.xiaomi.pluginutils.so|8789ca96dd20d69abdc9269eae066fe9bdd47ad4
 
 # Camera Configurations
 vendor/etc/camera/model/dof_model/capture_cache

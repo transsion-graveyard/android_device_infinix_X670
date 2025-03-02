@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/viva
+KERNEL_PATH := device/xiaomi/viva-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -52,6 +53,21 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+# Kernel
+# Kill lineage kernel build task while preserving kernel
+TARGET_NO_KERNEL_OVERRIDE := true
+
+# Workaround to make lineage's soong generator work
+TARGET_KERNEL_SOURCE := device/xiaomi/viva-kernel/kernel-headers
+
+LOCAL_KERNEL := $(KERNEL_PATH)/Image.gz
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
+# DTB
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 
 # Inherit from the proprietary version
 include vendor/xiaomi/viva/BoardConfigVendor.mk

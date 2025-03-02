@@ -51,7 +51,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
-    init.recovery.usb.rc
+    init.recovery.usb.rc \
+    fstab.mt6781 \
+    fstab.mt6781.ramdisk
 
 # Inherit our proprietary vendor
 $(call inherit-product, vendor/xiaomi/viva/viva-vendor.mk)

@@ -5,3 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/viva
+
+# Inherit from the proprietary version
+include vendor/xiaomi/viva/BoardConfigVendor.mk

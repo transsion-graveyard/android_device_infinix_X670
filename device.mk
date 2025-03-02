@@ -51,6 +51,16 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
+    init.cgroup.rc \
+    init_connectivity.rc \
+    init.connectivity.rc \
+    init.connectivity.common.rc \
+    init.mt6781.rc \
+    init.mt6781.usb.rc \
+    init.project.rc \
+    init.modem.rc \
+    init.sensor_1_0.rc \
+    ueventd.mt6781.rc \
     init.recovery.usb.rc \
     fstab.mt6781 \
     fstab.mt6781.ramdisk

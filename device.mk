@@ -14,5 +14,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Shipping API Level
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # Inherit our proprietary vendor
 $(call inherit-product, vendor/xiaomi/viva/viva-vendor.mk)

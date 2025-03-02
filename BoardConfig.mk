@@ -25,5 +25,16 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
+# OTA Updates
+TARGET_OTA_ASSERT_DEVICE := viva,vida
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := viva
+TARGET_NO_BOOTLOADER := true
+
+# Plaform
+BOARD_HAS_MTK_HARDWARE := true
+TARGET_BOARD_PLATFORM := mt6781
+
 # Inherit from the proprietary version
 include vendor/xiaomi/viva/BoardConfigVendor.mk

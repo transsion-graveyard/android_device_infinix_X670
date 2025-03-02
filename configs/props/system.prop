@@ -1,0 +1,26 @@
+# Radio
+persist.radio.apm_sim_not_pwdn=1
+persist.vendor.mdlog.flush_log_ratio=72340194296137244
+persist.vendor.mdlog.need_dump=1
+persist.vendor.vzw_device_type=0
+persist.vendor.wfc.sys_wfc_support=1
+persist.sys.mdlog_dumpback=2
+
+# Netflix
+ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+ro.netflix.signup=1
+
+# USB
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+
+# Connectivity
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
+mediatek.wlan.ctia=0
+ro.hardware.wlan.dbs=0
+ro.mediatek.wlan.p2p=1
+ro.mediatek.wlan.wsc=1

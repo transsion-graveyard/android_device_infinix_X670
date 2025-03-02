@@ -6,6 +6,7 @@
 
 DEVICE_PATH := device/xiaomi/viva
 KERNEL_PATH := device/xiaomi/viva-kernel
+CONFIGS_PATH := $(DEVICE_PATH)/configs
 
 # Architecture
 TARGET_ARCH := arm64
@@ -100,6 +101,11 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_SCREEN_DENSITY := 440
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6781
+
+# Properties
+TARGET_SYSTEM_PROP += $(CONFIGS_PATH)/props/system.prop
+TARGET_SYSTEM_EXT_PROP += $(CONFIGS_PATH)/props/system_ext.prop
+TARGET_VENDOR_PROP += $(CONFIGS_PATH)/props/vendor.prop
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

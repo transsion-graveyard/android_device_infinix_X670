@@ -120,6 +120,14 @@ blob_fixups: blob_fixups_user_type = {
     "vendor/lib64/libmnl.so": blob_fixup()
         .patchelf_version(patchelf_version)
         .add_needed("libcutils.so"),
+    (
+        "vendor/lib/libnvram.so",
+        "vendor/lib64/libnvram.so",
+        "vendor/lib64/libsysenv.so",
+        "vendor/lib64/libtflite_mtk.so",
+        "vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron"
+    ): blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -1,5 +1,9 @@
 # Unpinned blobs from missi_phoneext4_global-user 13 TP1A.220624.014 V816.0.4.0.TGDMIXM release-keys
 
+# AEE
+vendor/lib/libaedv.so
+vendor/lib64/libaedv.so
+
 # Audio
 vendor/lib/hw/audio.primary.mt6781.so
 vendor/lib/hw/audio.r_submix.mt6781.so

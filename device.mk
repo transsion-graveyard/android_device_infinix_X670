@@ -155,6 +155,14 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp/,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy)
 
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.mediatek
+
+# Enable audio accessory support
+$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+
 # Init scripts
 PRODUCT_PACKAGES += \
     init.cgroup.rc \

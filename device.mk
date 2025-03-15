@@ -163,6 +163,9 @@ PRODUCT_PACKAGES += \
 # Enable audio accessory support
 $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
+# Vibrator
+$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
+
 # Init scripts
 PRODUCT_PACKAGES += \
     init.cgroup.rc \

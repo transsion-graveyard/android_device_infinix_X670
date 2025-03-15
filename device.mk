@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
     android.software.vulkan.deqp.level-2021-03-01.prebuilt.xml \
     android.software.opengles.deqp.level-2021-03-01.prebuilt.xml
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.km41.xml
+
 # Init scripts
 PRODUCT_PACKAGES += \
     init.cgroup.rc \

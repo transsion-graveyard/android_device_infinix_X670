@@ -213,6 +213,17 @@ vendor/lib64/libpqparamparser.so
 vendor/lib64/libscltm.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
+vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc
+vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
+vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
+
+# KMSetkey
+vendor/bin/kmsetkey
+vendor/lib64/hw/kmsetkey.beanpod.so
+vendor/lib64/libkmsetkey.so
+
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/nvram_daemon

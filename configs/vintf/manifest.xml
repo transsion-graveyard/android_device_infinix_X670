@@ -89,4 +89,14 @@
         </interface>
         <fqname>@2.15::IPictureQuality/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.microtrust.hardware.thh</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IThhDevice</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IThhDevice/default</fqname>
+    </hal>
 </manifest>

@@ -177,6 +177,9 @@ vendor/lib64/libbt-vendor.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
+# Consumer IR
+vendor/lib64/hw/consumerir.common.so
+
 # Display configs
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/screen_light.xml

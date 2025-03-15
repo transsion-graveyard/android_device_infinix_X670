@@ -155,12 +155,63 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/smartpa_param/AW_DSP.bin
 vendor/etc/AudioLog_dynamic.xml
 
+# Display configs
+vendor/etc/AbnormalDisplayLog_dynamic.xml
+vendor/etc/screen_light.xml
+
 # Fuelgauge
 vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
 vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/lib/libfgauge_gm30.so
+
+# Graphics
+vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
+vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
+vendor/lib/egl/egl.cfg
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_meow.so
+vendor/lib64/egl/libMEOW_data.so
+vendor/lib64/egl/libMEOW_gift.so
+vendor/lib64/egl/libMEOW_qt.so
+vendor/lib64/egl/libMEOW_trace.so
+vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
+vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+vendor/lib64/hw/gralloc.default.so:vendor/lib64/hw/gralloc.mt6781.so
+vendor/lib64/hw/hwcomposer.mt6781.so
+vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
+vendor/lib64/hw/vulkan.mali.so
+vendor/lib64/mt6781/libdpframework.so
+vendor/lib64/mt6781/libmtk_drvb.so
+vendor/lib64/mt6781/libpq_prot.so
+vendor/lib64/arm.graphics-V1-ndk_platform.so
+vendor/lib64/libDR.so
+vendor/lib64/libDefaultFpsActor.so
+vendor/lib64/libFrameRecord.so
+vendor/lib64/libNoFpsActor.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libaalservice.so
+vendor/lib64/libappgamepq.so
+vendor/lib64/libcomposer_ext.so
+vendor/lib64/libdre.so
+vendor/lib64/libgamehdr.so
+vendor/lib64/libged.so
+vendor/lib64/libgpu_aux.so
+vendor/lib64/libgpud.so
+vendor/lib64/libgralloc_extra.so
+vendor/lib64/libgralloc_metadata.so
+vendor/lib64/libgralloctypes_mtk.so
+vendor/lib64/libhdrvideo.so
+vendor/lib64/libion_mtk.so
+vendor/lib64/libion_ulit.so
+vendor/lib64/libladder.so
+vendor/lib64/libmml.so
+vendor/lib64/libpixelflinger.so
+vendor/lib64/libpq_cust_base.so
+vendor/lib64/libpqparamparser.so
+vendor/lib64/libscltm.so
+vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
@@ -180,3 +231,28 @@ vendor/lib64/libnvram.so
 vendor/lib64/libnvram_sec.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
+
+# Picture Quality
+vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
+vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
+vendor/lib64/libaal_cust.so
+vendor/lib64/libaal_key.so
+vendor/lib64/libaal_mtk.so
+vendor/lib64/libpqframework.so
+vendor/lib64/librgbwlightsensor.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.11.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.12.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.13.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.14.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.15.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.4.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.5.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.9.so

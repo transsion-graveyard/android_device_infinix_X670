@@ -159,6 +159,10 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/smartpa_param/AW_DSP.bin
 vendor/etc/AudioLog_dynamic.xml
 
+# Batterysecret
+vendor/bin/batterysecret
+vendor/etc/init/init.batterysecret.rc
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc

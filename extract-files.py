@@ -28,6 +28,8 @@ from extract_utils.utils import (
 
 namespace_imports = [
     'device/xiaomi/viva',
+    'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client'
 ]
 
 

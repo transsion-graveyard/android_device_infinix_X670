@@ -982,6 +982,9 @@ on property:vold.decrypt=trigger_shutdown_framework
 on property:sys.boot_completed=1
     write /proc/bootprof "0"
 
+    # Start powerhal
+    setprop vendor.powerhal.init 1
+
 #ExtB HONGMI-91603,mawenzheng.wt.Add,20210924 add WIFI SAR function
 #WiFi add sar parameter GL
 on property:vendor.sysctl.tx=2

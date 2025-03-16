@@ -619,6 +619,15 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
+# Sensors
+vendor/etc/elliptic_sensor.xml
+vendor/lib64/hw/sensors.elliptic.so
+vendor/lib64/hw/sensors.mt6781.so
+vendor/lib64/libksensor.so
+vendor/lib64/libnotifyaudiohal.so
+vendor/lib64/libsensor_custom.so
+vendor/lib64/sensors.touch.detect.so
+
 # TEE
 vendor/bin/hw/vendor.microtrust.hardware.thh@2.0-service
 vendor/bin/init_thh

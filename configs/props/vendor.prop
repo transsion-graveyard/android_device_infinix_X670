@@ -185,6 +185,9 @@ ro.vendor.mtk_wfd_support=1
 # Factory reset Protection
 ro.frp.pst=/dev/block/platform/bootdevice/by-name/frp
 
+# Fingerprint
+persist.vendor.fingerprint.type=side
+
 # Encryption / TEE
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.mtk_key_manager_support=1

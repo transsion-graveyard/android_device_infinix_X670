@@ -29,7 +29,8 @@ from extract_utils.utils import (
 namespace_imports = [
     'device/xiaomi/viva',
     'hardware/mediatek',
-    'hardware/mediatek/libmtkperf_client'
+    'hardware/mediatek/libmtkperf_client',
+    'hardware/xiaomi'
 ]
 
 
@@ -51,6 +52,9 @@ blob_fixups: blob_fixups_user_type = {
     ),
     "vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc": blob_fixup().regex_replace(
         "start", "enable"
+    ),
+    "vendor/lib64/libgoodixhwfingerprint.so": blob_fixup().replace_needed(
+        "libvendor.goodix.hardware.biometrics.fingerprint@2.1.so", "vendor.goodix.hardware.biometrics.fingerprint@2.1.so"
     ),
 }  # fmt: skip
 

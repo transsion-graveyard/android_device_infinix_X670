@@ -109,6 +109,9 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .patchelf_version(patchelf_version)
         .replace_needed("libutils.so", "libutils-v32.so"),
+    "vendor/lib64/libmnl.so": blob_fixup()
+        .patchelf_version(patchelf_version)
+        .add_needed("libcutils.so"),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

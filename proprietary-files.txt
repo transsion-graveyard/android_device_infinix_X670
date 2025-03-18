@@ -1029,7 +1029,7 @@ vendor/lib64/libwo.so
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/lib/egl/egl.cfg
-vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6781.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
@@ -1041,9 +1041,9 @@ vendor/lib64/hw/gralloc.default.so:vendor/lib64/hw/gralloc.mt6781.so;FIX_SONAME
 vendor/lib64/hw/hwcomposer.mt6781.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib64/hw/vulkan.mali.so
-vendor/lib64/mt6781/libdpframework.so
-vendor/lib64/mt6781/libmtk_drvb.so
-vendor/lib64/mt6781/libpq_prot.so
+vendor/lib64/mt6781/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
+vendor/lib64/mt6781/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
+vendor/lib64/mt6781/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/libDR.so
 vendor/lib64/libDefaultFpsActor.so
@@ -1163,7 +1163,7 @@ vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-gpu.xml
 vendor/etc/armnn_app.config
-vendor/lib64/mt6781/libnir_neon_driver.so
+vendor/lib64/mt6781/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
 vendor/lib64/APUWareUtilsServer.so
 vendor/lib64/libapu_mdw.so
 vendor/lib64/libapusys.so
@@ -1255,7 +1255,7 @@ vendor/etc/ecc_list_OP18.xml
 vendor/etc/ecc_list_OP20.xml
 vendor/etc/ecc_list_OP236.xml
 vendor/etc/ecc_list_preference.xml
-vendor/lib/mt6781/libmtk_drvb.so
+vendor/lib/mt6781/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib/libmtkcutils.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so

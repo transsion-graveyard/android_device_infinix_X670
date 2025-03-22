@@ -65,7 +65,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control (A/B Updates)
 PRODUCT_PACKAGES += \
     com.android.hardware.boot \
-    android.hardware.boot-service.default_recovery
+    android.hardware.boot-service.default_recovery \
+    fastbootd
 
 # Permissions (features)
 PRODUCT_COPY_FILES += \

@@ -183,7 +183,7 @@ ro.vendor.mtk_wappush_support=1
 ro.vendor.mtk_wfd_support=1
 
 # Factory reset Protection
-ro.frp.pst=/dev/block/platform/bootdevice/by-name/frp
+ro.frp.pst=/dev/block/by-name/frp
 
 # Fingerprint
 persist.vendor.fingerprint.type=side

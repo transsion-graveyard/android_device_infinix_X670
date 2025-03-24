@@ -1184,6 +1184,14 @@ vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib64/libtflite_mtk.so
 vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 
+# NFC (Configurations)
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nxp.conf
+vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
+
+# NFC (Firmware)
+vendor/lib64/libpn557_fw.so
+
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/nvram_daemon
@@ -1347,6 +1355,11 @@ vendor/lib64/libthha.so;DISABLE_CHECKELF
 vendor/lib64/libthhclient.so
 vendor/lib64/vendor.microtrust.hardware.thh@2.0.so
 vendor/lib64/wechat.beanpod.so
+
+# Secure Element
+vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
+vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
+vendor/etc/libese-nxp.conf
 
 # TEE (TAs)
 vendor/thh/ta/0102030405060708090a0b0c0d0e0f10.ta

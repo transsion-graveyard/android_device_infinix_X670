@@ -261,5 +261,3 @@ ro.hardware.kmsetkey=beanpod
 ro.hardware.nfc_nci=pn8x
 ro.hardware.vulkan=mali
 
-import /vendor/etc/boardid_props/build_${ro.boot.board_id}.prop
-

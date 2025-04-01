@@ -134,6 +134,7 @@ BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 3
 
 # SELinux
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2024-08-01

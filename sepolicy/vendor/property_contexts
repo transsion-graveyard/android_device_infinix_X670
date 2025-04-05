@@ -1,0 +1,5 @@
+# Camera
+persist.vendor.camera. u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera3. u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera. u:object_r:vendor_mtk_camera_prop:s0
+

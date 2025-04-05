@@ -1,0 +1,4 @@
+# Camera HAL Files
+type persist_camera_file, file_type;
+type data_vendor_camera_file, file_type, data_file_type;
+

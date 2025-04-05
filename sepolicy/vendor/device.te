@@ -1,0 +1,3 @@
+# /dev/hardwareinfo
+type hardwareinfo_device, dev_type;
+

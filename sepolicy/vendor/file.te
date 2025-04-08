@@ -2,3 +2,6 @@
 type persist_camera_file, file_type;
 type data_vendor_camera_file, file_type, data_file_type;
 
+# Fingerprint
+type vendor_sysfs_fingerprint, fs_type, sysfs_type;
+

@@ -1,6 +1,12 @@
 # Batteryscret
 genfscon sysfs /devices/platform/1100f000.i2c3/i2c-3/3-0055 u:object_r:sysfs_batteryinfo:s0
 
+# Fingerprint
+genfscon sysfs /devices/platform/11015000.spi5/spi_master/spi5/spi5.0/clk_enable u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/11015000.spi5/spi_master/spi5/spi5.0/fingerdown_wait u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/11015000.spi5/spi_master/spi5/spi5.0/wakeup_enable u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/11015000.spi5/spi_master/spi5/spi5.0/irq u:object_r:vendor_sysfs_fingerprint:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/15020000.imgsys_config/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/1a000000.camisp/wakeup u:object_r:sysfs_wakeup:s0

@@ -1,0 +1,6 @@
+# Allow to r/w fingerprint sysfs
+allow hal_fingerprint_default vendor_sysfs_fingerprint:file rw_file_perms;
+
+# Allow to configure fingerprint props
+set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
+

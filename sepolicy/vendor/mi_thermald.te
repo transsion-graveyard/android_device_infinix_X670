@@ -1,5 +1,15 @@
 type mi_thermald, domain;
 type mi_thermald_exec, exec_type, vendor_file_type, file_type;
 
+allow mi_thermald thermal_core_data_file:dir rw_dir_perms;
+allow mi_thermald thermal_core_data_file:file create_file_perms;
+
+set_prop(mi_thermald, vendor_thermal_prop)
+
+r_dir_file(mi_thermald, sysfs)
+r_dir_file(mi_thermald, sysfs_therm)
+r_dir_file(mi_thermald, sysfs_batteryinfo)
+r_dir_file(mi_thermald, sysfs_leds)
+
 init_daemon_domain(mi_thermald)
 

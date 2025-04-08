@@ -49,6 +49,9 @@
 /dev/elliptic[0-1] u:object_r:sensors_device:s0
 /dev/hardwareinfo u:object_r:hardwareinfo_device:s0
 
+# Thermal
+/vendor/bin/mi_thermald u:object_r:mi_thermald_exec:s0
+
 # Vibrator
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service u:object_r:hal_vibrator_default_exec:s0
 

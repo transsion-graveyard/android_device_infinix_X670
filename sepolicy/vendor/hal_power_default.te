@@ -1,0 +1,7 @@
+# Allow to control mali GPU nodes
+r_dir_file(hal_power_default, sysfs_gpu)
+allow hal_power_default sysfs_gpu:file rw_file_perms;
+
+# Allow to control DT2W
+allow hal_power_default vendor_sysfs_gesture:file rw_file_perms;
+

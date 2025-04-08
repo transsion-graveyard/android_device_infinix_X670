@@ -1,3 +1,6 @@
+# Device identification props
+vendor_restricted_prop(vendor_deviceid_prop)
+
 # Fingerprint
 vendor_restricted_prop(vendor_fingerprint_prop)
 

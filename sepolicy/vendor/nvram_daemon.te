@@ -1,0 +1,3 @@
+# Allow to set bt mac
+set_prop(nvram_daemon, vendor_mtk_radio_prop)
+

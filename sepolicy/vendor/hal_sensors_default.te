@@ -1,0 +1,10 @@
+# Allow Sensors HAL to rw /dev/hardwareinfo                      
+allow hal_sensors_default hardwareinfo_device:chr_file rw_file_perms;
+
+# Allow using proximity sensor
+allow hal_sensors_default sensors_device:chr_file r_file_perms;
+
+# Allow to call audio hal
+binder_call(hal_sensors_default, hal_audio_default)
+hal_client_domain(hal_sensors_default, hal_audio)
+

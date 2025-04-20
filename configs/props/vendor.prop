@@ -57,7 +57,6 @@ ro.camera.sound.forced=0
 
 # SF / Graphics / ...
 debug.sf.disable_client_composition_cache=1
-debug.renderengine.backend=skiaglthreaded
 debug.sf.enable_hwc_vds=0
 graphics.gpu.profiler.support=true
 debug.sf.enable_transaction_tracing=false

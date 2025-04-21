@@ -2,9 +2,9 @@
   "Nodes": [
     {
       "Name": "CPULittleClusterMaxFreq",
-      "Path": "/proc/ppm/policy/cluster_0_max_freq",
+      "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
-        "-1",
+        "9999999",
         "2000000",
         "1933000",
         "1866000",
@@ -26,8 +26,9 @@
     },
     {
       "Name": "CPULittleClusterMinFreq",
-      "Path": "/proc/ppm/policy/cluster_0_min_freq",
+      "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
+        "9999999",
         "2000000",
         "1933000",
         "1866000",
@@ -42,16 +43,15 @@
         "975000",
         "875000",
         "774000",
-        "500000",
-        "-1"
+        "500000"
       ],
       "ResetOnInit": true
     },
     {
       "Name": "CPUBigClusterMaxFreq",
-      "Path": "/proc/ppm/policy/cluster_1_max_freq",
+      "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq",
       "Values": [
-        "-1",
+        "9999999",
         "2050000",
         "1986000",
         "1860000",
@@ -73,8 +73,9 @@
     },
     {
       "Name": "CPUBigClusterMinFreq",
-      "Path": "/proc/ppm/policy/cluster_1_min_freq",
+      "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq",
       "Values": [
+        "9999999",
         "2050000",
         "1986000",
         "1860000",
@@ -89,8 +90,7 @@
         "1002000",
         "919000",
         "835000",
-        "774000",
-        "-1"
+        "774000"
       ],
       "ResetOnInit": true
     },
@@ -225,25 +225,25 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMaxFreq",
-      "Duration": 0,
-      "Value": "-1"
+      "Duration": 60,
+      "Value": "9999999"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
+      "Duration": 60,
       "Value": "1375000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 0,
-      "Value": "-1"
+      "Duration": 60,
+      "Value": "9999999"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
+      "Duration": 60,
       "Value": "1419000"
     },
     {
@@ -256,7 +256,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 3000,
-      "Value": "-1"
+      "Value": "9999999"
     },
     {
       "PowerHint": "LAUNCH",
@@ -268,7 +268,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 3000,
-      "Value": "-1"
+      "Value": "9999999"
     },
     {
       "PowerHint": "LAUNCH",

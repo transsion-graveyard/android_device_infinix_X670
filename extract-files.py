@@ -130,7 +130,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/mi_thermald': blob_fixup()
         .binary_regex_replace(b'%d/on', b'%d/..'),
     "vendor/lib64/libmtkcam_featurepolicy.so": blob_fixup()
-        .binary_regex_replace(b"\x34\xE8\x87\x40\xB9", b"\x34\x28\x02\x80\x52")
+        .binary_regex_replace(b"\x34\xE8\x87\x40\xB9", b"\x34\x28\x02\x80\x52"),
+    'vendor/bin/hw/mtkfusionrild': blob_fixup()
+        .add_needed('libutils-v32.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

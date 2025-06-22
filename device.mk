@@ -179,8 +179,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64
 
 # IMS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+$(call inherit-product, vendor/mediatek/ims/ims.mk)
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -221,7 +220,6 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayViva \
     SettingsOverlayViva \
     SystemUIOverlayViva \
-    TelephonyOverlayViva \
     TetheringResOverlayViva \
     WifiResOverlayViva
 

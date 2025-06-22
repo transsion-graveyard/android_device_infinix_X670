@@ -42,22 +42,12 @@ def fixup_ndk_platform(libname: str) -> tuple[str, str]:
 
 patchelf_version = "0_17_2"
 
-def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    return f'{lib}_{partition}' if partition == 'vendor' else None
-
-
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    ('vendor.mediatek.hardware.videotelephony@1.0'): lib_fixup_vendor_suffix
 }
 
 
 blob_fixups: blob_fixups_user_type = {
-    'system_ext/lib64/libimsma.so': blob_fixup()
-        .replace_needed('libsink.so', 'libsink-mtk.so'),
-    'system_ext/lib64/libsink-mtk.so': blob_fixup()
-        .fix_soname()
-        .add_needed('libaudioclient_shim.so'),
     "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
         "@1.2-mediatek", "@1.2-mediatek-64b"
     ),

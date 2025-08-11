@@ -1,6 +1,7 @@
 # Batteryscret
-genfscon sysfs /devices/platform/1100f000.i2c3/i2c-3/3-0055 u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/platform/pd_adapter/Charging_Adapter/pd_adapter/ u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/1100f000.i2c3/i2c-3/3-0055 u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/pd_adapter/Charging_Adapter/pd_adapter/ u:object_r:sysfs_usb_nonplat:s0
+genfscon sysfs /devices/platform/rt-pd-manager/typec/port0/ u:object_r:sysfs_usb_nonplat:s0
 
 # DT2W gesture
 genfscon sysfs /devices/virtual/touch/touch_dev/gesture_double_tap_state u:object_r:vendor_sysfs_gesture:s0

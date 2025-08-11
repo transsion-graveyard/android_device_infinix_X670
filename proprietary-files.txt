@@ -1341,23 +1341,26 @@ system/framework/mediatek-telephony-base.jar;BOOT_JAR|6248b5b3fcf935ef59ab3c20b0
 system/framework/mediatek-telephony-common.jar;BOOT_JAR|cee3f9c3dad9da1a98a5231fb2a942c41de62676
 system_ext/priv-app/ImsService/ImsService.apk|7152630aeffffec91056fd216316408e30daf16f
 
-# Radio (IMS)
-system/bin/vtservice:system_ext/bin/vtservice
-system/etc/init/init.vtservice.rc:system_ext/etc/init/init.vtservice.rc
-system/lib64/libcomutils.so:system_ext/lib64/libcomutils.so
-system/lib64/libimsma_adapt.so:system_ext/lib64/libimsma_adapt.so
-system/lib64/libimsma_rtp.so:system_ext/lib64/libimsma_rtp.so
-system/lib64/libimsma_socketwrapper.so:system_ext/lib64/libimsma_socketwrapper.so
-system/lib64/libimsma.so:system_ext/lib64/libimsma.so
-system/lib64/libmtk_vt_service.so:system_ext/lib64/libmtk_vt_service.so
-system/lib64/libmtk_vt_wrapper.so:system_ext/lib64/libmtk_vt_wrapper.so
-system/lib64/libsignal.so:system_ext/lib64/libsignal.so
-system/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME
-system/lib64/libsource.so:system_ext/lib64/libsource.so
-system/lib64/libvcodec_cap.so:system_ext/lib64/libvcodec_cap.so
-system/lib64/libvcodec_capenc.so:system_ext/lib64/libvcodec_capenc.so
-system/lib64/libvt_avsync.so:system_ext/lib64/libvt_avsync.so
+# vtservice from sea OS2.0.3.0.VHZMIXM
+system/bin/vtservice:system_ext/bin/vtservice|21e520f34b4c8907272e5844be05718dd6e7db1a
+
+# Radio (Ims) from sea OS2.0.3.0.VHZMIXM
+system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
+system_ext/lib64/libcomutils.so|094b013e5acfe3575d3dc43f29bd73cf72ad0c6b
+system_ext/lib64/libimsma_adapt.so|3c1d51f2203b86c11a0123454986ec41b37e426a
+system_ext/lib64/libimsma_rtp.so|e0378d8e99597eb9bcd3057dcc12f67d370b15e8
+system_ext/lib64/libimsma_socketwrapper.so|0e8cb5f32de6eddfe374ccf149460dfe9850da2c
+system_ext/lib64/libimsma.so|1dd31200e07dab5d2ce340598a577f980010d006|1e6f897a9df05a55a7cf605f728512c7e14de90f
+system_ext/lib64/libmtk_vt_service.so|21f186bd6cd6b1ecef48bc38f8659e86a892843d
+system_ext/lib64/libmtk_vt_wrapper.so|e958564c01ede41548eec680790d259141d53f19
+system_ext/lib64/libsignal.so|b37d2fbc8d7e93b3f377b9f636f1865077aa9718
+system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so|7d365ca1f951074e757b567aca7883b2a3396d0e|bf4267d5b0583260fc4d75d7a1dab8851991daa9
+system_ext/lib64/libsource.so|d413a3650f957c074c2aff9babbb6f1fadb831e3
+system_ext/lib64/libvcodec_cap.so|b6ec9d9181deb3f4ae5811a5bedb713e97d70091
+system_ext/lib64/libvcodec_capenc.so|415f9bb9b523089d1a640d261479f561e9ef12a1
+system_ext/lib64/libvt_avsync.so|14938835ae9c9d070796988b9cc719247bd9b9da
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|797ce5497a2a5e032f0ec054f6d158b43a8c82e8
 
 # Sensors
 vendor/etc/elliptic_sensor.xml

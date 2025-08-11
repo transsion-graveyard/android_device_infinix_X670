@@ -53,13 +53,10 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    'system_ext/etc/init/init.vtservice.rc': blob_fixup()
-        .regex_replace("/system/", "/system_ext/"),
-    'system_ext/lib64/libsource.so': blob_fixup()
-        .add_needed("libui_shim.so"),
     'system_ext/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/lib64/libsink-mtk.so': blob_fixup()
+        .fix_soname()
         .add_needed('libaudioclient_shim.so'),
     "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
         "@1.2-mediatek", "@1.2-mediatek-64b"

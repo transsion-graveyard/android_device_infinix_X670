@@ -247,6 +247,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     PowerOffAlarm
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio-service.compat
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal \

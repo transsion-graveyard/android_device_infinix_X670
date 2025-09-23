@@ -280,6 +280,3 @@ log.tag.gralloc4=S
 # UVC
 ro.usb.uvc.enabled=true
 
-# Verity
-ro.apk_verity.mode=2
-

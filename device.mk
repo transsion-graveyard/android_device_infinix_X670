@@ -220,7 +220,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayViva \
     SettingsOverlayViva \
     SystemUIOverlayViva \
-    TetheringResOverlayViva \
+    NcmTetheringOverlay \
     WifiResOverlayViva
 
 # Lineage-Specific overlays

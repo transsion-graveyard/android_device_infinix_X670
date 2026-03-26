@@ -199,8 +199,6 @@ persist.vendor.fingerprint.sensor_location=1080|905|600|local:0
 # Encryption / TEE
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.mtk_key_manager_support=1
-ro.vendor.mtk_microtrust_tee_support=1
-ro.vendor.mtk_svp_on_mtee_support=1
 ro.vendor.mtk_tee_gp_support=1
 
 # Storage
@@ -263,9 +261,9 @@ ro.vendor.pref_scale_enable_cfg=1
 # Hardware modules
 ro.hardware.consumerir=common
 ro.hardware.egl=meow
-ro.hardware.gatekeeper=beanpod
+ro.hardware.gatekeeper=trustonic
 ro.hardware.hwcomposer=mtk_common
-ro.hardware.kmsetkey=beanpod
+ro.hardware.kmsetkey=trustonic
 ro.hardware.vulkan=mali
 
 # Power

@@ -20,4 +20,4 @@ PRODUCT_MANUFACTURER := Infinix
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix X670
 
-PRODUCT_GMS_CLIENTID_BASE := android-infinix
+PRODUCT_GMS_CLIENTID_BASE := android-transsion

@@ -58,9 +58,6 @@ blob_fixups: blob_fixups_user_type = {
     "vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc": blob_fixup().regex_replace(
         "start", "enable"
     ),
-    "vendor/lib64/libgoodixhwfingerprint.so": blob_fixup().replace_needed(
-        "libvendor.goodix.hardware.biometrics.fingerprint@2.1.so", "vendor.goodix.hardware.biometrics.fingerprint@2.1.so"
-    ),
     (
         "vendor/bin/hw/android.hardware.gnss-service.mediatek",
         "vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so",
@@ -85,7 +82,6 @@ blob_fixups: blob_fixups_user_type = {
         .patchelf_version(patchelf_version)
         .add_needed("android.hardware.sensors@1.0-convert-shared.so"),
     (
-        "vendor/lib64/libteei_daemon_vfs.so",
         "vendor/lib64/lib3a.flash.so",
         "vendor/lib64/libaaa_ltm.so",
         "vendor/lib64/lib3a.ae.stat.so",
@@ -118,8 +114,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     "vendor/lib64/hw/hwcomposer.mt6781.so": blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
-    'vendor/bin/mi_thermald': blob_fixup()
-        .binary_regex_replace(b'%d/on', b'%d/..'),
     "vendor/lib64/libmtkcam_featurepolicy.so": blob_fixup()
         .binary_regex_replace(b"\x34\xE8\x87\x40\xB9", b"\x34\x28\x02\x80\x52"),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()

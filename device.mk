@@ -22,7 +22,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel
 
 # Shipping API Level
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -161,7 +161,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -248,7 +248,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.xiaomi-multihal \
+    android.hardware.sensors@2.0-service.multihal-mediatek \
     android.hardware.sensors@2.0-subhal-impl-1.0:64
 
 PRODUCT_COPY_FILES += \

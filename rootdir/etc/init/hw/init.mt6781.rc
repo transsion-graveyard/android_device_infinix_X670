@@ -309,9 +309,6 @@ on post-fs-data
     #Accdet
     chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state
 
-    #Fingerprint
-    chmod 0666 /dev/goodix_fp
-
     #vdec-fmt
     chmod 0660 /dev/vdec-fmt
     chown media system /dev/vdec-fmt
@@ -813,9 +810,3 @@ on boot
 on property:sys.boot_completed=1
     # Start powerhal
     setprop vendor.powerhal.init 1
-
-service mi_thermald /system/vendor/bin/mi_thermald
-    class main
-    user root
-    group system
-    seclabel u:r:mi_thermald:s0

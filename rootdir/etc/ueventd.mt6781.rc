@@ -19,8 +19,7 @@
 /dev/block/by-name/proinfo   0660    root    system
 /dev/block/by-name/nvram     0660    root    system
 /dev/block/by-name/para      0660    root    system
-/dev/block/by-name/logo_a    0660    root    system
-/dev/block/by-name/logo_b    0660    root    system
+/dev/block/by-name/logo      0660    root    system
 /dev/block/by-name/frp       0660    root    system
 /dev/block/by-name/md1img    0640    root    system
 /dev/block/by-name/md1img_a  0640    root    system
@@ -58,7 +57,12 @@
 /dev/fw_log_wifi          0660   wifi     wifi
 
 # FMRadio
-/dev/fm                   0660   media     media
+# NFBD:modify  for dev/fm 0660->0666 NFRFP-5229 by xiaoyan.shi 20211125
+/dev/fm                   0666   media     media
+
+# NFC
+/dev/st21nfc              0660   nfc        radio
+/dev/st54spi              0660   secure_element        secure_element
 
 # MTK BTIF driver
 /dev/btif                 0600   system     system
@@ -74,7 +78,6 @@
 /dev/mobicore             0600   system     system
 /dev/mobicore-user        0666   system     system
 /dev/t-base-tui           0666   system     system
-/dev/hardwareinfo         0660   root       system
 
 #v4l2 device
 /dev/video*      0660 camera system
@@ -83,6 +86,15 @@
 
 #v4l2 codec
 /dev/vcu    0660 camera system
+
+#BSP: add ultrasound support CILHLJYQ-4 by yu.xiang5 20211220 start
+#elliptic sensor
+/dev/elliptic0            0644   system     system
+/dev/elliptic1            0644   system     system
+#BSP: add ultrasound support CILHLJYQ-4 by yu.xiang5 20211220 end
+#vdec-fmt
+/dev/vdec-fmt   0660 media system
+/dev/fmt_sync   0660 system system
 
 # add the read write right of ttyUSB*
 /dev/bus/usb/*     	  0660   root       usb
@@ -111,6 +123,8 @@
 /dev/ccci_raw_audio            0660   audio      audio
 /dev/ccci3_raw_audio            0660   audio      audio
 /dev/eemcs_aud            0660   audio      audio
+/dev/irtx                 0660   system     system
+/dev/ir-learning          0660   system     system
 # SGX device node
 /dev/pvrsrvkm             0666   root       root
 /dev/pvr_sync             0666   root       root
@@ -136,9 +150,6 @@
 /dev/camera_eeprom*       0660   system     camera
 /dev/seninf_n3d           0660   system     camera
 
-# Charger
-/sys/class/power_supply/battery input_suspend 0660 system system
-
 #FOR VIA MODEM
 /dev/ttySDIO*             0660   radio      sdcard_rw
 /dev/ttyRB*               0660   radio      radio
@@ -159,7 +170,3 @@
 
 #MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio
-
-#elliptic sensor
-/dev/elliptic0            0644   system     system
-/dev/elliptic1            0644   system     system

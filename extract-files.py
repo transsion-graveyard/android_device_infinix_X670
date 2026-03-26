@@ -27,18 +27,19 @@ from extract_utils.utils import (
 )
 
 namespace_imports = [
-    'device/xiaomi/viva',
-    'hardware/mediatek',
-    'hardware/mediatek/libmtkperf_client',
-    'hardware/lineage/compat',
-    'hardware/xiaomi'
+    "device/infinix/X670",
+    "hardware/mediatek",
+    "hardware/mediatek/libmtkperf_client",
+    "hardware/lineage/compat",
 ]
+
 
 def fixup_ndk_platform(libname: str) -> tuple[str, str]:
     """
     Replace -ndk_platform with -ndk
     """
     return (libname, libname.replace("-ndk_platform.so", "-ndk.so"))
+
 
 patchelf_version = "0_17_2"
 
@@ -126,14 +127,14 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'viva',
-    'xiaomi',
+    "X670",
+    "infinix",
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
     add_firmware_proprietary_file=True,
 )
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     utils = ExtractUtils.device(module)
     utils.run()

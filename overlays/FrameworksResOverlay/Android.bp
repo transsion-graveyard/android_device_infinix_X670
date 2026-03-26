@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "FrameworksResOverlayViva",
+    name: "FrameworksResOverlayX670",
     vendor: true,
     resource_dirs: ["res"]
 }

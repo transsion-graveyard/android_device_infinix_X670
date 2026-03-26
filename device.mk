@@ -18,7 +18,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
-    hardware/xiaomi \
     hardware/google/interfaces \
     hardware/google/pixel
 
@@ -226,20 +225,20 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayViva \
-    FrameworksResOverlayViva \
-    SettingsOverlayViva \
-    SystemUIOverlayViva \
+    CarrierConfigOverlayX670 \
+    FrameworksResOverlayX670 \
+    SettingsOverlayX670 \
+    SystemUIOverlayX670 \
     NcmTetheringOverlay \
-    WifiResOverlayViva
+    WifiResOverlayX670
 
 # Lineage-Specific overlays
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayViva \
-    LineageDialerOverlayViva \
-    LineageSDKOverlayViva \
-    LineageSettingsOverlayViva \
-    PowerOffAlarmOverlayViva
+    LineageApertureOverlayX670 \
+    LineageDialerOverlayX670 \
+    LineageSDKOverlayX670 \
+    LineageSettingsOverlayX670 \
+    PowerOffAlarmOverlayX670
 
 # Power
 PRODUCT_PACKAGES += \
@@ -313,4 +312,4 @@ PRODUCT_PACKAGES += \
     fstab.mt6781.ramdisk
 
 # Inherit our proprietary vendor
-$(call inherit-product, vendor/xiaomi/viva/viva-vendor.mk)
+$(call inherit-product, vendor/infinix/X670/X670-vendor.mk)

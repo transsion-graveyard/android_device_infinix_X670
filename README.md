@@ -1,1 +1,1 @@
-# Device tree for the Redmi Note 11 Pro (4G) (viva/vida)
+# Device tree for the Infinix X670 (X670)

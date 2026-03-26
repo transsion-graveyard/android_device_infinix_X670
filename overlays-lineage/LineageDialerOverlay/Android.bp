@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageDialerOverlayViva",
+    name: "LineageDialerOverlayX670",
     product_specific: true,
 }

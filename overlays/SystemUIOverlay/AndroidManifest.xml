@@ -5,7 +5,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.overlay.viva">
+    package="com.android.systemui.overlay.X670">
 
   <application android:hasCode="false"/>
   <overlay android:targetPackage="com.android.systemui"

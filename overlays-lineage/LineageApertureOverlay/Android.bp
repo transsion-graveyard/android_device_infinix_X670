@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageApertureOverlayViva",
+    name: "LineageApertureOverlayX670",
     product_specific: true,
 }

@@ -9,15 +9,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from device makefile
-$(call inherit-product, device/xiaomi/viva/device.mk)
+$(call inherit-product, device/infinix/X670/device.mk)
 
 # Inherit some common LineageOS Stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_viva
-PRODUCT_DEVICE := viva
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi Note 11 Pro
+PRODUCT_NAME := lineage_X670
+PRODUCT_DEVICE := X670
+PRODUCT_MANUFACTURER := Infinix
+PRODUCT_BRAND := Infinix
+PRODUCT_MODEL := Infinix X670
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_GMS_CLIENTID_BASE := android-infinix

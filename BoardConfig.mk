@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/viva
-KERNEL_PATH := device/xiaomi/viva-kernel
+DEVICE_PATH := device/infinix/X670
+KERNEL_PATH := device/infinix/X670-kernel
 CONFIGS_PATH := $(DEVICE_PATH)/configs
 
 # Architecture
@@ -34,10 +34,10 @@ TARGET_2ND_CPU_VARIANT := cortex-a55
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # OTA Updates
-TARGET_OTA_ASSERT_DEVICE := viva,vida
+TARGET_OTA_ASSERT_DEVICE := X670,x670
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := viva
+TARGET_BOOTLOADER_BOARD_NAME := X670
 TARGET_NO_BOOTLOADER := true
 
 # Plaform
@@ -67,7 +67,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_NO_KERNEL_OVERRIDE := true
 
 # Workaround to make lineage's soong generator work
-TARGET_KERNEL_SOURCE := device/xiaomi/viva-kernel/kernel-headers
+TARGET_KERNEL_SOURCE := device/infinix/X670-kernel/kernel-headers
 
 LOCAL_KERNEL := $(KERNEL_PATH)/Image.gz
 PRODUCT_COPY_FILES += \
@@ -153,7 +153,6 @@ DEVICE_MANIFEST_FILE := $(CONFIGS_PATH)/vintf/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(CONFIGS_PATH)/vintf/framework_compatibility_matrix.xml \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
 # RIL
@@ -179,4 +178,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit from the proprietary version
-include vendor/xiaomi/viva/BoardConfigVendor.mk
+include vendor/infinix/X670/BoardConfigVendor.mk

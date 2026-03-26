@@ -6,7 +6,7 @@ lk.img;AB
 logo.bin:logo.img;AB
 md1img.img;AB
 pi_img.img;AB
-preloader_viva.bin:preloader_raw.img;AB
+preloader_X670.bin:preloader_raw.img;AB
 scp.img;AB
 spmfw.img;AB
 sspm.img;AB

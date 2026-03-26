@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageSDKOverlayViva",
+    name: "LineageSDKOverlayX670",
     product_specific: true,
 }

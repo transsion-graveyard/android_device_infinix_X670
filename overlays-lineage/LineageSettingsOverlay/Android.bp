@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageSettingsOverlayViva",
+    name: "LineageSettingsOverlayX670",
     product_specific: true,
 }

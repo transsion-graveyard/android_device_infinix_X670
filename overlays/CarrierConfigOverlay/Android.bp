@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "CarrierConfigOverlayViva",
+    name: "CarrierConfigOverlayX670",
     sdk_version: "current",
     product_specific: true,
     aaptflags: ["--keep-raw-values"]

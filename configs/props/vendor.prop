@@ -266,7 +266,6 @@ ro.hardware.egl=meow
 ro.hardware.gatekeeper=beanpod
 ro.hardware.hwcomposer=mtk_common
 ro.hardware.kmsetkey=beanpod
-ro.hardware.nfc_nci=pn8x
 ro.hardware.vulkan=mali
 
 # Power
@@ -279,4 +278,3 @@ log.tag.gralloc4=S
 
 # UVC
 ro.usb.uvc.enabled=true
-

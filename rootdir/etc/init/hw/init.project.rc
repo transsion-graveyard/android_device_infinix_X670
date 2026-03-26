@@ -83,25 +83,3 @@ service mtk_secure_element_hal_service /vendor/bin/hw/android.hardware.secure_el
     user secure_element
     group secure_element
     disabled
-
-service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
-    override
-    class early_hal
-    user nfc
-    group nfc drmrpc system
-    disabled
-
-# NFC board variant selection
-on early-init && property:ro.boot.board_id=S98006AA1
-    setprop ro.boot.product.hardware.sku nfc
-
-# Enable NFC on X670
-on init && property:ro.boot.product.hardware.sku=nfc
-    enable mtk_secure_element_hal_service
-    enable vendor.nfc_hal_service
-
-on post-fs-data && property:ro.boot.product.hardware.sku=nfc
-    mkdir /data/vendor/nfc 0770 nfc nfc
-    mkdir /data/vendor/nfc/param 0770 nfc nfc
-    chmod 0660 /dev/pn557
-    chown nfc nfc /dev/pn557

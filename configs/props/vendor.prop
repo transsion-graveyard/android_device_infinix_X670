@@ -259,7 +259,6 @@ ro.vendor.pq.mtk_video_transition=0
 ro.vendor.pref_scale_enable_cfg=1
 
 # Hardware modules
-ro.hardware.consumerir=common
 ro.hardware.egl=meow
 ro.hardware.gatekeeper=trustonic
 ro.hardware.hwcomposer=mtk_common

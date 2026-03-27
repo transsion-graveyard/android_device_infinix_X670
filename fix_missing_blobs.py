@@ -9,11 +9,11 @@ ALL_FILES = os.path.join(SCRIPT_DIR, "all_files.txt")
 PROP_FILES = os.path.join(SCRIPT_DIR, "proprietary-files.txt")
 DUMP_DIR = os.path.expanduser("~/dump")
 
-LINEAGE_ROOT = "/home/ikan/lineage"
+LINEAGE_ROOT = "/home/ikan/axion"
 
 
 def run_build():
-    cmd = f"bash -c 'cd {LINEAGE_ROOT} && source build/envsetup.sh && lunch lineage_X670-bp1a-eng >/dev/null 2>&1 && m nothing 2>&1'"
+    cmd = f"bash -c 'cd {LINEAGE_ROOT} && source build/envsetup.sh && lunch lineage_X670-bp1a-userdebug >/dev/null 2>&1 && m nothing 2>&1'"
     proc = subprocess.Popen(
         cmd,
         shell=True,

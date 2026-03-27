@@ -26,13 +26,25 @@ on post-fs-data
 
     mkdir /mnt/vendor/persist/camera
     mkdir /data/vendor/camera
+    mkdir /data/vendor/multicam
+    mkdir /data/vendor/multicam/dualcam
+    mkdir /data/vendor/camera_watermark
     chown system system /mnt/vendor/persist/camera
     chown system system /data/vendor/camera
+    chown system system /data/vendor/multicam
+    chown system system /data/vendor/multicam/dualcam
+    chown system system /data/vendor/camera_watermark
     chmod 0777 /mnt/vendor/persist/camera
     chmod 0777 /data/vendor/camera
+    chmod 0771 /data/vendor/multicam
+    chmod 0771 /data/vendor/multicam/dualcam
+    chmod 0771 /data/vendor/camera_watermark
     chmod 0644 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
     chmod 0644 /data/vendor/camera/rear_dc_cal_wd.bin
     restorecon_recursive /mnt/vendor/persist/camera
+    restorecon_recursive /data/vendor/camera
+    restorecon_recursive /data/vendor/multicam
+    restorecon_recursive /data/vendor/camera_watermark
 
 #SMB
     chown system system /proc/smb/ScreenComm
@@ -72,10 +84,3 @@ on boot
     chown system system /sys/class/power_supply/battery/charging_call_state
     chmod 0660 /sys/class/power_supply/battery/charging_call_state
     #-chk101871 wangjiayu1 modify 20211027 add for charging call state
-
-service mtk_secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
-    override
-    class hal
-    user secure_element
-    group secure_element
-    disabled

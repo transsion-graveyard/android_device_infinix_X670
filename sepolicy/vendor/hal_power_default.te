@@ -5,3 +5,5 @@ allow hal_power_default sysfs_gpu:file rw_file_perms;
 # Allow to control DT2W
 allow hal_power_default vendor_sysfs_gesture:file rw_file_perms;
 
+# MTK power queries the fingerprint HAL process state through /proc.
+allow hal_power_default hal_fingerprint_default:dir { getattr search };

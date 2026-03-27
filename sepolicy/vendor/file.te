@@ -2,6 +2,11 @@
 type persist_camera_file, file_type;
 type data_vendor_camera_file, file_type, data_file_type;
 
+# Camera
+type sysfs_tran_cam_file, fs_type, sysfs_type;
+type transsion_camera_data_file, file_type, data_file_type, mlstrustedobject;
+type vendor_watermark_data_file, file_type, data_file_type, mlstrustedobject;
+
 # DT2W gesture
 type vendor_sysfs_gesture, fs_type, sysfs_type;
 

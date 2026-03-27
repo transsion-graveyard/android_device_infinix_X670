@@ -207,7 +207,8 @@ PRODUCT_PACKAGES += \
     SettingsOverlayX670 \
     SystemUIOverlayX670 \
     NcmTetheringOverlay \
-    WifiResOverlayX670
+    WifiResOverlayX670 \
+    SettingsProviderResTarget
 
 # Lineage-Specific overlays
 PRODUCT_PACKAGES += \

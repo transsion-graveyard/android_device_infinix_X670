@@ -10,7 +10,7 @@ vendor/lib/libaedv.so
 vendor/lib64/libaedv.so
 
 # Audio
-vendor/lib64/hw/audio.primary.default.so;SYMLINK=vvendor/lib/hw/audio.primary.mt6781.so
+vendor/lib/hw/audio.primary.mt6781.so
 vendor/lib/hw/audio.r_submix.mt6781.so
 vendor/lib/hw/sound_trigger.primary.default.so:vendor/lib/hw/sound_trigger.primary.mt6781.so;FIX_SONAME
 vendor/lib/libMtkSpeechEnh.so

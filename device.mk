@@ -162,7 +162,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 #PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor
+#    android.hardware.biometrics.fingerprint@2.1.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -178,7 +178,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.transsion
+    android.hardware.lights-service.transsion
 
 # Health
 PRODUCT_PACKAGES += \

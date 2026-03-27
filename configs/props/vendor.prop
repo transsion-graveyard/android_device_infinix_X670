@@ -270,8 +270,14 @@ vendor.powerhal.interaction.min=10
 vendor.powerhal.interaction.max=50
 vendor.powerhal.interaction.offset=0
 
+# Skia tracing
+debug.hwui.skia_tracing_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
+
 # Stop gralloc logspam
 log.tag.gralloc4=S
 
 # UVC
 ro.usb.uvc.enabled=true
+
+

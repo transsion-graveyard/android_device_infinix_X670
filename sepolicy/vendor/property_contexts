@@ -1,7 +1,4 @@
 # Camera
-ro.mtk_cam_dualzoom_support u:object_r:vendor_mtk_camera_prop:s0
-ro.mtk_cam_stereo_camera_support u:object_r:vendor_mtk_camera_prop:s0
-ro.mtk_key_manager_support u:object_r:vendor_mtk_camera_prop:s0
 persist.vendor.camera. u:object_r:vendor_mtk_camera_prop:s0
 persist.vendor.camera3. u:object_r:vendor_mtk_camera_prop:s0
 vendor.camera. u:object_r:vendor_mtk_camera_prop:s0

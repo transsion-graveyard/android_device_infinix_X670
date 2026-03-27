@@ -1,3 +1,9 @@
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
+ro.vendor.transsion.backlight_hal.optimization=1
+
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2

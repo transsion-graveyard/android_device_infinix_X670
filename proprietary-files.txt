@@ -520,6 +520,10 @@ vendor/lib64/libCamera_hi1631qmipiraw_SuperNight.so
 vendor/lib64/libCamera_hi1631qmipiraw_Video_1080.so
 vendor/lib64/libCamera_hi1631qmipiraw_Video_2k.so
 vendor/lib64/libCamera_hi1631qmipiraw_Video_720.so
+
+# Camera IdxMgr
+vendor/lib64/libCamera_gc02m1bmipiraw_Scene_Capture.so
+vendor/lib64/libCamera_gc02m1bmipiraw_Scene_Preview.so
 # Camera Configurations
 vendor/data/camera/model/megii_dualcam/capture_cache
 vendor/data/camera/model/megii_dualcam/capture_model

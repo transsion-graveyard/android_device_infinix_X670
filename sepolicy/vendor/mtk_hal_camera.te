@@ -17,3 +17,13 @@ allow mtk_hal_camera vendor_watermark_data_file:file { create read write open };
 
 # /sys/devices/platform/odm/odm:tran_battery/tran_cam
 allow mtk_hal_camera sysfs_tran_cam_file:file rw_file_perms;
+
+allow mtk_hal_camera sysfs_dt_firmware_android:dir search;
+allow mtk_hal_camera sysfs_dt_firmware_android:file r_file_perms;
+allow mtk_hal_camera property_socket:sock_file write;
+allow mtk_hal_camera hal_trancamserver_hwservice:hwservice_manager find;
+binder_call(mtk_hal_camera, trancamserver)
+
+get_prop(mtk_hal_camera, exported_default_prop)
+get_prop(mtk_hal_camera, vendor_camera_prop)
+set_prop(mtk_hal_camera, vendor_mtk_camera_prop)

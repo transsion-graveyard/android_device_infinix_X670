@@ -179,7 +179,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.transsion
+    android.hardware.lights-service.transsion
 
 # Health
 PRODUCT_PACKAGES += \

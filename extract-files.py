@@ -93,7 +93,6 @@ blob_fixups: blob_fixups_user_type = {
         "vendor/lib64/lib3a.ae.stat.so",
         "vendor/lib64/lib3a.sensors.color.so",
         "vendor/lib64/lib3a.sensors.flicker.so",
-        "vendor/lib64/libSQLiteModule_VER_ALL.so",
     ): blob_fixup()
         .patchelf_version(patchelf_version)
         .add_needed("liblog.so"),
@@ -151,7 +150,6 @@ blob_fixups: blob_fixups_user_type = {
     (
         "vendor/lib64/libtranssion_bodybeauty.so",
         "vendor/lib64/mt6789/libeffect_hal.so",
-        "vendor/lib64/libsegmentionPre.so",
         "vendor/lib64/libMegviiHum.so",
     ): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')

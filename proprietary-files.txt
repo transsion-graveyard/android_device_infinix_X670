@@ -1,3 +1,24 @@
+vendor/lib/modules/app_defrag.ko
+vendor/lib/modules/bt_drv_connac1x.ko
+vendor/lib/modules/connfem.ko
+vendor/lib/modules/defrag_gc_ko.ko
+vendor/lib/modules/dev_gc.ko
+vendor/lib/modules/fmradio_drv_mt6631.ko
+vendor/lib/modules/fpsgo.ko
+vendor/lib/modules/gps_drv.ko
+vendor/lib/modules/met.ko
+vendor/lib/modules/modules.alias
+vendor/lib/modules/modules.dep
+vendor/lib/modules/modules.load
+vendor/lib/modules/modules.softdep
+vendor/lib/modules/trace_mmstat.ko
+vendor/lib/modules/tran_fre.ko
+vendor/lib/modules/tran_gc_ko.ko
+vendor/lib/modules/udc_lib.ko
+vendor/lib/modules/wlan_drv_gen4m.ko
+vendor/lib/modules/wmt_chrdev_wifi.ko
+vendor/lib/modules/wmt_drv.ko
+
 vendor/etc/public.libraries.txt
 vendor/lib64/hi1631q_mipi_raw_tuning.so
 vendor/lib64/s5kjn1_mipi_raw_tuning.so
@@ -162,12 +183,7 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/AudioLog_dynamic.xml
 
 # Bluetooth
-vendor/lib/libbluetooth_audio_session_mediatek.so
-vendor/lib/libbluetooth_mtk.so
-vendor/lib/libbluetooth_mtk_pure.so
-vendor/lib/libbt-vendor.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib64/libbluetooth_audio_session_mediatek.so
+vendor/etc/init/init.bt_drv.rc
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
@@ -547,6 +563,7 @@ vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 
 # Fingerprint
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 
 # Firmware
 vendor/firmware/BT_FW.cfg

@@ -1,3 +1,7 @@
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2.vendor:64
+
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 #
 # Copyright (C) 2025 The LineageOS Project
@@ -157,7 +161,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \

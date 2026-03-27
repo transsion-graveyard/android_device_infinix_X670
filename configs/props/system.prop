@@ -34,14 +34,13 @@ ro.camera.sound.forced=0
 vendor.camera.tran.nums=1
 
 # Dalvik
+dalvik.vm.dex2oat64.enabled=true
 
 # Fuse passthrough
 persist.sys.fuse.passthrough.enable=true
 
 # GPU
 ro.opengles.version=196610
-
-# IMS
 
 # Kernel
 ro.kernel.zio=38,108,105,16
@@ -116,6 +115,9 @@ wifi.interface=wlan0
 wifi.tethering.interface=ap0
 
 # ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=1440
+ro.zram.periodic_wb_delay_hours=24
 
 # Zygote
 ro.zygote.preload.enable=0

@@ -5,8 +5,6 @@ persist.adb.nonblocking_ffs=0
 ro.vendor.have_aeev_feature=1
 ro.vendor.aee.convert64=0
 
-# APK Verity
-
 # APU
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn.option=D,E,F,Z
@@ -26,8 +24,6 @@ ro.vendor.mtk_aal_support=1
 vendor.bluetooth.ldac.abr=true
 ro.vendor.mtk.bt_sap_enable=true
 ro.vendor.bt.platform=connac1x
-
-# Boostfwk
 
 # Camera
 camera.disable_zsl_mode=1
@@ -58,7 +54,7 @@ vendor.mtk.camera.app.fd.video=1
 
 # DRM
 drm.service.enabled=true
-ro.netflix.bsp_rev=MTK6781-34066-1
+ro.netflix.bsp_rev=MTK6893-32816-1
 ro.vendor.mtk_widevine_drm_l1_support=1
 ro.vendor.mtk_sec_video_path_support=1
 
@@ -115,10 +111,8 @@ ro.vendor.pq.mtk_video_transition=0
 ro.vendor.pref_scale_enable_cfg=1
 ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_pq_support=2
-ro.vendor.composer_version=2.1
+ro.vendor.composer_version=2.3
 ro.hardware.hwcomposer=mtk_common
-
-# Display (Dynamic)
 
 # FM Radio
 ro.vendor.fm.platform=mt6631
@@ -151,8 +145,11 @@ persist.vendor.mtk_dynamic_ims_switch=1
 # LMK
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
-ro.lmk.psi_complete_stall_ms=700
+ro.lmk.psi_complete_stall_ms=150
 ro.lmk.swap_free_low_percentage=20
+ro.lmk.swap_util_max=90
+ro.lmk.thrashing_limit=25
+ro.lmk.thrashing_limit_decay=50
 
 # Media
 media.c2.dmabuf.padding=3072
@@ -165,14 +162,11 @@ ro.vendor.mtk_prefer_64bit_proc=0
 ro.vendor.smvr.p2batch.fhd=4
 ro.vendor.smvr.p2batch.hd=8
 ro.vendor.smvr.p2batch.vga=16
-
 # MediaTek
 ro.soc.manufacturer=Mediatek
 ro.vendor.mediatek.platform=MT6781
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
 ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V15.20.2_reallytek.s0mp1rc.k61v1.64.bsp_P40
-
-# Misc
 
 # Perf
 persist.vendor.iomanager.dirty=1

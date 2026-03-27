@@ -1,11 +1,5 @@
 # Device identification props
 vendor_restricted_prop(vendor_deviceid_prop)
 
-# Camera
-vendor_restricted_prop(vendor_mtk_camera_prop)
-
 # Fingerprint
 vendor_restricted_prop(vendor_fingerprint_prop)
-
-# Thermal
-vendor_restricted_prop(vendor_thermal_prop)

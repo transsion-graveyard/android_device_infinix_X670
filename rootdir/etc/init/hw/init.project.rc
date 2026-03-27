@@ -34,10 +34,6 @@ on post-fs-data
     chmod 0644 /data/vendor/camera/rear_dc_cal_wd.bin
     restorecon_recursive /mnt/vendor/persist/camera
 
-# for mishow
-    chown system system /sys/class/power_supply/battery/input_suspend
-    chmod 0777 /sys/class/power_supply/battery/input_suspend
-
 #SMB
     chown system system /proc/smb/ScreenComm
     chmod 0660 /proc/smb/ScreenComm

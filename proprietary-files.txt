@@ -1,3 +1,8 @@
+vendor/etc/public.libraries.txt
+vendor/lib64/hi1631q_mipi_raw_tuning.so
+vendor/lib64/s5kjn1_mipi_raw_tuning.so
+vendor/lib/libthha.so;DISABLE_CHECKELF
+vendor/lib64/libthha.so;DISABLE_CHECKELF
 # Unpinned blobs from missi_phoneext4_global-user 13 TP1A.220624.014 V816.0.4.0.TGDMIXM release-keys
 
 # AEE
@@ -161,15 +166,11 @@ vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbluetooth_mtk_pure.so
 vendor/lib/libbt-vendor.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 vendor/bin/hw/camerahalserver
@@ -228,7 +229,6 @@ vendor/lib64/libanc_dc_base.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
 vendor/lib64/libarcsoft_low_light_hdr.so
-system_ext/app/TranssionCamera/lib/arm64/libc++_shared.so
 vendor/lib64/libcam.afhal.so
 vendor/lib64/libcam.chdr.so
 vendor/lib64/libcam.feature_utils.so
@@ -393,6 +393,136 @@ vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
+
+# Camera IdxMgr
+vendor/lib64/fake_serial_yuv_IdxMgr.so
+vendor/lib64/gc02m1b_mipi_raw_IdxMgr.so
+vendor/lib64/hi1631q_mipi_raw_IdxMgr.so
+vendor/lib64/ov02b1b_mipi_raw_IdxMgr.so
+vendor/lib64/pblcgc02m1b_mipi_raw_IdxMgr.so
+vendor/lib64/pblchi1631q_mipi_raw_IdxMgr.so
+vendor/lib64/pblcov02b1b_mipi_raw_IdxMgr.so
+vendor/lib64/pblcs5kjn1_mipi_raw_IdxMgr.so
+vendor/lib64/pbrogc02m1b_mipi_raw_IdxMgr.so
+vendor/lib64/pbrohi1631q_mipi_raw_IdxMgr.so
+vendor/lib64/pbroov02b1b_mipi_raw_IdxMgr.so
+vendor/lib64/pbros5kjn1_mipi_raw_IdxMgr.so
+vendor/lib64/s5kjn1_mipi_raw_IdxMgr.so
+
+# Camera IdxMgr
+vendor/lib64/libcam3_transerverengine.so
+
+# Camera IdxMgr
+vendor/lib64/vendor.transsion.hardware.trancam.trancamserver@1.0.so
+
+# Camera IdxMgr
+vendor/lib64/libTranExtImgProc.so
+vendor/lib64/libtranssion_cal.so
+
+# Camera IdxMgr
+vendor/lib64/libTranASD.so
+vendor/lib64/libTranArcFilter.so
+vendor/lib64/libTranArcHDR.so
+vendor/lib64/libTranArcLLHDR.so
+vendor/lib64/libTranArcLowLight.so
+vendor/lib64/libTranArcNightHawk.so
+vendor/lib64/libTranDenoise.so
+vendor/lib64/libTranEyeDetect.so
+vendor/lib64/libTranFaceBeauty.so
+vendor/lib64/libTranGenderDetect.so
+vendor/lib64/libTranHumanLight.so
+vendor/lib64/libTranMSFilter.so
+vendor/lib64/libTranMagicSky.so
+vendor/lib64/libTranMegDualDepth.so
+vendor/lib64/libTranMegDualDepthtoBokeh.so
+vendor/lib64/libTranMegDualRefocus.so
+vendor/lib64/libTranSTPRRepair.so
+vendor/lib64/libTranSTSingleBlur.so
+vendor/lib64/libTranSlimBody.so
+vendor/lib64/libTranSmartDetection.so
+vendor/lib64/libTranStSuperResolution.so
+vendor/lib64/libTran_Log.so
+vendor/lib64/libcam3_tranelapsedtime.so
+vendor/lib64/libcam3_tranpriorityctrl.so
+vendor/lib64/libtranlog.so
+
+# Camera IdxMgr
+vendor/lib64/libNvLutEffect_arm64-v8a.so
+vendor/lib64/libTranPlatHW.so
+vendor/lib64/libTran_mtkPowerAPI.so
+vendor/lib64/lib_sr_indep_ocl.so
+vendor/lib64/libamipengine.so
+vendor/lib64/libarcsoft_low_light_shot.so
+vendor/lib64/libarcsoft_night_hawk.so
+vendor/lib64/libdenoise.so
+vendor/lib64/libeyedetector.so
+vendor/lib64/libfacesattribute.so
+vendor/lib64/libmagicsky_64.so
+vendor/lib64/libportrait_repair_ppl3_ocl.so
+vendor/lib64/libsdk_sr.so
+vendor/lib64/libsegmention.so;DISABLE_CHECKELF
+vendor/lib64/libsegmentionPre.so
+vendor/lib64/libsmartdetector.so
+vendor/lib64/libst_mobile.so
+vendor/lib64/libst_sr_models.so
+vendor/lib64/libstblur_capture_api.so
+vendor/lib64/libtf_asd_lib.so
+vendor/lib64/libtflite_native_gainference.so
+vendor/lib64/libtflite_native_inference.so
+vendor/lib64/libtflite_native_seginference.so
+vendor/lib64/libtranssion_bodybeauty.so
+
+# Camera IdxMgr
+vendor/lib64/libtranssion_beauty.so
+
+# Camera IdxMgr
+vendor/lib64/libWaterMarkProc.so
+
+# Camera IdxMgr
+vendor/lib64/libImageEval.so
+vendor/lib64/libcalculatesharpness.so
+
+# Camera IdxMgr
+vendor/lib64/libCamera_s5kjn1mipiraw_Boken_Capture.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Capture_Zoom1.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Capture_Zoom2.so
+vendor/lib64/libCamera_s5kjn1mipiraw_FaceBeauty.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Flash_Capture.so
+vendor/lib64/libCamera_s5kjn1mipiraw_NHDR_0EV.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Preview_Zoom1.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Preview_Zoom2.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Pro_scene.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Resolution.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Resolution_zoom.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Scene_Capture.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Scene_Capture_4cell.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Scene_Preview.so
+vendor/lib64/libCamera_s5kjn1mipiraw_ShortVideo.so
+vendor/lib64/libCamera_s5kjn1mipiraw_SuperNight.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Video.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Video_120fps.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Video_240fps.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Video_EIS.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Video_Zoom1.so
+vendor/lib64/libCamera_s5kjn1mipiraw_Video_Zoom2.so
+
+# Camera IdxMgr
+vendor/lib64/libCamera_hi1631qmipiraw_Beauty_capture.so
+vendor/lib64/libCamera_hi1631qmipiraw_Capture_Zoom1.so
+vendor/lib64/libCamera_hi1631qmipiraw_Flash_Capture.so
+vendor/lib64/libCamera_hi1631qmipiraw_HDR_MINUS_EV.so
+vendor/lib64/libCamera_hi1631qmipiraw_NHDR_0EV.so
+vendor/lib64/libCamera_hi1631qmipiraw_Preview_Zoom1.so
+vendor/lib64/libCamera_hi1631qmipiraw_Resolution.so
+vendor/lib64/libCamera_hi1631qmipiraw_Resolution_zoom.so
+vendor/lib64/libCamera_hi1631qmipiraw_Scene_Capture.so
+vendor/lib64/libCamera_hi1631qmipiraw_Scene_Capture_ITS.so
+vendor/lib64/libCamera_hi1631qmipiraw_Scene_Preview.so
+vendor/lib64/libCamera_hi1631qmipiraw_ShortVideo.so
+vendor/lib64/libCamera_hi1631qmipiraw_SuperNight.so
+vendor/lib64/libCamera_hi1631qmipiraw_Video_1080.so
+vendor/lib64/libCamera_hi1631qmipiraw_Video_2k.so
+vendor/lib64/libCamera_hi1631qmipiraw_Video_720.so
 # Camera Configurations
 vendor/data/camera/model/megii_dualcam/capture_cache
 vendor/data/camera/model/megii_dualcam/capture_model
@@ -486,10 +616,8 @@ vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/lib/libfgauge_gm30.so
 
 # Gatekeeper
-vendor/lib/hw/libMcGatekeeper.so
-vendor/lib/hw/libSoftGatekeeper.so
-vendor/lib64/hw/libMcGatekeeper.so
-vendor/lib64/hw/libSoftGatekeeper.so
+vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.so
+vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek

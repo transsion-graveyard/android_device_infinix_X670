@@ -87,7 +87,6 @@ blob_fixups: blob_fixups_user_type = {
         "vendor/lib64/lib3a.ae.stat.so",
         "vendor/lib64/lib3a.sensors.color.so",
         "vendor/lib64/lib3a.sensors.flicker.so",
-        "vendor/lib64/libSQLiteModule_VER_ALL.so",
     ): blob_fixup()
         .patchelf_version(patchelf_version)
         .add_needed("liblog.so"),
@@ -118,6 +117,15 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b"\x34\xE8\x87\x40\xB9", b"\x34\x28\x02\x80\x52"),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
+    ('vendor/lib64/libtranssion_bodybeauty.so', 'vendor/lib64/mt6789/libeffect_hal.so', 'vendor/lib64/libMegviiHum.so'): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_createFromHandle')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_getNativeHandle')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

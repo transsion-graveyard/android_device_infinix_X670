@@ -1,3 +1,4 @@
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 #
 # Copyright (C) 2025 The LineageOS Project
 #
@@ -174,10 +175,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
@@ -238,7 +235,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal-mediatek \
+    android.hardware.sensors@2.0-service.multihal \
     android.hardware.sensors@2.0-subhal-impl-1.0:64
 
 PRODUCT_COPY_FILES += \

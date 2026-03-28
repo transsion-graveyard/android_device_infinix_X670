@@ -152,6 +152,7 @@ ro.lmk.thrashing_limit=25
 ro.lmk.thrashing_limit_decay=50
 
 # Media
+media.c2.hal.selection=aidl
 media.c2.dmabuf.padding=3072
 ro.vendor.iomanager.support=1
 ro.vendor.jpeg_decode_sw_opt=1

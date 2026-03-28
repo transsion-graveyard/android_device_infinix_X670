@@ -111,8 +111,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6781
 
 # Properties
 TARGET_SYSTEM_PROP += $(CONFIGS_PATH)/props/system.prop
-TARGET_SYSTEM_EXT_PROP += $(CONFIGS_PATH)/props/system_ext.prop
-TARGET_PRODUCT_PROP += $(CONFIGS_PATH)/props/product.prop
 TARGET_VENDOR_PROP += $(CONFIGS_PATH)/props/vendor.prop
 
 # Verified Boot

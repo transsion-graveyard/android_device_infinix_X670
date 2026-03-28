@@ -17,6 +17,7 @@ PRODUCT_ENABLE_UFFD_GC := true
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/transsion \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/google/interfaces \
@@ -173,7 +174,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.lineage
+    android.hardware.lights-service.transsion
 
 # Health
 PRODUCT_PACKAGES += \

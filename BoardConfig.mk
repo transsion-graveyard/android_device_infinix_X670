@@ -1,3 +1,4 @@
+BUILD_BROKEN_DUP_RULES := true
 #
 # Copyright (C) 2025 The LineageOS Project
 #
@@ -77,6 +78,7 @@ BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 
 # Kernel Vendor Modules
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/vendor-modules/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/vendor-modules/modules.load))
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # BOARD_KERNEL_PAGESIZE * 64

@@ -50,6 +50,9 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/hw/audio.primary.mt6781.so': blob_fixup()
+        .replace_needed('libutils.so', 'libutils-v32.so')
+        .replace_needed('libalsautils.so', 'libalsautils-v32.so'),
     "vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc": blob_fixup().regex_replace(
         "start", "enable"
     ),

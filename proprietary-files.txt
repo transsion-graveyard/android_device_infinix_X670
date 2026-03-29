@@ -551,6 +551,16 @@ vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 
 # Fingerprint
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+#vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+vendor/etc/init/vendor.fpsensor.rc
+#vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
+vendor/lib/hw/fpsensor_fingerprint.default.so
+vendor/lib/libfp_ext_svc2.so
+vendor/lib/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so
+vendor/lib64/hw/fpsensor_fingerprint.default.so
+vendor/lib64/libfp_ext_svc2.so
+vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so
 
 # Firmware
 vendor/firmware/BT_FW.cfg
@@ -1000,7 +1010,7 @@ vendor/lib/libMcClient.so
 vendor/lib/libTEECommon.so
 vendor/lib/libgz_gp_client.so
 vendor/lib/libgz_uree.so
-vendor/lib64/hw/kmsetkey.trustonic.so
+vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
 vendor/lib64/libMcClient.so
 vendor/lib64/libTEECommon.so
 vendor/lib64/libgz_gp_client.so

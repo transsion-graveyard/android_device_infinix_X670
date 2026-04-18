@@ -53,6 +53,8 @@ blob_fixups: blob_fixups_user_type = {
     "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
         "@1.2-mediatek", "@1.2-mediatek-64b"
     ),
+    ('vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2', 'vendor/lib64/libgoodixhwfingerprint.so', 'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
+        .add_needed('libbase_shim.so'),    
     "vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc": blob_fixup().regex_replace(
         "on property:vts(.|\n)*", ""
     ),

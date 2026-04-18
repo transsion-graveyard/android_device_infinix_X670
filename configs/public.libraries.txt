@@ -1,0 +1,7 @@
+android.hidl.allocator@1.0
+libOpenCL.so
+libion_mtk.so
+libmpbase.so
+vendor.mediatek.hardware.camera.atms@1.0.so
+vendor.mediatek.hardware.camera.isphal@1.0.so
+vendor.mediatek.hardware.camera.isphal@1.1.so

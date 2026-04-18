@@ -18,6 +18,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Enable userfaultfd gc
 PRODUCT_ENABLE_UFFD_GC := true
 
+# Public Libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \

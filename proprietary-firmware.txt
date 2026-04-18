@@ -3,7 +3,6 @@
 gz.img;AB
 lk.img;AB
 logo.bin:logo.img;AB
-mcupm.img;AB
 md1img.img;AB
 pi_img.img;AB
 scp.img;AB

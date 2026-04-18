@@ -2,6 +2,11 @@
 persist.vendor.camera. u:object_r:vendor_mtk_camera_prop:s0
 persist.vendor.camera3. u:object_r:vendor_mtk_camera_prop:s0
 vendor.camera. u:object_r:vendor_mtk_camera_prop:s0
+vendor.debug. u:object_r:vendor_mtk_camera_prop:s0
+vendor.mtkcam. u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.mtkcam. u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.camera_tran_hal_server_support u:object_r:vendor_mtk_camera_prop:s0
+ro.vendor.camera_tran_fake_stereo_support u:object_r:vendor_mtk_camera_prop:s0
 
 # Device identification
 ro.vendor.oem.sno u:object_r:vendor_deviceid_prop:s0

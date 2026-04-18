@@ -67,6 +67,8 @@ blob_fixups: blob_fixups_user_type = {
     "vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc": blob_fixup().regex_replace(
         "on property:vts(.|\n)*", ""
     ),
+    'vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.transsion.rc': blob_fixup()
+        .regex_replace('@2.1-service\n', '@2.1-service.transsion\n'),
     (
         "vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc",
     ): blob_fixup().regex_replace("start", "enable"),

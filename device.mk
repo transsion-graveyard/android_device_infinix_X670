@@ -276,8 +276,9 @@ PRODUCT_COPY_FILES += \
 $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
 # Vibrator
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
-
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
+    
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \

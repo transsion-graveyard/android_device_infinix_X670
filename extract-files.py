@@ -27,11 +27,10 @@ from extract_utils.utils import (
 )
 
 namespace_imports = [
-    "device/infinix/X670",
     "hardware/mediatek",
     "hardware/mediatek/libmtkperf_client",
     "hardware/lineage/compat",
-    'hardware/transsion',
+    "device/infinix/X670",
 ]
 
 
@@ -53,8 +52,18 @@ blob_fixups: blob_fixups_user_type = {
     "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
         "@1.2-mediatek", "@1.2-mediatek-64b"
     ),
+    "vendor/etc/init/init.vtservice_hidl.rc": blob_fixup().regex_replace(
+        "start", "enable"
+    ),
+    "vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml": blob_fixup().regex_replace(
+        "1.1", "1.2"
+    ),
     ('vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2', 'vendor/lib64/libgoodixhwfingerprint.so', 'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),    
+    "vendor/lib/hw/audio.primary.mt6781.so": blob_fixup()
+        .patchelf_version(patchelf_version)
+        .replace_needed("libutils.so", "libutils-v32.so")
+        .replace_needed("libalsautils.so", "libalsautils-v32.so"),
     "vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc": blob_fixup().regex_replace(
         "on property:vts(.|\n)*", ""
     ),
@@ -76,6 +85,12 @@ blob_fixups: blob_fixups_user_type = {
 #        .replace_needed("libtinyxml2.so", "libtinyxml2-v34.so")
         .replace_needed("libutils.so", "libutils-v32.so")
         .replace_needed("libalsautils.so", "libalsautils-v32.so"),
+        "vendor/lib/libvcodec_oal.so",
+        "vendor/lib64/libvcodec_oal.so",
+    ): blob_fixup()
+        .clear_symbol_version('__aeabi_memcpy')
+        .clear_symbol_version('__aeabi_memset')
+        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
     (
         "vendor/lib64/libwvhidl.so",
         "vendor/lib64/mediadrm/libwvdrmengine.so",

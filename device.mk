@@ -165,6 +165,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
 
+# Shims
+PRODUCT_PACKAGES += \
+    libbinder_shim \
+    libbase_shim \
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libtinyxml2-v34 \
+    libbinder-v32 \
+    libhidlbase-v32 \
+    libutils-v32 \
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \

@@ -85,6 +85,7 @@ blob_fixups: blob_fixups_user_type = {
 #        .replace_needed("libtinyxml2.so", "libtinyxml2-v34.so")
         .replace_needed("libutils.so", "libutils-v32.so")
         .replace_needed("libalsautils.so", "libalsautils-v32.so"),
+    (
         "vendor/lib/libvcodec_oal.so",
         "vendor/lib64/libvcodec_oal.so",
     ): blob_fixup()

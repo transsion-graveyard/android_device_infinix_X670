@@ -39,7 +39,7 @@
         <!--dual analogPA speaker output-->
         <path name="dual_speaker_output" value="turnon">
             <kctl name="DAC In Mux" value="Normal Path" />
-            <kctl name="LOL Mux" value="Playback_L_DAC" />
+            <kctl name="LOL Mux" value="Playback" />
             <kctl name="RCV Mux" value="Voice Playback" />
         </path>
         <path name="dual_speaker_output" value="turnoff">
@@ -49,7 +49,7 @@
         <!--speaker output-->
         <path name="speaker_output" value="turnon">
             <kctl name="DAC In Mux" value="Normal Path" />
-            <kctl name="LOL Mux" value="Playback_L_DAC" />
+            <kctl name="LOL Mux" value="Playback" />
         </path>
         <path name="speaker_output" value="turnoff">
             <kctl name="LOL Mux" value="Open" />
@@ -68,7 +68,7 @@
         <path name="headphoneSpeaker_output" value="turnon">
             <kctl name="DAC In Mux" value="Normal Path" />
             <kctl name="HPL Mux" value="LoudSPK Playback" />
-            <kctl name="HPR Mux" value="Audio Playback" />
+            <kctl name="HPR Mux" value="LoudSPK Playback" />
         </path>
         <path name="headphoneSpeaker_output" value="turnoff">
             <kctl name="HPL Mux" value="Open" />

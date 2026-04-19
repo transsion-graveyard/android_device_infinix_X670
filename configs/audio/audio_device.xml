@@ -25,29 +25,21 @@
         </path>
         <!--receiver output-->
         <path name="receiver_output" value="turnon">
+            <kctl name="DAC In Mux" value="Normal Path" />
+            <kctl name="RCV Mux" value="Voice Playback" />
         </path>
         <path name="receiver_output" value="turnoff">
+            <kctl name="RCV Mux" value="Open" />
         </path>
         <!--2-in-1 speaker output-->
         <path name="two_in_one_speaker_output" value="turnon">
-            <!--  ALPS05007528 begin -->
-            <kctl name="RCV_AMP_MODE" value="RECIEVER_MODE" />
-            <kctl name="DAC In Mux" value="Normal Path" />
-            <kctl name="RCV Mux" value="Voice Playback" />
-            <kctl name="Ext_Reciver_Amp Switch" value="1" />
-            <!--  ALPS05007528 end -->
         </path>
         <path name="two_in_one_speaker_output" value="turnoff">
-            <!--  ALPS05007528 begin -->
-            <kctl name="Ext_Reciver_Amp Switch" value="0" />
-            <kctl name="RCV Mux" value="Open" />
-            <kctl name="RCV_AMP_MODE" value="SPEAKER_MODE" />
-            <!--  ALPS05007528 end -->
         </path>
         <!--dual analogPA speaker output-->
         <path name="dual_speaker_output" value="turnon">
             <kctl name="DAC In Mux" value="Normal Path" />
-            <kctl name="LOL Mux" value="Playback" />
+            <kctl name="LOL Mux" value="Playback_L_DAC" />
             <kctl name="RCV Mux" value="Voice Playback" />
         </path>
         <path name="dual_speaker_output" value="turnoff">
@@ -56,37 +48,12 @@
         </path>
         <!--speaker output-->
         <path name="speaker_output" value="turnon">
-            <kctl name="RCV_AMP_MODE" value="SPEAKER_MODE" />
             <kctl name="DAC In Mux" value="Normal Path" />
-            <kctl name="LOL Mux" value="Playback" />
-            <!--  ALPS05007528 begin -->
-            <kctl name="RCV Mux" value="Voice Playback" />
-            <!--  ALPS05007528 end -->
+            <kctl name="LOL Mux" value="Playback_L_DAC" />
         </path>
         <path name="speaker_output" value="turnoff">
             <kctl name="LOL Mux" value="Open" />
-            <!--  ALPS05007528 begin -->
-            <kctl name="RCV Mux" value="Open" />
-            <!--  ALPS05007528 end -->
         </path>
-        <!--  ALPS05007528 begin -->
-        <path name="speaker_output_mode_fm" value="setting">
-            <kctl name="SPK_AMP_MODE" value="FM_MODE" />
-            <kctl name="RCV_AMP_MODE" value="FM_MODE" />
-        </path>
-        <path name="speaker_output_mode_rcv" value="setting">
-            <kctl name="SPK_AMP_MODE" value="RECIEVER_MODE" />
-            <kctl name="RCV_AMP_MODE" value="RECIEVER_MODE" />
-        </path>
-        <path name="speaker_output_mode_music" value="setting">
-            <kctl name="SPK_AMP_MODE" value="SPEAKER_MODE" />
-            <kctl name="RCV_AMP_MODE" value="SPEAKER_MODE" />
-        </path>
-        <path name="speaker_output_mode_voice" value="setting">
-            <kctl name="SPK_AMP_MODE" value="VOICE_MODE" />
-            <kctl name="RCV_AMP_MODE" value="VOICE_MODE" />
-        </path>
-        <!--  ALPS05007528 end -->
         <!--headhpone dual analogPA speaker output-->
         <path name="headphoneDualSpeaker_output" value="turnon">
             <kctl name="DAC In Mux" value="Normal Path" />
@@ -99,13 +66,9 @@
         </path>
         <!--headhpone_speaker output-->
         <path name="headphoneSpeaker_output" value="turnon">
-            <kctl name="SPK_AMP_MODE" value="SPEAKER_MODE" />
-            <kctl name="RCV_AMP_MODE" value="SPEAKER_MODE" />
             <kctl name="DAC In Mux" value="Normal Path" />
-            <!--  ALPS05007528 begin -->
             <kctl name="HPL Mux" value="LoudSPK Playback" />
-            <kctl name="HPR Mux" value="LoudSPK Playback" />
-            <!--  ALPS05007528 end -->
+            <kctl name="HPR Mux" value="Audio Playback" />
         </path>
         <path name="headphoneSpeaker_output" value="turnoff">
             <kctl name="HPL Mux" value="Open" />
@@ -114,16 +77,328 @@
         <!--external_speaker output-->
         <path name="ext_speaker_output" value="turnon">
             <kctl name="Ext_Speaker_Amp Switch" value="1" />
-            <!--  ALPS05007528 begin -->
-            <kctl name="Ext_Reciver_Amp Switch" value="1" />
-            <!--  ALPS05007528 end -->
         </path>
         <path name="ext_speaker_output" value="turnoff">
             <kctl name="Ext_Speaker_Amp Switch" value="0" />
-            <!--  ALPS05007528 begin -->
-            <kctl name="Ext_Reciver_Amp Switch" value="0" />
-            <!--  ALPS05007528 end -->
         </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 start-->
+        <path name="igo-mode-voice-nr-InPhoneCall_HandSet" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InPhoneCall"  />
+            <kctl name= "IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO DMIC_M_CLK_SRC" value="DMIC_M_CLK_SRC_MCLK"/>
+            <kctl name="IGO MCLK" value="12288"/>
+            <kctl name="IGO DMIC_M_BCLK" value="1536"/>
+            <kctl name="IGO DAI_0_CLK" value="DAI_0_CLK_48K"/>
+            <kctl name="IGO DAI_0_MODE" value="DAI_0_MODE_SLAVE"/>
+            <kctl name="IGO DAI_0_DATA_BIT" value="DAI_0_DATA_BIT_32"/>
+            <kctl name="IGO UL_RX_PRI" value="UL_RX_PRI_DMIC_M0_P"/>
+            <kctl name="IGO UL_TX" value="UL_TX_DAI0_TX_L"/>
+            <kctl name="IGO NR_UL" value="NR_UL_ENABLE"/>
+            <kctl name="IGO NR_MODE1_EN" value="NR_MODE1_EN_ENABLE"/>
+            <kctl name="IGO NR_MODE3_EN" value="NR_MODE3_EN_ENABLE"/>
+            <kctl name="IGO SUB_MODULE" value="SUB_MODULE_MODE1"/>
+            <kctl name="IGO AGC_MODE" value="AGC_MODE_ONE_STAGE_AGC"/>
+            <kctl name="IGO AGC_GAIN" value="AGC_GAIN_18_DB"/>
+            <kctl name="IGO DMIC_INPUT_GAIN" value="DMIC_INPUT_GAIN_6_DB"/>
+            <kctl name="IGO UL_TX_GAIN" value="UL_TX_GAIN_N_6_DB"/>
+            <kctl name="IGO NR_VOICE_STR" value="NR_VOICE_STR_LV_2"/>
+            <kctl name="IGO NR_LEVEL" value="NR_LEVEL_LV_2"/>
+            <kctl name="IGO NR_NOISY_LEVEL" value="NR_NOISY_LEVEL_LV_2"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM7" value="15"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM8" value="15"/>
+            <kctl name="IGO UL_RX_AEC" value="UL_RX_AEC_DAI0_RX_L"/>
+            <kctl name="IGO AEC_BULK_DLY" value="33" />
+            <kctl name="IGO AEC_EN" value="AEC_EN_ENABLE"/>
+            <kctl name="IGO AES_EN" value="AES_EN_LV_0"/>
+            <kctl name="IGO AEC_PARAM4" value="5"/>
+            <kctl name="IGO AEC_PARAM7" value="1"/>
+            <!--kctl name="IGO DBG_SUBMODULE" value="DBG_SUBMODULE_BULK_DLY_CALI"/>
+            <kctl name="IGO DBG_AEC_REC_EN" value="DBG_AEC_REC_EN_48K" /-->
+            <kctl name="IGO NR_SIGNLE_TONE_DETECT_EN" value="NR_SIGNLE_TONE_DETECT_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_NR" />
+        </path>
+        <path name="igo-mode-voice-nr-InPhoneCall_HandFree" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InPhoneCall"  />
+           <kctl name= "IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO DMIC_M_CLK_SRC" value="DMIC_M_CLK_SRC_MCLK"/>
+            <kctl name="IGO MCLK" value="12288"/>
+            <kctl name="IGO DMIC_M_BCLK" value="1536"/>
+            <kctl name="IGO DAI_0_CLK" value="DAI_0_CLK_48K"/>
+            <kctl name="IGO DAI_0_MODE" value="DAI_0_MODE_SLAVE"/>
+            <kctl name="IGO DAI_0_DATA_BIT" value="DAI_0_DATA_BIT_32"/>
+            <kctl name="IGO UL_RX_PRI" value="UL_RX_PRI_DMIC_M0_N"/>
+            <kctl name="IGO UL_TX" value="UL_TX_DAI0_TX_L"/>
+            <kctl name="IGO NR_UL" value="NR_UL_ENABLE"/>
+            <kctl name="IGO NR_MODE1_EN" value="NR_MODE1_EN_ENABLE"/>
+            <kctl name="IGO NR_MODE3_EN" value="NR_MODE3_EN_ENABLE"/>
+            <kctl name="IGO SUB_MODULE" value="SUB_MODULE_MODE1"/>
+            <kctl name="IGO AGC_MODE" value="AGC_MODE_ONE_STAGE_AGC"/>
+            <kctl name="IGO AGC_GAIN" value="AGC_GAIN_18_DB"/>
+            <kctl name="IGO DMIC_INPUT_GAIN" value="DMIC_INPUT_GAIN_12_DB"/>
+            <kctl name="IGO UL_TX_GAIN" value="UL_TX_GAIN_N_2_DB"/>
+            <kctl name="IGO NR_VOICE_STR" value="NR_VOICE_STR_LV_2"/>
+            <kctl name="IGO NR_LEVEL" value="NR_LEVEL_LV_2"/>
+            <kctl name="IGO NR_NOISY_LEVEL" value="NR_NOISY_LEVEL_LV_2"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM7" value="15"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM8" value="15"/>
+            <kctl name="IGO UL_RX_AEC" value="UL_RX_AEC_DAI0_RX_L"/>
+            <kctl name="IGO AEC_BULK_DLY" value="12" />
+            <kctl name="IGO AEC_EN" value="AEC_EN_ENABLE"/>
+            <kctl name="IGO AES_EN" value="AES_EN_LV_2"/>
+            <kctl name="IGO AEC_PARAM4" value="5"/>
+            <kctl name="IGO AEC_PARAM7" value="1"/>
+            <!--kctl name="IGO DBG_SUBMODULE" value="DBG_SUBMODULE_BULK_DLY_CALI"/>
+            <kctl name="IGO DBG_AEC_REC_EN" value="DBG_AEC_REC_EN_48K" /-->
+            <kctl name="IGO NR_SIGNLE_TONE_DETECT_EN" value="NR_SIGNLE_TONE_DETECT_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_NR" />
+        </path>
+        <path name="igo-mode-voice-nr-InVoipCall_HandSet" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InVoip"  />
+           <kctl name= "IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO DMIC_M_CLK_SRC" value="DMIC_M_CLK_SRC_MCLK"/>
+            <kctl name="IGO MCLK" value="12288"/>
+            <kctl name="IGO DMIC_M_BCLK" value="1536"/>
+            <kctl name="IGO DAI_0_CLK" value="DAI_0_CLK_48K"/>
+            <kctl name="IGO DAI_0_MODE" value="DAI_0_MODE_SLAVE"/>
+            <kctl name="IGO DAI_0_DATA_BIT" value="DAI_0_DATA_BIT_32"/>
+            <kctl name="IGO UL_RX_PRI" value="UL_RX_PRI_DMIC_M0_P"/>
+            <kctl name="IGO UL_TX" value="UL_TX_DAI0_TX_L"/>
+            <kctl name="IGO NR_UL" value="NR_UL_ENABLE"/>
+            <kctl name="IGO NR_MODE1_EN" value="NR_MODE1_EN_ENABLE"/>
+            <kctl name="IGO NR_MODE3_EN" value="NR_MODE3_EN_ENABLE"/>
+            <kctl name="IGO SUB_MODULE" value="SUB_MODULE_MODE1"/>
+            <kctl name="IGO AGC_MODE" value="AGC_MODE_ONE_STAGE_AGC"/>
+            <kctl name="IGO AGC_GAIN" value="AGC_GAIN_18_DB"/>
+            <kctl name="IGO DMIC_INPUT_GAIN" value="DMIC_INPUT_GAIN_6_DB"/>
+            <kctl name="IGO UL_TX_GAIN" value="UL_TX_GAIN_N_6_DB"/>
+            <kctl name="IGO NR_VOICE_STR" value="NR_VOICE_STR_LV_2"/>
+            <kctl name="IGO NR_LEVEL" value="NR_LEVEL_LV_2"/>
+            <kctl name="IGO NR_NOISY_LEVEL" value="NR_NOISY_LEVEL_LV_2"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM7" value="15"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM8" value="15"/>
+            <kctl name="IGO UL_RX_AEC" value="UL_RX_AEC_DAI0_RX_L"/>
+            <kctl name="IGO AEC_BULK_DLY" value="33" />
+            <kctl name="IGO AEC_EN" value="AEC_EN_ENABLE"/>
+            <kctl name="IGO AES_EN" value="AES_EN_LV_0"/>
+            <kctl name="IGO AEC_PARAM4" value="5"/>
+            <kctl name="IGO AEC_PARAM7" value="1"/>
+            <!--kctl name="IGO DBG_SUBMODULE" value="DBG_SUBMODULE_BULK_DLY_CALI"/>
+            <kctl name="IGO DBG_AEC_REC_EN" value="DBG_AEC_REC_EN_48K" /-->
+            <kctl name="IGO NR_SIGNLE_TONE_DETECT_EN" value="NR_SIGNLE_TONE_DETECT_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_NR" />
+        </path>
+        <path name="igo-mode-voice-nr-InVoipCall_HandFree" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InVoip"  />
+            <kctl name= "IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO DMIC_M_CLK_SRC" value="DMIC_M_CLK_SRC_MCLK"/>
+            <kctl name="IGO MCLK" value="12288"/>
+            <kctl name="IGO DMIC_M_BCLK" value="1536"/>
+            <kctl name="IGO DAI_0_CLK" value="DAI_0_CLK_48K"/>
+            <kctl name="IGO DAI_0_MODE" value="DAI_0_MODE_SLAVE"/>
+            <kctl name="IGO DAI_0_DATA_BIT" value="DAI_0_DATA_BIT_32"/>
+            <kctl name="IGO UL_RX_PRI" value="UL_RX_PRI_DMIC_M0_N"/>
+            <kctl name="IGO UL_TX" value="UL_TX_DAI0_TX_L"/>
+            <kctl name="IGO NR_UL" value="NR_UL_ENABLE"/>
+            <kctl name="IGO NR_MODE1_EN" value="NR_MODE1_EN_ENABLE"/>
+            <kctl name="IGO NR_MODE3_EN" value="NR_MODE3_EN_ENABLE"/>
+            <kctl name="IGO SUB_MODULE" value="SUB_MODULE_MODE1"/>
+            <kctl name="IGO AGC_MODE" value="AGC_MODE_ONE_STAGE_AGC"/>
+            <kctl name="IGO AGC_GAIN" value="AGC_GAIN_18_DB"/>
+            <kctl name="IGO DMIC_INPUT_GAIN" value="DMIC_INPUT_GAIN_12_DB"/>
+            <kctl name="IGO UL_TX_GAIN" value="UL_TX_GAIN_N_2_DB"/>
+            <kctl name="IGO NR_VOICE_STR" value="NR_VOICE_STR_LV_2"/>
+            <kctl name="IGO NR_LEVEL" value="NR_LEVEL_LV_2"/>
+            <kctl name="IGO NR_NOISY_LEVEL" value="NR_NOISY_LEVEL_LV_2"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM7" value="15"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM8" value="15"/>
+            <kctl name="IGO UL_RX_AEC" value="UL_RX_AEC_DAI0_RX_L"/>
+            <kctl name="IGO AEC_BULK_DLY" value="12" />
+            <kctl name="IGO AEC_EN" value="AEC_EN_ENABLE"/>
+            <kctl name="IGO AES_EN" value="AES_EN_LV_0"/>
+            <kctl name="IGO AEC_PARAM4" value="5"/>
+            <kctl name="IGO AEC_PARAM7" value="1"/>
+            <!--kctl name="IGO DBG_SUBMODULE" value="DBG_SUBMODULE_BULK_DLY_CALI"/>
+            <kctl name="IGO DBG_AEC_REC_EN" value="DBG_AEC_REC_EN_48K" /-->
+            <kctl name="IGO NR_SIGNLE_TONE_DETECT_EN" value="NR_SIGNLE_TONE_DETECT_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_NR" />
+        </path>
+		<path name="igo-mode-CTS_AEC_ON_HandSet" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InVoip"  />
+           <kctl name= "IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO DMIC_M_CLK_SRC" value="DMIC_M_CLK_SRC_MCLK"/>
+            <kctl name="IGO MCLK" value="12288"/>
+            <kctl name="IGO DMIC_M_BCLK" value="1536"/>
+            <kctl name="IGO DAI_0_CLK" value="DAI_0_CLK_48K"/>
+            <kctl name="IGO DAI_0_MODE" value="DAI_0_MODE_SLAVE"/>
+            <kctl name="IGO DAI_0_DATA_BIT" value="DAI_0_DATA_BIT_32"/>
+            <kctl name="IGO UL_RX_PRI" value="UL_RX_PRI_DMIC_M0_P"/>
+            <kctl name="IGO UL_TX" value="UL_TX_DAI0_TX_L"/>
+            <kctl name="IGO NR_UL" value="NR_UL_ENABLE"/>
+            <kctl name="IGO NR_MODE1_EN" value="NR_MODE1_EN_ENABLE"/>
+            <kctl name="IGO NR_MODE3_EN" value="NR_MODE3_EN_ENABLE"/>
+            <kctl name="IGO SUB_MODULE" value="SUB_MODULE_MODE1"/>
+            <kctl name="IGO AGC_MODE" value="AGC_MODE_ONE_STAGE_AGC"/>
+            <kctl name="IGO AGC_GAIN" value="AGC_GAIN_18_DB"/>
+            <kctl name="IGO DMIC_INPUT_GAIN" value="DMIC_INPUT_GAIN_6_DB"/>
+            <kctl name="IGO UL_TX_GAIN" value="UL_TX_GAIN_N_6_DB"/>
+            <kctl name="IGO NR_VOICE_STR" value="NR_VOICE_STR_LV_2"/>
+            <kctl name="IGO NR_LEVEL" value="NR_LEVEL_LV_2"/>
+            <kctl name="IGO NR_NOISY_LEVEL" value="NR_NOISY_LEVEL_LV_2"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM7" value="15"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM8" value="15"/>
+            <kctl name="IGO UL_RX_AEC" value="UL_RX_AEC_DAI0_RX_L"/>
+            <kctl name="IGO AEC_BULK_DLY" value="33" />
+            <kctl name="IGO AEC_EN" value="AEC_EN_ENABLE"/>
+            <kctl name="IGO AES_EN" value="AES_EN_LV_0"/>
+            <kctl name="IGO AEC_PARAM4" value="5"/>
+            <kctl name="IGO AEC_PARAM7" value="1"/>
+            <!--kctl name="IGO DBG_SUBMODULE" value="DBG_SUBMODULE_BULK_DLY_CALI"/>
+            <kctl name="IGO DBG_AEC_REC_EN" value="DBG_AEC_REC_EN_48K" /-->
+            <kctl name="IGO NR_SIGNLE_TONE_DETECT_EN" value="NR_SIGNLE_TONE_DETECT_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_NR" />
+        </path>
+        <path name="igo-mode-CTS_AEC_ON_HandFree" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InVoip"  />
+            <kctl name= "IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO DMIC_M_CLK_SRC" value="DMIC_M_CLK_SRC_MCLK"/>
+            <kctl name="IGO MCLK" value="12288"/>
+            <kctl name="IGO DMIC_M_BCLK" value="1536"/>
+            <kctl name="IGO DAI_0_CLK" value="DAI_0_CLK_48K"/>
+            <kctl name="IGO DAI_0_MODE" value="DAI_0_MODE_SLAVE"/>
+            <kctl name="IGO DAI_0_DATA_BIT" value="DAI_0_DATA_BIT_32"/>
+            <kctl name="IGO UL_RX_PRI" value="UL_RX_PRI_DMIC_M0_N"/>
+            <kctl name="IGO UL_TX" value="UL_TX_DAI0_TX_L"/>
+            <kctl name="IGO NR_UL" value="NR_UL_ENABLE"/>
+            <kctl name="IGO NR_MODE1_EN" value="NR_MODE1_EN_ENABLE"/>
+            <kctl name="IGO NR_MODE3_EN" value="NR_MODE3_EN_ENABLE"/>
+            <kctl name="IGO SUB_MODULE" value="SUB_MODULE_MODE1"/>
+            <kctl name="IGO AGC_MODE" value="AGC_MODE_ONE_STAGE_AGC"/>
+            <kctl name="IGO AGC_GAIN" value="AGC_GAIN_18_DB"/>
+            <kctl name="IGO DMIC_INPUT_GAIN" value="DMIC_INPUT_GAIN_12_DB"/>
+            <kctl name="IGO UL_TX_GAIN" value="UL_TX_GAIN_N_2_DB"/>
+            <kctl name="IGO NR_VOICE_STR" value="NR_VOICE_STR_LV_2"/>
+            <kctl name="IGO NR_LEVEL" value="NR_LEVEL_LV_2"/>
+            <kctl name="IGO NR_NOISY_LEVEL" value="NR_NOISY_LEVEL_LV_2"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM7" value="15"/>
+            <kctl name="IGO NR_MODE1_PP_PARAM8" value="15"/>
+            <kctl name="IGO UL_RX_AEC" value="UL_RX_AEC_DAI0_RX_L"/>
+            <kctl name="IGO AEC_BULK_DLY" value="12" />
+            <kctl name="IGO AEC_EN" value="AEC_EN_ENABLE"/>
+            <kctl name="IGO AES_EN" value="AES_EN_LV_0"/>
+            <kctl name="IGO AEC_PARAM4" value="5"/>
+            <kctl name="IGO AEC_PARAM7" value="1"/>
+            <!--kctl name="IGO DBG_SUBMODULE" value="DBG_SUBMODULE_BULK_DLY_CALI"/>
+            <kctl name="IGO DBG_AEC_REC_EN" value="DBG_AEC_REC_EN_48K" /-->
+            <kctl name="IGO NR_SIGNLE_TONE_DETECT_EN" value="NR_SIGNLE_TONE_DETECT_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_NR" />
+        </path>
+        <path name="igo-mode-voice-record-bypass-Google_Voice" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InGoogleVoice"  />
+        </path>
+        <path name="igo-mode-voice-record-bottom-mic" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InRecord"  />
+            <kctl name="IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO MCLK"  value="12288"   />
+            <kctl name="IGO DMIC_M_BCLK"  value="1536"    />
+            <kctl name="IGO DMIC_M_CLK_SRC"  value="DMIC_M_CLK_SRC_MCLK" />
+            <kctl name="IGO UL_RX_PRI"  value="UL_RX_PRI_DMIC_M0_P" />
+            <kctl name="IGO DAI_0_CLK"  value="DAI_0_CLK_48K"   />
+            <kctl name="IGO DAI_0_MODE"  value="DAI_0_MODE_SLAVE"   />
+            <kctl name="IGO DAI_0_DATA_BIT"  value="DAI_0_DATA_BIT_32"   />
+            <kctl name="IGO UL_TX"  value="UL_TX_DAI0_TX_L"  />
+            <kctl name="IGO NR_UL"  value="NR_UL_DISABLE"   />
+            <kctl name="IGO AGC_MODE" value="AGC_MODE_ONE_STAGE_AGC"/>
+            <kctl name="IGO AGC_GAIN" value="AGC_GAIN_21P5_DB"/>
+            <kctl name="IGO DMIC_INPUT_GAIN" value="DMIC_INPUT_GAIN_6_DB"/>
+            <kctl name="IGO UL_TX_GAIN" value="UL_TX_GAIN_0_DB"/>
+            <kctl name="IGO NR_VOICE_STR" value="NR_VOICE_STR_LV_2"/>
+            <kctl name="IGO NR_LEVEL" value="NR_LEVEL_LV_4"/>
+            <kctl name="IGO NR_NOISY_LEVEL" value="NR_NOISY_LEVEL_LV_2"/>
+            <kctl name="IGO SUB_MODULE" value="SUB_MODULE_MODE1"/>
+            <kctl name="IGO OP_MODE"   value="OP_MODE_NR"   />
+        </path>
+        <path name="igo-mode-voice-record-top-mic" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InRecord"  />
+            <kctl name="IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO MCLK"  value="12288"   />
+            <kctl name="IGO DMIC_M_BCLK"  value="1536"    />
+            <kctl name="IGO DMIC_M_CLK_SRC"  value="DMIC_M_CLK_SRC_MCLK" />
+            <kctl name="IGO UL_RX_PRI"  value="UL_RX_PRI_DMIC_M0_N" />
+            <kctl name="IGO DAI_0_CLK"  value="DAI_0_CLK_48K"   />
+            <kctl name="IGO DAI_0_MODE"  value="DAI_0_MODE_SLAVE"   />
+            <kctl name="IGO DAI_0_DATA_BIT"  value="DAI_0_DATA_BIT_32"   />
+            <kctl name="IGO UL_TX"  value="UL_TX_DAI0_TX_L"  />
+            <kctl name="IGO NR_UL"  value="NR_UL_DISABLE"   />
+            <kctl name="IGO AGC_MODE" value="AGC_MODE_ONE_STAGE_AGC"/>
+            <kctl name="IGO AGC_GAIN" value="AGC_GAIN_21P5_DB"/>
+            <kctl name="IGO DMIC_INPUT_GAIN" value="DMIC_INPUT_GAIN_6_DB"/>
+            <kctl name="IGO UL_TX_GAIN" value="UL_TX_GAIN_0_DB"/>
+            <kctl name="IGO NR_VOICE_STR" value="NR_VOICE_STR_LV_2"/>
+            <kctl name="IGO NR_LEVEL" value="NR_LEVEL_LV_4"/>
+            <kctl name="IGO NR_NOISY_LEVEL" value="NR_NOISY_LEVEL_LV_2"/>
+            <kctl name="IGO SUB_MODULE" value="SUB_MODULE_MODE1"/>
+            <kctl name="IGO OP_MODE"   value="OP_MODE_NR"   />
+        </path>
+        <path name="igo-mode-voice-record-bypass-NotInCall" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InRecord"  />
+            <kctl name="IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO MCLK"  value="12288"   />
+            <kctl name="IGO DMIC_M_BCLK"  value="1536"    />
+            <kctl name="IGO DMIC_M_CLK_SRC"  value="DMIC_M_CLK_SRC_MCLK" />
+            <kctl name="IGO UL_RX_PRI"  value="UL_RX_PRI_DMIC_M0_P" />
+	    <kctl name="IGO UL_RX_SEC0" value="UL_RX_SEC0_DMIC_M0_N"/>
+            <kctl name="IGO DAI_0_CLK"  value="DAI_0_CLK_48K"   />
+            <kctl name="IGO DAI_0_MODE"  value="DAI_0_MODE_SLAVE"   />
+            <kctl name="IGO DAI_0_DATA_BIT"  value="DAI_0_DATA_BIT_32"   />
+            <kctl name="IGO UL_TX"  value="UL_TX_DAI0_TX_L"  />
+            <kctl name="IGO SW_BYPASS_EN" value="SW_BYPASS_EN_ENABLE"/>
+	    <kctl name="IGO DBG_AEC_REC_EN" value="DBG_AEC_REC_EN_16K_STEREO"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_BYPASS" />
+        </path>
+        <path name="igo-mode-voice-record-aec-ref" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InRecord"  />
+            <kctl name="IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO MCLK"  value="12288"   />
+            <kctl name="IGO DAI_0_CLK"  value="DAI_0_CLK_48K"   />
+            <kctl name="IGO DAI_0_MODE"  value="DAI_0_MODE_SLAVE"   />
+            <kctl name="IGO DAI_0_DATA_BIT"  value="DAI_0_DATA_BIT_32"   />
+            <kctl name="IGO UL_TX"  value="UL_TX_DAI0_TX_L"  />
+            <kctl name="IGO UL_RX_PRI"  value="UL_RX_PRI_DAI0_RX_L"  />
+            <kctl name="IGO SW_BYPASS_EN" value="SW_BYPASS_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_BYPASS"/>
+        </path>
+        <path name="igo-mode-test-bypass-P" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InRecord"  />
+            <kctl name="IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO MCLK" value="12288"/>
+            <kctl name="IGO DMIC_M_BCLK" value="1536"/>
+            <kctl name="IGO DMIC_M_CLK_SRC" value="DMIC_M_CLK_SRC_MCLK"/>
+            <kctl name="IGO DAI_0_CLK" value="DAI_0_CLK_48K"/>
+            <kctl name="IGO DAI_0_MODE" value="DAI_0_MODE_SLAVE"/>
+            <kctl name="IGO DAI_0_DATA_BIT" value="DAI_0_DATA_BIT_32"/>
+            <kctl name="IGO UL_RX_PRI" value="UL_RX_PRI_DMIC_M0_P"/>
+            <kctl name="IGO UL_TX" value="UL_TX_DAI0_TX_L"/>
+            <kctl name="IGO SW_BYPASS_EN" value="SW_BYPASS_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_BYPASS"/>
+        </path>
+        <path name="igo-mode-test-bypass-N" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="InRecord"  />
+            <kctl name="IGO POWER_MODE"  value="POWER_MODE_WORKING"  />
+            <kctl name="IGO MCLK" value="12288"/>
+            <kctl name="IGO DMIC_M_BCLK" value="1536"/>
+            <kctl name="IGO DMIC_M_CLK_SRC" value="DMIC_M_CLK_SRC_MCLK"/>
+            <kctl name="IGO DAI_0_CLK" value="DAI_0_CLK_48K"/>
+            <kctl name="IGO DAI_0_MODE" value="DAI_0_MODE_SLAVE"/>
+            <kctl name="IGO DAI_0_DATA_BIT" value="DAI_0_DATA_BIT_32"/>
+            <kctl name="IGO UL_RX_PRI" value="UL_RX_PRI_DMIC_M0_N"/>
+            <kctl name="IGO UL_TX" value="UL_TX_DAI0_TX_L"/>
+            <kctl name="IGO SW_BYPASS_EN" value="SW_BYPASS_EN_ENABLE"/>
+            <kctl name="IGO OP_MODE" value="OP_MODE_BYPASS"/>
+        </path>
+        <path name="igo-mode-standby-stop-audio" value="setting">
+            <kctl name="IGO VOICE_MODE"   value="VoiceEnd"  />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 end-->
         <!--mic setting-->
         <path name="builtin_Mic_Mic1" value="turnon">
             <kctl name="ADC L Mux" value="Left Preamplifier" />
@@ -269,18 +544,6 @@
             <kctl name="PGA L Mux" value="None" />
             <kctl name="PGA R Mux" value="None" />
         </path>
-        <path name="builtin_Mic_Vow_Mic2" value="turnon">
-            <kctl name="ADC L Mux" value="Left Preamplifier" />
-            <kctl name="ADC R Mux" value="Right Preamplifier" />
-            <kctl name="PGA L Mux" value="AIN3" />
-            <kctl name="PGA R Mux" value="AIN3" />
-        </path>
-        <path name="builtin_Mic_Vow_Mic2" value="turnoff">
-            <kctl name="ADC L Mux" value="Idle" />
-            <kctl name="ADC R Mux" value="Idle" />
-            <kctl name="PGA L Mux" value="None" />
-            <kctl name="PGA R Mux" value="None" />
-        </path>
         <path name="headset_vow_input" value="turnon">
             <kctl name="ADC L Mux" value="Left Preamplifier" />
             <kctl name="ADC R Mux" value="Right Preamplifier" />
@@ -349,6 +612,16 @@
             <kctl name="ADDA_DL_CH1 DL1_CH1" value="0" />
             <kctl name="ADDA_DL_CH2 DL1_CH2" value="0" />
         </path>
+        <!--BSP: modify XLQEHBY-3 igo ref setting by yong.guo 2021.12.9 start-->
+        <path name="PLAYBACK1_I2S1_TO_IGO_REF" value="turnon">
+            <kctl name="I2S1_CH1 DL1_CH1" value="1" />
+            <kctl name="I2S1_CH2 DL1_CH2" value="1" />
+        </path>
+        <path name="PLAYBACK1_I2S1_TO_IGO_REF" value="turnoff">
+            <kctl name="I2S1_CH1 DL1_CH1" value="0" />
+            <kctl name="I2S1_CH2 DL1_CH2" value="0" />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo ref setting by yong.guo 2021.12.9 end-->
         <path name="PLAYBACK1_TO_I2S1" value="turnon">
             <kctl name="I2S1_CH1 DL1_CH1" value="1" />
             <kctl name="I2S1_CH2 DL1_CH2" value="1" />
@@ -413,6 +686,24 @@
             <kctl name="ADDA_DL_CH1 DL12_CH1" value="0" />
             <kctl name="ADDA_DL_CH2 DL12_CH2" value="0" />
         </path>
+        <!--BSP: modify XLQEHBY-996 igo mode setting by xinyu.zhao 2022.01.04 start-->
+        <path name="PLAYBACK12_TO_ADDA_DL_IG_UL" value="turnon">
+            <kctl name="ADDA_DL_CH1 DL12_CH1" value="1" />
+            <kctl name="ADDA_DL_CH2 DL12_CH2" value="1" />
+            <!-- Barry add-->
+            <kctl name="I2S1_CH1 DL12_CH1" value="1" />
+            <kctl name="I2S1_CH2 DL12_CH2" value="1" />
+            <!-- Barry end-->
+        </path>
+        <path name="PLAYBACK12_TO_ADDA_DL_IG_UL" value="turnoff">
+            <kctl name="ADDA_DL_CH1 DL12_CH1" value="0" />
+            <kctl name="ADDA_DL_CH2 DL12_CH2" value="0" />
+            <!-- Barry add-->
+            <kctl name="I2S1_CH1 DL12_CH1" value="0" />
+            <kctl name="I2S1_CH2 DL12_CH2" value="0" />
+            <!-- Barry end-->
+        </path>
+        <!--BSP: modify XLQEHBY-996 igo mode setting by xinyu.zhao 2022.01.04 end-->
         <path name="PLAYBACK12_TO_I2S1" value="turnon">
             <kctl name="I2S1_CH1 DL12_CH1" value="1" />
             <kctl name="I2S1_CH2 DL12_CH2" value="1" />
@@ -477,6 +768,24 @@
             <kctl name="ADDA_DL_CH1 DL3_CH1" value="0" />
             <kctl name="ADDA_DL_CH2 DL3_CH2" value="0" />
         </path>
+        <!--BSP: modify XLQEHBY-996 igo mode setting by xinyu.zhao 2022.01.04 start-->
+        <path name="PLAYBACK3_TO_ADDA_DL_IG_UL" value="turnon">
+            <kctl name="ADDA_DL_CH1 DL3_CH1" value="1" />
+            <kctl name="ADDA_DL_CH2 DL3_CH2" value="1" />
+            <!-- Barry add-->
+            <kctl name="I2S1_CH1 DL3_CH1" value="1" />
+            <kctl name="I2S1_CH2 DL3_CH2" value="1" />
+            <!-- Barry end-->
+        </path>
+        <path name="PLAYBACK3_TO_ADDA_DL_IG_UL" value="turnoff">
+            <kctl name="ADDA_DL_CH1 DL3_CH1" value="0" />
+            <kctl name="ADDA_DL_CH2 DL3_CH2" value="0" />
+            <!-- Barry add-->
+            <kctl name="I2S1_CH1 DL3_CH1" value="0" />
+            <kctl name="I2S1_CH2 DL3_CH2" value="0" />
+            <!-- Barry end-->
+        </path>
+        <!--BSP: modify XLQEHBY-996 igo mode setting by xinyu.zhao 2022.01.04 end-->
         <path name="PLAYBACK3_TO_I2S1" value="turnon">
             <kctl name="I2S1_CH1 DL3_CH1" value="1" />
             <kctl name="I2S1_CH2 DL3_CH2" value="1" />
@@ -589,6 +898,24 @@
             <kctl name="UL1_CH1 ADDA_UL_CH1" value="0" />
             <kctl name="UL1_CH2 ADDA_UL_CH2" value="0" />
         </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 start-->
+        <path name="I2S2_TO_CAPTURE1_4CH" value="turnon">
+            <kctl name="I2S2_HD_Mux" value="Low_Jitter" />
+            <kctl name="I2S2_In_Mux" value="Input_Widget" />
+            <kctl name="UL1_CH1 I2S2_CH1" value="1" />
+            <kctl name="UL1_CH2 I2S2_CH2" value="1" />
+            <kctl name="UL1_CH3 I2S2_CH3" value="1" />
+            <kctl name="UL1_CH4 I2S2_CH4" value="1" />
+        </path>
+        <path name="I2S2_TO_CAPTURE1_4CH" value="turnoff">
+            <kctl name="I2S2_HD_Mux" value="Normal" />
+            <kctl name="I2S2_In_Mux" value="Normal" />
+            <kctl name="UL1_CH1 I2S2_CH1" value="0" />
+            <kctl name="UL1_CH2 I2S2_CH2" value="0" />
+            <kctl name="UL1_CH3 I2S2_CH3" value="0" />
+            <kctl name="UL1_CH4 I2S2_CH4" value="0" />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 end-->
         <path name="ADDA_TO_CAPTURE1_4CH" value="turnon">
             <kctl name="UL1_CH1 ADDA_UL_CH1" value="1" />
             <kctl name="UL1_CH2 ADDA_UL_CH1" value="1" />
@@ -689,6 +1016,28 @@
             <kctl name="UL2_CH1 DL12_CH1" value="0" />
             <kctl name="UL2_CH2 DL12_CH2" value="0" />
         </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 start-->
+        <path name="DL_MEMIF_TO_I2S1" value="turnon">
+            <kctl name="I2S1_CH1 DL1_CH1" value="1" />
+            <kctl name="I2S1_CH2 DL1_CH2" value="1" />
+            <kctl name="I2S1_CH1 DL2_CH1" value="1" />
+            <kctl name="I2S1_CH2 DL2_CH2" value="1" />
+            <kctl name="I2S1_CH1 DL3_CH1" value="1" />
+            <kctl name="I2S1_CH2 DL3_CH2" value="1" />
+            <kctl name="I2S1_CH1 DL12_CH1" value="1" />
+            <kctl name="I2S1_CH2 DL12_CH2" value="1" />
+        </path>
+        <path name="DL_MEMIF_TO_I2S1" value="turnoff">
+            <kctl name="I2S1_CH1 DL1_CH1" value="0" />
+            <kctl name="I2S1_CH2 DL1_CH2" value="0" />
+            <kctl name="I2S1_CH1 DL2_CH1" value="0" />
+            <kctl name="I2S1_CH2 DL2_CH2" value="0" />
+            <kctl name="I2S1_CH1 DL3_CH1" value="0" />
+            <kctl name="I2S1_CH2 DL3_CH2" value="0" />
+            <kctl name="I2S1_CH1 DL12_CH1" value="0" />
+            <kctl name="I2S1_CH2 DL12_CH2" value="0" />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 end-->
         <path name="DL_MEMIF_TO_CAPTURE2_SPEAKER_HIFI3" value="turnon">
             <kctl name="UL2_CH1 DL4_CH1" value="1" />
             <kctl name="UL2_CH2 DL4_CH2" value="1" />
@@ -805,6 +1154,28 @@
             <kctl name="ADDA_DL_CH1 PCM_2_CAP_CH1" value="0" />
             <kctl name="ADDA_DL_CH2 PCM_2_CAP_CH1" value="0" />
         </path>
+	        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 start-->
+        <path name="MD1_TO_ADDA_DL_IG_UL" value="turnon">
+            <kctl name="I2S2_HD_Mux" value="Low_Jitter" />
+            <kctl name="I2S2_In_Mux" value="Input_Widget" />
+            <kctl name="PCM_2_PB_CH1 I2S2_CH1" value="1" />
+            <kctl name="PCM_2_PB_CH2 I2S2_CH2" value="1" />
+            <kctl name="I2S1_CH1 PCM_2_CAP_CH1" value="1" />
+            <kctl name="I2S1_CH2 PCM_2_CAP_CH1" value="1" />
+            <kctl name="ADDA_DL_CH1 PCM_2_CAP_CH1" value="1" />
+            <kctl name="ADDA_DL_CH2 PCM_2_CAP_CH1" value="1" />
+        </path>
+        <path name="MD1_TO_ADDA_DL_IG_UL" value="turnoff">
+            <kctl name="I2S2_HD_Mux" value="Normal" />
+            <kctl name="I2S2_In_Mux" value="Normal" />
+            <kctl name="PCM_2_PB_CH1 I2S2_CH1" value="0" />
+            <kctl name="PCM_2_PB_CH2 I2S2_CH2" value="0" />
+            <kctl name="I2S1_CH1 PCM_2_CAP_CH1" value="0" />
+            <kctl name="I2S1_CH2 PCM_2_CAP_CH1" value="0" />
+            <kctl name="ADDA_DL_CH1 PCM_2_CAP_CH1" value="0" />
+            <kctl name="ADDA_DL_CH2 PCM_2_CAP_CH1" value="0" />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 end-->
         <path name="DMic1_MD1_TO_ADDA_DL" value="turnon">
             <kctl name="ADDA_DL_CH1 PCM_2_CAP_CH1" value="1" />
             <kctl name="ADDA_DL_CH2 PCM_2_CAP_CH1" value="1" />
@@ -841,6 +1212,24 @@
             <kctl name="I2S3_CH1 PCM_2_CAP_CH1" value="0" />
             <kctl name="I2S3_CH2 PCM_2_CAP_CH1" value="0" />
         </path>
+	        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 start-->
+        <path name="MD1_TO_I2S3_IG_UL" value="turnon">
+            <kctl name="I2S2_HD_Mux" value="Low_Jitter" />
+            <kctl name="I2S2_In_Mux" value="Input_Widget" />
+            <kctl name="PCM_2_PB_CH1 I2S2_CH1" value="1" />
+            <kctl name="PCM_2_PB_CH2 I2S2_CH2" value="1" />
+            <kctl name="I2S3_CH1 PCM_2_CAP_CH1" value="1" />
+            <kctl name="I2S3_CH2 PCM_2_CAP_CH1" value="1" />
+        </path>
+        <path name="MD1_TO_I2S3_IG_UL" value="turnoff">
+            <kctl name="I2S2_HD_Mux" value="Normal" />
+            <kctl name="I2S2_In_Mux" value="Normal" />
+            <kctl name="PCM_2_PB_CH1 I2S2_CH1" value="0" />
+            <kctl name="PCM_2_PB_CH2 I2S2_CH2" value="0" />
+            <kctl name="I2S3_CH1 PCM_2_CAP_CH1" value="0" />
+            <kctl name="I2S3_CH2 PCM_2_CAP_CH1" value="0" />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 end-->
         <path name="MIC1_MD1_TO_I2S3" value="turnon">
             <kctl name="PCM_2_PB_CH1 ADDA_UL_CH1" value="1" />
             <kctl name="PCM_2_PB_CH2 ADDA_UL_CH1" value="1" />
@@ -893,6 +1282,28 @@
             <kctl name="ADDA_DL_CH1 PCM_1_CAP_CH1" value="0" />
             <kctl name="ADDA_DL_CH2 PCM_1_CAP_CH1" value="0" />
         </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 start-->
+        <path name="MD2_TO_ADDA_DL_IG_UL" value="turnon">
+            <kctl name="I2S2_HD_Mux" value="Low_Jitter" />
+            <kctl name="I2S2_In_Mux" value="Input_Widget" />
+            <kctl name="PCM_1_PB_CH1 I2S2_CH1" value="1" />
+            <kctl name="PCM_1_PB_CH2 I2S2_CH2" value="1" />
+            <kctl name="ADDA_DL_CH1 PCM_1_CAP_CH1" value="1" />
+            <kctl name="ADDA_DL_CH2 PCM_1_CAP_CH1" value="1" />
+            <kctl name="ADDA_DL_CH3 PCM_1_CAP_CH1" value="1" />
+            <kctl name="ADDA_DL_CH4 PCM_1_CAP_CH1" value="1" />
+        </path>
+        <path name="MD2_TO_ADDA_DL_IG_UL" value="turnoff">
+            <kctl name="I2S2_HD_Mux" value="Normal" />
+            <kctl name="I2S2_In_Mux" value="Normal" />
+            <kctl name="PCM_1_PB_CH1 I2S2_CH1" value="0" />
+            <kctl name="PCM_1_PB_CH2 I2S2_CH2" value="0" />
+            <kctl name="ADDA_DL_CH1 PCM_1_CAP_CH1" value="0" />
+            <kctl name="ADDA_DL_CH2 PCM_1_CAP_CH1" value="0" />
+            <kctl name="ADDA_DL_CH3 PCM_1_CAP_CH1" value="0" />
+            <kctl name="ADDA_DL_CH4 PCM_1_CAP_CH1" value="0" />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 end-->
         <path name="MD2_TO_I2S1" value="turnon">
             <kctl name="I2S1_CH1 PCM_1_CAP_CH1" value="1" />
             <kctl name="I2S1_CH2 PCM_1_CAP_CH1" value="1" />
@@ -909,6 +1320,24 @@
             <kctl name="I2S3_CH1 PCM_1_CAP_CH1" value="0" />
             <kctl name="I2S3_CH2 PCM_1_CAP_CH1" value="0" />
         </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 start-->
+        <path name="MD2_TO_I2S3_IG_UL" value="turnon">
+            <kctl name="I2S2_HD_Mux" value="Low_Jitter" />
+            <kctl name="I2S2_In_Mux" value="Input_Widget" />
+            <kctl name="PCM_1_PB_CH1 I2S2_CH1" value="1" />
+            <kctl name="PCM_1_PB_CH2 I2S2_CH2" value="1" />
+            <kctl name="I2S3_CH1 PCM_1_CAP_CH1" value="1" />
+            <kctl name="I2S3_CH2 PCM_1_CAP_CH1" value="1" />
+        </path>
+        <path name="MD2_TO_I2S3_IG_UL" value="turnoff">
+            <kctl name="I2S2_HD_Mux" value="Normal" />
+            <kctl name="I2S2_In_Mux" value="Normal" />
+            <kctl name="PCM_1_PB_CH1 I2S2_CH1" value="0" />
+            <kctl name="PCM_1_PB_CH2 I2S2_CH2" value="0" />
+            <kctl name="I2S3_CH1 PCM_1_CAP_CH1" value="0" />
+            <kctl name="I2S3_CH2 PCM_1_CAP_CH1" value="0" />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 end-->
         <path name="MD2_TO_I2S5" value="turnon">
             <kctl name="I2S5_CH1 PCM_1_CAP_CH1" value="1" />
             <kctl name="I2S5_CH2 PCM_1_CAP_CH1" value="1" />
@@ -917,6 +1346,20 @@
             <kctl name="I2S5_CH1 PCM_1_CAP_CH1" value="0" />
             <kctl name="I2S5_CH2 PCM_1_CAP_CH1" value="0" />
         </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 start-->
+        <path name="I2S2_TO_LOOPBACK_4CH" value="turnon">
+			<kctl name="I2S2_HD_Mux" value="Low_Jitter" />
+            <kctl name="I2S2_In_Mux" value="Input_Widget" />
+            <kctl name="ADDA_DL_CH1 I2S2_CH1" value="1" />
+            <kctl name="ADDA_DL_CH2 I2S2_CH2" value="1" />
+        </path>
+        <path name="I2S2_TO_LOOPBACK_4CH" value="turnoff">
+			<kctl name="I2S2_HD_Mux" value="Normal" />
+            <kctl name="I2S2_In_Mux" value="Normal" />
+            <kctl name="ADDA_DL_CH1 I2S2_CH1" value="0" />
+            <kctl name="ADDA_DL_CH2 I2S2_CH2" value="0" />
+        </path>
+        <!--BSP: modify XLQEHBY-3 igo mode setting by yong.guo 2021.11.26 end-->
         <path name="ADDA_UL_TO_ADDA_DL" value="turnon">
             <kctl name="ADDA_DL_CH1 ADDA_UL_CH1" value="1" />
             <kctl name="ADDA_DL_CH2 ADDA_UL_CH2" value="1" />
@@ -1347,24 +1790,47 @@
             <kctl name="UL5_CH1 ADDA_UL_CH1" value="0" />
             <kctl name="UL5_CH2 ADDA_UL_CH2" value="0" />
         </path>
+<!-- BSP: add ultrasound support CILHLJYQ-4 by yu.xiang5 20211220 start -->
         <path name="ultrasound-proximity" value="turnon">
-            <kctl name="Ultrasound Mode" value="1075" />
-            <kctl name="Ultrasound Custom Setting 4" value="1" />
-            <kctl name="Ultrasound Log Level" value="7" />
+			<kctl name="Ultrasound Custom Setting 4" value="1" />
+            <kctl name="Ultrasound Mode" value="1068" />
+            <kctl name="Ultrasound Log Level" value="3" />
         </path>
         <path name="ultrasound-proximity" value="turnoff">
             <kctl name="Ultrasound Mode" value="0"  />
-            <kctl name="Ultrasound Log Level" value="7" />
+            <kctl name="Ultrasound Log Level" value="3" />
         </path>
         <path name="ultrasound-proximity-speaker" value="turnon">
-            <kctl name="Ultrasound Debug Mode" value="0" />
-            <kctl name="Ultrasound Mode" value="1076" />
-            <kctl name="Ultrasound Log Level" value="7" />
+			<kctl name="Ultrasound Custom Setting 4" value="1" />
+            <kctl name="Ultrasound Mode" value="1069" />
+            <kctl name="Ultrasound Log Level" value="3" />
         </path>
         <path name="ultrasound-proximity-speaker" value="turnoff">
-            <kctl name="Ultrasound Debug Mode" value="0" />
             <kctl name="Ultrasound Mode" value="0"  />
-            <kctl name="Ultrasound Log Level" value="7" />
+            <kctl name="Ultrasound Log Level" value="3" />
         </path>
+<!-- BSP: add ultrasound support CILHLJYQ-4 by yu.xiang5 20211220 end -->
+<!-- BSP: add audio bringup by yu.xiang5 20220613 start -->
+        <path name="speaker_2n1_output" value="turnon">
+            <kctl name="Tran_2N1_Speaker_Switch" value="On" />
+        </path>
+        <path name="speaker_2n1_output" value="turnoff">
+            <kctl name="Tran_2N1_Speaker_Switch" value="Off" />
+        </path>
+<!-- BSP: add audio bringup by yu.xiang5 20220613 end -->
+<!-- BSP: add audio bringup XLQLBH-1747 by weichengliao 20220705 start -->
+        <path name="tran_loopback" value="turnon">
+            <kctl name="Tran_LoopBack_Switch" value="On" />
+        </path>
+        <path name="tran_loopback" value="turnoff">
+            <kctl name="Tran_LoopBack_Switch" value="Off" />
+        </path>
+        <path name="tran_midtest_loopback_speaker" value="turnon">
+            <kctl name="Tran_MidTest_LoopBack_Switch" value="On" />
+        </path>
+        <path name="tran_midtest_loopback_speaker" value="turnoff">
+            <kctl name="Tran_MidTest_LoopBack_Switch" value="Off" />
+        </path>
+<!-- BSP: add audio bringup XLQLBH-1747 by weichengliao 20220705 end -->
     </mixercontrol>
 </root>

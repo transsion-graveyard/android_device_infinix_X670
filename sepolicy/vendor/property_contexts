@@ -8,6 +8,15 @@ ro.vendor.mtkcam. u:object_r:vendor_camera_prop:s0
 ro.vendor.camera_tran_hal_server_support u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.camera_tran_fake_stereo_support u:object_r:vendor_mtk_camera_prop:s0
 
+# Audio
+vendor.audiomediatek. u:object_r:vendor_audioserver_prop:s0
+vendor.streamout. u:object_r:vendor_mtk_audiohal_prop:s0
+vendor.streamin. u:object_r:vendor_mtk_audiohal_prop:s0
+vendor.a2dp. u:object_r:vendor_mtk_audiohal_prop:s0
+vendor.audiohal. u:object_r:vendor_mtk_audiohal_prop:s0
+persist.vendor.audiohal. u:object_r:vendor_mtk_audiohal_prop:s0
+persist.vendor.vow. u:object_r:vendor_mtk_audiohal_prop:s0
+
 # Device identification
 ro.vendor.oem.sno u:object_r:vendor_deviceid_prop:s0
 ro.vendor.oem.psno u:object_r:vendor_deviceid_prop:s0

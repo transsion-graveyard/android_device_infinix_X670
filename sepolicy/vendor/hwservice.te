@@ -1,10 +1,2 @@
 # Camera
 type hal_trancamserver_hwservice, hwservice_manager_type;
-
-# Fingerprint
-type fp_ext_svc2_hwservice, hwservice_manager_type;
-type goodix_fingerprint_service, service_manager_type, hwservice_manager_type;
-type ff_hwservice, hwservice_manager_type;
-
-# TNE
-type hal_tnev_hwservice, hwservice_manager_type;

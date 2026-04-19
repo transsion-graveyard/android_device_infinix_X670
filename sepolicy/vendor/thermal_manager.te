@@ -1,1 +1,0 @@
-allow thermal_manager vendor_thermal_engine_prop:file { read open getattr map };

@@ -3,50 +3,16 @@ type persist_camera_file, file_type;
 type data_vendor_camera_file, file_type, data_file_type;
 
 # Camera
-type camera_persist_file, file_type;
 type sysfs_tran_cam_file, fs_type, sysfs_type;
 type transsion_camera_data_file, file_type, data_file_type, mlstrustedobject;
-type vendor_arcsoft_data_file, file_type, data_file_type, mlstrustedobject;
-type vendor_camera_data_file, data_file_type, file_type;
-type vendor_megvii_data_file, file_type, data_file_type, mlstrustedobject;
 type vendor_watermark_data_file, file_type, data_file_type, mlstrustedobject;
 
 # DT2W gesture
 type vendor_sysfs_gesture, fs_type, sysfs_type;
 
 # Fingerprint
-type ff_data_file, file_type, data_file_type;
-type ff_device, dev_type;
-type ff_hwservice, hwservice_manager_type;
-type ff_service, service_manager_type;
-type fingerprint_device, dev_type;
-type vendor_fingerprint_data_file, data_file_type, file_type;
 type vendor_sysfs_fingerprint, fs_type, sysfs_type;
 
-# Health
-type sysfs_usb_switch, fs_type, sysfs_type;
-type sysfs_touchpanel, sysfs_type, fs_type;
-
-# Sensors
-type hwmsensor_device, dev_type;
-type sensorlist_device, dev_type;
-
-# Audio
-type mtk_audiohal_data_file, data_file_type, file_type;
-
-# TKV / Trustonic / TNE
-type tneengine_tnek_file, dev_type, mlstrustedobject;
-type tkv_block_device, dev_type;
-
 # Graphics
-type vendor_sysfs_display, fs_type, sysfs_type;
 type vendor_sysfs_graphics, fs_type, sysfs_type;
 
-# Torch
-type sysfs_sub_torch_file, fs_type, sysfs_type;
-type sysfs_torch_file, fs_type, sysfs_type;
-type sysfs_wide_torch_file, fs_type, sysfs_type;
-
-# OTG
-type sysfs_OTG_STATE_file, fs_type, sysfs_type;
-type sysfs_OTG_CTL_file, fs_type, sysfs_type;

@@ -5,20 +5,5 @@ allow hal_power_default sysfs_gpu:file rw_file_perms;
 # Allow to control DT2W
 allow hal_power_default vendor_sysfs_gesture:file rw_file_perms;
 
-allow hal_power_default sysfs_therm:file w_file_perms;
-allow hal_power_default sysfs_touchpanel:dir r_dir_perms;
-allow hal_power_default sysfs_touchpanel:file rw_file_perms;
-allow hal_power_default fwk_stats_service:service_manager find;
-allow hal_power_default hal_thermal_service:service_manager find;
-hal_client_domain(hal_power_default, hal_thermal)
-
-# To do powerhint on nodes defined in powerhint.json
-allow hal_power_default vendor_sysfs_gpu:dir search;
-allow hal_power_default vendor_sysfs_gpu:file rw_file_perms;
-
-# Allow libperfmgr to control GPU boost
-r_dir_file(hal_power_default, sysfs_ged)
-allow hal_power_default sysfs_ged:file w_file_perms;
-
 # MTK power queries the fingerprint HAL process state through /proc.
 allow hal_power_default hal_fingerprint_default:dir { getattr search };

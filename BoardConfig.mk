@@ -6,6 +6,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 DEVICE_PATH := device/infinix/X670
 KERNEL_PATH := device/infinix/X670-kernel
 CONFIGS_PATH := $(DEVICE_PATH)/configs

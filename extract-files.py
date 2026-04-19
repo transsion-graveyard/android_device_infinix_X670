@@ -49,14 +49,6 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    (
-        "vendor/etc/init/init.bt_drv.rc",
-        "vendor/etc/init/init.connfem.rc",
-        "vendor/etc/init/init.wmt_drv.rc",
-        "vendor/etc/init/init.wlan_drv.rc",
-    ): blob_fixup().regex_replace(
-        "vendor/lib/modules/", "vendor/lib/modules_prebuilt/"
-    ),
     "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
         "@1.2-mediatek", "@1.2-mediatek-64b"
     ),

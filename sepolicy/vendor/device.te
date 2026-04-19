@@ -1,3 +1,9 @@
 # /dev/hardwareinfo
 type hardwareinfo_device, dev_type;
 
+# Device-specific devices
+type dw9781_ois_device, dev_type;
+type cml421_ois_device, dev_type;
+type cml401_ois_device, dev_type;
+type cwvi5300_device, dev_type;
+type tkv_block_device, dev_type;

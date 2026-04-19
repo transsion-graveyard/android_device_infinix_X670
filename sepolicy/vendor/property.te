@@ -3,3 +3,15 @@ vendor_restricted_prop(vendor_deviceid_prop)
 
 # Fingerprint
 vendor_restricted_prop(vendor_fingerprint_prop)
+
+vendor_internal_prop(vendor_thermal_engine_prop)
+vendor_restricted_prop(vendor_camera_prop)
+vendor_restricted_prop(vendor_exported_system_prop)
+vendor_public_prop(vendor_audioserver_prop)
+vendor_internal_prop(vendor_dynamic_sensor_prop)
+vendor_internal_prop(vendor_mtk_audiohal_prop)
+vendor_internal_prop(vendor_mtk_audio_prop)
+vendor_internal_prop(vendor_mtk_pq_prop)
+vendor_internal_prop(vendor_mtk_vendor_vt_prop)
+vendor_internal_prop(vendor_mtk_wmt_prop)
+vendor_internal_prop(vendor_mtk_trustonic_tee_prop)

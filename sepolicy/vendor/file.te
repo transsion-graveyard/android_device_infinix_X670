@@ -1,11 +1,18 @@
 # Camera HAL Files
 type persist_camera_file, file_type;
 type data_vendor_camera_file, file_type, data_file_type;
+type camera_persist_file, file_type;
+type vendor_camera_data_file, file_type, data_file_type;
 
 # Camera
 type sysfs_tran_cam_file, fs_type, sysfs_type;
 type transsion_camera_data_file, file_type, data_file_type, mlstrustedobject;
 type vendor_watermark_data_file, file_type, data_file_type, mlstrustedobject;
+type vendor_arcsoft_data_file, file_type, data_file_type, mlstrustedobject;
+type vendor_megvii_data_file, file_type, data_file_type, mlstrustedobject;
+type sysfs_sub_torch_file, fs_type, sysfs_type;
+type sysfs_torch_file, fs_type, sysfs_type;
+type sysfs_wide_torch_file, fs_type, sysfs_type;
 
 # DT2W gesture
 type vendor_sysfs_gesture, fs_type, sysfs_type;
@@ -15,4 +22,3 @@ type vendor_sysfs_fingerprint, fs_type, sysfs_type;
 
 # Graphics
 type vendor_sysfs_graphics, fs_type, sysfs_type;
-

@@ -1,7 +1,11 @@
 # Allow to r/w fingerprint sysfs
 allow hal_fingerprint_default vendor_sysfs_fingerprint:file rw_file_perms;
 
+# Allow to access the fingerprint character device and vendor service.
+allow hal_fingerprint_default fpsensor_fp_device:chr_file rw_file_perms;
+allow hal_fingerprint_default fp_ext_svc2_service:hwservice_manager { add find };
+allow platform_app fp_ext_svc2_service:hwservice_manager find;
+allow init fpsensor_fp_device:chr_file write;
+
 # Allow to configure fingerprint props
 set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
-
-

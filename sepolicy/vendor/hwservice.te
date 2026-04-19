@@ -1,2 +1,5 @@
 # Camera
 type hal_trancamserver_hwservice, hwservice_manager_type;
+
+# Fingerprint
+type fp_ext_svc2_service, hwservice_manager_type;

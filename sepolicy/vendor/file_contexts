@@ -43,7 +43,8 @@
 /vendor/bin/hw/vendor\.transsion\.hardware\.trancam\.trancamserver@1\.0-service                                 u:object_r:trancamserver_exec:s0
 
 # Fingerprint
-/(system\/vendor|vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service(\.transsion)? u:object_r:hal_fingerprint_default_exec:s0
+/(system\/vendor|vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service u:object_r:hal_fingerprint_default_exec:s0
+/dev/fpsensor u:object_r:fpsensor_fp_device:s0
 
 # Power
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr u:object_r:hal_power_default_exec:s0

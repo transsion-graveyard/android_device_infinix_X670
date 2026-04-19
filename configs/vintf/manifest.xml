@@ -246,11 +246,13 @@
         <name>vendor.mediatek.hardware.camera.isphal</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IISPModule</name>
             <instance>internal/0</instance>
         </interface>
         <fqname>@1.0::IISPModule/internal/0</fqname>
+        <fqname>@1.1::IISPModule/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.camera.postproc</name>

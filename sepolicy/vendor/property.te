@@ -9,3 +9,5 @@ vendor_restricted_prop(vendor_fingerprint_prop)
 
 # Audio
 vendor_public_prop(vendor_audioserver_prop)
+vendor_restricted_prop(vendor_exported_system_prop)
+

@@ -132,6 +132,7 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .patchelf_version(patchelf_version)
         .replace_needed("libutils.so", "libutils-v32.so")
+        .add_needed("android.hardware.camera.device@3.6.so")
         .add_needed("libcamera_metadata_shim.so"),
     (
         "vendor/lib64/libmnl.so",
@@ -159,9 +160,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed("libutils.so", "libutils-v32.so"),
     "vendor/bin/hw/camerahalserver": blob_fixup()
         .patchelf_version(patchelf_version)
-        .replace_needed("libhidlbase.so", "libhidlbase-v32.so")
-        .replace_needed("libbinder.so", "libbinder-v32.so")
-        .replace_needed("libutils.so", "libutils-v32.so")
+        .add_needed("android.hardware.camera.device@3.6.so")
         .add_needed("libhidlbase_shim.so")
         .add_needed("libprocessgroup_shim.so"),
     "vendor/lib64/libmtkcam_featurepolicy.so": blob_fixup()

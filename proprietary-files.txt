@@ -59,6 +59,7 @@ vendor/etc/audio_param/BtInfo_AudioParam.xml
 vendor/etc/audio_param/BtInfo_ParamUnitDesc.xml
 vendor/etc/audio_param/HpImpedance_AudioParam.xml
 vendor/etc/audio_param/HpImpedance_ParamUnitDesc.xml
+vendor/etc/audio_param/SpeechVol_AudioParam.xml
 vendor/etc/audio_param/MicInfo_AudioParam.xml
 vendor/etc/audio_param/MicInfo_ParamUnitDesc.xml
 vendor/etc/audio_param/PlaybackACF_AudioParam.xml
@@ -552,9 +553,6 @@ vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.transsion
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.transsion.rc
-vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml:vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.transsion.xml
 vendor/etc/init/vendor.fpsensor.rc
 vendor/lib/hw/fpsensor_fingerprint.default.so
 vendor/lib/libfp_ext_svc2.so

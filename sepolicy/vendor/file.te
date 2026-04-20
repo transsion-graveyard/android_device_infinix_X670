@@ -29,3 +29,6 @@ type proc_gesture_state, fs_type, proc_type, sysfs_type;
 # Graphics
 type vendor_sysfs_graphics, fs_type, sysfs_type;
 type vendor_sysfs_gpu, fs_type, sysfs_type;
+
+# Battery
+type sysfs_battery, fs_type, sysfs_type;

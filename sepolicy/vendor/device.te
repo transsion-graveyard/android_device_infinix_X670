@@ -3,3 +3,9 @@ type hardwareinfo_device, dev_type;
 
 # /dev/fpsensor
 type fpsensor_fp_device, dev_type;
+
+# /dev/biometric
+type biometric_device, dev_type;
+
+# /dev/m_bio_misc
+type m_bio_misc_device, dev_type;

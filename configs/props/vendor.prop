@@ -115,6 +115,10 @@ ro.vendor.mtk_pq_support=2
 ro.vendor.composer_version=2.3
 ro.hardware.hwcomposer=mtk_common
 
+# Fingerprint
+ro.fingerprint_support=1
+ro.side_fingerprint_support=1
+
 # FM Radio
 ro.vendor.fm.platform=mt6631
 persist.vendor.connsys.fm_chipid=mt6631

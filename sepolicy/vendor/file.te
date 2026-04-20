@@ -25,12 +25,7 @@ type vendor_fingerprint_data_file, data_file_type, file_type;
 type vendor_sysfs_display, fs_type, sysfs_type;
 type proc_gesture_function, fs_type, proc_type, sysfs_type;
 type proc_gesture_state, fs_type, proc_type, sysfs_type;
-type vendor_sysfs_gpu, fs_type, sysfs_type;
-type sysfs_touchpanel, sysfs_type, fs_type;
-type sysfs_battery_consumption, fs_type, sysfs_type;
-type sysfs_battery_temp, fs_type, sysfs_type;
-type sysfs_power_off_vol, fs_type, sysfs_type;
-type sysfs_power_on_vol, fs_type, sysfs_type;
+
 type sysfs_fg_disable, fs_type, sysfs_type;
 type sysfs_dis_nafg, fs_type, sysfs_type;
 

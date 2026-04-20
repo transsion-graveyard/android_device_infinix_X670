@@ -229,6 +229,15 @@ Android framework expects a fingerprint HAL that can enroll, authenticate, enume
 ### 7.5 Boot ordering notes
 The main HAL is deliberately delayed until `late_start` because the stock tree notes a `/data` race if it starts too early. This suggests the daemon or its backend reads calibration or state from data-backed storage.
 
+### 7.6 Updated live conclusion
+- Enrollment works and the HAL reaches `authenticate` on the custom ROM.
+- The earlier TEE blame was overstated: stock logs also contain recurring Trustonic noise (`TeeEndorsementInstaller`, `TEEC_InvokeCommand` rc 0x10, endorsement token warnings).
+- Current evidence points more strongly to SELinux/property integration gaps than to TEE as the primary blocker.
+- Notable live denials:
+  - `hal_fingerprint_default` reading `default_prop`
+  - `mtk_hal_power` touching `/proc/<fingerprint pid>`
+  - `Fingerprint21`/`fpCoreHal` continuing operation despite the above, so these denials are likely degrading or confusing the auth path rather than blocking init entirely.
+
 ---
 
 ## 8. VINTF / Manifest Analysis
@@ -581,3 +590,78 @@ Keep these for first boot with fingerprint:
 - **Risk:** medium
 - **Why:** the visible Android HAL is straightforward, but the real implementation is a proprietary multi-blob wrapper with vendor extension service, kernel node dependencies, and strict SELinux/init coupling
 - **Bottom line:** reuse the stock fingerprint stack first; replacing it is a later project, not a bring-up shortcut
+
+---
+
+## 17. Live Custom-ROM Reassessment
+
+### 17.1 Corrected TEE conclusion
+- The earlier TEE diagnosis was too aggressive.
+- Stock logs also show recurring Trustonic noise:
+  - `TeeEndorsementInstaller: Endorsement token not found`
+  - `TEEC_InvokeCommand returned ... rc 0x10`
+  - `TCI has not been set up properly` on some paths
+- Because those messages appear on stock too, TEE is not the primary root cause by itself.
+
+### 17.2 What the custom ROM logs actually show
+- Enrollment works.
+- The HAL reaches `authenticate`.
+- The stack is alive enough to keep processing captures and `FingerprintAuthenticationClient` requests.
+- The most interesting custom-ROM warnings are SELinux/property related:
+  - `hal_fingerprint_default` reading `default_prop`
+  - `mtk_hal_power` probing `/proc/<fingerprint pid>` and getting denied
+
+### 17.3 Likely root cause on custom ROM
+- The strongest signal is missing property-context coverage and related SELinux integration, not TEE failure.
+- The fingerprint backend strings show these property keys are relevant:
+  - `ro.vendor.mediatek.platform`
+  - `dev.fp_tee_platform`
+  - `persist.vendor.transsion.auto_test`
+- `persist.vendor.sys.fp.*` is already covered, but the three keys above are not obviously mapped in `property_contexts`, which fits the observed `default_prop` denials.
+
+### 17.4 Suggested device-tree changes
+1. Add property-context entries for the fingerprint backend keys that currently fall into `default_prop`.
+2. Keep the current `/dev/fpsensor`, `/dev/biometric`, `/dev/m_bio_misc`, and `fp_ext_svc2_service` wiring unchanged.
+3. Preserve `hal_fingerprint_default` access to `fpsensor_fp_device` and the vendor extension HIDL service.
+4. Revisit MTK power-helper policy only if auth still misbehaves after property fixes.
+
+### 17.5 Candidate property-context additions
+```text
+ro.vendor.mediatek.platform               u:object_r:vendor_mtk_default_prop:s0
+dev.fp_tee_platform                       u:object_r:vendor_fingerprint_prop:s0
+persist.vendor.transsion.auto_test        u:object_r:vendor_fingerprint_prop:s0
+```
+
+### 17.6 Next verification step
+- Re-test fingerprint enroll and auth after adding the property contexts.
+- Watch for the disappearance of `default_prop` denials from `hal_fingerprint_default`.
+- Treat Trustonic warnings as secondary unless they correlate with auth failure after the SELinux/property fixes.
+
+---
+
+## 18. Device Tree Fixes Applied
+
+### Fix Summary
+
+**Problem Identified:** Missing property contexts causing fingerprint HAL to read `default_prop` instead of proper vendor properties.
+
+**Root Cause:** The fingerprint backend requires specific property contexts that were not defined in the device tree, causing SELinux denials.
+
+### Changes Made
+
+1. **`sepolicy/vendor/property_contexts`** - Added:
+   ```
+   persist.vendor.transsion.auto_test    u:object_r:vendor_fingerprint_prop:s0
+   ```
+
+### Remaining
+
+- `ro.vendor.mediatek.platform` - should already be covered by `vendor_mtk_default_prop`
+- `dev.fp_tee_platform` - may need additional context
+
+### Testing
+
+After rebuild and flash:
+1. Re-enroll fingerprint
+2. Test authentication multiple times
+3. Check logs for reduced `default_prop` denials

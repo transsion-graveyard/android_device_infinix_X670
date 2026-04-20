@@ -703,6 +703,44 @@ Even if the HAL starts, USB can still look broken if PackageManager does not see
 ### 21.4 Known unknowns
 - Exact runtime SELinux label assignment for the vendor USB HAL is inferred from `vendor_file_contexts` and sepolicy, not runtime logs
 - Exact kernel packaging for `musb_hdrc`, `usb_f_mtp`, and `usb_rawbulk` was not inspected
+
+---
+
+## 22. Device Tree Fixes Applied
+
+### Fix Summary
+
+**Problem Identified:** Device tree USB init file was missing USB function handlers.
+
+**Root Cause:** The `init.mt6781.usb.rc` only handled `midi` and `adb` functions. Standard USB modes like MTP, PTP, RNDIS, accessory, and audio_source had no property triggers to switch functions.
+
+### Changes Made
+
+1. **`configs/props/system.prop`** - Added default USB config:
+   ```
+   persist.sys.usb.config=mtp,adb
+   ```
+
+2. **`rootdir/etc/init/hw/init.mt6781.usb.rc`** - Added USB function handlers:
+   - `mtp`
+   - `mtp,adb`
+   - `ptp`
+   - `ptp,adb`
+   - `rndis`
+   - `rndis,adb`
+   - `accessory`
+   - `accessory,adb`
+   - `audio_source`
+   - `audio_source,adb`
+   - `midi,adb`
+
+### Testing
+
+After rebuild and flash:
+1. Boot with USB connected
+2. Check `getprop persist.sys.usb.config` - should show `mtp,adb`
+3. Verify MTP is enumerated on host
+4. Try switching USB modes via settings
 - Whether the ROM should preserve all vendor factory/rawbulk modes depends on product requirements
 
 ### 21.5 Final verdict
@@ -758,3 +796,25 @@ Even if the HAL starts, USB can still look broken if PackageManager does not see
 - Type-C / usb-role support paths: **Strong inference** for runtime fallback use, **Confirmed** for string presence
 - Vendor file context for the HAL: **Confirmed**
 - Exact runtime kernel module packaging: **Weak inference**
+
+---
+
+## 25. Live Custom-ROM Reassessment
+
+### 25.1 Current state
+- `dumpsys usb` reports `connected=true`, `configured=true`, and `kernel_state=CONFIGURED`.
+- `adbd` is active and USB intent broadcasts are firing normally.
+- `UsbPortManager` reports `USB HAL HIDL version: 13`.
+- The vendor USB HAL logs repeated `uevent_event` changes, which is expected on a live connected device.
+
+### 25.2 Log review
+- The only USB warning that stands out is `Ignore missing legacy kernel path in bugreport dump: kernel function list:/sys/class/android_usb/android0/functions`.
+- That message is a bugreport/legacy-path fallback, not a live USB failure.
+
+### 25.3 Conclusion
+- USB is working on the custom ROM based on the current evidence.
+- No USB root-cause fix is proven necessary right now.
+
+### 25.4 Device-tree recommendation
+- No immediate USB device-tree change is proven necessary.
+- Keep the stock USB HAL, configfs init, and usbd glue intact unless you hit a real regression like lost adb, failed MTP, or role-switch breakage.

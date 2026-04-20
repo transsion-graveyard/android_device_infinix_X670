@@ -772,3 +772,26 @@ High risk and medium-high difficulty. Basic audio bring-up is realistic if the s
 - Confirmed: service binaries, rc files, manifest entries, config files, permissions, SELinux labels, and most paths were directly observed.
 - Strong inference: `audio_proxy_service`/legacy alias handling, some kernel driver coupling, and AIDL audio core relevance.
 - Weak inference: exact runtime behavior of optional enhancement chains and any missing kernel module load order.
+
+---
+
+## 25. Live Custom-ROM Reassessment
+
+### 25.1 Current state
+- `audioserver` is running.
+- `media.audio_flinger`, `media.audio_policy`, and `media.aaudio` are present in `service list`.
+- `dumpsys audio` shows active speaker/earpiece routing and normal volume groups.
+- `lshal` shows the audio and soundtrigger HALs in the expected namespace.
+
+### 25.2 Log review
+- No audio-specific fatal failure stands out in the current logs.
+- The `avc: denied` lines that showed up during inspection are mostly shell-query noise or unrelated app/service accesses.
+- One unrelated runtime warning remains: `Can't load library: dlopen failed: library "libmagtsync.so" not found`, but it does not currently correlate with audio service failure.
+
+### 25.3 Conclusion
+- Audio does not currently look broken on the custom ROM.
+- There is no proven audio root cause to fix from the available evidence.
+
+### 25.4 Device-tree recommendation
+- No immediate audio device-tree change is proven necessary.
+- Keep the stock audio HAL blobs, policy XMLs, DTS assets, and init glue intact unless a concrete playback/capture failure is reproduced.

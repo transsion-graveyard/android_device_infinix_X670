@@ -59,8 +59,8 @@
 /vendor/bin/hw/android\.hardware\.sensors@2\.0-service\.multihal-mediatek u:object_r:hal_sensors_default_exec:s0
 /dev/elliptic[0-1] u:object_r:sensors_device:s0
 /dev/hardwareinfo u:object_r:hardwareinfo_device:s0
-/sys/devices/platform/odm/odm:tran_battery/OTG_CTL                                     u:object_r:sysfs_OTG_CTL_file:s0
-/sys/devices/platform/extcon_usb/extcon/extcon0/cable.1/state                           u:object_r:sysfs_OTG_STATE_file:s0
+/sys/devices/platform/odm/odm:tran_battery/OTG_CTL                                     u:object_r:sysfs_usb_nonplat:s0
+/sys/devices/platform/extcon_usb/extcon/extcon0/cable.1/state                           u:object_r:sysfs_usb_nonplat:s0
 /vendor/bin/hw/vendor\.focaltech\.hardware\.biometrics\.fingerprint@1\.0-service    u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/kmsetkey_ca.trustonic                                                  u:object_r:trustonic_kmsetkey_ca_exec:s0
 

@@ -1,6 +1,6 @@
 # Camera
-/mnt/vendor/persist/camera(/.*)? u:object_r:persist_camera_file:s0
-/data/vendor/camera(/.*)? u:object_r:data_vendor_camera_file:s0
+/mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
+/data/vendor/camera(/.*)? u:object_r:transsion_camera_data_file:s0
 /vendor/lib(64)?/libmpbase\.so                            u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmialgoengine\.so                      u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_beautyshot\.so                u:object_r:same_process_hal_file:s0
@@ -41,20 +41,28 @@
 /sys/devices/platform/(odm/odm:tran_battery|tran_battery)/tran_cam                                              u:object_r:sysfs_tran_cam_file:s0
 /vendor/bin/hw/(mt[0-9]+[a-z]*/)?camerahalserver                                                                  u:object_r:mtk_hal_camera_exec:s0
 /vendor/bin/hw/vendor\.transsion\.hardware\.trancam\.trancamserver@1\.0-service                                 u:object_r:trancamserver_exec:s0
+/data/vendor/anc_yuvnight/working_dir(/.*)?                                             u:object_r:vendor_megvii_data_file:s0
+/data/vendor/arcsoft(/.*)?                                                              u:object_r:vendor_arcsoft_data_file:s0
 
 # Fingerprint
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.focaltech\.hardware\.biometrics\.fingerprint@1\.0-service u:object_r:hal_fingerprint_default_exec:s0
 /dev/fpsensor u:object_r:fpsensor_fp_device:s0
 /dev/biometric u:object_r:biometric_device:s0
 /dev/m_bio_misc u:object_r:m_bio_misc_device:s0
 
 # Power
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.1-service         u:object_r:hal_health_default_exec:s0
 
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors@2\.0-service\.multihal-mediatek u:object_r:hal_sensors_default_exec:s0
 /dev/elliptic[0-1] u:object_r:sensors_device:s0
 /dev/hardwareinfo u:object_r:hardwareinfo_device:s0
+/sys/devices/platform/odm/odm:tran_battery/OTG_CTL                                     u:object_r:sysfs_OTG_CTL_file:s0
+/sys/devices/platform/extcon_usb/extcon/extcon0/cable.1/state                           u:object_r:sysfs_OTG_STATE_file:s0
+/vendor/bin/hw/vendor\.focaltech\.hardware\.biometrics\.fingerprint@1\.0-service    u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/kmsetkey_ca.trustonic                                                  u:object_r:trustonic_kmsetkey_ca_exec:s0
 
 # Vibrator
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service u:object_r:hal_vibrator_default_exec:s0

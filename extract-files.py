@@ -70,10 +70,6 @@ blob_fixups: blob_fixups_user_type = {
         .patchelf_version(patchelf_version)
         .replace_needed("libutils.so", "libutils-v32.so")
         .replace_needed("libalsautils.so", "libalsautils-v32.so"),
-    "vendor/etc/init/android.hardware.audio.service.mediatek.rc": blob_fixup().regex_replace(
-        "android.hardware.audio.service.mediatek",
-        "android.hardware.audio.service",
-    ),
     "vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc": blob_fixup().regex_replace(
         "on property:vts(.|\n)*", ""
     ),

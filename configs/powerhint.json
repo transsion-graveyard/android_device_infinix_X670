@@ -169,6 +169,16 @@
         "0-7"
       ],
       "ResetOnInit": false
+    },
+    {
+      "Name": "DoubleTapToWake",
+      "Path": "/proc/gesture_function",
+      "Values": [
+        "cc2",
+        "cc1"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
     }
   ],
   "Actions": [
@@ -285,6 +295,12 @@
       "Node": "RestrictedCpuset",
       "Duration": 0,
       "Value": "0-3"
+    },
+    {
+      "PowerHint": "DOUBLE_TAP_TO_WAKE",
+      "Node": "DoubleTapToWake",
+      "Duration": 0,
+      "Value": "cc1"
     }
   ]
 }

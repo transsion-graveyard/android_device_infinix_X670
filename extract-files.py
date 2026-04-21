@@ -49,12 +49,6 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so': blob_fixup()
-        .add_needed('libhidlbase_shim.so'),    
-    "vendor/etc/init/vendor.fpsensor.rc": blob_fixup().regex_replace(
-        "chmod 664 /dev/fpsensor\n    chown system root /dev/fpsensor",
-        "chmod 664 /dev/kfp\n    chown system root /dev/kfp\n    symlink /dev/kfp /dev/fpsensor",
-    ),
     "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
         "@1.2-mediatek", "@1.2-mediatek-64b"
     ),
@@ -67,7 +61,6 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2', 'vendor/lib64/libgoodixhwfingerprint.so', 'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),    
     "vendor/lib64/hw/audio.primary.mt6781.so": blob_fixup()
-        .patchelf_version(patchelf_version)
         .replace_needed("libutils.so", "libutils-v32.so")
         .replace_needed("libalsautils.so", "libalsautils-v32.so"),
     "vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc": blob_fixup().regex_replace(
@@ -86,18 +79,6 @@ blob_fixups: blob_fixups_user_type = {
         .patchelf_version(patchelf_version)
         .replace_needed("libavservices_minijail_vendor.so", "libavservices_minijail.so")
         .add_needed("libstagefright_foundation-v33.so"),
-    "vendor/lib64/hw/audio.primary.mt6781.so": blob_fixup()
-        .patchelf_version(patchelf_version)
-#        .replace_needed("libtinyxml2.so", "libtinyxml2-v34.so")
-        .replace_needed("libutils.so", "libutils-v32.so")
-        .replace_needed("libalsautils.so", "libalsautils-v32.so"),
-    (
-        "vendor/lib/libvcodec_oal.so",
-        "vendor/lib64/libvcodec_oal.so",
-    ): blob_fixup()
-        .clear_symbol_version('__aeabi_memcpy')
-        .clear_symbol_version('__aeabi_memset')
-        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
     (
         "vendor/lib64/libwvhidl.so",
         "vendor/lib64/mediadrm/libwvdrmengine.so",

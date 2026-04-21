@@ -138,38 +138,57 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Audio
-PRODUCT_PACKAGES += \
-    android.hardware.audio.service \
-    android.hardware.audio@7.0-impl:32 \
-    android.hardware.audio.effect@7.0-impl:32 \
-    android.hardware.soundtrigger@2.3-impl:32 \
-    audio_policy.stub:32 \
-    audio.bluetooth.default:32 \
-    audio.usb.default:32 \
-    libspeexresampler.vendor:32
-
+# Audio
+$(call soong_config_set,android_hardware_audio,run_64bit,true)
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0-impl:64 \
+    android.hardware.audio.effect@7.0-impl:64 \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl:64 \
+    android.hardware.soundtrigger@2.3-impl:64
+
+PRODUCT_PACKAGES += \
+    audio.primary.default:64 \
+    audio.bluetooth.default:64 \
+    audio.r_submix.default:64 \
+    audio.usb.default:64
+
+PRODUCT_PACKAGES += \
+    audio_policy.stub:64 \
+    libopus.vendor:64 \
+    audioclient-types-aidl-cpp.vendor:64 \
+    libaudioroute.vendor:64 \
+    libaudiofoundation.vendor:64 \
+    libbundlewrapper:64 \
+    libbluetooth_audio_session:64 \
+    libaudiopreprocessing:64 \
+    libalsautils:64 \
+    libdownmix:64 \
+    libeffectproxy:64 \
+    libnbaio_mono:64 \
+    libtinycompress:64 \
+    libdynproc:64 \
+    libhapticgenerator:64 \
+    libldnhncr:64 \
+    libreverbwrapper:64 \
+    libprocessgroup.vendor:64
+
+PRODUCT_PACKAGES += \
+    MtkInCallService
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
-
-# Fixes incall volume setting
-PRODUCT_PACKAGES += \
-    MtkInCallService
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek \
-    android.hardware.bluetooth.audio-impl:32 \
     vendor.mediatek.hardware.bluetooth.audio@2.1.vendor \
     vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
 
@@ -192,7 +211,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor
+    android.hardware.biometrics.fingerprint@2.1.service
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -201,7 +220,6 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libtinyxml2 \
     libbinder-v32 \
     libhidlbase-v32 \
     libutils-v32 \
@@ -228,10 +246,6 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-V1-ndk \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
@@ -246,8 +260,6 @@ PRODUCT_PACKAGES += \
     libeffects:64 \
     libeffectsconfig.vendor:64
 
-
-
 # Media
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
@@ -256,9 +268,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcrypto-v33 \
     libssl-v33
-
-PRODUCT_PACKAGES += \
-    libsuspend
 
 PRODUCT_PACKAGES += \
     vndservicemanager \
@@ -270,28 +279,22 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 TARGET_EXCLUDES_AUDIOFX := true
 
 # Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayX670 \
-    FrameworksResOverlayX670 \
-    SettingsOverlayX670 \
-    SystemUIOverlayX670 \
-    NcmTetheringOverlay \
-    WifiResOverlayX670 \
-    SettingsProviderResTarget
-
-# Lineage-Specific overlays
-PRODUCT_PACKAGES += \
-    LineageApertureOverlayX670 \
-    LineageDialerOverlayX670 \
-    LineageSDKOverlayX670 \
-    LineageSettingsOverlayX670 \
-    PowerOffAlarmOverlayX670
+    FrameworksResTarget \
+    SettingsResTarget \
+    SettingsProviderResTarget \
+    SystemUIResTarget \
+    TetheringConfigTarget \
+    WifiResTarget
 
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
     android.hardware.power-service.pixel-libperfmgr \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor \
+    vendor.mediatek.hardware.mtkpower@1.1.vendor \
     libmtkperf_client_vendor \
     libmtkperf_client \
     libpowerhalwrap_vendor
@@ -304,10 +307,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     PowerOffAlarm
 
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio-service.compat
-
+# Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor
@@ -332,14 +332,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
-
-# Enable audio accessory support
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
 # Vibrator
 PRODUCT_PACKAGES += \

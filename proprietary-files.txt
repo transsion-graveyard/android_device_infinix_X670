@@ -14,6 +14,7 @@ vendor/lib64/libaedv.so
 vendor/bin/mt6660_calibration
 vendor/bin/rt5512_calibration
 vendor/lib/hw/awinic.audio.effect.so;FIX_SONAME
+vendor/lib/libmtkshifter_vendor.so
 vendor/lib64/hw/audio.primary.mt6781.so
 vendor/lib64/hw/audio.r_submix.mt6781.so
 vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v32.so;FIX_SONAME
@@ -44,6 +45,46 @@ vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
+vendor/lib/hw/audio.primary.mt6781.so
+vendor/lib/hw/audio.r_submix.mt6781.so
+vendor/lib/libaudio_param_parser-vnd.so
+vendor/lib/libaudiocompensationfilter_vendor.so
+vendor/lib/libaudiocompensationfilterc.so
+vendor/lib/libaudiocomponentengine_vendor.so
+vendor/lib/libaudiocomponentenginec.so
+vendor/lib/libaudiocustparam_vendor.so
+vendor/lib/libaudiodcrflt_vendor.so
+vendor/lib/libaudiofmtconv.so
+vendor/lib/libaudioloudc.so
+vendor/lib/libaudioprimarydevicehalifclient.so
+vendor/lib/libaudiotoolkit_vendor.so
+vendor/lib/libaurisysdemo.so
+vendor/lib/libbessound_hd_mtk_vendor.so
+vendor/lib/libblisrc32_vendor.so
+vendor/lib/libbluetooth_audio_session_mediatek.so
+vendor/lib/libbluetooth_mtk.so
+vendor/lib/libbluetooth_mtk_pure.so
+vendor/lib/libbt-vendor.so
+vendor/lib/libcvsd_mtk.so
+vendor/lib/libmtklimiter_vendor.so
+vendor/lib/libMtkOmxAdpcmDec.so
+vendor/lib/libMtkOmxAlacDec.so
+vendor/lib/libMtkOmxApeDec.so
+vendor/lib/libMtkOmxCore.so
+vendor/lib/libMtkOmxGsmDec.so
+vendor/lib/libMtkOmxMp3Dec.so
+vendor/lib64/libMtkOmxCore.so
+vendor/lib/libMtkSpeechEnh.so
+vendor/lib64/libanc_hdr.so
+vendor/lib64/libancbase.so
+vendor/lib64/libancbase_848.so
+vendor/lib64/libapmonitor_vendor.so
+vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
+#vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+#vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
+vendor/lib/vendor.mediatek.hardware.audio@6.1.so
+vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 
 # Audio Configurations
 vendor/etc/audio_param/AudioParamOptions.xml
@@ -105,7 +146,6 @@ vendor/etc/audio_param/SpeechUI_AudioParam.xml
 vendor/etc/audio_param/SpeechUI_ParamUnitDesc.xml
 vendor/etc/audio_param/SpeechVolUI_AudioParam.xml
 vendor/etc/audio_param/SpeechVolUI_ParamUnitDesc.xml
-vendor/etc/audio_param/SpeechVol_AudioParam.xml
 vendor/etc/audio_param/SpeechVol_ParamUnitDesc.xml
 vendor/etc/audio_param/Speech_AudioParam.xml
 vendor/etc/audio_param/Speech_ParamTreeView.xml
@@ -157,6 +197,12 @@ vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/AudioLog_dynamic.xml
+vendor/etc/apdb/APDB_MT6785_S01__W2317
+vendor/etc/apdb/APDB_MT6785_S01__W2317_ENUM
+vendor/etc/audio_param/CRSVol_AudioParam.xml
+vendor/etc/audio_param/CRSVol_ParamUnitDesc.xml
+vendor/etc/audio_param/CRSVolUI_AudioParam.xml
+vendor/etc/audio_param/CRSVolUI_ParamUnitDesc.xml
 
 # Bluetooth
 vendor/etc/init/init.bt_drv.rc
@@ -385,7 +431,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
-
 # Camera IdxMgr
 vendor/lib64/fake_serial_yuv_IdxMgr.so
 vendor/lib64/gc02m1b_mipi_raw_IdxMgr.so
@@ -522,6 +567,7 @@ vendor/lib64/libCamera_hi1631qmipiraw_Video_720.so
 # Camera IdxMgr
 vendor/lib64/libCamera_gc02m1bmipiraw_Scene_Capture.so
 vendor/lib64/libCamera_gc02m1bmipiraw_Scene_Preview.so
+
 # Camera Configurations
 vendor/data/camera/model/megii_dualcam/capture_cache
 vendor/data/camera/model/megii_dualcam/capture_model
@@ -530,7 +576,89 @@ vendor/data/camera/model/megii_dualcam/preview_cache
 vendor/data/camera/model/megii_dualcam/preview_model
 vendor/data/camera/model/megii_dualcam/preview_policy
 vendor/data/camera/model/megii_dualcam/dof_mecp.bin
+vendor/data/camera/model/animal_human_landmark_fp16.mnn
+vendor/data/camera/model/capture_sky.mnn
+vendor/data/camera/model/eyes_detect_model
+vendor/data/camera/model/facerecheck.bin
+vendor/data/camera/model/facerecheck.param
+vendor/data/camera/model/facesr_hd_composite_ref_4.1.15_mtkg96_ppl3_ocl.model
+vendor/data/camera/model/lightforgender_addindian_tf113_test5.tflite
+vendor/data/camera/model/lightforgender_addindian_tf113_test5_converted.mnn
+vendor/data/camera/model/lightforgenderandage_tf113_test4.tflite
+vendor/data/camera/model/lightforgenderandage_tf113_test4_converted.mnn
+vendor/data/camera/model/lut_aurora.png
+vendor/data/camera/model/lut_dusk.png
+vendor/data/camera/model/lut_meteor.png
+vendor/data/camera/model/lut_moon.png
+vendor/data/camera/model/lut_rainbow.png
+vendor/data/camera/model/lut_river.png
+vendor/data/camera/model/lut_starry.png
+vendor/data/camera/model/lut_startrail.png
+vendor/data/camera/model/lut_sunset.png
+vendor/data/camera/model/lut_sunset2.png
+vendor/data/camera/model/lut_sunshine.png
+vendor/data/camera/model/lut_sunshine2.png
+vendor/data/camera/model/M_Segment_DoubleLoss_V1.model
+vendor/data/camera/model/megii_dualcam/cache_data
+vendor/data/camera/model/meishefilter/abao.mslut
+vendor/data/camera/model/meishefilter/heijin01.mslut
+vendor/data/camera/model/meishefilter/heijin02.mslut
+vendor/data/camera/model/meishefilter/landiao.mslut
+vendor/data/camera/model/meishefilter/Paris06.mslut
+vendor/data/camera/model/meishefilter/saibo.mslut
+vendor/data/camera/model/meishefilter/youhua.mslut
+vendor/data/camera/model/preview_sky.mnn
+vendor/data/camera/model/preview_sky_aurora.jpg
+vendor/data/camera/model/preview_sky_dusk.jpg
+vendor/data/camera/model/preview_sky_meteor.jpg
+vendor/data/camera/model/preview_sky_moon.jpg
+vendor/data/camera/model/preview_sky_rainbow.jpg
+vendor/data/camera/model/preview_sky_river.jpg
+vendor/data/camera/model/preview_sky_starry.jpg
+vendor/data/camera/model/preview_sky_startrail.jpg
+vendor/data/camera/model/preview_sky_sunset.jpg
+vendor/data/camera/model/preview_sky_sunset2.jpg
+vendor/data/camera/model/preview_sky_sunshine.jpg
+vendor/data/camera/model/preview_sky_sunshine2.jpg
+vendor/data/camera/model/rgbw_fusion_global_config.xml
+vendor/data/camera/model/scene.tflite
+vendor/data/camera/model/segment.tflite
+vendor/data/camera/model/segmentPre.tflite
+vendor/data/camera/model/sky_aurora.jpg
+vendor/data/camera/model/sky_dusk.jpg
+vendor/data/camera/model/sky_meteor.jpg
+vendor/data/camera/model/sky_moon.jpg
+vendor/data/camera/model/sky_rainbow.jpg
+vendor/data/camera/model/sky_river.jpg
+vendor/data/camera/model/sky_starry.jpg
+vendor/data/camera/model/sky_startrail.jpg
+vendor/data/camera/model/sky_sunset.jpg
+vendor/data/camera/model/sky_sunset2.jpg
+vendor/data/camera/model/sky_sunshine.jpg
+vendor/data/camera/model/sky_sunshine2.jpg
+vendor/data/camera/model/sr_params.xml
+vendor/data/camera/model/Transsion_Segment_Pre.mnn
+vendor/data/camera/watermark/watermark_1280x720.nv21
+vendor/data/camera/watermark/watermark_1280x720.yuyv
+vendor/data/camera/watermark/watermark_1920x1080.nv21
+vendor/data/camera/watermark/watermark_1920x1080.yuyv
+vendor/data/camera/watermark/watermark_2560x1440.nv21
+vendor/data/camera/watermark/watermark_2560x1440.yuyv
+vendor/data/camera/watermark/watermark_3840x2160.nv21
+vendor/data/camera/watermark/watermark_3840x2160.yuyv
+vendor/data/camera/watermark/watermark_640x480.nv21
+vendor/data/camera/watermark/watermark_640x480.yuyv
+vendor/data/camera/watermark/watermark_config
 vendor/etc/default_pd_calibration.bin
+vendor/etc/anc_siq/cache_hi1631q_17201701_front_g9xb
+vendor/etc/anc_siq/cache_s5kjn1_17201711_back_g9xb
+vendor/etc/anc_siq/dgain_mask_hi1631q_17201701_front_g9xb.bin
+vendor/etc/anc_siq/dgain_mask_s5kjn1_17201711_back_g9xb.bin
+vendor/etc/anc_siq/siq_ocl_cache_hi1631q_17201701_front_g9xb
+vendor/etc/anc_siq/siq_ocl_cache_s5kjn1_17201711_back_g9xb
+vendor/etc/anc_siq/superiq_model_hi1631q_17201701_front_g9xb
+vendor/etc/anc_siq/superiq_model_s5kjn1_17201711_back_g9xb
+
 
 # Display configs
 vendor/etc/AbnormalDisplayLog_dynamic.xml
@@ -544,6 +672,7 @@ vendor/lib64/liboemcrypto.so
 vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 
 # Fingerprint
 vendor/etc/init/vendor.fpsensor.rc
@@ -610,6 +739,9 @@ vendor/firmware/soc2_2_ram_mcu_2a_1_hdr.bin
 vendor/firmware/soc2_2_ram_wifi_2_1_hdr.bin
 vendor/firmware/soc2_2_ram_wifi_2a_1_hdr.bin
 vendor/firmware/wifi.cfg
+vendor/firmware/aw87xxx_acf.bin
+vendor/firmware/awinic_params.bin
+vendor/firmware/fs1599.fsm
 
 # Fuelgauge
 vendor/bin/fuelgauged
@@ -623,14 +755,15 @@ vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
 # GNSS
-vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/charon
 vendor/bin/epdg_wod
+vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/ipsec_mon
 vendor/bin/mnld
 vendor/bin/mtk_agpsd
 vendor/bin/starter
 vendor/bin/stroke
+vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Claro_Peru.xml
@@ -643,17 +776,17 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_T-Mobile_US.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml
-vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
+vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.wod.rc
 vendor/etc/init/init.xcap.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/mtk_agpsd_p.rc
-vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mediatek.xml
-vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/etc/MNL_Config.xml
 vendor/etc/mpe.conf
 vendor/etc/slp_conf
+vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mediatek.xml
+vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/lib/libipsec_ims_shr.so
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
@@ -733,6 +866,9 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Media
+vendor/etc/mtk_omx_core.cfg
+vendor/etc/special_pws_channel.xml
+vendor/etc/vendor-apns-conf.xml
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/bin/vpud
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
@@ -745,6 +881,8 @@ vendor/lib/HEVCSecureVdecCA.so
 vendor/lib/VP9SecureVdecCA.so
 vendor/lib/libAVCSecureVencCA.so
 vendor/lib/libHEVCdec_sa.ca7.android.so;DISABLE_CHECKELF
+vendor/lib64/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
+vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libadpcmdec_mtk.so
 vendor/lib/libbwc.so
 vendor/lib/libh264dec_customize.so
@@ -783,7 +921,6 @@ vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
-vendor/lib64/libhevce_sb.ca7.android.so
 vendor/lib64/libmp3dec_mtk.so
 vendor/lib64/libvcodec_oal.so
 vendor/lib64/libvcodecdrv_header_stub.so
@@ -881,6 +1018,7 @@ vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Radio
+vendor/etc/init/muxreport.rc
 vendor/bin/hw/mtkfusionrild
 vendor/bin/bip
 vendor/bin/ccci_mdinit
@@ -963,17 +1101,19 @@ vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/libverno.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 
 # Sensors
 vendor/lib64/hw/sensors.mt6781.so
 vendor/lib64/libksensor.so
 vendor/lib64/libsensor_custom.so
+vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 
 # TEE
-vendor/app/mcRegistry/030c0000000000000000000000000000.drbin
-vendor/app/mcRegistry/030c0000000000000000000000000000.tlbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin
+vendor/app/mcRegistry/030c0000000000000000000000000000.drbin
+vendor/app/mcRegistry/030c0000000000000000000000000000.tlbin
 vendor/app/mcRegistry/05120000000000000000000000000000.drbin
 vendor/app/mcRegistry/05120000000000000000000000000000.tlbin
 vendor/app/mcRegistry/05120000000000000000000000000001.drbin
@@ -993,7 +1133,10 @@ vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin
 vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.tlbin
 vendor/app/mcRegistry/5020170115e016302017012521300000.drbin
 vendor/app/mcRegistry/5020170115e016302017012521300000.tlbin
+vendor/app/mcRegistry/85fbf4ccc2fd4a32922a4e90c56179de.tabin
 vendor/app/mcRegistry/abcd270ea5c44c58bcd3384a2fa2539e.tabin
+vendor/app/mcRegistry/ce4550edbcb1662566b006ebcb303050.tabin
+vendor/app/mcRegistry/df1edda8627911e980ae507b9d9a7e7d.tabin
 vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin
 vendor/bin/mcDriverDaemon
 vendor/etc/init/tee.rc

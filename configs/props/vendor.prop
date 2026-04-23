@@ -24,6 +24,7 @@ ro.vendor.mtk_aal_support=1
 vendor.bluetooth.ldac.abr=true
 ro.vendor.mtk.bt_sap_enable=true
 ro.vendor.bt.platform=connac1x
+ro.bluetooth.powerstats.disable=true
 
 # Camera
 camera.disable_zsl_mode=1

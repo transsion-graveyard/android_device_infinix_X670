@@ -61,10 +61,6 @@ vendor/lib/libaudiotoolkit_vendor.so
 vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
-vendor/lib/libbluetooth_audio_session_mediatek.so
-vendor/lib/libbluetooth_mtk.so
-vendor/lib/libbluetooth_mtk_pure.so
-vendor/lib/libbt-vendor.so
 vendor/lib/libcvsd_mtk.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libMtkOmxAdpcmDec.so
@@ -80,8 +76,6 @@ vendor/lib64/libancbase.so
 vendor/lib64/libancbase_848.so
 vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
-#vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-#vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
@@ -205,10 +199,30 @@ vendor/etc/audio_param/CRSVolUI_AudioParam.xml
 vendor/etc/audio_param/CRSVolUI_ParamUnitDesc.xml
 
 # Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
+vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/etc/init/init.bt_drv.rc
+vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
+vendor/lib/libbluetooth_audio_session_mediatek.so
+vendor/lib/libbluetooth_mtk.so
+vendor/lib/libbluetooth_mtk_pure.so
+vendor/lib/libbt-vendor.so
+vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
+vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
+vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
+
+# error: vendor/infinix/X670/Android.bp:2670:1: module "prebuilt_vendor.mediatek.hardware.bluetooth.audio@2.1" variant "android_vendor_arm64_armv8-2a-dotprod_cortex-a76_shared": partition is different: system_ext(vendor.mediatek.hardware.bluetooth.audio@2.1) != vendor(prebuilt_vendor.mediatek.hardware.bluetooth.audio@2.1)
+#vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+#vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+
+# error: vendor/infinix/X670/Android.bp:2670:1: module "prebuilt_vendor.mediatek.hardware.bluetooth.audio@2.2" variant "android_vendor_arm64_armv8-2a-dotprod_cortex-a76_shared": partition is different: system_ext(vendor.mediatek.hardware.bluetooth.audio@2.2) != vendor(prebuilt_vendor.mediatek.hardware.bluetooth.audio@2.2)
+#vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+#vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+
 
 # Camera
 vendor/bin/hw/camerahalserver

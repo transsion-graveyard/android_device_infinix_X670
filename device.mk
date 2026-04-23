@@ -145,12 +145,10 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl:64 \
     android.hardware.audio.effect@7.0-impl:64 \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl:64 \
     android.hardware.soundtrigger@2.3-impl:64
 
 PRODUCT_PACKAGES += \
     audio.primary.default:64 \
-    audio.bluetooth.default:64 \
     audio.r_submix.default:64 \
     audio.usb.default:64
 
@@ -161,7 +159,6 @@ PRODUCT_PACKAGES += \
     libaudioroute.vendor:64 \
     libaudiofoundation.vendor:64 \
     libbundlewrapper:64 \
-    libbluetooth_audio_session:64 \
     libaudiopreprocessing:64 \
     libalsautils:64 \
     libdownmix:64 \
@@ -186,11 +183,22 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-# Bluetooth
+# Bluetooth - Disabled
+#PRODUCT_PACKAGES += \
+#    android.hardware.bluetooth-service.mediatek \
+#    vendor.mediatek.hardware.bluetooth.audio@2.1.vendor \
+#    vendor.mediatek.hardware.bluetooth.audio@2.2.vendor \
+#    android.hardware.bluetooth.audio-impl:64 \
+#    audio.bluetooth.default:64 \
+#    libbluetooth_audio_session:64
+
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth-service.mediatek \
-    vendor.mediatek.hardware.bluetooth.audio@2.1.vendor \
-    vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
+    audio.bluetooth.default \
+    android.hardware.bluetooth.audio-impl
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml
 
 # Display
 PRODUCT_PACKAGES += \

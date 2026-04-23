@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Location on the screen of the center of the physical power button. -->
-    <dimen name="physical_power_button_center_screen_location_y">1040px</dimen>
+    <dimen name="physical_power_button_center_screen_location_y">1100px</dimen>
 
     <!-- Location on the screen of the center of the fingerprint sensor. -->
     <dimen name="physical_fingerprint_sensor_center_screen_location_x">1080px</dimen>
-    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1040px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1156px</dimen>
 
     <!-- Adjust the icon padding in status bar for rounded corners. -->
     <dimen name="rounded_corner_content_padding">47.0px</dimen>

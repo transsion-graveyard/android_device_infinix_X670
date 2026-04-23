@@ -370,7 +370,7 @@
          the framework from using higher refresh rates, even if display modes with higher refresh
          rates are available from hardware composer. Only has an effect if the value is
          non-zero. -->
-    <integer name="config_defaultPeakRefreshRate">120</integer>
+    <integer name="config_defaultPeakRefreshRate">60</integer>
 
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps">true</bool>
@@ -385,8 +385,8 @@
     <array name="config_sfps_sensor_props_0">
         <item>local:0</item> <!-- displayId -->
         <item>1080</item> <!-- sensorLocationX -->
-        <item>1040</item> <!-- sensorLocationY -->
-        <item>100</item>  <!-- sensorRadius -->
+        <item>1056</item> <!-- sensorLocationY -->
+        <item>210</item>  <!-- sensorRadius -->
     </array>
 
      <!-- Display settings screen, Color mode options. Must be the same length and order as

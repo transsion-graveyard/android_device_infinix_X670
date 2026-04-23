@@ -191,8 +191,8 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session:64
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    android.hardware.bluetooth.audio-impl
+   vendor.mediatek.hardware.bluetooth.audio@2.1.vendor:64 \
+   vendor.mediatek.hardware.bluetooth.audio@2.2.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \

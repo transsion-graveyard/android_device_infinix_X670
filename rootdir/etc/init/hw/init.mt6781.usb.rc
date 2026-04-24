@@ -15,7 +15,7 @@ on post-fs
     write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
     write /config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
     #SDD: add multi device name by lijia.chen 2020.08.10 start
-    write /config/usb_gadget/g1/strings/0x409/product "Android ADB Interface"
+    write /config/usb_gadget/g1/strings/0x409/product "Infinix NOTE 12"
     #SDD: add multi device name by lijia.chen 2020.08.10 end
     mkdir /config/usb_gadget/g1/functions/accessory.gs2
     mkdir /config/usb_gadget/g1/functions/audio_source.gs3

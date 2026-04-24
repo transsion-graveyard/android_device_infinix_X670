@@ -1416,3 +1416,8 @@ vendor/lib64/pbrogc02m1b_mipi_raw_tuning.so
 vendor/lib64/pbrohi1631q_mipi_raw_tuning.so
 vendor/lib64/pbroov02b1b_mipi_raw_tuning.so
 vendor/lib64/pbros5kjn1_mipi_raw_tuning.so
+
+# Media
+vendor/lib64/libstagefrighthw.so
+vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
+vendor/lib64/libvpu5.so

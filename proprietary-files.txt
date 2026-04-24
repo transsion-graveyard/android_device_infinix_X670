@@ -819,6 +819,10 @@ vendor/lib64/libsimaka.so
 vendor/lib64/libssl-md.so
 vendor/lib64/libstrongswan.so
 vendor/lib64/libwo.so
+vendor/lib/libcurl-md.so
+vendor/lib/libssl-md.so
+vendor/lib/libcrypto-md.so
+
 
 # Graphics
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek

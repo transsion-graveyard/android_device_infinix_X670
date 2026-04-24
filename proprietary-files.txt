@@ -698,6 +698,7 @@ vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/vendor.fpsensor.rc
 vendor/lib64/android.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/hw/fpsensor_fingerprint.default.so;SYMLINK=vendor/lib64/hw/cdfinger.fingerprint.default.so
 vendor/lib64/hw/fpsensor_fingerprint.default.so
 vendor/lib64/libfp_ext_svc2.so
 vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so

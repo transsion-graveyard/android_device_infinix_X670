@@ -62,6 +62,8 @@ blob_fixups: blob_fixups_user_type = {
     ),
     ('vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2', 'vendor/lib64/libgoodixhwfingerprint.so', 'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),    
+    'vendor/lib64/hw/fingerprint.default.so': blob_fixup()
+        .binary_regex_replace(b'fpsensor_fingerprint', b'fingerprint\x00\x00\x00\x00\x00\x00\x00\x00\x00'),
     "vendor/lib64/hw/audio.primary.mt6781.so": blob_fixup()
         .replace_needed("libutils.so", "libutils-v32.so")
         .replace_needed("libalsautils.so", "libalsautils-v32.so"),

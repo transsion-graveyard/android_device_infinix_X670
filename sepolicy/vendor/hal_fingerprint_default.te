@@ -14,6 +14,7 @@ allow init m_bio_misc_device:chr_file write;
 
 # Allow to configure fingerprint props
 set_prop(hal_fingerprint_default, vendor_fingerprint_prop)
+get_prop(hal_fingerprint_default, vendor_mtk_default_prop)
 
 # Allow fingerprint HAL to setup fingerprint database files
 allow hal_fingerprint_default vendor_fingerprint_data_file:dir rw_dir_perms;

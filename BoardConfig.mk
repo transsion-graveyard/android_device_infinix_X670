@@ -164,7 +164,7 @@ include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Vendor security patch level
-VENDOR_SECURITY_PATCH := 2024-02-05
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # VINTF
 DEVICE_MANIFEST_FILE := $(CONFIGS_PATH)/vintf/manifest.xml

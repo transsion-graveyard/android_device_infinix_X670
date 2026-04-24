@@ -778,7 +778,6 @@ vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.
 vendor/bin/charon
 vendor/bin/epdg_wod
 vendor/bin/hw/android.hardware.gnss-service.mediatek
-vendor/bin/ipsec_mon
 vendor/bin/mnld
 vendor/bin/mtk_agpsd
 vendor/bin/starter
@@ -800,7 +799,6 @@ vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.wod.rc
 vendor/etc/init/init.xcap.rc
-vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/MNL_Config.xml
 vendor/etc/mpe.conf
@@ -1043,11 +1041,15 @@ vendor/bin/hw/mtkfusionrild
 vendor/bin/bip
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
+vendor/bin/ipsec_mon
 vendor/bin/gsm0710muxd
+vendor/bin/wfca
 vendor/etc/init/gsm0710muxd.rc
 vendor/etc/init/init.bip.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
+vendor/etc/init/ipsec_mon.rc
+vendor/etc/init/init.wfca.rc
 vendor/etc/init/init.md_apps.rc
 vendor/etc/init/mtkrild.rc
 vendor/etc/ecc_list.xml
@@ -1064,6 +1066,7 @@ vendor/lib/mt6781/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib/libmtkcutils.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
+vendor/lib/libstrongswan.so
 vendor/lib64/libcapctrl.so
 vendor/lib64/libcares_naptr.so
 vendor/lib64/libcarrierconfig.so
@@ -1103,7 +1106,6 @@ vendor/bin/volte_imsm_93
 vendor/bin/volte_md_status
 vendor/bin/volte_stack
 vendor/bin/volte_ua
-vendor/bin/wfca
 vendor/bin/xcap
 vendor/etc/init/init.volte_imcb.rc
 vendor/etc/init/init.volte_imsm_93.rc
@@ -1111,7 +1113,10 @@ vendor/etc/init/init.volte_md_status.rc
 vendor/etc/init/init.volte_stack.rc
 vendor/etc/init/init.volte_ua.rc
 vendor/etc/init/init.vtservice_hidl.rc
-vendor/etc/init/init.wfca.rc
+vendor/etc/ipsec/ssl/openssl.cnf
+vendor/etc/ipsec/ipsec.conf
+vendor/etc/ipsec/strongswan.conf
+vendor/etc/smsdbvisitor.xml
 vendor/etc/init/init.xcap.rc
 vendor/etc/init/volte_clientapi_ua.rc
 vendor/lib/libverno.so

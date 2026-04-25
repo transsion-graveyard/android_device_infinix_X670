@@ -266,3 +266,9 @@ ro.vendor.wlan.gen=gen4m
 ro.vendor.wlan.standalone.log=y
 ro.vendor.mtk_wfd_support=1
 ro.vendor.mtk_tb_wifi_3g_mode=0
+
+# ZRAM writeback
+ro.zram_backing_device_min_free_mb=1536
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24

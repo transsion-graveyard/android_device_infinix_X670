@@ -5,9 +5,6 @@ on init
     chown system system /proc/gesture_function
     chmod 0660 /proc/gesture_function
 
-    # OTG
-    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
-
 on post-fs-data
 
 #Camera
@@ -92,3 +89,8 @@ on boot
     chown system system /sys/class/power_supply/battery/charging_call_state
     chmod 0660 /sys/class/power_supply/battery/charging_call_state
     #-chk101871 wangjiayu1 modify 20211027 add for charging call state
+
+# OTG
+on property:sys.boot_completed=1
+    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
+    

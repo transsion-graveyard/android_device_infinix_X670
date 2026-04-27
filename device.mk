@@ -1,8 +1,3 @@
-# Secure Element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2.vendor:64
-
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 #
 # Copyright (C) 2025 The LineageOS Project
 #
@@ -41,6 +36,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Allow userspace reboots
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
+
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
+
 
 # AB OTA Configuration
 AB_OTA_UPDATER := true
@@ -183,16 +181,16 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-# Bluetooth - Disabled
+# Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek \
-    android.hardware.bluetooth.audio-impl:64 \
-    audio.bluetooth.default:64 \
-    libbluetooth_audio_session:64
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default \
+    libbluetooth_audio_session
 
 PRODUCT_PACKAGES += \
-   vendor.mediatek.hardware.bluetooth.audio@2.1.vendor:64 \
-   vendor.mediatek.hardware.bluetooth.audio@2.2.vendor:64
+    vendor.mediatek.hardware.bluetooth.audio@2.1.vendor \
+    vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -228,7 +226,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbinder-v32 \
     libhidlbase-v32 \
-    libutils-v32 \
+    libutils-v32
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -270,10 +268,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp/,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy)
-
-PRODUCT_PACKAGES += \
-    libcrypto-v33 \
-    libssl-v33
 
 PRODUCT_PACKAGES += \
     vndservicemanager \
@@ -332,6 +326,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2.vendor:64
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.mediatek
@@ -342,26 +340,18 @@ PRODUCT_COPY_FILES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
-    
-# Wifi
+
+# Wi-Fi
 PRODUCT_PACKAGES += \
+    libwifi-hal-wrapper \
     android.hardware.wifi-service \
     wpa_supplicant \
+    lib_driver_cmd_mt66xx \
     hostapd \
-    libwifi-hal-wrapper:64 \
-    android.system.wifi.keystore@1.0.vendor \
-    libkeystore-wifi-hidl \
-    libkeystore-engine-wifi-hidl \
-    libnl.vendor \
-    android.hardware.wifi@1.1.vendor \
-    android.hardware.wifi@1.2.vendor \
-    android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi@1.4.vendor \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.supplicant@1.4.vendor \
+    libkeystore-wifi-hidl:64 \
+    libkeystore-engine-wifi-hidl:64
+    
+PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
     android.hardware.tetheroffload.control@1.0.vendor \
     android.hardware.tetheroffload.control@1.1.vendor

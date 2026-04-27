@@ -1,69 +1,65 @@
-# AEE
-ro.vendor.have_aee_feature=1
-persist.vendor.mtk.aee.filter=0
-
-# AF
-vendor.af.threshold.src_and_effect_count=5
-
 # Audio
 ro.audio.silent=0
 ro.audio.usb.period_us=16000
+ro.config.vc_call_vol_default=11
+ro.config.media_vol_default=13
+ro.config.alarm_vol_default=13
+ro.config.system_vol_default=15
 persist.vendor.anr.dumpthr=1
 
 # Bluetooth
-bluetooth.profile.sap.server.enabled=true
-bluetooth.profile.bas.client.enabled=true
 bluetooth.profile.asha.central.enabled=true
-bluetooth.profile.a2dp.source.enabled=true
-bluetooth.profile.avrcp.target.enabled=true
-bluetooth.profile.gatt.enabled=true
-bluetooth.profile.hfp.ag.enabled=true
-bluetooth.profile.hid.device.enabled=true
-bluetooth.profile.hid.host.enabled=true
-bluetooth.profile.map.server.enabled=true
-bluetooth.profile.opp.enabled=true
-bluetooth.profile.pan.nap.enabled=true
-bluetooth.profile.pan.panu.enabled=true
-bluetooth.profile.pbap.server.enabled=true
-
-# Brand
-Build.BRAND=MTK
 
 # Camera
 ro.camera.sound.forced=0
 vendor.camera.tran.nums=1
 
+# Charger
+ro.charger.enable_suspend=true
+ro.vendor.mtk_fast_charging_support=1
+
+# Cached app compaction
+persist.device_config.activity_manager.use_compaction=true
+
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
-# Fuse passthrough
-persist.sys.fuse.passthrough.enable=true
+# Dex / Dalvik
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.boot-dex2oat-threads=6
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.dex2oat-threads=6
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.image-dex2oat-threads=6
+persist.device_config.runtime_native.usap_pool_enabled=false
+persist.sys.minfree_6g=73728,92160,110592,340000,1282868,1677312
+persist.sys.minfree_8g=73728,92160,110592,340000,1677312,2064384
+persist.sys.minfree_def=73728,92160,110592,340000,510000,645120
+pm.dexopt.ab-ota=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.boot=verify
+pm.dexopt.first-boot=verify
+pm.dexopt.install=speed-profile
 
-# GPU
+# Display
+debug.sf.enable_transaction_tracing=false
+debug.sf.predict_hwc_composition_strategy=0
 ro.opengles.version=196610
+vendor.debug.sf.display_dejitter=0
+
+# Disable mtk aggressive_dex2oat
+pm.dexopt.aggressive_dex2oat.enable=false
 
 # Kernel
 ro.kernel.zio=38,108,105,16
 ro.iorapd.enable=false
-
-# Logging
-persist.log.tag.BufferQueueDump=I
-persist.log.tag.BufferQueueProducer=I
-persist.log.tag.GraphicBuffer=I
-persist.log.tag.SurfaceControl=I
-persist.log.tag.Telecom=I
 
 # Media
 debug.stagefright.c2inputsurface=-1
 media.stagefright.thumbnail.prefer_hw_codecs=true
 vendor.mtk_thumbnail_optimization=true
 ro.vendor.mtk_flv_playback_support=1
-
-# Perf
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
-ro.mtk_perf_simple_start_win=1
-security.perf_harden=1
 
 # Power
 sys.ipo.disable=1
@@ -81,30 +77,13 @@ persist.vendor.tran_boottime=0
 persist.vendor.tran_sign_prj=0
 persist.vendor.tran_source_prj=0
 persist.vendor.tran_target_prj=0
+ro.kom_telephony_support=0
 
-# RIL
+# Radio
+persist.sys.radio.force_lte_ca=true
+ro.vendor.mtk_telephony_add_on_policy=0
 vendor.rild.libargs=-d /dev/ttyC0
 vendor.rild.libpath=mtk-ril.so
-
-# SurfaceFlinger
-debug.sf.early.app.duration=20000000
-debug.sf.early.sf.duration=27600000
-debug.sf.earlyGl.app.duration=20000000
-debug.sf.earlyGl.sf.duration=27600000
-debug.sf.enable_transaction_tracing=false
-debug.sf.hwc.min.duration=23000000
-debug.sf.latch_unsignaled=true
-debug.sf.late.app.duration=20000000
-debug.sf.late.sf.duration=27600000
-debug.sf.predict_hwc_composition_strategy=0
-debug.sf.use_phase_offsets_as_durations=1
-
-# USB
-ro.sys.usb.bicr=no
-ro.sys.usb.charging.only=yes
-ro.sys.usb.mtp.whql.enable=0
-ro.sys.usb.storage.type=mtp
-ro.usb.connect.keycodes=100,200
 
 # WiFi
 ro.mediatek.wlan.p2p=1
@@ -113,11 +92,3 @@ mediatek.wlan.ctia=0
 wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
-
-# ZRAM
-ro.zram.mark_idle_delay_mins=60
-ro.zram.first_wb_delay_mins=1440
-ro.zram.periodic_wb_delay_hours=24
-
-# Zygote
-ro.zygote.preload.enable=0

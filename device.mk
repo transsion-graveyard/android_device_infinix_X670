@@ -228,6 +228,9 @@ PRODUCT_PACKAGES += \
     libhidlbase-v32 \
     libutils-v32
 
+# Bypass Lock State for Kaeru
+$(call soong_config_set_bool,fastbootd,bypass_lock_state,true)
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \

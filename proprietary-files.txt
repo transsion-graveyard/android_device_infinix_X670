@@ -208,7 +208,7 @@ vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml
 system_ext/lib64/libArcFilter.so
 system_ext/lib64/libarcsoft_frc.so
-system_ext/lib64/libeffect.so
+system_ext/lib64/libeffect.so;DISABLE_CHECKELF
 system_ext/lib64/libiconv.so
 system_ext/lib64/libjniarcsoft_frc.so
 system_ext/lib64/libzbar.so

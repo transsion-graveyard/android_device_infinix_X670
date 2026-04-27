@@ -2,19 +2,15 @@
 vendor.audiomediatek. u:object_r:vendor_audioserver_prop:s0
 
 # Camera
-cam.egnsavefile.enable u:object_r:vendor_mtk_camera_prop:s0
 persist.vendor.camera. u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.privapp.list u:object_r:vendor_persist_camera_prop:s0
 persist.vendor.camera3. u:object_r:vendor_mtk_camera_prop:s0
-ro.vendor.camera. u:object_r:camera_prop:s0
 ro.vendor.camera_tran_fake_stereo_support u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.camera_tran_hal_server_support u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.mtkcam. u:object_r:vendor_camera_prop:s0
 vendor.camera. u:object_r:vendor_camera_prop:s0
 vendor.debug. u:object_r:vendor_camera_prop:s0
 vendor.mtkcam. u:object_r:vendor_camera_prop:s0
-RUNTIME_OVERRIDE_LOG_LEVEL u:object_r:exported_system_prop:s0
-jpeg.exif.icc.profile u:object_r:exported_default_prop:s0
 
 # Device identification
 ro.vendor.oem.sno u:object_r:vendor_mtk_radio_prop:s0

@@ -40,6 +40,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.heapminfree=8m \
     dalvik.vm.heapmaxfree=48m
 
+# Cgroup
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
 # Allow userspace reboots
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 

@@ -4,6 +4,7 @@ vendor.audiomediatek. u:object_r:vendor_audioserver_prop:s0
 # Camera
 persist.vendor.camera. u:object_r:vendor_camera_prop:s0
 persist.vendor.camera3. u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.privapp.list u:object_r:vendor_persist_camera_prop:s0
 vendor.camera. u:object_r:vendor_camera_prop:s0
 vendor.debug. u:object_r:vendor_camera_prop:s0
 vendor.mtkcam. u:object_r:vendor_camera_prop:s0

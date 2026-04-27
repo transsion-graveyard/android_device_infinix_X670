@@ -45,6 +45,7 @@ ro.vendor.camera_tran_fake_stereo_support=1
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 vendor.mtk.camera.app.fd.video=1
+persist.vendor.camera.privapp.list=org.lineageos.aperture
 
 # DRM
 drm.service.enabled=true

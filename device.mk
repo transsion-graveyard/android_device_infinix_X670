@@ -278,10 +278,6 @@ PRODUCT_PACKAGES += \
     libeffects:64 \
     libeffectsconfig.vendor:64
 
-# OMX
-PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-service
-
 # Media
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc) \

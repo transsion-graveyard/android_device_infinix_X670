@@ -619,7 +619,7 @@ vendor/lib64/libmtkcam_hwutils.so
 vendor/lib64/libmtkcam_imgbuf.so
 vendor/lib64/libmtkcam_mapping_mgr.so
 vendor/lib64/libmtkcam_metadata.so
-vendor/lib64/libmtkcam_metastore.so|83ba7ca3529923b47638f984da21aac41f010b61
+vendor/lib64/libmtkcam_metastore.so
 vendor/lib64/libmtkcam_mfb.so
 vendor/lib64/libmtkcam_modulefactory_aaa.so
 vendor/lib64/libmtkcam_modulefactory_custom.so
@@ -1010,7 +1010,6 @@ vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 vendor/etc/init/vpud.rc
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_1_mediatek.xml
 vendor/etc/VideoLog_dynamic.xml
-vendor/etc/mtk_omx_core.cfg
 vendor/etc/mtk_platform_codecs_config.xml
 vendor/etc/special_pws_channel.xml
 vendor/etc/vendor-apns-conf.xml
@@ -1338,7 +1337,7 @@ vendor/lib64/libmtcloader.so
 
 # Transsion Camera
 system_ext/app/TranssionCamera/lib/arm64/libc++_shared.so:system_ext/lib64/libc++_shared.so
-system_ext/app/TranssionCamera/TranssionCamera.apk
+-system_ext/app/TranssionCamera/TranssionCamera.apk
 system_ext/lib64/libNvStreamingSdkCore.so
 system_ext/lib64/libcvface_api.so
 

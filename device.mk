@@ -149,11 +149,12 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
-$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl:64 \
     android.hardware.audio.effect@7.0-impl:64 \
     android.hardware.audio.service \
+    android.hardware.audio.sounddose-vendor-impl \
     android.hardware.soundtrigger@2.3-impl:64
 
 PRODUCT_PACKAGES += \
@@ -235,6 +236,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
+    libtinyxml2-v34 \
     libbinder-v32 \
     libhidlbase-v32 \
     libutils-v32

@@ -49,13 +49,8 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so': blob_fixup()
-        .add_needed('libhidlbase_shim.so'),    
     "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
         "@1.2-mediatek", "@1.2-mediatek-64b"
-    ),
-    "vendor/etc/init/init.vtservice_hidl.rc": blob_fixup().regex_replace(
-        "start", "enable"
     ),
     "vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml": blob_fixup().regex_replace(
         "1.1", "1.2"
@@ -66,6 +61,7 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'fpsensor_fingerprint', b'fingerprint\x00\x00\x00\x00\x00\x00\x00\x00\x00'),
     "vendor/lib64/hw/audio.primary.mt6781.so": blob_fixup()
         .replace_needed("libutils.so", "libutils-v32.so")
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
         .replace_needed("libalsautils.so", "libalsautils-v32.so"),
     "vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc": blob_fixup().regex_replace(
         "on property:vts(.|\n)*", ""
@@ -106,15 +102,12 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .patchelf_version(patchelf_version)
         .add_needed("liblog.so"),
-    "vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service": blob_fixup()
-        .patchelf_version(patchelf_version)
-#        .replace_needed("libtinyxml2.so", "libtinyxml2-v34.so")
-        .replace_needed("libutils.so", "libutils-v32.so"),
-    "vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so": blob_fixup()
-        .patchelf_version(patchelf_version)
-        .add_needed("android.hardware.sensors@1.0-convert-shared.so")
-#        .replace_needed("libtinyxml2.so", "libtinyxml2-v34.so")
-        .replace_needed("libutils.so", "libutils-v32.so"),
+    ('vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so', 'vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service'): blob_fixup()
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
+        .replace_needed('libbinder.so', 'libbinder-v32.so')
+        .replace_needed('libutils.so', 'libutils-v32.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
+        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     (
         "vendor/lib64/libmtkcam_stdutils.so",
         "vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so",
@@ -130,8 +123,8 @@ blob_fixups: blob_fixups_user_type = {
         .patchelf_version(patchelf_version)
         .add_needed("libcutils.so"),
     "vendor/lib64/librt_extamp_intf.so": blob_fixup()
-        .patchelf_version(patchelf_version),
-#        .replace_needed("libtinyxml2.so", "libtinyxml2-v34.so"),
+        .patchelf_version(patchelf_version)
+        .replace_needed("libtinyxml2.so", "libtinyxml2-v34.so"),
     (
         "vendor/lib/libnvram.so",
         "vendor/lib64/libnvram.so",

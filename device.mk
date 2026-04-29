@@ -392,4 +392,4 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/infinix/X670/X670-vendor.mk)
 
 # Inherit the sign keys
-$(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+#$(call inherit-product, vendor/lineage-priv/keys/keys.mk)

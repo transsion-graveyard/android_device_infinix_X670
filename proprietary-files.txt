@@ -1337,7 +1337,7 @@ vendor/lib64/libmtcloader.so
 
 # Transsion Camera
 system_ext/app/TranssionCamera/lib/arm64/libc++_shared.so:system_ext/lib64/libc++_shared.so
--system_ext/app/TranssionCamera/TranssionCamera.apk
+#-system_ext/app/TranssionCamera/TranssionCamera.apk
 system_ext/lib64/libNvStreamingSdkCore.so
 system_ext/lib64/libcvface_api.so
 

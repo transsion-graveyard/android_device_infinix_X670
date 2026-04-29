@@ -206,12 +206,6 @@ vendor/bin/lib3a.ccu.pm
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/vendor.transsion.hardware.trancam.trancamserver@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.transsion.hardware.trancam.trancamserver@1.0.xml
-system_ext/lib64/libArcFilter.so
-system_ext/lib64/libarcsoft_frc.so
-system_ext/lib64/libeffect.so;DISABLE_CHECKELF
-system_ext/lib64/libiconv.so
-system_ext/lib64/libjniarcsoft_frc.so
-system_ext/lib64/libzbar.so
 vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.1-impl.so
@@ -1337,9 +1331,24 @@ vendor/lib64/libmtcloader.so
 
 # Transsion Camera
 system_ext/app/TranssionCamera/lib/arm64/libc++_shared.so:system_ext/lib64/libc++_shared.so
-#system_ext/app/TranssionCamera/TranssionCamera.apk
-system_ext/lib64/libNvStreamingSdkCore.so
+system_ext/app/TranssionCamera/oat/arm64/TranssionCamera.odex
+system_ext/app/TranssionCamera/oat/arm64/TranssionCamera.vdex
+system_ext/app/TranssionCamera/TranssionCamera.apk
+system_ext/lib64/libArcFilter.so
+system_ext/lib64/libarcsoft_frc.so
+system_ext/lib64/libcommon.so
 system_ext/lib64/libcvface_api.so
+system_ext/lib64/libeffect.so;DISABLE_CHECKELF
+system_ext/lib64/libiconv.so
+system_ext/lib64/libjniarcsoft_frc.so
+system_ext/lib64/libjnipanorama.so
+system_ext/lib64/libjniwideselfie.so
+system_ext/lib64/libNvStreamingSdkCore.so
+system_ext/lib64/libpanorama.so
+system_ext/lib64/libwideselfie.so
+system_ext/lib64/libXDocProcessSDK.so
+system_ext/lib64/libYTCommon.so
+system_ext/lib64/libzbar.so
 
 # USB
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2

@@ -18,3 +18,16 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     check_elf_files: false,
 }
+
+cc_prebuilt_library_shared {
+    name: "libcdsprpc",
+    vendor: true,
+    strip: { none: true },
+    target: {
+        android_arm64: {
+            srcs: ["libcdsprpc.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+}

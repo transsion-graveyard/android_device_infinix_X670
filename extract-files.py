@@ -54,9 +54,6 @@ blob_fixups: blob_fixups_user_type = {
     "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
         "@1.2-mediatek", "@1.2-mediatek-64b"
     ),
-    "vendor/etc/init/init.vtservice_hidl.rc": blob_fixup().regex_replace(
-        "start", "enable"
-    ),
     "vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml": blob_fixup().regex_replace(
         "1.1", "1.2"
     ),

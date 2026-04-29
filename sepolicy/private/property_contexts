@@ -1,6 +1,16 @@
+cam.        u:object_r:system_prop:s0
+jpeg.       u:object_r:system_prop:s0
+prepend.    u:object_r:system_prop:s0
+gce.        u:object_r:system_prop:s0
+vilte.      u:object_r:system_prop:s0
+RUNTIME_OVERRIDE_LOG_LEVEL u:object_r:system_prop:s0
+debuglog.drv u:object_r:vendor_mtk_camera_prop:s0
+debuglog.drv. u:object_r:vendor_mtk_camera_prop:s0
+
 # Camera
 ro.mtk_cam_dualzoom_support u:object_r:vendor_mtk_camera_prop:s0
 ro.mtk_cam_stereo_camera_support u:object_r:vendor_mtk_camera_prop:s0
+cam.egnsavefile.enable u:object_r:vendor_default_prop:s0
 
 # Fingerprint
 ro.fingerprint_support u:object_r:vendor_mtk_default_prop:s0

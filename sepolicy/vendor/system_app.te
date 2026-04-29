@@ -1,3 +1,18 @@
 # FM Radio
 get_prop(system_app, vendor_mtk_wmt_prop)
 get_prop(system_app, vendor_mtk_default_prop)
+
+allow system_app {
+    hal_audio_default
+    hal_bootctl_default
+    hal_gnss_default
+    hal_health_default
+    hal_light_default
+    mtk_hal_memtrack
+    hal_thermal_default
+    mtk_hal_bluetooth
+    hal_vibrator_default
+    hal_wifi_default
+    hal_wifi_supplicant_default
+}:binder { call };
+

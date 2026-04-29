@@ -1,2 +1,13 @@
-#============= platform_app ==============
-allow platform_app { sysfs_sub_torch_file sysfs_torch_file sysfs_wide_torch_file }:file rw_file_perms;
+# Only allowed camera property
+get_prop(platform_app, vendor_camera_prop)
+
+# Torch access (camera app)
+allow platform_app sysfs_tran_cam_file:file { read open getattr };
+
+allow platform_app { 
+    sysfs_sub_torch_file 
+    sysfs_torch_file 
+    sysfs_wide_torch_file 
+}:file rw_file_perms;
+
+allow platform_app unlabeled:filesystem getattr;

@@ -1,3 +1,9 @@
-allow cameraserver { sysfs_sub_torch_file sysfs_torch_file sysfs_wide_torch_file }:file rw_file_perms;
-binder_call(cameraserver, hal_sensors_default)
+# CameraService property access
+get_prop(cameraserver, vendor_persist_camera_prop)
 get_prop(cameraserver, vendor_camera_prop)
+
+# Torch access
+allow cameraserver sysfs_camera_leds:file { read write open getattr };
+
+
+binder_call(cameraserver, hal_sensors_default)

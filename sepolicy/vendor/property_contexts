@@ -1,3 +1,6 @@
+# Camera FMQ
+ro.vendor.camera.res.fmq.size         u:object_r:vendor_camera_prop:s0
+
 # Audio
 vendor.audiomediatek. u:object_r:vendor_audioserver_prop:s0
 
@@ -11,6 +14,7 @@ ro.vendor.mtkcam. u:object_r:vendor_camera_prop:s0
 vendor.camera. u:object_r:vendor_camera_prop:s0
 vendor.debug. u:object_r:vendor_camera_prop:s0
 vendor.mtkcam. u:object_r:vendor_camera_prop:s0
+vendor.debug.seninf.hs_trail u:object_r:vendor_mtk_camera_prop:s0
 
 # Device identification
 ro.vendor.oem.sno u:object_r:vendor_mtk_radio_prop:s0

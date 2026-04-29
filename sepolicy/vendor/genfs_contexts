@@ -22,6 +22,11 @@ genfscon sysfs /devices/platform/1100f000.i2c3/i2c-3/3-0055/power_supply/bms/ u:
 genfscon sysfs /devices/platform/14000000.dispsys_config/drm/card0/card0-DSI-1/panel_event u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/13000000.mali u:object_r:sysfs_gpu:s0
 
+# Torch
+genfscon sysfs /devices/virtual/sub_torch/sub_torch/sub_torch_level                                 u:object_r:sysfs_sub_torch_file:s0
+genfscon sysfs /devices/virtual/torch/torch/torch_level                                             u:object_r:sysfs_torch_file:s0
+genfscon sysfs /devices/virtual/wide_torch/wide_torch/wide_torch_level                              u:object_r:sysfs_wide_torch_file:s0
+
 # Wakeup
 genfscon sysfs /devices/platform/15020000.imgsys_config/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/1a000000.camisp/wakeup u:object_r:sysfs_wakeup:s0

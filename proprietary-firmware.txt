@@ -1,8 +1,8 @@
 # Unpinned blobs from missi_phoneext4_global-user 13 TP1A.220624.014 V816.0.4.0.TGDMIXM release-keys
 
 gz.img;AB
-lk.img;AB
-logo.bin:logo.img;AB
+lk.img;AB|ec50e98a16f16fdc989fd96a26088325082d1fc9
+logo.bin:logo.img;AB|a1b68e0a7811c32c58c66299def2fb47db3f4e73
 md1img.img;AB
 pi_img.img;AB
 scp.img;AB

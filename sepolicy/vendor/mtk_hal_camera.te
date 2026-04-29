@@ -70,3 +70,5 @@ allow mtk_hal_camera transsion_camera_data_file:file {read write create open };
 
 set_prop(mtk_hal_camera, vendor_mtk_camera_prop)
 set_prop(mtk_hal_camera, vendor_camera_prop)
+
+hal_client_domain(mtk_hal_camera, hal_configstore)

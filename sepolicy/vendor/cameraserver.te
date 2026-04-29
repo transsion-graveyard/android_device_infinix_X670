@@ -5,5 +5,6 @@ get_prop(cameraserver, vendor_camera_prop)
 # Torch access
 allow cameraserver sysfs_camera_leds:file { read write open getattr };
 
-
+# Configstore binding
+binder_call(cameraserver, hal_configstore_default);
 binder_call(cameraserver, hal_sensors_default)

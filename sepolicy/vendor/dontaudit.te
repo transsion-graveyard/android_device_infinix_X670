@@ -1,0 +1,4 @@
+# Camera hal
+dontaudit {
+  mtk_hal_camera
+} default_prop:file r_file_perms;

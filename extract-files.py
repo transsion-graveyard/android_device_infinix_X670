@@ -139,7 +139,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     "vendor/lib64/hw/hwcomposer.mt6781.so": blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
-    "vendor/lib64/hw/mt6789/vendor.mediatek.hardware.camera.isphal@1.0-impl.so": blob_fixup()
+    "vendor/lib64/hw/vendor.mediatek.hardware.camera.isphal@1.0-impl.so": blob_fixup()
         .patchelf_version(patchelf_version)
         .replace_needed("libhidlbase.so", "libhidlbase-v32.so")
         .replace_needed("libbinder.so", "libbinder-v32.so")
@@ -155,7 +155,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libutils-v32.so'),
     (
         "vendor/lib64/libtranssion_bodybeauty.so",
-        "vendor/lib64/mt6789/libeffect_hal.so",
         "vendor/lib64/libMegviiHum.so",
     ): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')

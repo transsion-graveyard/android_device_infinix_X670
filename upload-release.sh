@@ -36,6 +36,16 @@ echo "BOOT: $BOOT_IMG"
 echo "TAG: $TAG"
 
 # ======================
+# RELEASE NOTES INPUT
+# ======================
+# For Single Line Notes:
+# echo "Enter release notes (press Enter when done):"
+# read -r NOTES
+# For Multiple lines Notes:
+echo "Enter release notes, do not use special character. (Ctrl+D to finish):"
+NOTES=$(cat)
+
+# ======================
 # CREATE RELEASE (IF NOT EXISTS)
 # ======================
 echo "Checking release..."
@@ -47,7 +57,7 @@ else
     gh release create "$TAG" \
         --repo "$REPO" \
         --title "$TAG" \
-        --notes "LineageOS-22.2 userdebug build for X670"
+        --notes "$NOTES"
 fi
 
 # ======================

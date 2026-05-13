@@ -23,7 +23,6 @@ genfscon sysfs /devices/platform/14000000.dispsys_config/drm/card0/card0-DSI-1/p
 genfscon sysfs /devices/platform/13000000.mali u:object_r:sysfs_gpu:s0
 
 genfscon sysfs /class/thermal u:object_r:sysfs_thermal:s0
-genfscon sysfs /class/thermal/thermal_zone0 u:object_r:sysfs_thermal:s0
 genfscon sysfs /devices/virtual/thermal u:object_r:sysfs_thermal:s0
 genfscon sysfs /devices/virtual/thermal/thermal_zone0 u:object_r:sysfs_thermal:s0
 

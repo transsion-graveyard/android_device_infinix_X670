@@ -1,0 +1,2 @@
+# Allow thermal_core to access thermal sysfs
+allow thermal_core sysfs_thermal:dir search;

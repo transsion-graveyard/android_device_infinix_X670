@@ -1,7 +1,11 @@
-# infinity props
-ro.product.marketname=Infinix NOTE 12
-ro.infinity.soc=Mediatek Helio G96
-ro.infinity.camera=50MP + 16MP
+# Enable or disable ScrollOptimizer globally
+persist.sys.perf.scroll_opt = true
+
+# Heavy app handling mode
+# 0 - Disable heavy app classification
+# 1 - Enable dynamic detection (based on frame duration and buffer load)
+# 2 - Treat all apps as heavy for performance
+persist.sys.perf.scroll_opt.heavy_app = 2
 
 # Audio
 ro.audio.silent=0

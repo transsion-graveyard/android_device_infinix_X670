@@ -115,7 +115,7 @@ BOARD_MTK_DYNAMIC_PARTITIONS_PARTITION_LIST := $(ALL_PARTITIONS)
 BOARD_MTK_DYNAMIC_PARTITIONS_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304)
 
 ifneq ($(WITH_GMS),true)
--include vendor/infinity/config/BoardConfigReservedSize.mk
+-include vendor/lineage/config/BoardConfigReservedSize.mk
 endif
 
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext

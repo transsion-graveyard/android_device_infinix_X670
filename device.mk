@@ -315,8 +315,7 @@ PRODUCT_PACKAGES += \
     SettingsProviderResTarget \
     SystemUIResTarget \
     TetheringConfigTarget \
-    WifiResTarget \
-    OpenDeltaResTarget
+    WifiResTarget
 
 PRODUCT_PACKAGES += \
     UpdaterResTarget

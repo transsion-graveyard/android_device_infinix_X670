@@ -1,0 +1,902 @@
+--------- beginning of main
+05-14 01:20:11.464   857  2487 D AudioALSAStreamOut: standby(), flag 4
+05-14 01:20:11.464   857  2487 D AudioALSAStreamOut: standbyStreamOut(), halRequest 0, mDestroy 0, flag 4
+05-14 01:20:11.464   857  2487 D AudioALSAStreamOut: close(), flags 4
+05-14 01:20:11.464   857  2487 D AudioALSAPlaybackHandlerFast: +close()
+05-14 01:20:11.464   857  2487 D AudioALSAHardwareResourceManager: +stopOutputDevice(), mOutputDevices = 0x2, mStartOutputDevicesCount = 1
+05-14 01:20:11.464   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = ext_speaker_output descriptor->DeviceStatusCounter = 1, Ctlsize=2
+05-14 01:20:11.502  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:11.566   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = headphone_output descriptor->DeviceStatusCounter = 1, Ctlsize=4
+05-14 01:20:11.597   857  2487 D AudioALSAHardwareResourceManager: notifyOutputDeviceStatusChange(), device = 2, status = 1, sampleRate = 0, mOpenSpeakerPathCount = 0
+05-14 01:20:11.597   857  2487 D AudioALSAStreamManager: speakerStatusChangeCb(), status = 1, sampleRate = 0
+05-14 01:20:11.599   857  2487 D AudioALSAPlaybackHandlerBase: -closePcmDriver(), mPcm = 0x0
+05-14 01:20:11.599   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = PLAYBACK2_TO_ADDA_DL descriptor->DeviceStatusCounter = 1, Ctlsize=4
+05-14 01:20:11.600   857  2487 D AudioALSAPlaybackHandlerBase: DestroyAurisysLibManager()
+05-14 01:20:11.601   857  2487 D aurisys_lib_handler: aurisys_arsi_destroy_handler(), lib_name mtk_bessound, 0xb4000070d40f48f0, arsi_destroy_handler, arsi_handler = 0xb4000072043b23e0, retval = 0
+05-14 01:20:11.601   857  2487 D aurisys_lib_manager: delete_aurisys_lib_manager(), manager 0xb4000071c40ebab0
+05-14 01:20:11.601   857  2487 D AudioALSAPlaybackHandlerBase: closeWavDump()
+05-14 01:20:11.601   857  2487 D AudioALSAPlaybackHandlerFast: -close()
+--------- beginning of system
+05-14 01:20:11.602  1633  2199 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:12.505  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:12.931   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:12.931   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:12.931   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:12.931   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:12.934  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:12.969 10140 10200 D WM-NetworkStateTracker: Network capabilities changed: [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=30000Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /10.230.64.187, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -56, Link speed: 86Mbps, Tx Link speed: 86Mbps, Max Supported Tx Link speed: 72Mbps, Rx Link speed: 86Mbps, Max Supported Rx Link speed: 72Mbps, Frequency: 2412MHz, Net ID: -1, Metered hint: true, score: 94, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: -1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -56 UnderlyingNetworks: Null]
+05-14 01:20:12.974  2258  2276 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-14 01:20:12.974  2258  2276 W libbinder.Binder: Large reply transaction of 1056768 bytes, interface descriptor , code 1, flags 17
+05-14 01:20:12.975  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 1] [i 5]
+05-14 01:20:12.977  1633  5053 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:13.138  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:13.470  2258  6153 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=true, isWifiConnected=true)
+05-14 01:20:13.491  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:13.493  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:13.512  1633  5053 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:13.600  1633  1744 I ActivityManager: Test idle passed
+05-14 01:20:13.659  2704  2709 W droid.bluetooth: Reducing the number of considered missed Gc histogram windows from 136 to 100
+05-14 01:20:14.239   998   998 I thermal_repeater: [recvMdThermalInfo] ret=29, strLen=127,  3, 34, -50, -28393, 32767, 0
+05-14 01:20:14.515  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:15.182  1633  1763 D AppOpHistoryHelper: MetricHandler reporting 92 records.
+05-14 01:20:15.518  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:15.953   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:15.953   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:15.953   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:15.953   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:15.955  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:15.961  1633  1919 D ConnectivityService: NetReassign [no changes] [c 0] [a 1] [i 3]
+05-14 01:20:16.186  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:16.521  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:17.522  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:18.522  7136  7136 I RotationButtonController: onRotationProposal(rotation=3)
+05-14 01:20:18.525  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:18.614  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:18.616  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:18.980   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:18.981   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:18.981   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:18.981   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:18.988  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:19.014  1633  2199 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:19.016  2258  3722 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-14 01:20:19.016  2258  3722 W libbinder.Binder: Large reply transaction of 1056768 bytes, interface descriptor , code 1, flags 17
+05-14 01:20:19.017  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 1] [i 4]
+05-14 01:20:19.019 10140 10200 D WM-NetworkStateTracker: Network capabilities changed: [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=30000Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /10.230.64.187, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -46, Link speed: 86Mbps, Tx Link speed: 86Mbps, Max Supported Tx Link speed: 72Mbps, Rx Link speed: 86Mbps, Max Supported Rx Link speed: 72Mbps, Frequency: 2412MHz, Net ID: -1, Metered hint: true, score: 78, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: -1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -46 UnderlyingNetworks: Null]
+05-14 01:20:19.521  2258  6153 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=true, isWifiConnected=true)
+05-14 01:20:19.527  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:20.529  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:21.532  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:22.007   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:22.008   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:22.008   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:22.008   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:22.012  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:22.019  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 1] [i 5]
+05-14 01:20:22.535  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:23.312  1633  5053 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 27
+05-14 01:20:23.312   857  2487 I AudioALSAStreamOut: updateSourceMetadata(), do nothing source_metadata = 0x6f57562d68
+05-14 01:20:23.313   857  2950 D AudioALSAStreamOut: write(), flag 0x4, usePolicyDevice: 1, output_devices: 0x2 -> latest policyDevice 0x2 (ori policyDevice 0x2)
+05-14 01:20:23.313   857  2950 D AudioALSAStreamManager: +syncSharedOutDevice(), originDevice/routingSharedOutDevice: 0x2/0x2, mAudioMode: 0
+05-14 01:20:23.313   857  2950 D AudioIEMsController: routing(+), cur out 0x0 in 0x0, hs 0, bt 0, usb 0, device 0x2, mask 0x1, on 0
+05-14 01:20:23.313   857  2950 D AudioIEMsController: routing(-), cur out 0x0 in 0x0
+05-14 01:20:23.313   857  2950 E AudioMTKGainController: setNormalVolume(), invalid param, stream -1, mSceneIndex 0, index -1, devices 2, gainDevice 2, return
+05-14 01:20:23.313   857  2950 D AudioALSAStreamOut: open(), flags 4
+05-14 01:20:23.313   857  2950 D AudioALSAStreamManager: +createPlaybackHandler(), mAudioMode = 0, output_devices = 0x2, isMixerOut = 0, isBypassAurisys = 0, flag = 4, isIEMsSource = 0, isIEMsOn = 0
+05-14 01:20:23.313   857  2950 D AudioALSAStreamManager: needEnableVoip(), output_devices = 0x2, flags: 0x4, mAvailableOutputFlags: 0x1800e, enable: 0
+05-14 01:20:23.314   857  2950 D AudioALSAPlaybackHandlerFast: AudioALSAPlaybackHandlerFast()
+05-14 01:20:23.314   857  2950 D AudioALSAPlaybackHandlerFast: +open(), mDevice = 0x2
+05-14 01:20:23.314   857  2950 D AudioALSADeviceParser: compare pcm success = 2, stringpair = Playback_2
+05-14 01:20:23.314   857  2950 D AudioALSADeviceConfigManager: ApplyDeviceTurnonSequenceByName() DeviceName = PLAYBACK2_TO_ADDA_DL descriptor->DeviceStatusCounte = 0, Ctlsize=4
+05-14 01:20:23.321   857  2950 D AudioUtility: chooseTargetSampleRate() hiFiState 0 isDeviceSupportHiFi 0 sampleRate 48000 targetSampleRate 48000
+05-14 01:20:23.321   857  2950 D AudioALSAPlaybackHandlerBase: transferAudioFormatToPcmFormat(), audio_format(0x4) => pcm_format(0x3)
+05-14 01:20:23.321   857  2950 D AudioALSAPlaybackHandlerFast: open(), mConfig: channels = 2, rate = 48000, period_size = 256, period_count = 2, format = 3, buffer size 4096 2048
+05-14 01:20:23.321   857  2950 D AudioALSAPlaybackHandlerBase: CreateAurisysLibManager, ph type: 7, voip: 0, mAurisysScenario: 1
+05-14 01:20:23.321   857  2950 D aurisys_utility: input dev: 0x80000004, fmt = 0x3, fs: 48000, max fs: 48000, ch: 2, max ch: 1, ch maks: 0x3, hw_info_mask: 0x0; output dev: 0x2, fmt = 0x3, fs: 48000, max fs: 48000, ch: 2, max ch: 2, ch maks: 0x3, hw_info_mask: 0x4; task_scene: 2, audio_mode: 0, stream_type: -1, output_flags: 0x4, input_source: 0, input_flags: 0x0; network_info: 0, enhancement_feature_mask: 0x0
+05-14 01:20:23.321   857  2950 D AudioUtility: setupCustomInfoStr(), custom_info = "SetAudioCustomScene=;", (scene = , vol_level = -1, bt_codec = -1)
+05-14 01:20:23.321   857  2950 D aurisys_utility: lib, working fs: 48000, fmt: 0x3, frame = 0, b_interleave = 1, num_ul_ref_buf_array = 0, num_dl_ref_buf_array = 0
+05-14 01:20:23.321   857  2950 D aurisys_utility: dl in[type:2], ch: 2, ch_mask: 0x3, buf fs: 48000, buf content fs: 48000, fmt: 0x3; dl out[type:3], ch: 2, ch_mask: 0x3, buf fs: 48000, buf content fs: 48000, fmt: 0x3
+05-14 01:20:23.321   857  2950 D android.hardware.audio.service: get_custom_info_value(), cusom_info = SetAudioCustomScene=;, key= SetAudioCustomScene, ret = 0, ptr = 0x6f572335d0, value_str = , max_value_str_leng = 20
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: audioHierarchicalParamEnable [1]
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: getPlaybackPostProcessParameterFromXML Type/Name [5]/[PlaybackDRC]
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: Load from scene Scene,Default,Volume type,Music
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: audioHierarchicalParamEnable [1]
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: getPlaybackPostProcessParameterFromXML Type/Name [0]/[PlaybackACF]
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: Load from scene Scene,Default,Volume type,Music,Profile,Speaker
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: audioHierarchicalParamEnable [1]
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: getPlaybackPostProcessParameterFromXML Type/Name [6]/[PlaybackDRC]
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: Load from scene Scene,Default,Volume type,Ring
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: audioHierarchicalParamEnable [1]
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: getPlaybackPostProcessParameterFromXML Type/Name [8]/[PlaybackACF]
+05-14 01:20:23.322   857  2950 D AudioCompFltCustParam: Load from scene Scene,Default,Volume type,Music,Profile,Speaker
+05-14 01:20:23.322   857  2950 D aurisys_lib_handler: aurisys_arsi_parsing_param_file(), gProductInfo "platform=MT6781,device=X670,model=Infinix X670", file_path "/vendor/etc/audio_param", enhancement_mode 0, param_buf_size 2528, data_size 2528, custom_info SetAudioCustomScene=;
+05-14 01:20:23.323   857  2950 D aurisys_lib_handler: aurisys_arsi_create_handler(), lib_name mtk_bessound, 0xb4000070d40f48f0, memory_size 72724, arsi_handler 0xb4000072043b23e0, retval 0x0
+05-14 01:20:23.323   857  2950 D aurisys_lib_handler: aurisys_arsi_create_handler(), arsi_query_process_unit_bytes, ul 0, dl 2048, retval 0
+05-14 01:20:23.323   857  2950 D aurisys_lib_manager: DL Lib, lib_name mtk_bessound, 0xb4000070d40f48f0, sample_rate: 48000 => 48000, num_channels: 2 => 2, audio_format: 0x3 => 0x3, interleave: 1 => 1, frame: 0 => 0
+05-14 01:20:23.323   857  2950 D aurisys_lib_manager: DL out, sample_rate: 48000 => 48000, num_channels: 2 => 2, audio_format: 0x3 => 0x4, interleave: 1 => 1, frame: 0 => 0
+05-14 01:20:23.329   857  2950 D AudioALSAPlaybackHandlerBase: openPcmDriverWithFlag(), pcm device = 2 flag = 0x8 mPcm = 0xb4000071140eebf0
+05-14 01:20:23.329   857  2950 D AudioALSAHardwareResourceManager: +startOutputDevice(), new_devices = 0x2, mOutputDevices = 0x0, mStartOutputDevicesCount = 0 SampleRate = 48000
+05-14 01:20:23.329   857  2950 D AudioALSADeviceConfigManager: ApplyDeviceTurnonSequenceByName() DeviceName = headphone_output descriptor->DeviceStatusCounte = 0, Ctlsize=6
+05-14 01:20:23.331  1633  2199 V WindowManager: DesktopModeLaunchParamsModifier: phase= 0 task=null activity=null display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 task null, skipping
+05-14 01:20:23.331  1633  2199 V WindowManager: TaskLaunchParamsModifier:phase=0 task=null activity=null display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461
+05-14 01:20:23.337  1633  2199 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@680f6b47 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+05-14 01:20:23.337  1633  1744 I ActivityManager: Test idle passed
+05-14 01:20:23.342  1633  2199 V WindowManager: DesktopModeLaunchParamsModifier: phase= 0 task=null activity=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 task null, skipping
+05-14 01:20:23.342  1633  2199 V WindowManager: TaskLaunchParamsModifier:phase=0 task=null activity=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461
+05-14 01:20:23.343  1633  2199 V WindowManager: DesktopModeLaunchParamsModifier: phase= 3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 not entering desktop mode, skipping
+05-14 01:20:23.344  1633  2199 V WindowManager: TaskLaunchParamsModifier:phase=3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 inherit-from-source=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@71859461 skip-bounds-fullscreen
+05-14 01:20:23.346  1633  2199 V WindowManager: DesktopModeLaunchParamsModifier: phase= 3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 not entering desktop mode, skipping
+05-14 01:20:23.347  1633  2199 V WindowManager: TaskLaunchParamsModifier:phase=3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 inherit-from-source=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@71859461 skip-bounds-fullscreen
+05-14 01:20:23.349  1633  2199 V WindowManager: DesktopModeLaunchParamsModifier: phase= 3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 not entering desktop mode, skipping
+05-14 01:20:23.349  1633  2199 V WindowManager: TaskLaunchParamsModifier:phase=3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 inherit-from-source=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@71859461 skip-bounds-fullscreen
+05-14 01:20:23.350  1633  2199 W PackageConfigPersister: App-specific configuration not found for packageName: com.android.settings and userId: 0
+05-14 01:20:23.356  1633  2199 I ActivityTaskManager: START u0 {xflg=0x4 cmp=com.infinity.updater/.UpdatesActivity} with LAUNCH_SINGLE_TOP from uid 1000 (com.android.settings) (sr=111433673) (BAL_ALLOW_VISIBLE_WINDOW) result code=0
+05-14 01:20:23.358  1633  1727 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@680f6b47 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+05-14 01:20:23.359  2008  2042 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+05-14 01:20:23.359  2008  2042 V ShellDesktopMode: DesktopTasksController: handleRequest request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=43 effectiveUid=1000 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings } baseActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} topActivity=ComponentInfo{com.infinity.updater/com.infinity.updater.UpdatesActivity} origActivity=ComponentInfo{com.android.settings/com.android.settings.Settings} realActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} numActivities=3 lastActiveTime=1730685 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@3aa7ce1} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{142d72a com.infinity.updater.UpdatesActivity} launchCookies=[android.os.BinderProxy@c4aa8c7] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatMode=undefinedundefined} topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransition = null, displayChange = null, requestedLocation = null, userChange = null, windowingLayerChange = null, flags = 0, debugId = 131 }
+05-14 01:20:23.359  2008  2042 V ShellDesktopMode: DesktopTasksController: skipping handleRequest reason=triggerTask's display doesn't support desktop mode
+05-14 01:20:23.360   857  2950 D AudioALSADeviceConfigManager: ApplyDeviceTurnonSequenceByName() DeviceName = ext_speaker_output descriptor->DeviceStatusCounte = 0, Ctlsize=2
+05-14 01:20:23.367  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:23.383  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio//cgroup.procs: No such file or directory
+05-14 01:20:23.384   852   852 D Zygote  : Forked child process 10521
+05-14 01:20:23.385  1633  1745 I ActivityManager: Start proc 10521:com.infinity.updater/u0a344 for next-top-activity {com.infinity.updater/com.infinity.updater.UpdatesActivity}
+05-14 01:20:23.393   857  2950 D AudioALSAHardwareResourceManager: notifyOutputDeviceStatusChange(), device = 2, status = 0, sampleRate = 48000, mOpenSpeakerPathCount = 1
+05-14 01:20:23.393   857  2950 D AudioALSAStreamManager: speakerStatusChangeCb(), status = 0, sampleRate = 48000
+05-14 01:20:23.393   857  2950 D AudioALSAPlaybackHandlerFast: -open()
+05-14 01:20:23.393 10521 10521 I Zygote  : Process 10521 created for com.infinity.updater
+05-14 01:20:23.393 10521 10521 I nfinity.updater: Using CollectorTypeCC GC.
+05-14 01:20:23.398 10521 10521 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+05-14 01:20:23.404  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:23.404  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio//cgroup.procs: No such file or directory
+05-14 01:20:23.408 10521 10521 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+05-14 01:20:23.408 10521 10521 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+05-14 01:20:23.414  2008  2042 V ShellDesktopMode: DesktopMixedTransitionHandler: No pending desktop transition
+05-14 01:20:23.418 10521 10521 D nativeloader: Configuring clns-shared-9 for other apk /system_ext/priv-app/Updater/Updater.apk. target_sdk_version=36, uses_libraries=, library_path=/system_ext/priv-app/Updater/lib/arm64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.infinity.updater:/system_ext/priv-app/Updater:/system/lib64:/system_ext/lib64
+05-14 01:20:23.425 10521 10521 V GraphicsEnvironment: Currently set values for:
+05-14 01:20:23.425 10521 10521 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+05-14 01:20:23.425 10521 10521 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+05-14 01:20:23.425 10521 10521 V GraphicsEnvironment: com.infinity.updater is not listed in per-application setting
+05-14 01:20:23.426 10521 10521 V GraphicsEnvironment: ANGLE allowlist from config: 
+05-14 01:20:23.426 10521 10521 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+05-14 01:20:23.426 10521 10521 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+05-14 01:20:23.426  1633  1724 V WindowManager: Sent Transition (#131) createdAt=05-14 01:20:23.341 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=43 effectiveUid=1000 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings } baseActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} topActivity=ComponentInfo{com.infinity.updater/com.infinity.updater.UpdatesActivity} origActivity=ComponentInfo{com.android.settings/com.android.settings.Settings} realActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} numActivities=3 lastActiveTime=1730685 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{5827d86 Task{61446ae #43 type=standard A=1000:com.android.settings.root}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{f4cc1 com.infinity.updater.UpdatesActivity} launchCookies=[android.os.BinderProxy@b02e74] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatMode=undefinedundefined} topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransition = null, displayChange = null, requestedLocation = null, userChange = null, windowingLayerChange = null, flags = 0, debugId = 131 }
+05-14 01:20:23.426  1633  1724 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+05-14 01:20:23.426  1633  1724 V WindowManager:     info={id=131 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+05-14 01:20:23.426  1633  1724 V WindowManager:         {m=OPEN f=FILLS_TASK|IS_BEHIND_STARTING_WINDOW leash=Surface(name=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t43}#1465)/@0x536f98e sb=Rect(0, 0 - 0, 0) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=-1->0 r=-1->0:-1 bc=ff1a1b1f activity=ActivityTransitionInfo { component = ComponentInfo{com.infinity.updater/com.infinity.updater.UpdatesActivity}, taskId = 43, appCompatTransitionInfo = null }},
+05-14 01:20:23.426  1633  1724 V WindowManager:         {m=TO_BACK f=FILLS_TASK|IS_BEHIND_STARTING_WINDOW leash=Surface(name=ActivityRecord{111433673 u0 com.android.settings/.SubSettings t43}#1454)/@0xb9d8a sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 bc=ff1a1b1f activity=ActivityTransitionInfo { component = ComponentInfo{com.android.settings/com.android.settings.SubSettings}, taskId = 43, appCompatTransitionInfo = null }}
+05-14 01:20:23.426  1633  1724 V WindowManager:     ]}
+05-14 01:20:23.435  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:23.435  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:23.437  1633  3561 D ConnectivityService: requestNetwork for uid/pid:10337/2008 asUid: 10344 activeRequest: null callbackRequest: 368 [NetworkRequest [ REQUEST id=369, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|BLK
+05-14 01:20:23.438 10521 10535 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+05-14 01:20:23.439  1633  2199 V DisplayManagerService: FrozenStateChangeCallback not supported for pid 10521
+05-14 01:20:23.439 10521 10535 D libMEOW : meow new tls: 0xb4000076e810b0a0
+05-14 01:20:23.439 10521 10535 D libMEOW : meow reload base cfg path: na
+05-14 01:20:23.439 10521 10535 D libMEOW : meow reload overlay cfg path: na
+05-14 01:20:23.440  1633  1912 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=369, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:23.440  1633  1912 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=369, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:23.440  1633  1912 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=369, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:23.440  1633  1912 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=369, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:23.440  1633  1919 D ConnectivityService: NetReassign [369 : null → 101] [c 0] [a 1] [i 2]
+05-14 01:20:23.444 10521 10535 E QT      : [QT]file does not exist
+05-14 01:20:23.445 10521 10535 D libMEOW : applied 1 plugins for [com.infinity.updater]:
+05-14 01:20:23.445 10521 10535 D libMEOW :   plugin 1: [libMEOW_gift.so]: 0xb400007738085010
+05-14 01:20:23.445 10521 10535 D libMEOW : rebuild call chain: 0xb4000076e811b0b0
+05-14 01:20:23.447 10521 10521 D DesktopExperienceFlags: Toggle override initialized to: false
+05-14 01:20:23.451 10521 10521 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+05-14 01:20:23.454 10521 10521 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+05-14 01:20:23.465 10521 10521 D CompatChangeReporter: Compat change id reported: 377864165; UID 10344; state: ENABLED
+05-14 01:20:23.465 10521 10521 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+05-14 01:20:23.474  7136  7136 D b/417220811: invalidateLoadedTasks - previous requestLoadId: -1
+05-14 01:20:23.502   857  2487 I AudioALSAStreamOut: updateSourceMetadata(), do nothing source_metadata = 0x6f57562d68
+05-14 01:20:23.527   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.527   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.527   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.527   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.527   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.528   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.528   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.528   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.528   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:23.536  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:23.553 10521 10521 D UpdaterService: Starting service
+05-14 01:20:23.557 10521 10521 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@5d92294
+05-14 01:20:23.558  1633  2199 D CoreBackPreview: Window{8509b33 u0 com.infinity.updater/com.infinity.updater.UpdatesActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@defb78f, mPriority=-1, mIsAnimationCallback=false, mOverrideBehavior=0}
+05-14 01:20:23.559 10521 10521 D VRI[UpdatesActivity]: WindowInsets changed: 1080x2400 statusBars:[0,108,0,0] navigationBars:[0,0,0,72] mandatorySystemGestures:[0,144,0,96] 
+05-14 01:20:23.567   899  2266 E SurfaceFlinger: getSupportedContentTypes: getSupportedContentTypes failed for display 0: UNSUPPORTED (8)
+05-14 01:20:23.596 10521 10521 D UpdatesActivity: Checking https://raw.githubusercontent.com/ProjectInfinity-X/official_devices/16/vanilla/X670.json
+05-14 01:20:23.600  1633  1724 I ActivityTaskManager: Displayed com.infinity.updater/.UpdatesActivity for user 0: +272ms
+05-14 01:20:23.638  1633  1895 I ImeTracker: com.infinity.updater:9da09d4b: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+05-14 01:20:23.638 10521 10521 I ImeTracker: com.infinity.updater:9da09d4b: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+05-14 01:20:23.645  3551  3551 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2043 
+05-14 01:20:23.646  1633  3201 I ImeTracker: system_server:1401610f: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+05-14 01:20:23.646  3551  3551 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+05-14 01:20:23.647  1633  1727 I ImeTracker: system_server:1401610f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-14 01:20:23.647  3551  3551 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1293 onStartInput(EditorInfo{EditorInfo{packageName=com.infinity.updater, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+05-14 01:20:23.648  3551  3551 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+05-14 01:20:23.650  1633  3153 W PackageConfigPersister: App-specific configuration not found for packageName: com.infinity.updater and userId: 0
+05-14 01:20:23.730  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:23.732  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:23.903  1633  1724 V WindowManager: Finish Transition (#131): created at 05-14 01:20:23.341 collect-started=0.366ms request-sent=14.805ms started=19.345ms ready=67.757ms sent=69.635ms commit=13.185ms finished=561.273ms
+05-14 01:20:23.904 10212 10212 D VRI[SubSettings]: visibilityChanged oldVisibility=true newVisibility=false
+05-14 01:20:23.910  1633  1983 W ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+05-14 01:20:23.913  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:23.918  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:23.920  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:23.949  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:24.252   998   998 I thermal_repeater: [recvMdThermalInfo] ret=29, strLen=127,  3, 33, -50, -28393, 32767, 0
+05-14 01:20:24.544  1633  3201 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:24.576 10521 10560 E HttpURLConnectionClient: The server replied with code 404
+05-14 01:20:24.576 10521 10560 E UpdatesActivity: Could not download updates list
+05-14 01:20:24.871  2008  2042 D ShellBackPreview: Finishing gesture with event action: 1
+05-14 01:20:24.871  2008  2042 D ShellBackPreview: onGestureFinished called while no gesture is started
+05-14 01:20:24.882  1633  2199 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 27
+05-14 01:20:24.888   857  2487 I AudioALSAStreamOut: updateSourceMetadata(), do nothing source_metadata = 0x6f57562d68
+05-14 01:20:24.974   857  2487 I AudioALSAStreamOut: updateSourceMetadata(), do nothing source_metadata = 0x6f57562d68
+05-14 01:20:24.979 10521 10521 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.widget.PopupWindow$PopupDecorView$$ExternalSyntheticLambda1@9b399ee
+05-14 01:20:24.980  1633  2199 D CoreBackPreview: Window{ec7e44e u0 PopupWindow:df5556d}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@e2aae68, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+05-14 01:20:25.022   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:25.023   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:25.023   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:25.023   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:25.024  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:25.026  1633  1919 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 2]
+05-14 01:20:25.547  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:26.188 10521 10535 I mali    : [DebugProp] GPU Debug-Mechanism Disable !
+05-14 01:20:26.303  1633  5053 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 27
+05-14 01:20:26.307  1633  3153 V WindowManager: DesktopModeLaunchParamsModifier: phase= 0 task=null activity=null display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 task null, skipping
+05-14 01:20:26.308  1633  3153 V WindowManager: TaskLaunchParamsModifier:phase=0 task=null activity=null display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461
+05-14 01:20:26.311  1633  3153 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@ddd6e0f8 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+05-14 01:20:26.312   857  2487 I AudioALSAStreamOut: updateSourceMetadata(), do nothing source_metadata = 0x6f57562d68
+05-14 01:20:26.317  1633  3153 V WindowManager: DesktopModeLaunchParamsModifier: phase= 0 task=null activity=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 task null, skipping
+05-14 01:20:26.317  1633  3153 V WindowManager: TaskLaunchParamsModifier:phase=0 task=null activity=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461
+05-14 01:20:26.318  1633  3153 V WindowManager: DesktopModeLaunchParamsModifier: phase= 3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 not entering desktop mode, skipping
+05-14 01:20:26.318  1633  3153 V WindowManager: TaskLaunchParamsModifier:phase=3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 inherit-from-source=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@71859461 skip-bounds-fullscreen
+05-14 01:20:26.321  1633  3153 V WindowManager: DesktopModeLaunchParamsModifier: phase= 3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 not entering desktop mode, skipping
+05-14 01:20:26.322  1633  3153 V WindowManager: TaskLaunchParamsModifier:phase=3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 inherit-from-source=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@71859461 skip-bounds-fullscreen
+05-14 01:20:26.324  1633  3153 V WindowManager: DesktopModeLaunchParamsModifier: phase= 3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 not entering desktop mode, skipping
+05-14 01:20:26.325  1633  3153 V WindowManager: TaskLaunchParamsModifier:phase=3 task=Task{61446ae #43 type=standard A=1000:com.android.settings.root} activity=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t-1} display-area-from-source=DefaultTaskDisplayArea@71859461 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@71859461 inherit-from-source=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@71859461 skip-bounds-fullscreen
+05-14 01:20:26.327  1633  3153 W PackageConfigPersister: App-specific configuration not found for packageName: com.android.settings and userId: 0
+05-14 01:20:26.331  1633  3153 I ActivityTaskManager: START u0 {act=android.intent.action.OPEN_DOCUMENT cat=[android.intent.category.OPENABLE] typ=application/zip xflg=0x4 cmp=com.android.documentsui/.picker.PickActivity} with LAUNCH_MULTIPLE from uid 10344 (com.infinity.updater) (rr=56322011) (BAL_ALLOW_VISIBLE_WINDOW) result code=0
+05-14 01:20:26.331  2008  2042 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+05-14 01:20:26.332 10521 10521 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+05-14 01:20:26.332  2008  2042 V ShellDesktopMode: DesktopTasksController: handleRequest request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=43 effectiveUid=1000 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings } baseActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} topActivity=ComponentInfo{com.android.documentsui/com.android.documentsui.picker.PickActivity} origActivity=ComponentInfo{com.android.settings/com.android.settings.Settings} realActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} numActivities=4 lastActiveTime=1733660 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@3aa7ce1} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{685a5df com.android.documentsui.picker.PickActivity} launchCookies=[android.os.BinderProxy@c4aa8c7] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatMode=undefinedundefined} topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransition = null, displayChange = null, requestedLocation = null, userChange = null, windowingLayerChange = null, flags = 0, debugId = 132 }
+05-14 01:20:26.332  1633  3153 D CoreBackPreview: Window{ec7e44e u0 PopupWindow:df5556d}: Setting back callback null
+05-14 01:20:26.332  2008  2042 V ShellDesktopMode: DesktopTasksController: skipping handleRequest reason=triggerTask's display doesn't support desktop mode
+05-14 01:20:26.332  1633  1727 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@ddd6e0f8 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+05-14 01:20:26.341  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:26.355  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio//cgroup.procs: No such file or directory
+05-14 01:20:26.356   852   852 D Zygote  : Forked child process 10568
+05-14 01:20:26.357  1633  1745 I ActivityManager: Start proc 10568:com.android.documentsui/u0a263 for next-top-activity {com.android.documentsui/com.android.documentsui.picker.PickActivity}
+05-14 01:20:26.363  2008  2091 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda12@25871d7
+05-14 01:20:26.364  1633  3153 D CoreBackPreview: Window{6744c5f u0 Splash Screen com.android.documentsui}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@9b6eb0a, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+05-14 01:20:26.378  1633  1724 V WindowManager: Sent Transition (#132) createdAt=05-14 01:20:26.315 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=43 effectiveUid=1000 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings } baseActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} topActivity=ComponentInfo{com.android.documentsui/com.android.documentsui.picker.PickActivity} origActivity=ComponentInfo{com.android.settings/com.android.settings.Settings} realActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} numActivities=4 lastActiveTime=1733660 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{5827d86 Task{61446ae #43 type=standard A=1000:com.android.settings.root}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{dd5adf1 com.android.documentsui.picker.PickActivity} launchCookies=[android.os.BinderProxy@b02e74] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatMode=undefinedundefined} topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransition = null, displayChange = null, requestedLocation = null, userChange = null, windowingLayerChange = null, flags = 0, debugId = 132 }
+05-14 01:20:26.379  1633  1724 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+05-14 01:20:26.379  1633  1724 V WindowManager:     info={id=132 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+05-14 01:20:26.379  1633  1724 V WindowManager:         {m=OPEN f=FILLS_TASK|IS_BEHIND_STARTING_WINDOW leash=Surface(name=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t43}#1483)/@0x23b4f7b sb=Rect(0, 0 - 0, 0) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=-1->0 r=-1->0:-1 bc=ff303030 activity=ActivityTransitionInfo { component = ComponentInfo{com.android.documentsui/com.android.documentsui.picker.PickActivity}, taskId = 43, appCompatTransitionInfo = null }},
+05-14 01:20:26.379  1633  1724 V WindowManager:         {m=TO_BACK f=FILLS_TASK|IS_BEHIND_STARTING_WINDOW leash=Surface(name=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t43}#1465)/@0x536f98e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 bc=ff303030 activity=ActivityTransitionInfo { component = ComponentInfo{com.infinity.updater/com.infinity.updater.UpdatesActivity}, taskId = 43, appCompatTransitionInfo = null }}
+05-14 01:20:26.379  1633  1724 V WindowManager:     ]}
+05-14 01:20:26.380  2008  2042 V ShellDesktopMode: DesktopMixedTransitionHandler: No pending desktop transition
+05-14 01:20:26.390 10568 10568 I Zygote  : Process 10568 created for com.android.documentsui
+05-14 01:20:26.391 10568 10568 I oid.documentsui: Using CollectorTypeCC GC.
+05-14 01:20:26.397 10568 10568 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+05-14 01:20:26.398   857  2487 I AudioALSAStreamOut: updateSourceMetadata(), do nothing source_metadata = 0x6f57562d68
+05-14 01:20:26.405  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio//cgroup.procs: No such file or directory
+05-14 01:20:26.405  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:26.418 10568 10568 D nativeloader: Configuring clns-shared-9 for other apk /system/priv-app/DocumentsUI/DocumentsUI.apk. target_sdk_version=36, uses_libraries=, library_path=/system/priv-app/DocumentsUI/lib/arm64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.documentsui:/system/priv-app/DocumentsUI:/system/lib64:/system_ext/lib64
+05-14 01:20:26.427 10568 10568 V GraphicsEnvironment: Currently set values for:
+05-14 01:20:26.427 10568 10568 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+05-14 01:20:26.427 10568 10568 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+05-14 01:20:26.427 10568 10568 V GraphicsEnvironment: com.android.documentsui is not listed in per-application setting
+05-14 01:20:26.427 10568 10568 V GraphicsEnvironment: ANGLE allowlist from config: 
+05-14 01:20:26.427 10568 10568 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+05-14 01:20:26.427 10568 10568 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+05-14 01:20:26.434 10568 10568 D FlagUtils: override flag com.android.documentsui.flags.use_material3 to false
+05-14 01:20:26.436 10568 10581 W ThemeOverlayManager: Skip enabled overlay package:com.android.documentsui.overlay, user:UserHandle{0}
+05-14 01:20:26.442 10568 10583 D DesktopExperienceFlags: Toggle override initialized to: false
+05-14 01:20:26.451  7136  7136 D b/417220811: invalidateLoadedTasks - previous requestLoadId: -1
+05-14 01:20:26.460  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:26.460  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:26.461 10568 10568 D DocumentsApplication: OverlayManager.setEnabled() result: false
+05-14 01:20:26.463 10568 10589 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+05-14 01:20:26.463  1633  5053 V DisplayManagerService: FrozenStateChangeCallback not supported for pid 10568
+05-14 01:20:26.464 10568 10589 D libMEOW : meow new tls: 0xb4000076e811b0b0
+05-14 01:20:26.464 10568 10588 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+05-14 01:20:26.464 10568 10589 D libMEOW : meow reload base cfg path: na
+05-14 01:20:26.464 10568 10589 D libMEOW : meow reload overlay cfg path: na
+05-14 01:20:26.465 10568 10589 D libMEOW : applied 1 plugins for [com.android.documentsui]:
+05-14 01:20:26.465 10568 10589 D libMEOW :   plugin 1: [libMEOW_gift.so]: 0xb400007738085010
+05-14 01:20:26.465 10568 10589 D libMEOW : rebuild call chain: 0xb4000076e810b0a0
+05-14 01:20:26.476 10568 10568 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+05-14 01:20:26.487 10568 10568 D CompatChangeReporter: Compat change id reported: 377864165; UID 10263; state: ENABLED
+05-14 01:20:26.488 10568 10568 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+05-14 01:20:26.548  1633  5053 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:26.567  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:26.573 10568 10568 E oid.documentsui: No package ID ff found for resource ID 0xffffffff.
+05-14 01:20:26.602 10568 10568 W SelectionTracker: Setting gestureTooltypes is likely to result in unexpected behavior.
+05-14 01:20:26.608 10568 10568 E oid.documentsui: No package ID ff found for resource ID 0xffffffff.
+05-14 01:20:26.627 10568 10568 E oid.documentsui: No package ID ff found for resource ID 0xffffffff.
+05-14 01:20:26.630 10568 10568 D VRI[PickActivity]: WindowInsets changed: 1080x2400 statusBars:[0,108,0,0] navigationBars:[0,0,0,72] mandatorySystemGestures:[0,144,0,96] 
+05-14 01:20:26.631 10568 10568 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda12@7817ffe
+05-14 01:20:26.632  1633  3201 D CoreBackPreview: Window{8e90328 u0 com.android.documentsui/com.android.documentsui.picker.PickActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@c9cc327, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+05-14 01:20:26.645   899   938 E SurfaceFlinger: getSupportedContentTypes: getSupportedContentTypes failed for display 0: UNSUPPORTED (8)
+05-14 01:20:26.675 10568 10568 E oid.documentsui: No package ID ff found for resource ID 0xffffffff.
+05-14 01:20:26.733  1633  1724 I ActivityTaskManager: Displayed com.android.documentsui/.picker.PickActivity for user 0: +428ms
+05-14 01:20:26.743 10568 10568 E oid.documentsui: No package ID ff found for resource ID 0xffffffff.
+05-14 01:20:26.763 10568 10568 D DefaultSelectionTracker: Ignoring onDataSetChange. No active selection.
+05-14 01:20:26.865  1633  1724 V WindowManager: Finish Transition (#132): created at 05-14 01:20:26.315 collect-started=0.307ms request-sent=15.54ms started=20.314ms ready=58.6ms sent=60.484ms commit=19.67ms finished=549.258ms
+05-14 01:20:26.866 10521 10521 D VRI[UpdatesActivity]: visibilityChanged oldVisibility=true newVisibility=false
+05-14 01:20:26.872  1633  3201 D ConnectivityService: requestNetwork for uid/pid:10337/2008 asUid: 10263 activeRequest: null callbackRequest: 370 [NetworkRequest [ REQUEST id=371, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10263 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|BLK
+05-14 01:20:26.881  1633  1912 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=371, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10263 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:26.881  1633  1912 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=371, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10263 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:26.881  1633  1912 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=371, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10263 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:26.881  1633  1912 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=371, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10263 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:26.882  1633  1919 D ConnectivityService: NetReassign [371 : null → 101] [c 0] [a 1] [i 7]
+05-14 01:20:26.938  1633  1895 I ImeTracker: com.android.documentsui:464066da: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+05-14 01:20:26.942 10568 10568 I ImeTracker: com.android.documentsui:464066da: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+05-14 01:20:26.943  1633  3201 I ImeTracker: com.android.documentsui:81171957: onRequestHide at ORIGIN_SERVER reason HIDE_SOFT_INPUT fromUser false
+05-14 01:20:26.944  1633  3201 I ImeTracker: com.android.documentsui:81171957: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-14 01:20:26.944  3551  3551 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2043 
+05-14 01:20:26.945  3551  3551 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+05-14 01:20:26.946  3551  3551 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1293 onStartInput(EditorInfo{EditorInfo{packageName=com.android.documentsui, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+05-14 01:20:26.947  1633  2199 I ImeTracker: system_server:53035391: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+05-14 01:20:26.947  3551  3551 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+05-14 01:20:26.948  1633  1727 I ImeTracker: system_server:53035391: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-14 01:20:26.948  1633  2199 W PackageConfigPersister: App-specific configuration not found for packageName: com.android.documentsui and userId: 0
+05-14 01:20:26.953  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:26.956 10521 10521 D UpdaterService: Service no longer needed, stopping
+05-14 01:20:26.966  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:27.053  2008  2091 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+05-14 01:20:27.054  1633  2199 D CoreBackPreview: Window{6744c5f u0 Splash Screen com.android.documentsui EXITING}: Setting back callback null
+05-14 01:20:27.553  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:28.043   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:28.043   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:28.043   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:28.043   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:28.046  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:28.054  1633  1919 D ConnectivityService: NetReassign [no changes] [c 0] [a 2] [i 4]
+05-14 01:20:28.555  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:28.853  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:28.856  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:28.865   907   918 D ccci_mdinit: (1):monitor_time_update_thread round:71 ########
+05-14 01:20:28.928  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-14 01:20:28.931  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-14 01:20:28.931  1633  1919 D InetDiagMessage: Destroyed live tcp sockets for uids={10304} in 7ms
+05-14 01:20:28.934  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-14 01:20:28.936  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-14 01:20:28.936  1633  1919 D InetDiagMessage: Destroyed live tcp sockets for uids={20304} in 4ms
+05-14 01:20:29.379   857  2487 D AudioALSAStreamOut: standby(), flag 4
+05-14 01:20:29.379   857  2487 D AudioALSAStreamOut: standbyStreamOut(), halRequest 0, mDestroy 0, flag 4
+05-14 01:20:29.380   857  2487 D AudioALSAStreamOut: close(), flags 4
+05-14 01:20:29.380   857  2487 D AudioALSAPlaybackHandlerFast: +close()
+05-14 01:20:29.380   857  2487 D AudioALSAHardwareResourceManager: +stopOutputDevice(), mOutputDevices = 0x2, mStartOutputDevicesCount = 1
+05-14 01:20:29.380   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = ext_speaker_output descriptor->DeviceStatusCounter = 1, Ctlsize=2
+05-14 01:20:29.473   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = headphone_output descriptor->DeviceStatusCounter = 1, Ctlsize=4
+05-14 01:20:29.504   857  2487 D AudioALSAHardwareResourceManager: notifyOutputDeviceStatusChange(), device = 2, status = 1, sampleRate = 0, mOpenSpeakerPathCount = 0
+05-14 01:20:29.504   857  2487 D AudioALSAStreamManager: speakerStatusChangeCb(), status = 1, sampleRate = 0
+05-14 01:20:29.507   857  2487 D AudioALSAPlaybackHandlerBase: -closePcmDriver(), mPcm = 0x0
+05-14 01:20:29.507   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = PLAYBACK2_TO_ADDA_DL descriptor->DeviceStatusCounter = 1, Ctlsize=4
+05-14 01:20:29.508   857  2487 D AudioALSAPlaybackHandlerBase: DestroyAurisysLibManager()
+05-14 01:20:29.508   857  2487 D aurisys_lib_handler: aurisys_arsi_destroy_handler(), lib_name mtk_bessound, 0xb4000070d40f48f0, arsi_destroy_handler, arsi_handler = 0xb4000072043b23e0, retval = 0
+05-14 01:20:29.509   857  2487 D aurisys_lib_manager: delete_aurisys_lib_manager(), manager 0xb4000071c40ebab0
+05-14 01:20:29.509   857  2487 D AudioALSAPlaybackHandlerBase: closeWavDump()
+05-14 01:20:29.509   857  2487 D AudioALSAPlaybackHandlerFast: -close()
+05-14 01:20:29.510  1633  2199 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:29.557  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:30.560  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:31.069   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:31.070   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:31.070   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:31.070   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:31.073  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:31.098 10140 10200 D WM-NetworkStateTracker: Network capabilities changed: [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=30000Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /10.230.64.187, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -62, Link speed: 86Mbps, Tx Link speed: 86Mbps, Max Supported Tx Link speed: 72Mbps, Rx Link speed: 86Mbps, Max Supported Rx Link speed: 72Mbps, Frequency: 2412MHz, Net ID: -1, Metered hint: true, score: 84, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: -1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -62 UnderlyingNetworks: Null]
+05-14 01:20:31.103  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 2] [i 4]
+05-14 01:20:31.113  2258  3722 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-14 01:20:31.113  2258  3722 W libbinder.Binder: Large reply transaction of 1056768 bytes, interface descriptor , code 1, flags 17
+05-14 01:20:31.116  1633  3201 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:31.414  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:31.416  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:31.563  1633  5053 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:31.597  2258  6153 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=true, isWifiConnected=true)
+05-14 01:20:31.976  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-14 01:20:31.979  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-14 01:20:31.979  1633  1919 D InetDiagMessage: Destroyed live tcp sockets for uids={10344} in 5ms
+05-14 01:20:31.981  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-14 01:20:31.983  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-14 01:20:31.983  1633  1919 D InetDiagMessage: Destroyed live tcp sockets for uids={20344} in 4ms
+05-14 01:20:32.057  1633  1744 I ActivityManager: Test idle passed
+05-14 01:20:32.109  2731  2751 W k.incallservice: Reducing the number of considered missed Gc histogram windows from 138 to 100
+05-14 01:20:32.565  1633  5053 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:32.697  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:33.567  1633  5053 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:33.975  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:33.977  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:34.096   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:34.097   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:34.097   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:34.097   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:34.099  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:34.129 10140 10200 D WM-NetworkStateTracker: Network capabilities changed: [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=30000Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /10.230.64.187, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -51, Link speed: 86Mbps, Tx Link speed: 86Mbps, Max Supported Tx Link speed: 72Mbps, Rx Link speed: 86Mbps, Max Supported Rx Link speed: 72Mbps, Frequency: 2412MHz, Net ID: -1, Metered hint: true, score: 73, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: -1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -51 UnderlyingNetworks: Null]
+05-14 01:20:34.130  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 0] [i 3]
+05-14 01:20:34.130  2258  3722 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+05-14 01:20:34.130  2258  3722 W libbinder.Binder: Large reply transaction of 1056768 bytes, interface descriptor , code 1, flags 17
+05-14 01:20:34.133  1633  3201 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:34.265   998   998 I thermal_repeater: [recvMdThermalInfo] ret=29, strLen=127,  3, 33, -50, -28393, 32767, 0
+05-14 01:20:34.570  1633  3201 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:34.631  2258  6153 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=true, isWifiConnected=true)
+05-14 01:20:35.572  1633  3201 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:36.257 10568 10589 I mali    : [DebugProp] GPU Debug-Mechanism Disable !
+05-14 01:20:36.315  2008  2042 V ShellDesktopMode: DesktopTasksController: handleRequest request=TransitionRequestInfo { type = CLOSE, triggerTask = null, pipChange = null, remoteTransition = null, displayChange = null, requestedLocation = null, userChange = null, windowingLayerChange = null, flags = 0, debugId = 133 }
+05-14 01:20:36.315  2008  2042 V ShellDesktopMode: DesktopTasksController: skipping handleRequest reason=triggerTask is null
+05-14 01:20:36.319  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:36.340  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:36.368  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:36.370  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:36.371  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:36.371  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio//cgroup.procs: No such file or directory
+05-14 01:20:36.381 10521 10521 D CompatChangeReporter: Compat change id reported: 379365266; UID 10344; state: ENABLED
+05-14 01:20:36.383  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:36.384  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:36.430  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:36.440  3035  4833 I MediaProvider: Open with lower FS for /storage/emulated/0/Project_Infinity-X-3.10-X670-13.05.2026-GAPPS-UNOFFICIAL.zip. Uid: 10265
+05-14 01:20:36.451 10521 10521 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Dialog$$ExternalSyntheticLambda2@57f144b
+05-14 01:20:36.455  1633  5053 D CoreBackPreview: Window{cf4e9ff u0 Local update}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@e1ea1f6, mPriority=-1, mIsAnimationCallback=false, mOverrideBehavior=0}
+05-14 01:20:36.460  7136  7136 D b/417220811: invalidateLoadedTasks - previous requestLoadId: -1
+05-14 01:20:36.481  1633  1724 V WindowManager: Sent Transition (#133) createdAt=05-14 01:20:36.314 via request=TransitionRequestInfo { type = CLOSE, triggerTask = null, pipChange = null, remoteTransition = null, displayChange = null, requestedLocation = null, userChange = null, windowingLayerChange = null, flags = 0, debugId = 133 }
+05-14 01:20:36.481  1633  1724 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+05-14 01:20:36.481  1633  1724 V WindowManager:     info={id=133 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+05-14 01:20:36.481  1633  1724 V WindowManager:         {m=CLOSE f=FILLS_TASK leash=Surface(name=ActivityRecord{236465958 u0 com.android.documentsui/.picker.PickActivity t43}#1483)/@0x23b4f7b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 bc=ff202124 activity=ActivityTransitionInfo { component = ComponentInfo{com.android.documentsui/com.android.documentsui.picker.PickActivity}, taskId = 43, appCompatTransitionInfo = null } opt={t=FROM_STYLE mUserId=0}},
+05-14 01:20:36.481  1633  1724 V WindowManager:         {m=TO_FRONT f=FILLS_TASK leash=Surface(name=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t43}#1465)/@0x536f98e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 bc=ff202124 activity=ActivityTransitionInfo { component = ComponentInfo{com.infinity.updater/com.infinity.updater.UpdatesActivity}, taskId = 43, appCompatTransitionInfo = null } opt={t=FROM_STYLE mUserId=0}}
+05-14 01:20:36.481  1633  1724 V WindowManager:     ]}
+05-14 01:20:36.483  2008  2042 V ShellDesktopMode: DesktopMixedTransitionHandler: No pending desktop transition
+05-14 01:20:36.484 10521 10521 D UpdaterService: Starting service
+05-14 01:20:36.489 10521 10521 D UpdatesActivity: Checking https://raw.githubusercontent.com/ProjectInfinity-X/official_devices/16/vanilla/X670.json
+05-14 01:20:36.491  1633  3153 D ConnectivityService: requestNetwork for uid/pid:10337/2008 asUid: 10344 activeRequest: null callbackRequest: 372 [NetworkRequest [ REQUEST id=373, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|BLK
+05-14 01:20:36.494  1633  1912 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=373, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:36.495  1633  1919 D ConnectivityService: NetReassign [373 : null → 101] [c 1] [a 0] [i 3]
+05-14 01:20:36.495  1633  1912 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=373, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:36.495  1633  1912 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=373, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:36.496  1633  1912 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=373, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10344 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:20:36.574  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:36.850 10521 10627 E HttpURLConnectionClient: The server replied with code 404
+05-14 01:20:36.850 10521 10627 E UpdatesActivity: Could not download updates list
+05-14 01:20:36.857   876   876 I Accelerometer: flush, flushCnt:1
+05-14 01:20:36.861  1633  3153 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:36.863   876   912 I Accelerometer: flush complete, flushCnt:0
+05-14 01:20:36.868  1633  3153 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:36.963  1633  1724 V WindowManager: Finish Transition (#133): created at 05-14 01:20:36.314 collect-started=0.086ms request-sent=0.138ms started=10.887ms ready=36.421ms sent=163.707ms commit=10.117ms finished=648.606ms
+05-14 01:20:36.964 10568 10568 D VRI[PickActivity]: visibilityChanged oldVisibility=true newVisibility=false
+05-14 01:20:37.002 10568 10568 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+05-14 01:20:37.002  1633  3153 D CoreBackPreview: Window{8e90328 u0 com.android.documentsui/com.android.documentsui.picker.PickActivity}: Setting back callback null
+05-14 01:20:37.005 10568 10568 D ViewRootImpl: Skipping stats log for color mode
+05-14 01:20:37.008  1633  3153 I ImeTracker: system_server:b1064649: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+05-14 01:20:37.009  1633  1727 I ImeTracker: system_server:b1064649: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-14 01:20:37.013  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:20:37.061  1633  3153 W AppOps  : Noting op not finished: uid 10296 pkg com.google.android.gms code 113 startTime of in progress event=1778696028866
+05-14 01:20:37.068  1633  3153 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:37.071  1633  3201 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:37.073  1633  3153 W AppOps  : Noting op not finished: uid 10296 pkg com.google.android.gms code 79 startTime of in progress event=1778696028866
+05-14 01:20:37.077  1633  2199 W AppOps  : Noting op not finished: uid 10296 pkg com.google.android.gms code 113 startTime of in progress event=1778696028866
+05-14 01:20:37.082  1633  3201 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:37.089  1633  3201 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:37.091  1633  3153 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:37.104  2258  3548 I ActivityScheduler: nextTriggerTime: 1924434, in 179999ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 22500
+05-14 01:20:37.105  1633  3201 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:37.108  1633  3153 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:20:37.108   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:37.108   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:37.108   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:37.108   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:37.110  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:37.114  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 0] [i 1]
+05-14 01:20:37.575  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:38.063  1633  3153 W AppOps  : Noting op not finished: uid 10296 pkg com.google.android.gms code 79 startTime of in progress event=1778696028866
+05-14 01:20:38.063  1633  3153 W AppOps  : Noting op not finished: uid 10296 pkg com.google.android.gms code 113 startTime of in progress event=1778696028866
+05-14 01:20:38.064  1633  3153 W AppOps  : Noting op not finished: uid 10296 pkg com.google.android.gms code 113 startTime of in progress event=1778696028866
+05-14 01:20:38.576  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:39.090  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:39.092  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:39.579  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:40.124   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:40.124   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:40.124   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:40.124   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:40.126  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:40.131  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 0] [i 3]
+05-14 01:20:40.580  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:41.582  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:42.537  1633  1744 I ActivityManager: Test idle passed
+05-14 01:20:42.583  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:43.143   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:43.143   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:43.143   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:43.143   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:43.146  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:43.153  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 1] [i 4]
+05-14 01:20:43.585  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:44.209  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:44.209  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:44.276   998   998 I thermal_repeater: [recvMdThermalInfo] ret=29, strLen=127,  3, 33, -50, -28393, 32767, 0
+05-14 01:20:44.586  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:45.593  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:46.159   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:46.159   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:46.159   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:46.159   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:46.162  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:46.166  1633  1919 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 3]
+05-14 01:20:46.596  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:47.543  1633  1744 I ActivityManager: Test idle passed
+05-14 01:20:47.575  2986  2997 W obileos.sidebar: Reducing the number of considered missed Gc histogram windows from 134 to 100
+05-14 01:20:47.598  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:48.600  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:49.178   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:49.178   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:49.178   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:49.178   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:49.182  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:49.189  1633  1919 D ConnectivityService: NetReassign [no changes] [c 0] [a 1] [i 5]
+05-14 01:20:49.331  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:49.332  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:49.601  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:49.712   922   942 W TeeEndorsementInstaller: Endorsement token not found, wait a bit longer [vendor/mediatek/proprietary/trustzone/trustonic/source/external/mobicore/common/500/Daemon/src/EndorsementInstaller.cpp:105]
+05-14 01:20:50.577 10106 10106 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS xflg=0x4 pkg=com.google.android.gms }
+05-14 01:20:50.603  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:51.605  1633  3153 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:52.013   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.013   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.013   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.013   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.013   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.014   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.014   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.014   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.014   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:20:52.194   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:52.194   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:52.194   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:52.194   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:52.197  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:52.202  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 0] [i 3]
+05-14 01:20:52.549  1633  1744 I ActivityManager: Test idle passed
+05-14 01:20:52.595  2992  3014 W bileos.freeform: Reducing the number of considered missed Gc histogram windows from 134 to 100
+05-14 01:20:52.615  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:53.617  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:54.252  2968  3325 I bbax    : (REDACTED) getHotwordActive::active query: %s, watch: %s, devices connected: %s
+05-14 01:20:54.289   998   998 I thermal_repeater: [recvMdThermalInfo] ret=29, strLen=127,  3, 35, -50, -28393, 32767, 0
+05-14 01:20:54.452  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:54.453  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:54.619  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:55.214   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:55.214   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:55.214   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:55.214   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:55.217  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:55.284   539   539 I lowmemorykiller: Kill 'com.google.android.googlequicksearchbox:search' (10140), uid 10303, oom_score_adj 975 to free 220480kB rss, 1820kB swap; reason: low watermark is breached
+05-14 01:20:55.331   852   852 I Zygote  : Process 10140 exited due to signal 9 (Killed)
+05-14 01:20:55.334  1633  3153 E AppOps  : Bad call made by uid 1000. Package "com.google.android.googlequicksearchbox" does not belong to uid 1000.
+05-14 01:20:55.334  1633  2199 I ActivityManager: Process com.google.android.googlequicksearchbox:search (pid 10140) has died: cch  +75 CEM 
+05-14 01:20:55.335  1633  1919 D ConnectivityService: releasing NetworkRequest [ REQUEST id=361, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10303 RequestorUid: 10303 RequestorPkg: com.google.android.googlequicksearchbox UnderlyingNetworks: Null] ] (release request)
+05-14 01:20:55.335  1633  3153 W BinderNative: Uncaught exception from death notification
+05-14 01:20:55.335  1633  3153 W BinderNative: java.lang.SecurityException: Specified package "com.google.android.googlequicksearchbox" under uid 1000 but it is not
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at com.android.server.appop.AppOpsService.verifyAndGetBypass(AppOpsService.java:5101)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at com.android.server.appop.AppOpsService.verifyAndGetBypass(AppOpsService.java:4957)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at com.android.server.appop.AppOpsService.verifyAndGetBypass(AppOpsService.java:4947)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at com.android.server.appop.AppOpsService.stopWatchingAsyncNoted(AppOpsService.java:3820)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at com.android.server.appop.AppOpsService.lambda$startWatchingAsyncNoted$8(AppOpsService.java:3796)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at com.android.server.appop.AppOpsService.$r8$lambda$8-LvphSu5hQo1Pm8R22O3seI00E(AppOpsService.java:0)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at com.android.server.appop.AppOpsService$$ExternalSyntheticLambda1.onInterfaceDied(R8$$SyntheticClass:0)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at android.os.RemoteCallbackList$Builder$1.onCallbackDied(RemoteCallbackList.java:337)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at android.os.RemoteCallbackList$Interface.binderDied(RemoteCallbackList.java:229)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at android.os.IBinder$DeathRecipient.binderDied(IBinder.java:340)
+05-14 01:20:55.335  1633  3153 W BinderNative: 	at android.os.BinderProxy.sendDeathNotice(BinderProxy.java:787)
+05-14 01:20:55.336  1633  1747 I libprocessgroup: Removed cgroup /sys/fs/cgroup/apps/uid_10303/pid_10140
+05-14 01:20:55.338  2968  3329 I xyq     : processToken binder died, :search process likely died
+05-14 01:20:55.339  2968  3329 I Opa2NgaEvent: Search process died, resetting state.
+05-14 01:20:55.339  2968  3329 W OpaStateMachine: Search process died, entering IDLE
+05-14 01:20:55.339  2968  3329 I OpaStateMachine: (REDACTED) Entered state %s
+05-14 01:20:55.431   539   539 I lowmemorykiller: Kill 'com.google.android.apps.wellbeing' (10307), uid 10304, oom_score_adj 965 to free 142688kB rss, 1800kB swap; reason: low watermark is breached
+05-14 01:20:55.460   852   852 I Zygote  : Process 10307 exited due to signal 9 (Killed)
+05-14 01:20:55.460  1633  2199 I ActivityManager: Process com.google.android.apps.wellbeing (pid 10307) has died: cch  +65 CEM 
+05-14 01:20:55.461  1633  1747 I libprocessgroup: Removed cgroup /sys/fs/cgroup/apps/uid_10304/pid_10307
+05-14 01:20:55.461 10212 10212 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@8c6f77f
+05-14 01:20:55.557   539   539 I lowmemorykiller: Kill 'com.google.android.gms.ui' (10315), uid 10296, oom_score_adj 955 to free 215972kB rss, 1780kB swap; reason: low watermark is breached
+05-14 01:20:55.597   852   852 I Zygote  : Process 10315 exited due to signal 9 (Killed)
+05-14 01:20:55.604  1633  2199 I ActivityManager: Process com.google.android.gms.ui (pid 10315) has died: cch  +55 CEM 
+05-14 01:20:55.605  1633  1747 I libprocessgroup: Removed cgroup /sys/fs/cgroup/apps/uid_10296/pid_10315
+05-14 01:20:55.606 10212 10212 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@75a434c
+05-14 01:20:55.621  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:56.622  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:57.624  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:58.235   878   878 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:20:58.235   878   878 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:20:58.235   878   878 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:20:58.235   878   878 I WifiHAL : feature_set=0x8488141a
+05-14 01:20:58.238  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:20:58.626  1633  2199 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:20:58.801 10521 10624 D UpdaterController: Adding download: local
+05-14 01:20:58.801 10521 10521 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+05-14 01:20:58.803  1633  2199 D CoreBackPreview: Window{cf4e9ff u0 Local update}: Setting back callback null
+05-14 01:20:58.842  1633  1727 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+05-14 01:20:58.894   907   918 D ccci_mdinit: (1):monitor_time_update_thread round:72 ########
+05-14 01:20:58.953 10521 10521 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Dialog$$ExternalSyntheticLambda2@8370700
+05-14 01:20:58.954  1633  2199 D CoreBackPreview: Window{c14d83a u0 com.infinity.updater/com.infinity.updater.UpdatesActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@7b922f4, mPriority=-1, mIsAnimationCallback=false, mOverrideBehavior=0}
+05-14 01:20:58.989  1633  1895 I ImeTracker: com.infinity.updater:e5ff90d8: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+05-14 01:20:58.995  3551  3551 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2043 
+05-14 01:20:58.995 10521 10521 I ImeTracker: com.infinity.updater:e5ff90d8: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+05-14 01:20:58.997  3551  3551 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+05-14 01:20:58.998  3551  3551 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1293 onStartInput(EditorInfo{EditorInfo{packageName=com.infinity.updater, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+05-14 01:20:59.001  3551  3551 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+05-14 01:20:59.002  1633  1845 I ImeTracker: system_server:9ad16418: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+05-14 01:20:59.003  1633  2199 W PackageConfigPersister: App-specific configuration not found for packageName: com.infinity.updater and userId: 0
+05-14 01:20:59.003  1633  1727 I ImeTracker: system_server:9ad16418: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-14 01:20:59.181  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:20:59.572  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:20:59.574  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+05-14 01:20:59.629  1633  1845 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:21:00.229  1633  1775 I DisplayPowerController[0]: BrightnessEvent: brt=0.0(0.0%), nits=9.08, lux=-1.0, reason=manual, strat=FallbackBrightnessStrategy, state=ON, stateReason=DEFAULT_POLICY, policy=DIM, flags=, initBrt=0.0, rcmdBrt=NaN, preBrt=NaN, preLux=0.0, wasShortTermModelActive=false, autoBrightness=false (default), unclampedBrt=0.0, hbmMax=1.0, hbmMode=off, thrmMax=1.0, rbcStrength=50, powerFactor=1.0, physDisp=Built-in Screen(local:0), logicalId=0, slowChange=false, rampSpeed=0.0
+05-14 01:21:00.330  1633  1775 I DisplayPowerController[0]: BrightnessEvent: brt=0.0(0.0%), nits=9.08, lux=-1.0, reason=manual, strat=FallbackBrightnessStrategy, state=ON, stateReason=DEFAULT_POLICY, policy=BRIGHT, flags=, initBrt=0.0, rcmdBrt=NaN, preBrt=NaN, preLux=0.0, wasShortTermModelActive=false, autoBrightness=false (default), unclampedBrt=0.0, hbmMax=1.0, hbmMode=off, thrmMax=1.0, rbcStrength=50, powerFactor=1.0, physDisp=Built-in Screen(local:0), logicalId=0, slowChange=false, rampSpeed=0.0
+05-14 01:21:00.441  1633  1699 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 27
+05-14 01:21:00.444   857  2487 I AudioALSAStreamOut: updateSourceMetadata(), do nothing source_metadata = 0x6f57562d68
+05-14 01:21:00.445   857  2950 D AudioALSAStreamOut: write(), flag 0x4, usePolicyDevice: 1, output_devices: 0x2 -> latest policyDevice 0x2 (ori policyDevice 0x2)
+05-14 01:21:00.445   857  2950 D AudioALSAStreamManager: +syncSharedOutDevice(), originDevice/routingSharedOutDevice: 0x2/0x2, mAudioMode: 0
+05-14 01:21:00.445   857  2950 D AudioIEMsController: routing(+), cur out 0x0 in 0x0, hs 0, bt 0, usb 0, device 0x2, mask 0x1, on 0
+05-14 01:21:00.445   857  2950 D AudioIEMsController: routing(-), cur out 0x0 in 0x0
+05-14 01:21:00.445   857  2950 E AudioMTKGainController: setNormalVolume(), invalid param, stream -1, mSceneIndex 0, index -1, devices 2, gainDevice 2, return
+05-14 01:21:00.445   857  2950 D AudioALSAStreamOut: open(), flags 4
+05-14 01:21:00.445   857  2950 D AudioALSAStreamManager: +createPlaybackHandler(), mAudioMode = 0, output_devices = 0x2, isMixerOut = 0, isBypassAurisys = 0, flag = 4, isIEMsSource = 0, isIEMsOn = 0
+05-14 01:21:00.445   857  2950 D AudioALSAStreamManager: needEnableVoip(), output_devices = 0x2, flags: 0x4, mAvailableOutputFlags: 0x1800e, enable: 0
+05-14 01:21:00.445   857  2950 D AudioALSAPlaybackHandlerFast: AudioALSAPlaybackHandlerFast()
+05-14 01:21:00.445   857  2950 D AudioALSAPlaybackHandlerFast: +open(), mDevice = 0x2
+05-14 01:21:00.445   857  2950 D AudioALSADeviceParser: compare pcm success = 2, stringpair = Playback_2
+05-14 01:21:00.445   857  2950 D AudioALSADeviceConfigManager: ApplyDeviceTurnonSequenceByName() DeviceName = PLAYBACK2_TO_ADDA_DL descriptor->DeviceStatusCounte = 0, Ctlsize=4
+05-14 01:21:00.451   857  2950 D AudioUtility: chooseTargetSampleRate() hiFiState 0 isDeviceSupportHiFi 0 sampleRate 48000 targetSampleRate 48000
+05-14 01:21:00.451   857  2950 D AudioALSAPlaybackHandlerBase: transferAudioFormatToPcmFormat(), audio_format(0x4) => pcm_format(0x3)
+05-14 01:21:00.451   857  2950 D AudioALSAPlaybackHandlerFast: open(), mConfig: channels = 2, rate = 48000, period_size = 256, period_count = 2, format = 3, buffer size 4096 2048
+05-14 01:21:00.452   857  2950 D AudioALSAPlaybackHandlerBase: CreateAurisysLibManager, ph type: 7, voip: 0, mAurisysScenario: 1
+05-14 01:21:00.452   857  2950 D aurisys_utility: input dev: 0x80000004, fmt = 0x3, fs: 48000, max fs: 48000, ch: 2, max ch: 1, ch maks: 0x3, hw_info_mask: 0x0; output dev: 0x2, fmt = 0x3, fs: 48000, max fs: 48000, ch: 2, max ch: 2, ch maks: 0x3, hw_info_mask: 0x4; task_scene: 2, audio_mode: 0, stream_type: -1, output_flags: 0x4, input_source: 0, input_flags: 0x0; network_info: 0, enhancement_feature_mask: 0x0
+05-14 01:21:00.452   857  2950 D AudioUtility: setupCustomInfoStr(), custom_info = "SetAudioCustomScene=;", (scene = , vol_level = -1, bt_codec = -1)
+05-14 01:21:00.452   857  2950 D aurisys_utility: lib, working fs: 48000, fmt: 0x3, frame = 0, b_interleave = 1, num_ul_ref_buf_array = 0, num_dl_ref_buf_array = 0
+05-14 01:21:00.452   857  2950 D aurisys_utility: dl in[type:2], ch: 2, ch_mask: 0x3, buf fs: 48000, buf content fs: 48000, fmt: 0x3; dl out[type:3], ch: 2, ch_mask: 0x3, buf fs: 48000, buf content fs: 48000, fmt: 0x3
+05-14 01:21:00.452   857  2950 D android.hardware.audio.service: get_custom_info_value(), cusom_info = SetAudioCustomScene=;, key= SetAudioCustomScene, ret = 0, ptr = 0x6f572335d0, value_str = , max_value_str_leng = 20
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: audioHierarchicalParamEnable [1]
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: getPlaybackPostProcessParameterFromXML Type/Name [5]/[PlaybackDRC]
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: Load from scene Scene,Default,Volume type,Music
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: audioHierarchicalParamEnable [1]
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: getPlaybackPostProcessParameterFromXML Type/Name [0]/[PlaybackACF]
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: Load from scene Scene,Default,Volume type,Music,Profile,Speaker
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: audioHierarchicalParamEnable [1]
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: getPlaybackPostProcessParameterFromXML Type/Name [6]/[PlaybackDRC]
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: Load from scene Scene,Default,Volume type,Ring
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: audioHierarchicalParamEnable [1]
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: getPlaybackPostProcessParameterFromXML Type/Name [8]/[PlaybackACF]
+05-14 01:21:00.452   857  2950 D AudioCompFltCustParam: Load from scene Scene,Default,Volume type,Music,Profile,Speaker
+05-14 01:21:00.452   857  2950 D aurisys_lib_handler: aurisys_arsi_parsing_param_file(), gProductInfo "platform=MT6781,device=X670,model=Infinix X670", file_path "/vendor/etc/audio_param", enhancement_mode 0, param_buf_size 2528, data_size 2528, custom_info SetAudioCustomScene=;
+05-14 01:21:00.453   857  2950 D aurisys_lib_handler: aurisys_arsi_create_handler(), lib_name mtk_bessound, 0xb4000070d40f48f0, memory_size 72724, arsi_handler 0xb4000072043b23e0, retval 0x0
+05-14 01:21:00.453   857  2950 D aurisys_lib_handler: aurisys_arsi_create_handler(), arsi_query_process_unit_bytes, ul 0, dl 2048, retval 0
+05-14 01:21:00.453   857  2950 D aurisys_lib_manager: DL Lib, lib_name mtk_bessound, 0xb4000070d40f48f0, sample_rate: 48000 => 48000, num_channels: 2 => 2, audio_format: 0x3 => 0x3, interleave: 1 => 1, frame: 0 => 0
+05-14 01:21:00.453   857  2950 D aurisys_lib_manager: DL out, sample_rate: 48000 => 48000, num_channels: 2 => 2, audio_format: 0x3 => 0x4, interleave: 1 => 1, frame: 0 => 0
+05-14 01:21:00.456   857  2950 D AudioALSAPlaybackHandlerBase: openPcmDriverWithFlag(), pcm device = 2 flag = 0x8 mPcm = 0xb4000071140eebf0
+05-14 01:21:00.456   857  2950 D AudioALSAHardwareResourceManager: +startOutputDevice(), new_devices = 0x2, mOutputDevices = 0x0, mStartOutputDevicesCount = 0 SampleRate = 48000
+05-14 01:21:00.456   857  2950 D AudioALSADeviceConfigManager: ApplyDeviceTurnonSequenceByName() DeviceName = headphone_output descriptor->DeviceStatusCounte = 0, Ctlsize=6
+05-14 01:21:00.487   857  2950 D AudioALSADeviceConfigManager: ApplyDeviceTurnonSequenceByName() DeviceName = ext_speaker_output descriptor->DeviceStatusCounte = 0, Ctlsize=2
+05-14 01:21:00.521   857  2950 D AudioALSAHardwareResourceManager: notifyOutputDeviceStatusChange(), device = 2, status = 0, sampleRate = 48000, mOpenSpeakerPathCount = 1
+05-14 01:21:00.521   857  2950 D AudioALSAStreamManager: speakerStatusChangeCb(), status = 0, sampleRate = 48000
+05-14 01:21:00.521   857  2950 D AudioALSAPlaybackHandlerFast: -open()
+05-14 01:21:00.578 10521 10521 D UpdatesActivity: Checking https://raw.githubusercontent.com/ProjectInfinity-X/official_devices/16/vanilla/X670.json
+05-14 01:21:00.582   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.582   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.582   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.583   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.583   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.583   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.583   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.583   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.583 10521 10521 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+05-14 01:21:00.583   877  1947 I android.hardware.usb@1.2-service-mediatekv2: uevent_event change@/devices/virtual/xt_idletimer/timers
+05-14 01:21:00.584  1633  2199 D CoreBackPreview: Window{c14d83a u0 com.infinity.updater/com.infinity.updater.UpdatesActivity}: Setting back callback null
+05-14 01:21:00.602  1633  1727 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+05-14 01:21:00.611  1633  1744 I ActivityManager: Test idle passed
+05-14 01:21:00.632   857  2487 I AudioALSAStreamOut: updateSourceMetadata(), do nothing source_metadata = 0x6f57562d68
+05-14 01:21:00.633  1633  1991 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:21:00.662  2724  2737 W id.ext.services: Reducing the number of considered missed Gc histogram windows from 130 to 100
+05-14 01:21:00.667 10521 10521 D UpdaterService: Starting service
+05-14 01:21:00.670  1081  1081 I update_engine: [INFO:update_attempter_android.cc(737)] Enabling performance mode.
+05-14 01:21:00.672  1081  1081 W libprocessgroup: [WARN:task_profiles.cpp(412)] SetCgroup::ExecuteForTask: failed to open /dev/blkio/tasks: No such file or directory
+05-14 01:21:00.673  1081  1081 W libprocessgroup: [WARN:task_profiles.cpp(1246)] Failed to apply HighIoPriority task profile
+05-14 01:21:00.674  1081  1081 E update_engine: [ERROR:update_attempter_android.cc(94)] Replying with failure: system/update_engine/aosp/update_attempter_android.cc 747: Could not change profiles
+05-14 01:21:00.675 10521 10521 D AndroidRuntime: Shutting down VM
+--------- beginning of crash
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: FATAL EXCEPTION: main
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: Process: com.infinity.updater, PID: 10521
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: java.lang.RuntimeException: Unable to start service com.infinity.updater.controller.UpdaterService@c815c6d with Intent { act=action_install_update xflg=0x4 cmp=com.infinity.updater/.controller.UpdaterService (has extras) }
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5740)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleServiceArgs(Unknown Source:0)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2787)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:132)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:333)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:263)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:367)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9310)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:571)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:929)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: Caused by: android.os.ServiceSpecificException: Could not change profiles (code 1)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3387)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3357)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3340)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3282)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.IUpdateEngine$Stub$Proxy.setPerformanceMode(IUpdateEngine.java:686)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.os.UpdateEngine.setPerformanceMode(UpdateEngine.java:474)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at com.infinity.updater.controller.ABUpdateInstaller.install(ABUpdateInstaller.java:212)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at com.infinity.updater.controller.ABUpdateInstaller.install(ABUpdateInstaller.java:162)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at com.infinity.updater.controller.UpdaterService.onStartCommand(UpdaterService.java:206)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5724)
+05-14 01:21:00.675 10521 10521 E AndroidRuntime: 	... 10 more
+05-14 01:21:00.678  1633 10641 I DropBoxManagerService: add tag=system_app_crash isTagEnabled=true flags=0x2
+05-14 01:21:00.679  1633  2199 W ActivityTaskManager:   Force finishing activity com.infinity.updater/.UpdatesActivity
+05-14 01:21:00.680  1633  2199 W TransitionChain: Combining AR.finish-force-crash into #134(CLOSE|R|0x10) from finishTopCrash
+05-14 01:21:00.681  2008  2042 V ShellDesktopMode: DesktopTasksController: handleRequest request=TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=43 effectiveUid=1000 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings } baseActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} topActivity=ComponentInfo{com.infinity.updater/com.infinity.updater.UpdatesActivity} origActivity=ComponentInfo{com.android.settings/com.android.settings.Settings} realActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} numActivities=3 lastActiveTime=1743672 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@3aa7ce1} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{2917d52 com.infinity.updater.UpdatesActivity} launchCookies=[android.os.BinderProxy@c4aa8c7] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatMode=undefinedundefined} topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransition = null, displayChange = null, requestedLocation = null, userChange = null, windowingLayerChange = null, flags = 16, debugId = 134 }
+05-14 01:21:00.682  2008  2042 V ShellDesktopMode: DesktopTasksController: skipping handleRequest reason=triggerTask's display doesn't support desktop mode
+05-14 01:21:00.687 10521 10521 I Process : Sending signal. PID: 10521 SIG: 9
+05-14 01:21:00.721  2258  6817 I .gms.persistent: Explicit concurrent copying GC freed 12MB AllocSpace bytes, 34(1532KB) LOS objects, 54% free, 19MB/42MB, paused 152us,37us total 179.671ms
+05-14 01:21:00.752   852   852 I Zygote  : Process 10521 exited due to signal 9 (Killed)
+05-14 01:21:00.752  1633  2199 I ActivityManager: Process com.infinity.updater (pid 10521) has died: fg  TOP 
+05-14 01:21:00.752  1633  1845 I WindowManager: WIN DEATH: Window{c14d83a u0 com.infinity.updater/com.infinity.updater.UpdatesActivity EXITING}
+05-14 01:21:00.753  1633  3561 I ImeTracker: com.infinity.updater:1f041abe: onRequestHide at ORIGIN_SERVER reason HIDE_REMOVE_CLIENT fromUser false
+05-14 01:21:00.753  1633  3561 I ImeTracker: com.infinity.updater:1f041abe: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-14 01:21:00.753  1633  1747 I libprocessgroup: Removed cgroup /sys/fs/cgroup/apps/uid_10344/pid_10521
+05-14 01:21:00.757  1633  1845 I WindowManager: WIN DEATH: Window{8509b33 u0 com.infinity.updater/com.infinity.updater.UpdatesActivity}
+05-14 01:21:00.761  1633  2199 W ActivityManager: Scheduling restart of crashed service com.infinity.updater/.controller.UpdaterService in 1000ms for start-requested
+05-14 01:21:00.766  1633  2199 W TransitionChain: Combining appDied into #134(CLOSE|R|0x10) from finishTopCrash
+05-14 01:21:00.767  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-14 01:21:00.769  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-14 01:21:00.769  1633  1919 D InetDiagMessage: Destroyed live tcp sockets for uids={10344} in 2ms
+05-14 01:21:00.770  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-14 01:21:00.771  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-14 01:21:00.771  1633  1919 D InetDiagMessage: Destroyed live tcp sockets for uids={20344} in 2ms
+05-14 01:21:00.779  1633  1727 W ActivityManager: setHasOverlayUi called on unknown pid: 10521
+05-14 01:21:00.780  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:21:00.783  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:21:00.783  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:21:00.784  1633  1963 D BackgroundInstallControlService: Package event received: 0
+05-14 01:21:00.786  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio//cgroup.procs: No such file or directory
+05-14 01:21:00.786  1633  2676 D ConnectivityService: requestNetwork for uid/pid:10337/2008 asUid: 1000 activeRequest: null callbackRequest: 374 [NetworkRequest [ REQUEST id=375, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|BLK
+05-14 01:21:00.788  1633  2199 I SystemUpdateManagerService: No existing info file /data/system/system-update-info.xml
+05-14 01:21:00.791  1633  1912 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=375, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:21:00.791  1633  1912 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=375, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:21:00.791  1633  1912 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=375, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:21:00.791  1633  1912 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=375, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 1000 RequestorUid: 10337 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+05-14 01:21:00.792  1633  1919 D ConnectivityService: NetReassign [375 : null → 101] [c 0] [a 1] [i 4]
+05-14 01:21:00.796 10212 10353 D SettingsActivity: No enabled state changed, skipping updateCategory call
+05-14 01:21:00.804 10212 10212 D SysUpdatePrefContr: Update status unknown
+05-14 01:21:00.805 10212 10353 W TileUtils: Found com.android.settings.Settings$InfinitySuiteActivity for intent Intent { act=com.android.settings.action.SETTINGS pkg=com.android.settings } missing metadata com.android.settings.category
+05-14 01:21:00.821   899   899 E BpTransactionCompletedListener: Failed to transact (-32)
+05-14 01:21:00.826 10212 10353 W TileUtils: Found com.google.android.gms.auth.proximity.multidevice.SettingsMaterialNextActivity for intent Intent { act=com.android.settings.action.IA_SETTINGS } missing metadata 
+05-14 01:21:00.826 10212 10353 W TileUtils: Found com.libremobileos.sidebar.ui.sidebar.SidebarSettingsActivity for intent Intent { act=com.android.settings.action.IA_SETTINGS } missing metadata 
+05-14 01:21:00.862  1633  1724 V WindowManager: Sent Transition (#134) createdAt=05-14 01:21:00.679 via request=TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=43 effectiveUid=1000 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.settings/.Settings } baseActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} topActivity=ComponentInfo{com.infinity.updater/com.infinity.updater.UpdatesActivity} origActivity=ComponentInfo{com.android.settings/com.android.settings.Settings} realActivity=ComponentInfo{com.android.settings/com.android.settings.homepage.SettingsHomepageActivity} numActivities=3 lastActiveTime=1743672 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{5827d86 Task{61446ae #43 type=standard A=1000:com.android.settings.root}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{f4cc1 com.infinity.updater.UpdatesActivity} launchCookies=[android.os.BinderProxy@b02e74] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatMode=undefinedundefined} topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransition = null, displayChange = null, requestedLocation = null, userChange = null, windowingLayerChange = null, flags = 16, debugId = 134 }
+05-14 01:21:00.863  1633  1724 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+05-14 01:21:00.863  1633  1724 V WindowManager:     info={id=134 t=CLOSE f=0x10 trk=0 r=[0@Point(0, 0)] c=[
+05-14 01:21:00.863  1633  1724 V WindowManager:         {m=CLOSE f=FILLS_TASK leash=Surface(name=ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t43}#1465)/@0x536f98e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 bc=ff303030 activity=ActivityTransitionInfo { component = ComponentInfo{com.infinity.updater/com.infinity.updater.UpdatesActivity}, taskId = 43, appCompatTransitionInfo = null } opt={t=FROM_STYLE mUserId=0}},
+05-14 01:21:00.863  1633  1724 V WindowManager:         {m=TO_FRONT f=FILLS_TASK leash=Surface(name=ActivityRecord{111433673 u0 com.android.settings/.SubSettings t43}#1454)/@0xb9d8a sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 bc=ff303030 activity=ActivityTransitionInfo { component = ComponentInfo{com.android.settings/com.android.settings.SubSettings}, taskId = 43, appCompatTransitionInfo = null } opt={t=FROM_STYLE mUserId=0}}
+05-14 01:21:00.863  1633  1724 V WindowManager:     ]}
+05-14 01:21:00.869  2008  2042 V ShellDesktopMode: DesktopMixedTransitionHandler: No pending desktop transition
+05-14 01:21:00.905  1633  1895 I ImeTracker: com.android.settings:63a31595: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+05-14 01:21:00.910 10212 10212 I ImeTracker: com.android.settings:63a31595: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+05-14 01:21:00.913  3551  3551 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2043 
+05-14 01:21:00.914  3551  3551 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+05-14 01:21:00.915  3551  3551 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1293 onStartInput(EditorInfo{EditorInfo{packageName=com.android.settings, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+05-14 01:21:00.915  1633  2199 I ImeTracker: system_server:c5e9889c: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+05-14 01:21:00.916  3551  3551 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+05-14 01:21:00.917  1633  1727 I ImeTracker: system_server:c5e9889c: onCancelled at PHASE_SERVER_SHOULD_HIDE
+05-14 01:21:00.919  1633  2676 W PackageConfigPersister: App-specific configuration not found for packageName: com.android.settings and userId: 0
+05-14 01:21:01.183  1633  1727 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{56322011 u0 com.infinity.updater/.UpdatesActivity t43 f} isExiting}
+05-14 01:21:01.224  1633  1845 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:21:01.252   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:21:01.253   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:21:01.253   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:21:01.253   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:21:01.257  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:21:01.265  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 1] [i 5]
+05-14 01:21:01.370  1633  1724 V WindowManager: Finish Transition (#134): created at 05-14 01:21:00.679 collect-started=0.143ms request-sent=0.405ms started=6.881ms ready=96.668ms sent=176.324ms commit=33.576ms finished=688.328ms
+05-14 01:21:01.371  1633  1845 W ActivityManager: pid 1633 system sent binder code 7 with flags 1 and got error -32
+05-14 01:21:01.372  1633  1845 W WindowManager: Exception thrown during dispatchAppVisibility Window{8509b33 u0 com.infinity.updater/com.infinity.updater.UpdatesActivity EXITING}
+05-14 01:21:01.372  1633  1845 W WindowManager: android.os.DeadObjectException
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at android.os.BinderProxy.transactNative(Native Method)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at android.os.BinderProxy.transact(BinderProxy.java:599)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at android.view.IWindow$Stub$Proxy.dispatchAppVisibility(IWindow.java:535)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at com.android.server.wm.WindowState.sendAppVisibilityToClients(WindowState.java:3268)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at com.android.server.wm.WindowContainer.sendAppVisibilityToClients(WindowContainer.java:1223)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at com.android.server.wm.WindowToken.setClientVisible(WindowToken.java:394)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at com.android.server.wm.ActivityRecord.commitVisibility(ActivityRecord.java:5626)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at com.android.server.wm.Transition.finishTransition(Transition.java:1500)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at com.android.server.wm.TransitionController.finishTransition(TransitionController.java:1096)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.finishTransition(WindowOrganizerController.java:518)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at android.window.IWindowOrganizerController$Stub.onTransact(IWindowOrganizerController.java:270)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.onTransact(WindowOrganizerController.java:233)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at android.os.Binder.execTransactInternal(Binder.java:1473)
+05-14 01:21:01.372  1633  1845 W WindowManager: 	at android.os.Binder.execTransact(Binder.java:1418)
+05-14 01:21:01.373  1633  1845 W Process : Unable to open /proc/10521/status
+05-14 01:21:01.419   899   899 E BpTransactionCompletedListener: Failed to transact (-32)
+05-14 01:21:01.635  1633  1845 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:21:01.765  1633  1744 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@680f6b47 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+05-14 01:21:01.802   852   852 D Zygote  : Forked child process 10647
+05-14 01:21:01.804  1633  1745 I ActivityManager: Start proc 10647:com.infinity.updater/u0a344 for service {com.infinity.updater/com.infinity.updater.controller.UpdaterService}
+05-14 01:21:01.816 10647 10647 I Zygote  : Process 10647 created for com.infinity.updater
+05-14 01:21:01.817 10647 10647 I nfinity.updater: Using CollectorTypeCC GC.
+05-14 01:21:01.823 10647 10647 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+05-14 01:21:01.840 10647 10647 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+05-14 01:21:01.840 10647 10647 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+05-14 01:21:01.845 10647 10647 D nativeloader: Configuring clns-shared-9 for other apk /system_ext/priv-app/Updater/Updater.apk. target_sdk_version=36, uses_libraries=, library_path=/system_ext/priv-app/Updater/lib/arm64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.infinity.updater:/system_ext/priv-app/Updater:/system/lib64:/system_ext/lib64
+05-14 01:21:01.852 10647 10647 V GraphicsEnvironment: Currently set values for:
+05-14 01:21:01.852 10647 10647 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+05-14 01:21:01.852 10647 10647 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+05-14 01:21:01.852 10647 10647 V GraphicsEnvironment: com.infinity.updater is not listed in per-application setting
+05-14 01:21:01.852 10647 10647 V GraphicsEnvironment: ANGLE allowlist from config: 
+05-14 01:21:01.852 10647 10647 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+05-14 01:21:01.852 10647 10647 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+05-14 01:21:01.860  1633  1752 W libprocessgroup: SetCgroup::ExecuteForProcess: failed to open /dev/blkio/background/cgroup.procs: No such file or directory
+05-14 01:21:01.873 10647 10647 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+05-14 01:21:01.883 10647 10647 D UpdaterService: Starting service
+05-14 01:21:01.883 10647 10647 D AndroidRuntime: Shutting down VM
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: FATAL EXCEPTION: main
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: Process: com.infinity.updater, PID: 10647
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: java.lang.RuntimeException: Unable to start service com.infinity.updater.controller.UpdaterService@fbcddbd with Intent { act=action_install_update xflg=0x4 cmp=com.infinity.updater/.controller.UpdaterService (has extras) }
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5740)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleServiceArgs(Unknown Source:0)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2787)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:132)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.os.Looper.dispatchMessage(Looper.java:333)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:263)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:367)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9310)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:571)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:929)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke interface method 'int com.infinity.updater.model.UpdateInfo.getPersistentStatus()' on a null object reference
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at com.infinity.updater.controller.UpdaterService.onStartCommand(UpdaterService.java:199)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:5724)
+05-14 01:21:01.884 10647 10647 E AndroidRuntime: 	... 10 more
+05-14 01:21:01.886  1633 10661 I DropBoxManagerService: add tag=system_app_crash isTagEnabled=true flags=0x2
+05-14 01:21:01.889 10647 10647 I Process : Sending signal. PID: 10647 SIG: 9
+05-14 01:21:01.922   852   852 I Zygote  : Process 10647 exited due to signal 9 (Killed)
+05-14 01:21:01.931  1633  1845 I ActivityManager: Process com.infinity.updater (pid 10647) has died: fg  SVC 
+05-14 01:21:01.932  1633  1747 I libprocessgroup: Removed cgroup /sys/fs/cgroup/apps/uid_10344/pid_10647
+05-14 01:21:01.932  1633  1845 W ActivityManager: Scheduling restart of crashed service com.infinity.updater/.controller.UpdaterService in 1800000ms for start-requested
+05-14 01:21:01.939  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-14 01:21:01.942  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-14 01:21:01.942  1633  1919 D InetDiagMessage: Destroyed live tcp sockets for uids={10344} in 7ms
+05-14 01:21:01.945  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+05-14 01:21:01.948  1633  1919 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+05-14 01:21:01.948  1633  1919 D InetDiagMessage: Destroyed live tcp sockets for uids={20344} in 5ms
+05-14 01:21:02.420  1633  2676 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:21:02.650  1633  2676 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:21:03.140 10568 10573 W oid.documentsui: Cleared Reference was only reachable from finalizer (only reported once)
+05-14 01:21:03.613   857  2487 D AudioALSAStreamOut: standby(), flag 4
+05-14 01:21:03.613   857  2487 D AudioALSAStreamOut: standbyStreamOut(), halRequest 0, mDestroy 0, flag 4
+05-14 01:21:03.613   857  2487 D AudioALSAStreamOut: close(), flags 4
+05-14 01:21:03.613   857  2487 D AudioALSAPlaybackHandlerFast: +close()
+05-14 01:21:03.613   857  2487 D AudioALSAHardwareResourceManager: +stopOutputDevice(), mOutputDevices = 0x2, mStartOutputDevicesCount = 1
+05-14 01:21:03.613   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = ext_speaker_output descriptor->DeviceStatusCounter = 1, Ctlsize=2
+05-14 01:21:03.652  1633  2676 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:21:03.718   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = headphone_output descriptor->DeviceStatusCounter = 1, Ctlsize=4
+05-14 01:21:03.749   857  2487 D AudioALSAHardwareResourceManager: notifyOutputDeviceStatusChange(), device = 2, status = 1, sampleRate = 0, mOpenSpeakerPathCount = 0
+05-14 01:21:03.749   857  2487 D AudioALSAStreamManager: speakerStatusChangeCb(), status = 1, sampleRate = 0
+05-14 01:21:03.751   857  2487 D AudioALSAPlaybackHandlerBase: -closePcmDriver(), mPcm = 0x0
+05-14 01:21:03.751   857  2487 D AudioALSADeviceConfigManager: ApplyDeviceTurnoffSequenceByName(), DeviceName = PLAYBACK2_TO_ADDA_DL descriptor->DeviceStatusCounter = 1, Ctlsize=4
+05-14 01:21:03.753   857  2487 D AudioALSAPlaybackHandlerBase: DestroyAurisysLibManager()
+05-14 01:21:03.753   857  2487 D aurisys_lib_handler: aurisys_arsi_destroy_handler(), lib_name mtk_bessound, 0xb4000070d40f48f0, arsi_destroy_handler, arsi_handler = 0xb4000072043b23e0, retval = 0
+05-14 01:21:03.754   857  2487 D aurisys_lib_manager: delete_aurisys_lib_manager(), manager 0xb4000071c40ebab0
+05-14 01:21:03.754   857  2487 D AudioALSAPlaybackHandlerBase: closeWavDump()
+05-14 01:21:03.754   857  2487 D AudioALSAPlaybackHandlerFast: -close()
+05-14 01:21:03.756  1633  2676 V PowerManagerService: FrozenStateChangeCallback was already unregistered
+05-14 01:21:04.279   878  2924 D android.hardware.wifi-service: WifiRequest::create vendor command to iface 33, vendor_id=0x1a11, subcmd=0x0002, res=0
+05-14 01:21:04.280   878  2924 D WifiHAL : In GetFeatureSetCommand::handleResponse for 5
+05-14 01:21:04.280   878  2924 D WifiHAL : vendor_id = 0x0, subcmd = 0x0
+05-14 01:21:04.280   878  2924 I WifiHAL : feature_set=0x8488141a
+05-14 01:21:04.283  1633  1912 I HalDevMgr: bestIfaceCreationProposal is null, requestIface=STA, existingIface=[name=wlan0 type=STA]
+05-14 01:21:04.291  1633  1919 D ConnectivityService: NetReassign [no changes] [c 1] [a 1] [i 4]
+05-14 01:21:04.306   998   998 I thermal_repeater: [recvMdThermalInfo] ret=29, strLen=127,  3, 36, -50, -28393, 32767, 0
+05-14 01:21:04.655  1633  2676 D FileUtils: Rounded bytes from 8122036224 to 8000000000
+05-14 01:21:04.693  2156  2291 D SatelliteController: iisInCarrierRoamingNbIotNtn: satellite is disabled
+05-14 01:21:04.695  2156  2291 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0

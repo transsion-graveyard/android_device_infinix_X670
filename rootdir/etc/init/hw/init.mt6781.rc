@@ -6,9 +6,18 @@ import /vendor/etc/init/hw/init.mt6781.power.rc
 import /vendor/etc/init/hw/init.modem.rc
 
 on init
+    write /proc/bootprof "INIT:init"
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+
+    mkdir /mnt/cd-rom 0000 system system
+
 #BSP:add XLLSHLSSP-17 for tranfs by shentao.yang 20190603 start
     mkdir /tranfs 0771 system system
 #BSP:add XLLSHLSSP-17 for tranfs by shentao.yang 20190603 end
+
+    # dex2oat_threads
+    setprop persist.vendor.powerhal.dex2oat_threads 0
 
 # change lk_env permission
     chown root system /proc/lk_env
@@ -18,6 +27,12 @@ on init
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
 
+# Setup runtime blkio
+    write /dev/blkio/blkio.weight 1000
+    write /dev/blkio/background/blkio.weight 200
+    write /dev/blkio/blkio.group_idle 2000
+    write /dev/blkio/background/blkio.group_idle 0
+
 # update cpus for cpuset cgroup
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 0-7
@@ -26,6 +41,8 @@ on init
     write /dev/cpuset/top-app/cpus 0-7
 
 on late-init
+    write /proc/bootprof "INIT:late-init"
+# enable rcu_expedited
     write /sys/kernel/rcu_expedited 1
 
 # mount different fs start

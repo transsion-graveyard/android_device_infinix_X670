@@ -552,7 +552,8 @@
     <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
-    <bool translatable="false" name="config_wifi_softap_sae_supported">true</bool>
+    <!-- Disabled to fix WPA2/WPA3 transition network auth failure. Matches P661N reference device. -->
+    <!-- <bool translatable="false" name="config_wifi_softap_sae_supported">true</bool> -->
 
     <!-- Whether to play turbulence noise after clicking the play button -->
     <bool name="config_turbulenceNoise">false</bool>

@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "OpenDeltaOverlayMT6789",
+    name: "OpenDeltaResTarget",
     product_specific: true,
     sdk_version: "current"
 }

@@ -295,14 +295,18 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 TARGET_EXCLUDES_AUDIOFX := true
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
 PRODUCT_PACKAGES += \
     FrameworksResTarget \
     SettingsResTarget \
     SettingsProviderResTarget \
     SystemUIResTarget \
     TetheringConfigTarget \
-    WifiResTarget
+    WifiResTarget \
+    OpenDeltaResTarget
 
 # Power
 PRODUCT_PACKAGES += \

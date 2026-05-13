@@ -1,4 +1,2 @@
-# Allow update_engine to access thermal zone interfaces during OTA
-allow update_engine sysfs_thermal:dir { search read getattr };
-allow update_engine sysfs_thermal:file { read write getattr setattr open };
-allow update_engine sysfs_thermal:lnk_file { read getattr };
+# Allow update_engine to access tranfs block device during OTA
+allow update_engine tranfs_block_device:blk_file rw_file_perms;

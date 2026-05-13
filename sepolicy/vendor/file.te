@@ -36,6 +36,3 @@ type sysfs_battery, fs_type, sysfs_type;
 # OTG
 type sysfs_OTG_STATE_file, fs_type, sysfs_type;
 type sysfs_OTG_CTL_file, fs_type, sysfs_type;
-
-# Thermal
-type sysfs_thermal, fs_type, sysfs_type;

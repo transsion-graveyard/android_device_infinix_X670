@@ -312,9 +312,6 @@ PRODUCT_PACKAGES += \
     TetheringConfigTarget \
     WifiResTarget
 
-PRODUCT_PACKAGES += \
-    UpdaterResTarget
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \

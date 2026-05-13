@@ -2,14 +2,6 @@
 ro.mtk_cam_dualzoom_support u:object_r:vendor_mtk_camera_prop:s0
 ro.mtk_cam_stereo_camera_support u:object_r:vendor_mtk_camera_prop:s0
 
-# Audio
-vendor.streamout.        u:object_r:vendor_mtk_audiohal_prop:s0
-vendor.streamin.         u:object_r:vendor_mtk_audiohal_prop:s0
-vendor.a2dp.             u:object_r:vendor_mtk_audiohal_prop:s0
-vendor.audiohal.         u:object_r:vendor_mtk_audiohal_prop:s0
-persist.vendor.audiohal. u:object_r:vendor_mtk_audiohal_prop:s0
-persist.vendor.vow.      u:object_r:vendor_mtk_audiohal_prop:s0
-
 # Fingerprint
 ro.fingerprint_support u:object_r:vendor_mtk_default_prop:s0
 ro.side_fingerprint_support u:object_r:vendor_mtk_default_prop:s0

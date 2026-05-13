@@ -34,18 +34,19 @@ persist.vendor.camera3.pipeline.bufnum.min.low_ram.imgo=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.lcso=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.rrzo=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.rsso=6
+ro.camera.sound.forced=0
 ro.mtk_cam_dualzoom_support=1
 ro.mtk_cam_stereo_camera_support=1
-ro.vendor.mtk_cam_security_support=0
-ro.vendor.mtk_camera_app_version=3
 ro.vendor.camera.isp.support.colorspace=0
 ro.vendor.camera3.zsl.default=270
-ro.vendor.camera_tran_hal_server_support=1
 ro.vendor.camera_tran_fake_stereo_support=1
+ro.vendor.camera_tran_hal_server_support=1
+ro.vendor.mtk_cam_security_support=0
+ro.vendor.mtk_camera_app_version=3
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
+vendor.camera.tran.nums=1
 vendor.mtk.camera.app.fd.video=1
-persist.vendor.camera.privapp.list=org.lineageos.aperture
 
 # DRM
 drm.service.enabled=true

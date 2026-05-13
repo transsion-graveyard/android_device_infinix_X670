@@ -6,7 +6,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 DEVICE_PATH := device/infinix/X670
@@ -20,6 +19,10 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a76
 TARGET_CPU_VARIANT_RUNTIME := cortex-a76
+
+# Audio 
+BOARD_USES_ALSA_AUDIO := true
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
 
 # Enable 64-bit for non-zygote.
 ZYGOTE_FORCE_64 := true

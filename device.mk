@@ -219,6 +219,9 @@ PRODUCT_PACKAGES += \
     android.software.vulkan.deqp.level-2021-03-01.prebuilt.xml \
     android.software.opengles.deqp.level-2021-03-01.prebuilt.xml
 
+# Dolby
+$(call inherit-product, vendor/sony/dolby/setup.mk)
+
 # DRM (Clearkey)
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey

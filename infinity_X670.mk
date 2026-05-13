@@ -27,8 +27,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=Infinix/X670-GL/Infinix-X670:12/SP1A.210812.016/240224V150:user/release-keys
 
 PERF_ANIM_OVERRIDE := true
-WITH_GMS := false
-WITH_GAPPS := false
+WITH_GMS := true
+WITH_GAPPS := true
 
 # Time
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
@@ -51,3 +51,5 @@ AXION_DEBUGGING_ENABLED := true
 
 TARGET_INCLUDES_LOS_PREBUILTS := true
 
+# Maintainer Name
+INFINITY_MAINTAINER := "R"

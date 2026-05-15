@@ -22,3 +22,7 @@ allow hal_power_default proc_gesture_function:file rw_file_perms;
 
 # MTK power queries the fingerprint HAL process state through /proc.
 allow hal_power_default hal_fingerprint_default:dir { getattr search };
+
+# Allow Power HAL to find Thermal HAL service
+allow hal_power_default hal_thermal_service:service_manager find;
+hal_client_domain(hal_power_default, hal_thermal)

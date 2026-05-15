@@ -23,8 +23,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/google/interfaces \
-    hardware/google/pixel \
-    device/infinix/X670/overlay
+    hardware/google/pixel
 
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 31
@@ -159,7 +158,6 @@ PRODUCT_PACKAGES += \
     audio.usb.default:64
 
 PRODUCT_PACKAGES += \
-    android.hardware.cas@1.2-service-lazy \
     audio_policy.stub:64 \
     libopus.vendor:64 \
     audioclient-types-aidl-cpp.vendor:64 \

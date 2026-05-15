@@ -1326,7 +1326,7 @@ vendor/lib/libMcClient.so
 vendor/lib/libTEECommon.so
 vendor/lib/libgz_gp_client.so
 vendor/lib/libgz_uree.so
-vendor/lib64/hw/kmsetkey.trustonic.so
+vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
 vendor/lib64/libMcClient.so
 vendor/lib64/libTEECommon.so
 vendor/lib64/libgz_gp_client.so

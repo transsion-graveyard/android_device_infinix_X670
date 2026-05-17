@@ -150,110 +150,15 @@
       "ResetOnInit": true
     },
     {
-      "Name": "MTKTouchEnable",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "enable 1"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MTKTouchOpp",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "touch_opp 0",
-        "touch_opp 2"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MTKTouchCluster0Opp",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "cluster_opp 0 0",
-        "cluster_opp 0 -1"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MTKTouchCluster1Opp",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "cluster_opp 1 0",
-        "cluster_opp 1 -1"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MTKTouchDuration",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "duration 300000000",
-        "duration 200000000",
-        "duration 100000000"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MTKTouchActiveTime",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "active_time 300000",
-        "active_time 100000"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MTKTouchEasBoost",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "eas_boost 100",
-        "eas_boost 80"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MTKTouchDeboostWhenRender",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "deboost_when_render 0",
-        "deboost_when_render 1"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "MTKTouchTimeToLastTouch",
-      "Path": "/proc/perfmgr/tchbst/user/usrtch",
-      "Values": [
-        "time_to_last_touch 600000"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALAudioState",
       "Path": "vendor.powerhal.audio",
-      "Values": [
-        "AUDIO_STREAMING_LOW_LATENCY",
-        ""
-      ],
+      "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
       "Type": "Property"
     },
     {
       "Name": "PowerHALRenderingState",
       "Path": "vendor.powerhal.rendering",
-      "Values": [
-        "EXPENSIVE_RENDERING",
-        ""
-      ],
+      "Values": ["EXPENSIVE_RENDERING", ""],
       "Type": "Property"
     },
     {
@@ -297,57 +202,27 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "MTKTouchEnable",
+      "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
-      "Value": "enable 1"
+      "Value": "9999999"
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "MTKTouchOpp",
+      "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "touch_opp 0"
+      "Value": "9999999"
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "MTKTouchCluster0Opp",
+      "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "cluster_opp 0 0"
+      "Value": "9999999"
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "MTKTouchCluster1Opp",
+      "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "cluster_opp 1 0"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "MTKTouchDuration",
-      "Duration": 0,
-      "Value": "duration 300000000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "MTKTouchActiveTime",
-      "Duration": 0,
-      "Value": "active_time 300000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "MTKTouchEasBoost",
-      "Duration": 0,
-      "Value": "eas_boost 100"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "MTKTouchDeboostWhenRender",
-      "Duration": 0,
-      "Value": "deboost_when_render 0"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "MTKTouchTimeToLastTouch",
-      "Duration": 0,
-      "Value": "time_to_last_touch 600000"
+      "Value": "9999999"
     },
     {
       "PowerHint": "INTERACTION",

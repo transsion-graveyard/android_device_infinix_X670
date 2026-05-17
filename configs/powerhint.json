@@ -203,26 +203,38 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMaxFreq",
-      "Duration": 60,
+      "Duration": 150,
       "Value": "9999999"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 60,
+      "Duration": 150,
       "Value": "1375000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 60,
+      "Duration": 150,
       "Value": "9999999"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 60,
+      "Duration": 150,
       "Value": "1419000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "SchedBoost",
+      "Duration": 150,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "DRAMOppMin",
+      "Duration": 150,
+      "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",

@@ -179,7 +179,7 @@ ro.vendor.mtk_nn_support=1
 # Power
 vendor.powerhal.interaction.offset=0
 vendor.powerhal.interaction.min=100
-vendor.powerhal.interaction.max=300
+vendor.powerhal.interaction.max=500
 
 # Radio
 persist.vendor.log.tel_log_ctrl=1

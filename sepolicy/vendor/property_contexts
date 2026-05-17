@@ -17,6 +17,8 @@ ro.vendor.oem.sno u:object_r:vendor_mtk_radio_prop:s0
 ro.vendor.oem.psno u:object_r:vendor_mtk_radio_prop:s0
 ro.vendor.oem.imei u:object_r:vendor_mtk_radio_prop:s0
 ro.vendor.oem.meid u:object_r:vendor_mtk_radio_prop:s0
+ctl.vendor.ccci_rpcd  u:object_r:vendor_mtk_ctl_ccci_rpcd_prop:s0
+ctl.vendor.ccci2_rpcd u:object_r:vendor_mtk_ctl_ccci2_rpcd_prop:s0
 
 # Fingerprint
 persist.vendor.sys.fp. u:object_r:vendor_fingerprint_prop:s0
@@ -47,3 +49,5 @@ vendor.tee.googlekey.status                          u:object_r:vendor_mtk_trust
 
 # VT
 ro.vendor.vt.                               u:object_r:vendor_mtk_vendor_vt_prop:s0
+persist.vendor.vt.                          u:object_r:vendor_mtk_vendor_vt_prop:s0
+vendor.vt.                                  u:object_r:vendor_mtk_vendor_vt_prop:s0

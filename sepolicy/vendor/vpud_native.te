@@ -1,0 +1,1 @@
+allow vpud_native vendor_camera_prop:file { read open getattr };

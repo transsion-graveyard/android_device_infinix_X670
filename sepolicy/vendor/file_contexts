@@ -35,6 +35,11 @@
 /vendor/lib(64)?/libarcsoft_low_light_hdr\.so            u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libarcsoft_hdr_detection\.so            u:object_r:same_process_hal_file:s0
 
+# Health
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health@1\.0-service         u:object_r:hal_health_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.0-service         u:object_r:hal_health_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.1-service         u:object_r:hal_health_default_exec:s0
+
 # Camera
 /data/vendor/camera_watermark(/.*)? u:object_r:vendor_watermark_data_file:s0
 /data/vendor/multicam(/.*)?                                                                                     u:object_r:transsion_camera_data_file:s0
@@ -64,8 +69,20 @@
 /vendor/bin/hw/vendor\.focaltech\.hardware\.biometrics\.fingerprint@1\.0-service    u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/kmsetkey_ca.trustonic                                                  u:object_r:trustonic_kmsetkey_ca_exec:s0
 
+# RIL
+/(vendor|system/vendor)/bin/hw/mtkfusionrild                                                u:object_r:rild_exec:s0
+/(vendor|system/vendor)/bin/ccci_rpcd                                                       u:object_r:ccci_rpcd_exec:s0
+
+# Thermal
+/(vendor|system/vendor)/bin/thermal_manager                                                u:object_r:thermal_manager_exec:s0
+
+# VT
+/(vendor|system/vendor)/bin/hw/vtservice_hidl                                              u:object_r:vtservice_hidl_exec:s0
+
 # Tranfs
 /dev/block/by-name/tranfs                                                                          u:object_r:tranfs_block_device:s0
 
 # Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service-mediatek            u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.0-service-mediatek-lazy       u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator-service\.mediatek                u:object_r:hal_vibrator_default_exec:s0

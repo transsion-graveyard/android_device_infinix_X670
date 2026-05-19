@@ -1335,6 +1335,7 @@ vendor/lib64/libgz_uree.so
 # kpoc
 system/bin/kpoc_charger
 system/etc/init/kpoc_charger.rc
+system/lib64/libshowlogo.so
 
 # Secure Element
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek

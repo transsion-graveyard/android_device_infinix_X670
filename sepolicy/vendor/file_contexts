@@ -52,6 +52,9 @@
 /dev/biometric u:object_r:biometric_device:s0
 /dev/m_bio_misc u:object_r:m_bio_misc_device:s0
 
+# kpoc
+/system/bin/kpoc_charger                                                                            u:object_r:kpoc_charger_exec:s0
+
 # Power
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr u:object_r:hal_power_default_exec:s0
 

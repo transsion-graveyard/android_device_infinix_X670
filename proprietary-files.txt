@@ -1332,6 +1332,10 @@ vendor/lib64/libTEECommon.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
 
+# kpoc
+system/bin/kpoc_charger
+system/etc/init/kpoc_charger.rc
+
 # Secure Element
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc

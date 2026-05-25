@@ -276,7 +276,7 @@ PRODUCT_PACKAGES += \
 
 # MediaCas
 PRODUCT_PACKAGES += \
-    android.hardware.cas@1.2-service-lazy
+    android.hardware.cas@1.2-service-lazy:64
 
 # Media (C2)
 PRODUCT_PACKAGES += \

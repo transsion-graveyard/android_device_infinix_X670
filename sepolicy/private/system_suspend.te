@@ -11,3 +11,7 @@ allow system_suspend sysfs_batteryinfo:dir { open read };
 allow system_suspend sysfs_extcon:dir r_dir_perms;
 allow system_suspend sysfs_rtc:dir r_dir_perms;
 allow system_suspend sysfs_rtc:file rw_file_perms;
+
+# Generic sysfs wakeup nodes not yet individually labeled
+allow system_suspend sysfs:dir r_dir_perms;
+allow system_suspend sysfs:file r_file_perms;

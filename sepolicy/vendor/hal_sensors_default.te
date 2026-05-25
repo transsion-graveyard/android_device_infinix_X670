@@ -63,6 +63,9 @@ rw_dir_file(hal_sensors_default, sensor_data_file)
 # Allow access for dynamic sensor properties.
 get_prop(hal_sensors_default, vendor_dynamic_sensor_prop)
 
+# proc_cmdline
+allow hal_sensors_default proc_cmdline:file r_file_perms;
+
 # Allow access to raw HID devices for dynamic sensors.
 allow hal_sensors_default device:dir r_dir_perms;
 allow hal_sensors_default hidraw_device:chr_file rw_file_perms;

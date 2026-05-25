@@ -26,6 +26,9 @@
         <permission name="android.permission.MANAGE_USB"/>
         <!-- Add for network slice test -->
         <permission name="android.permission.CONNECTIVITY_INTERNAL"/>
+        <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
+        <permission name="android.permission.LOCATION_HARDWARE"/>
     </privapp-permissions>
 
 </permissions>

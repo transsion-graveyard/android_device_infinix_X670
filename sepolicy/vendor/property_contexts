@@ -9,7 +9,6 @@ ro.vendor.camera_tran_fake_stereo_support u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.camera_tran_hal_server_support u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.mtkcam. u:object_r:vendor_camera_prop:s0
 vendor.camera. u:object_r:vendor_camera_prop:s0
-vendor.debug. u:object_r:vendor_camera_prop:s0
 vendor.mtkcam. u:object_r:vendor_camera_prop:s0
 
 # Device identification
@@ -45,5 +44,4 @@ vendor.sys.thermal. u:object_r:vendor_thermal_engine_prop:s0
 # TEE property
 vendor.tee.googlekey.status                          u:object_r:vendor_mtk_trustonic_tee_prop:s0
 
-# VT
-ro.vendor.vt.                               u:object_r:vendor_mtk_vendor_vt_prop:s0
+

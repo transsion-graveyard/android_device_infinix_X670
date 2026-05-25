@@ -20,3 +20,6 @@ vendor_restricted_prop(vendor_exported_system_prop)
 # Bluetooth
 vendor_public_prop(vendor_bluetooth_prop)
 
+# OMX Core property
+vendor_restricted_prop(vendor_mtk_omx_core_prop)
+

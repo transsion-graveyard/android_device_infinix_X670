@@ -53,3 +53,13 @@ TARGET_INCLUDES_LOS_PREBUILTS := true
 
 # Maintainer Name
 INFINITY_MAINTAINER := "R"
+
+SURFACE_FLINGER_BOOST := true
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,60)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
+<!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
+<integer name="config_aodMaxRefreshRate">30</integer>

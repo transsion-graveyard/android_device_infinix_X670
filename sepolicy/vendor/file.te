@@ -15,6 +15,7 @@ type vendor_sysfs_fingerprint, fs_type, sysfs_type;
 type vendor_fingerprint_data_file, data_file_type, file_type;
 
 type vendor_sysfs_display, fs_type, sysfs_type;
+type vendor_sysfs_mali, fs_type, sysfs_type;
 
 # Gesture
 type proc_gesture_function, fs_type, proc_type, sysfs_type;

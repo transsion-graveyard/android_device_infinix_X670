@@ -34,9 +34,6 @@ persist.vendor.camera3.pipeline.bufnum.min.low_ram.imgo=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.lcso=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.rrzo=6
 persist.vendor.camera3.pipeline.bufnum.min.low_ram.rsso=6
-ro.camera.sound.forced=0
-ro.mtk_cam_dualzoom_support=1
-ro.mtk_cam_stereo_camera_support=1
 ro.vendor.camera.isp.support.colorspace=0
 ro.vendor.camera3.zsl.default=270
 ro.vendor.camera_tran_fake_stereo_support=1
@@ -251,9 +248,6 @@ debug.sf.earlyGl.app.duration=16600000
 debug.sf.enable_egl_image_tracker=0
 debug.sf.enable_hwc_vds=0
 
-# RKP
-remote_provisioning.hostname=remoteprovisioning.googleapis.com
-
 # TEE
 ro.hardware.gatekeeper=trustonic
 ro.hardware.kmsetkey=trustonic
@@ -261,7 +255,6 @@ ro.hardware.paytrigger=trustonic
 ro.vendor.mtk_trustonic_tee_support=1
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_svp_on_mtee_support=1
-ro.mtk_key_manager_support=1
 ro.vendor.keymaster_version=4.1
 
 # VPU

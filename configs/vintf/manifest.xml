@@ -49,6 +49,14 @@
         </interface>
         <fqname>@4.0::IAllocator/default</fqname>
     </hal>
+    <hal format="aidl">
+        <name>android.hardware.graphics.allocator</name>
+        <version>2</version>
+        <interface>
+            <name>IAllocator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
         <transport>hwbinder</transport>

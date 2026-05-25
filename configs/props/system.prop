@@ -1,6 +1,11 @@
+ro.lunaris.maintainer=R
+
 # infinity props
 ro.product.marketname=Infinix NOTE 12
 ro.infinity.soc=Mediatek Helio G96
+ro.camera.sound.forced=0
+ro.mtk_cam_dualzoom_support=1
+ro.mtk_cam_stereo_camera_support=1
 ro.infinity.camera=50MP + 16MP
 
 # Audio
@@ -83,6 +88,12 @@ ro.vendor.mtk_flv_playback_support=1
 sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 persist.sys.usic.support=true
+
+# RKP
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
+# TEE
+ro.mtk_key_manager_support=1
 
 # Radio
 ro.vendor.mtk_omacp_support=1

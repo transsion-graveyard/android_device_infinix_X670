@@ -27,7 +27,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=Infinix/X670-GL/Infinix-X670:12/SP1A.210812.016/240224V150:user/release-keys
 
 PERF_ANIM_OVERRIDE := true
-WITH_GMS := true
+WITH_GMS := false
 WITH_GAPPS := false
 
 # Time

@@ -167,6 +167,7 @@ BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 3
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Vendor security patch level
 BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)

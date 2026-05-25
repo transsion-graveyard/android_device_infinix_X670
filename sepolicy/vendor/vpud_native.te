@@ -1,1 +1,1 @@
-allow vpud_native vendor_camera_prop:file { read open getattr };
+get_prop(vpud_native, vendor_camera_prop)

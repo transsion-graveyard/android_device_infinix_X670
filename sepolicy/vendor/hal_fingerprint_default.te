@@ -45,7 +45,6 @@ allow hal_fingerprint_default goodix_fingerprint_service:hwservice_manager { add
 set_prop(hal_fingerprint_default, vendor_mtk_default_prop)
 
 # Types
-type ff_ta_exec, exec_type, file_type;
 type ff_service, service_manager_type;
 type ff_hwservice, hwservice_manager_type;
 type ff_device, dev_type;

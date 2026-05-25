@@ -1,6 +1,3 @@
-# proc_perfmgr
-type proc_perfmgr, fs_type, proc_type;
-
 # Camera
 type sysfs_tran_cam_file, fs_type, sysfs_type;
 type transsion_camera_data_file, file_type, data_file_type, mlstrustedobject;

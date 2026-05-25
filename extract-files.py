@@ -29,7 +29,6 @@ from extract_utils.utils import (
 namespace_imports = [
     "hardware/mediatek",
     "hardware/mediatek/libmtkperf_client",
-    "hardware/lineage/compat",
     "device/infinix/X670",
 ]
 

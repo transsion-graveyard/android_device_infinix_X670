@@ -55,7 +55,6 @@ TARGET_INCLUDES_LOS_PREBUILTS := true
 INFINITY_MAINTAINER := "R"
 
 SURFACE_FLINGER_BOOST := true
-TARGET_OPTIMIZED_DEXOPT := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,60)

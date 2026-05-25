@@ -1,2 +1,1 @@
-# Allow update_engine to access tranfs block device during OTA
-allow update_engine tranfs_block_device:blk_file rw_file_perms;
+allow update_engine tkv_block_device:blk_file rw_file_perms;

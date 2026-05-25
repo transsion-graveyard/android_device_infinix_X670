@@ -1,25 +1,8 @@
-# Device identification props
-vendor_restricted_prop(vendor_deviceid_prop)
-
-# Camera props
-vendor_restricted_prop(vendor_camera_prop)
-
-# Fingerprint
-vendor_restricted_prop(vendor_fingerprint_prop)
-
-# Thermal
-vendor_internal_prop(vendor_thermal_engine_prop)
+# Audio
+vendor_public_prop(vendor_audioserver_prop);
 
 # Dynamic sensor
-vendor_internal_prop(vendor_dynamic_sensor_prop)
+vendor_internal_prop(vendor_dynamic_sensor_prop);
 
-# Audio
-vendor_public_prop(vendor_audioserver_prop)
-vendor_restricted_prop(vendor_exported_system_prop)
-
-# Bluetooth
-vendor_public_prop(vendor_bluetooth_prop)
-
-# OMX Core property
-vendor_restricted_prop(vendor_mtk_omx_core_prop)
-
+# NFC
+vendor_internal_prop(vendor_nfc_prop);

@@ -1,2 +1,2 @@
-allow fuelgauged_nvram sysfs_dt_firmware_android:dir { open read search };
-allow fuelgauged_nvram sysfs_dt_firmware_android:file { getattr open read };
+allow fuelgauged_nvram sysfs_dt_firmware_android:dir search;
+allow fuelgauged_nvram sysfs_dt_firmware_android:file r_file_perms;

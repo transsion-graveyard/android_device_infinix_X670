@@ -1,28 +1,24 @@
-# Allow to control mali GPU nodes
-r_dir_file(hal_power_default, sysfs_gpu)
-allow hal_power_default sysfs_gpu:file rw_file_perms;
-
-# Allow hal_power_default to enable/disable sched_boost
-allow hal_power_default proc:file rw_file_perms;
-
-# To do powerhint on nodes defined in powerhint.json
-allow hal_power_default vendor_sysfs_gpu:dir search;
-allow hal_power_default vendor_sysfs_gpu:file rw_file_perms;
-
-# Allow libperfmgr to control GPU boost
-r_dir_file(hal_power_default, sysfs_ged)
-allow hal_power_default sysfs_ged:file w_file_perms;
-
-# Allow to control DT2W
-allow hal_power_default vendor_sysfs_gesture:file rw_file_perms;
-
 # Allow libperfmgr to access Transsion DT2W Nodes
 allow hal_power_default proc_gesture_function:dir search;
 allow hal_power_default proc_gesture_function:file rw_file_perms;
 
-# MTK power queries the fingerprint HAL process state through /proc.
-allow hal_power_default hal_fingerprint_default:dir { getattr search };
+# Allow libperfmgr to control cgroups
+allow hal_power_default cgroup:file rw_file_perms;
 
-# Allow Power HAL to find Thermal HAL service
-allow hal_power_default hal_thermal_service:service_manager find;
-hal_client_domain(hal_power_default, hal_thermal)
+# Allow libperfmgr to write GPU nodes
+allow hal_power_default sysfs_gpu:dir r_dir_perms;
+allow hal_power_default sysfs_gpu:file rw_file_perms;
+
+# Allow libperfmgr to control cpu frequencies
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+
+r_dir_file(hal_power_default, proc_gpufreqv2)
+allow hal_power_default proc_gpufreqv2:file rw_file_perms;
+
+# Allow libperfmgr to control mtk-dvfsrc-devfreq
+allow hal_power_default sysfs_dvfsrc_devfreq:dir r_dir_perms;
+allow hal_power_default sysfs_dvfsrc_devfreq:file rw_file_perms;
+
+# Allow libperfmgr to control task turbo
+r_dir_file(hal_power_default, sysfs_task_turbo)
+allow hal_power_default sysfs_task_turbo:file w_file_perms;

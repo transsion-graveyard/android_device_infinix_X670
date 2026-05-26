@@ -317,7 +317,8 @@ PRODUCT_PACKAGES += \
     SettingsProviderResTarget \
     SystemUIResTarget \
     TetheringConfigTarget \
-    WifiResTarget
+    WifiResTarget \
+    NcmTetheringOverlay
 
 # Power
 PRODUCT_PACKAGES += \

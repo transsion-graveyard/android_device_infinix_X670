@@ -50,12 +50,6 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'system/lib64/libem_support_jni.so': blob_fixup()
         .add_needed('libjni_shim.so'),
-    "vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc": blob_fixup().regex_replace(
-        "@1.2-mediatek", "@1.2-mediatek-64b"
-    ),
-    "vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml": blob_fixup().regex_replace(
-        "1.1", "1.2"
-    ),
     ('vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2', 'vendor/lib64/libgoodixhwfingerprint.so', 'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),    
     "vendor/lib64/hw/audio.primary.mt6781.so": blob_fixup()
@@ -74,10 +68,15 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup().replace_needed(
         *fixup_ndk_platform("android.hardware.gnss-V1-ndk_platform.so")
     ),
-    "vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b": blob_fixup()
-        .patchelf_version(patchelf_version)
-        .replace_needed("libavservices_minijail_vendor.so", "libavservices_minijail.so")
-        .add_needed("libstagefright_foundation-v33.so"),
+    (
+        'vendor/lib64/hw/sensors.mediatek.V2.0.so',
+        'vendor/lib64/libcodec2_mtk_c2store.so',
+        'vendor/lib64/libcodec2_mtk_vdec.so',
+        'vendor/lib64/libcodec2_mtk_venc.so',
+        'vendor/lib64/libcodec2_vpp_qt_plugin.so',
+        'vendor/lib64/libcodec2_vpp_rs_plugin.so'
+    ): blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     (
         "vendor/lib64/libwvhidl.so",
         "vendor/lib64/mediadrm/libwvdrmengine.so",

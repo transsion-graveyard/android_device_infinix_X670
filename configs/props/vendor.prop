@@ -60,6 +60,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 ro.vendor.mm.defrag.support=1
 
 # Display
+media.c2.hal.selection=aidl
 debug.cpurend.vsync=false
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false

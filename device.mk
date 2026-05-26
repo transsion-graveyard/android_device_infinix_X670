@@ -283,7 +283,7 @@ PRODUCT_PACKAGES += \
 
 # MediaCas
 PRODUCT_PACKAGES += \
-    android.hardware.cas@1.2-service-lazy
+    android.hardware.cas@1.2-service-lazy:64
 
 # Media (C2)
 $(call soong_config_set_bool,android_hardware_mediatek_codec2,link_v33_libstagefright_foundation,true)

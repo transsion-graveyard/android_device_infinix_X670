@@ -27,7 +27,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=Infinix/X670-GL/Infinix-X670:12/SP1A.210812.016/240224V150:user/release-keys
 
 PERF_ANIM_OVERRIDE := true
-WITH_GMS := false
+WITH_GMS := true
 WITH_GAPPS := false
 
 # Time
@@ -36,10 +36,10 @@ LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 # AxionOS
 
 # Define rear camera specs (multiple sensors supported)
-AXION_CAMERA_REAR_INFO := 50MP  # Example: 50MP + 48MP
+AXION_CAMERA_REAR_INFO := 50  # Example: 50MP + 48MP
 
 # Define front camera specs
-AXION_CAMERA_FRONT_INFO := 16MP  # Example: 42MP
+AXION_CAMERA_FRONT_INFO := 16  # Example: 42MP
 
 # Maintainer name (use "_" for spaces, e.g., "rmp_22" → "rmp 22" in UI)
 AXION_MAINTAINER := R

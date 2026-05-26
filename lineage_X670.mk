@@ -60,3 +60,8 @@ TARGET_BOOT_ANIMATION_RES := 1080
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,60)
 $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_AXFX := true
+
+PRODUCT_PRODUCT_PROPERTIES += persist.sys.ax_debug_enabled=1
+

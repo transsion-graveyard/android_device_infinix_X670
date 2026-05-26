@@ -171,6 +171,15 @@
       "ResetOnInit": false
     },
     {
+      "Name": "TaskTurbo",
+      "Path": "/sys/module/task_turbo/parameters/feats",
+      "Values": [
+        "15",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "DoubleTapToWake",
       "Path": "/proc/gesture_function",
       "Values": [
@@ -203,14 +212,26 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedBoost",
-      "Duration": 500,
+      "Duration": 700,
       "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "DRAMOppMin",
-      "Duration": 500,
+      "Duration": 700,
       "Value": "1"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 700,
+      "Value": "1075000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 700,
+      "Value": "1169000"
     },
     {
       "PowerHint": "LAUNCH",
@@ -247,6 +268,12 @@
       "Node": "SchedBoost",
       "Duration": 3000,
       "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TaskTurbo",
+      "Duration": 3000,
+      "Value": "15"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",

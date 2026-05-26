@@ -78,6 +78,11 @@ on charger
     # Configure default brightness and switch to drm backlight trigger.
     write /sys/class/leds/lcd-backlight/brightness 1000
     write /sys/class/leds/lcd-backlight/trigger "backlight-drm"
+    mkdir /metadata/mtk_charger 0770 system system
+    restorecon_recursive /metadata/mtk_charger
+    write /metadata/mtk_charger/fast_charging_support 1
+    chown system system /metadata/mtk_charger/fast_charging_support
+    chmod 0660 /metadata/mtk_charger/fast_charging_support
 
 on fs
     mount_all --early
@@ -160,6 +165,13 @@ on post-fs-data
     chown system system /mnt/vendor/nvcfg/fg
     chown system system /mnt/vendor/nvcfg/fg/old_fg_data
     chown system system /mnt/vendor/nvcfg/fg/car_tune_value
+
+    # Stock KPOC charger checks this marker before showing fast charging.
+    mkdir /metadata/mtk_charger 0770 system system
+    restorecon_recursive /metadata/mtk_charger
+    write /metadata/mtk_charger/fast_charging_support 1
+    chown system system /metadata/mtk_charger/fast_charging_support
+    chmod 0660 /metadata/mtk_charger/fast_charging_support
 
 #BSP:add XLLSHLSSP-17 for tranfs by shentao.yang 20190603 start
     chown system system /tranfs

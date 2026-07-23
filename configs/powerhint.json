@@ -132,6 +132,24 @@
       "DefaultIndex": 0
     },
     {
+      "Name": "SFUclampMin",
+      "Path": "/dev/stune/sf_standalone/schedtune.uclamp.min",
+      "Values": [
+        "100",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "SFUclampMax",
+      "Path": "/dev/stune/sf_standalone/schedtune.uclamp.max",
+      "Values": [
+        "100",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "FGUclampMin",
       "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
       "Values": [
@@ -332,6 +350,18 @@
       "Node": "PowerHALRenderingState",
       "Duration": 0,
       "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "SFUclampMin",
+      "Duration": 0,
+      "Value": "100"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "SFUclampMax",
+      "Duration": 0,
+      "Value": "100"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",

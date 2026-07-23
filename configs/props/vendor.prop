@@ -259,9 +259,6 @@ ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_svp_on_mtee_support=1
 ro.vendor.keymaster_version=4.1
 
-# USB
-vendor.usb.controller=musb-hdrc
-
 # VPU
 ro.vendor.mtk_mvpu_security_support=0
 

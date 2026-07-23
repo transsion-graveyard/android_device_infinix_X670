@@ -132,6 +132,28 @@
       "DefaultIndex": 0
     },
     {
+      "Name": "perfservFGClampMin",
+      "Path": "/proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_uclamp_min",
+      "Values": [
+        "100",
+        "50",
+        "20",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "perfservTAClampMin",
+      "Path": "/proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ta_uclamp_min",
+      "Values": [
+        "100",
+        "50",
+        "20",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "DRAMOppMin",
       "Path": "/proc/perfmgr/boost_ctrl/dram_ctrl/ddr",
       "Values": [
@@ -234,6 +256,12 @@
       "Value": "1169000"
     },
     {
+      "PowerHint": "INTERACTION",
+      "Node": "perfservFGClampMin",
+      "Duration": 700,
+      "Value": "20"
+    },
+    {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 3000,
@@ -276,10 +304,22 @@
       "Value": "15"
     },
     {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "perfservFGClampMin",
+      "Duration": 1000,
+      "Value": "50"
+    },
+    {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "PowerHALRenderingState",
       "Duration": 0,
       "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "perfservFGClampMin",
+      "Duration": 0,
+      "Value": "50"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",

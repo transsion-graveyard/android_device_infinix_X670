@@ -18,6 +18,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+
+# Matlog
+TARGET_DISABLE_MATLOG:= true
+TARGET_INCLUDE_MATLOG := false
+
+
 # Enable userfaultfd gc
 PRODUCT_ENABLE_UFFD_GC := true
 

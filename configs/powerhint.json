@@ -132,52 +132,6 @@
       "DefaultIndex": 0
     },
     {
-      "Name": "SFUclampMin",
-      "Path": "/dev/stune/sf_standalone/schedtune.uclamp.min",
-      "Values": [
-        "100",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "SFUclampMax",
-      "Path": "/dev/stune/sf_standalone/schedtune.uclamp.max",
-      "Values": [
-        "100",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "FGUclampMin",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": [
-        "100",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "TAUclampMin",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      "Values": [
-        "100",
-        "10",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CDUclampMin",
-      "Path": "/dev/cpuctl/camera-daemon/cpu.uclamp.min",
-      "Values": [
-        "100",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "DRAMOppMin",
       "Path": "/proc/perfmgr/boost_ctrl/dram_ctrl/ddr",
       "Values": [
@@ -258,32 +212,26 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedBoost",
-      "Duration": 0,
+      "Duration": 700,
       "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "DRAMOppMin",
-      "Duration": 0,
+      "Duration": 700,
       "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "1375000"
+      "Duration": 700,
+      "Value": "1075000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "1419000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "TAUclampMin",
-      "Duration": 0,
-      "Value": "10"
+      "Duration": 700,
+      "Value": "1169000"
     },
     {
       "PowerHint": "LAUNCH",
@@ -311,18 +259,6 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "FGUclampMin",
-      "Duration": 3000,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "TAUclampMin",
-      "Duration": 3000,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "LAUNCH",
       "Node": "DRAMOppMin",
       "Duration": 3000,
       "Value": "1"
@@ -340,28 +276,10 @@
       "Value": "15"
     },
     {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "CDUclampMin",
-      "Duration": 1000,
-      "Value": "100"
-    },
-    {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "PowerHALRenderingState",
       "Duration": 0,
       "Value": "EXPENSIVE_RENDERING"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "SFUclampMin",
-      "Duration": 0,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "SFUclampMax",
-      "Duration": 0,
-      "Value": "100"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",

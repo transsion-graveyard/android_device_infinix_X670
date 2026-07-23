@@ -16,8 +16,8 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lunaris_device_message">Infinix NOTE 3000</string>
+    <string name="lunaris_device_message">TecFiTel ZENOVAWER 69</string>
     <string name="lunaris_processor_code_message">Mediatek Elite Gen 69</string>
-    <string name="lunaris_battery_type_message">99999 mAh</string>
-    <string name="lunaris_screen_message">Super Amoled LTPO LGTVWQHD+ 60hz</string>
+    <string name="lunaris_battery_type_message">6969 kWh</string>
+    <string name="lunaris_screen_message">Super Amoled LTPO LGTVWQHD+ 69hz</string>
 </resources>

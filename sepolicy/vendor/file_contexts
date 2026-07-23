@@ -1,6 +1,19 @@
 # BatteryInfo
 /sys/devices/platform/soc/11017000.i2c/i2c-5/5-006b/power_supply/charger(/.*)?						u:object_r:sysfs_batteryinfo:s0
 
+# Charging sysfs - Pump Express / charging nodes
+/sys/devices/platform/charger/Pump_Express                                                          u:object_r:sysfs_pump_express:s0
+/sys/devices/platform/battery/Pump_Express                                                          u:object_r:sysfs_pump_express:s0
+/sys/devices/platform/charger/fast_chg_indicator                                                    u:object_r:sysfs_fs_chg_file:s0
+/sys/devices/platform/charger/Charger_Config                                                        u:object_r:sysfs_chg_cfg:s0
+/sys/devices/platform/charger/adapter_capacity                                                      u:object_r:sysfs_pump_express:s0
+/sys/devices/platform/charger/chr_type                                                              u:object_r:sysfs_pump_express:s0
+/sys/devices/platform/charger/Charger_Type                                                          u:object_r:sysfs_pump_express:s0
+/sys/devices/platform/charger/power_supply/mtk-slave-charger/present                                u:object_r:sysfs_chg2_present:s0
+/sys/devices/platform/pca_dv2_algo/super_fast_charge_thermal                                        u:object_r:sysfs_sfc_thermal_file:s0
+/sys/devices/platform/charger/tran_aichg_bigdata                                                    u:object_r:sysfs_aichg_file:s0
+/sys/devices/platform/charger/tran_aichg_disable_charger                                            u:object_r:sysfs_aichg_file:s0
+
 # Camera
 /dev/cml421_ois(/.*)?                                                                   u:object_r:cml421_ois_device:s0
 /dev/cwvi5300                                                                           u:object_r:cwvi5300_device:s0

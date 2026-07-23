@@ -4,5 +4,14 @@ allow init tranfs_block_device:lnk_file { getattr read relabelto };
 allow init trustonic_kmsetkey_ca_exec:file execute;
 allow init socket_device:sock_file { create write };
 
+# 33W Fast Charging - init writes sysfs permissions in boot scripts
+allow init sysfs_pump_express:file rw_file_perms;
+allow init sysfs_fs_chg_file:file rw_file_perms;
+allow init sysfs_sfc_thermal_file:file rw_file_perms;
+allow init sysfs_aichg_file:file rw_file_perms;
+allow init sysfs_chg2_present:file rw_file_perms;
+allow init sysfs_chg_cfg:file rw_file_perms;
+allow init sysfs_chg_mode_file:file rw_file_perms;
+
 get_prop(init, vendor_mtk_service_nvram_restore_prop)
 get_prop(init, vts_status_prop)

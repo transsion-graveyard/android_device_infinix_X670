@@ -2,4 +2,8 @@ allow system_server sysfs_OTG_STATE_file:file { read write getattr open };
 allow system_server sysfs_OTG_CTL_file:file { read write getattr open };
 allow system_server sysfs_vibrator:file { read open getattr write };
 
+# 33W Fast Charging - system_server reads charging status
+allow system_server sysfs_pump_express:file r_file_perms;
+allow system_server sysfs_aichg_file:file rw_file_perms;
+
 get_prop(system_server, wifi_hal_prop)

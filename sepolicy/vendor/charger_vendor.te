@@ -7,3 +7,12 @@ allow charger_vendor { sysfs_leds sysfs_batteryinfo sysfs_power_supply }:file rw
 
 allow charger_vendor gpu_device:dir search;
 allow charger_vendor dri_device:chr_file rw_file_perms;
+
+# 33W Fast Charging - Pump Express / PE40
+r_dir_file(charger_vendor, sysfs_pump_express)
+r_dir_file(charger_vendor, sysfs_fs_chg_file)
+r_dir_file(charger_vendor, sysfs_sfc_thermal_file)
+r_dir_file(charger_vendor, sysfs_aichg_file)
+r_dir_file(charger_vendor, sysfs_chg2_present)
+r_dir_file(charger_vendor, sysfs_chg_cfg)
+r_dir_file(charger_vendor, sysfs_chg_mode_file)

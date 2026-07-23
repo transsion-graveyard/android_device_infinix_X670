@@ -1,3 +1,11 @@
 # FM Radio
 get_prop(system_app, vendor_mtk_wmt_prop)
 get_prop(system_app, vendor_mtk_default_prop)
+
+# 33W Fast Charging sysfs access
+allow system_app sysfs_pump_express:file rw_file_perms;
+allow system_app sysfs_fs_chg_file:file r_file_perms;
+allow system_app sysfs_aichg_file:file rw_file_perms;
+allow system_app sysfs_sfc_thermal_file:file rw_file_perms;
+allow system_app sysfs_chg_mode_file:file rw_file_perms;
+allow system_app sysfs_chg_cfg:file r_file_perms;

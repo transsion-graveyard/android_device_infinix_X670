@@ -394,6 +394,12 @@ on post-fs-data
     chown system system /sys/devices/platform/charger/tran_aichg_disable_charger
     chmod 0666 /sys/devices/platform/charger/tran_aichg_disable_charger
     #MG-CHG(Bypass):bypass function by jianqiang.ouyang 20230110 end
+    # Pump Express / PE+ / PE40 fast charging sysfs access
+    chmod 0666 /sys/devices/platform/charger/Pump_Express
+    chmod 0666 /sys/devices/platform/battery/Pump_Express
+    chmod 0666 /sys/devices/platform/charger/fast_chg_indicator
+    chmod 0666 /sys/devices/platform/charger/adapter_capacity
+    chmod 0666 /sys/devices/platform/charger/Charger_Config
     # PMIC property
     chown radio system /sys/devices/platform/mt-pmic/low_battery_protect_stop
     chown radio system /sys/devices/platform/mt-pmic/low_battery_protect_ut

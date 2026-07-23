@@ -3,6 +3,18 @@ genfscon sysfs /devices/platform/odm/odm:usb_switch/power_supply/usb_switch     
 genfscon sysfs /devices/platform/mtk_ctd/power_supply                                                u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/10026000.pwrap/10026000.pwrap:mt6366/mt6358-chrdet/power_supply u:object_r:sysfs_batteryinfo:s0
 
+# Charging - Pump Express / PE+ / PE40
+genfscon sysfs /devices/platform/charger/Pump_Express                                                u:object_r:sysfs_pump_express:s0
+genfscon sysfs /devices/platform/battery/Pump_Express                                                u:object_r:sysfs_pump_express:s0
+genfscon sysfs /devices/platform/charger/fast_chg_indicator                                          u:object_r:sysfs_fs_chg_file:s0
+genfscon sysfs /devices/platform/charger/Charger_Config                                              u:object_r:sysfs_chg_cfg:s0
+genfscon sysfs /devices/platform/charger/power_supply/mtk-slave-charger/present                      u:object_r:sysfs_chg2_present:s0
+genfscon sysfs /devices/platform/pca_dv2_algo/super_fast_charge_thermal                              u:object_r:sysfs_sfc_thermal_file:s0
+
+# AI Charging (Transsion bypass)
+genfscon sysfs /devices/platform/charger/tran_aichg_bigdata                                          u:object_r:sysfs_aichg_file:s0
+genfscon sysfs /devices/platform/charger/tran_aichg_disable_charger                                  u:object_r:sysfs_aichg_file:s0
+
 # Devices
 genfscon sysfs /devices/platform/11270000.ufshci/host0/target0:0:0/0:0:0:0/block/sda/queue         u:object_r:sysfs_devices_block:s0
 genfscon sysfs /devices/platform/11270000.ufshci/host0/target0:0:0/0:0:0:0/block/sdb/queue         u:object_r:sysfs_devices_block:s0

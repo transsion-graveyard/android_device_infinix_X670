@@ -35,3 +35,12 @@ type aw87xxx_vmax, fs_type, sysfs_type;
 
 # TNE
 type tneengine_tnek_file, dev_type, mlstrustedobject;
+
+# Charging - Pump Express / PE40
+type sysfs_pump_express, fs_type, sysfs_type;
+type sysfs_fs_chg_file, fs_type, sysfs_type;
+type sysfs_sfc_thermal_file, fs_type, sysfs_type;
+type sysfs_aichg_file, fs_type, sysfs_type;
+type sysfs_chg2_present, fs_type, sysfs_type;
+type sysfs_chg_cfg, fs_type, sysfs_type;
+type sysfs_chg_mode_file, fs_type, sysfs_type;

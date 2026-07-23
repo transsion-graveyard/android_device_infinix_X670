@@ -221,6 +221,7 @@ on post-fs-data
 
     # Create Audio HAL data directory
     mkdir /data/vendor/audiohal 0771 system audio
+    mkdir /data/vendor/audiohal/audio_param 0770 audio audio
 
 #BSP:add XLLSHLSSP-17 for tranfs by shentao.yang 20190603 start
     restorecon_recursive /tranfs

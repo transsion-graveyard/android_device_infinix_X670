@@ -181,7 +181,8 @@ PRODUCT_PACKAGES += \
     libhapticgenerator:64 \
     libldnhncr:64 \
     libreverbwrapper:64 \
-    libprocessgroup.vendor:64
+    libprocessgroup.vendor:64 \
+    libunwindstack.vendor:64
 
 PRODUCT_PACKAGES += \
     MtkInCallService

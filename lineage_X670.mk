@@ -65,3 +65,5 @@ TARGET_INCLUDE_AXFX := true
 
 PRODUCT_PRODUCT_PROPERTIES += persist.sys.ax_debug_enabled=1
 
+TARGET_NEEDS_VULKAN_MEDIA_FIX : = true
+

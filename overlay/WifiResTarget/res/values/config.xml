@@ -4,13 +4,22 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <!-- Disable WPA3 SAE auto-upgrade on mixed WPA2/WPA3 networks. -->
+    <bool name="config_wifi5ghzSupport">true</bool>
+    <bool name="config_wifi_fast_bss_transition_enabled">true</bool>
+    <bool name="config_wifi_background_scan_support">true</bool>
+    <string name="config_wifiSoftap2gChannelList" translatable="false">1-13</string>
+    <string name="config_wifiSoftap5gChannelList" translatable="false">36,38,40,42,44,46,48,149,153,157,161,165</string>
+    <bool name="config_wifi_softap_acs_supported">true</bool>
+    <bool name="config_wifi_softap_sae_supported">true</bool>
+    <bool name="config_wifi_softap_ieee80211ac_supported">true</bool>
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+    <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
+    <string name="config_wifi_tcp_buffers" translatable="false">1730560,3461120,6922240,524288,1048576,4525824</string>
+    <integer name="config_wifiDelayDisconnectOnImsLostMs">1000</integer>
+    <bool name="config_wifiSaeH2eSupported">true</bool>
+    <bool name="config_wifiDppAkmSupported">true</bool>
+    <bool name="config_wifiBridgedSoftApSupported">true</bool>
     <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
     <bool translatable="false" name="config_wifiSaeUpgradeOffloadEnabled">false</bool>
-
-    <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
-    <integer translatable="false" name="config_wifiDelayDisconnectOnImsLostMs">10</integer>
-
-    <!-- Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">Infinix NOTE 12</string>
 </resources>

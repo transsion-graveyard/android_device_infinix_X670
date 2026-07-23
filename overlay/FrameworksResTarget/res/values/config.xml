@@ -593,4 +593,42 @@
 
     <!-- System Info -->
     <integer name="config_sysCPUTempMultiplier">1000</integer>
+
+    <!-- Default files to pin via Pinner Service -->
+    <string-array name="config_defaultPinnerServiceFiles" translatable="false">
+        <item>/apex/com.android.art/javalib/core-oj.jar</item>
+        <item>/apex/com.android.art/javalib/core-libart.jar</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
+        <item>/system/bin/surfaceflinger</item>
+        <item>/system_ext/priv-app/SystemUI/SystemUI.apk</item>
+    </string-array>
+
+    <!-- Whether to skip restoring network selection -->
+    <bool name="skip_restoring_network_selection">true</bool>
+
+    <!-- MMS user agent -->
+    <string name="config_mms_user_agent" translatable="false">Android-Mms/0.1</string>
+
+    <!-- Enable new auto select network UI -->
+    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
+
+    <!-- Device VoLTE available -->
+    <bool name="config_device_volte_available">true</bool>
+
+    <!-- Device VT available -->
+    <bool name="config_device_vt_available">true</bool>
+
+    <!-- Device WFC IMS available -->
+    <bool name="config_device_wfc_ims_available">true</bool>
+
+    <!-- Switch phone on voice registration state change -->
+    <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
+
+    <!-- Voice/data/SMS auto fallback -->
+    <bool name="config_voice_data_sms_auto_fallback">true</bool>
+
+    <!-- WLAN IMS service classes -->
+    <string name="config_wlan_data_service_class" translatable="false">com.mediatek.internal.telephony.data.IwlanDataService</string>
+    <string name="config_wlan_network_service_class" translatable="false">com.mediatek.internal.telephony.IWlanNetworkService</string>
 </resources>

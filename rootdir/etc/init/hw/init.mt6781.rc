@@ -760,6 +760,13 @@ on post-fs-data
 # -----------------------
 
 on boot
+    # Create CCCI PCM nodes for call audio (kernel driver doesn't create them)
+    mknod /dev/ccci_pcm_rx c 235 159
+    mknod /dev/ccci_pcm_tx c 235 159
+    chown audio audio /dev/ccci_pcm_rx /dev/ccci_pcm_tx
+    chmod 0660 /dev/ccci_pcm_rx /dev/ccci_pcm_tx
+    chcon u:object_r:ccci_aud_device:s0 /dev/ccci_pcm_rx /dev/ccci_pcm_tx
+
     write /proc/sys/vm/dirty_writeback_centisecs 300
     chmod 0660 /sys/power/autosleep
 

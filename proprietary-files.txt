@@ -42,7 +42,6 @@ vendor/lib/libmtkshifter_vendor.so
 vendor/lib/lib_iir.so
 vendor/lib/libmsbc_mtk.so
 vendor/lib/libopus.so
-vendor/lib/libbluetooth_audio_session.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/libalsautils.so:vendor/lib/libalsautils-v32.so;FIX_SONAME
 vendor/lib/hw/sound_trigger.primary.default.so
@@ -75,7 +74,6 @@ vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libcs_cs35l45_intf.so
 vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libmsbc_mtk.so
-vendor/lib64/libbluetooth_audio_session.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libmtklimiter_vendor.so

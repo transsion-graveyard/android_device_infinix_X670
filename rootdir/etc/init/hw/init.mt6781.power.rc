@@ -96,25 +96,12 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor "schedutil"
     write /sys/devices/platform/11270000.ufshci/clkgate_enable 1
 
-# X670 power / touch boost tuning
-
 on post-fs-data
     chown system system /proc/perfmgr/tchbst/user/usrtch
     chmod 0664 /proc/perfmgr/tchbst/user/usrtch
 
 on boot
     wait /proc/perfmgr/tchbst/user/usrtch 10
-    write /proc/perfmgr/tchbst/user/usrtch "enable 1"
-    write /proc/perfmgr/tchbst/user/usrtch "eas_boost 100"
-    write /proc/perfmgr/tchbst/user/usrtch "touch_opp 0"
-    write /proc/perfmgr/tchbst/user/usrtch "cluster_opp 0 0"
-    write /proc/perfmgr/tchbst/user/usrtch "cluster_opp 1 0"
-    write /proc/perfmgr/tchbst/user/usrtch "duration 300000000"
-    write /proc/perfmgr/tchbst/user/usrtch "active_time 300000"
-    write /proc/perfmgr/tchbst/user/usrtch "time_to_last_touch 600000"
-    write /proc/perfmgr/tchbst/user/usrtch "deboost_when_render 0"
-
-on property:sys.boot_completed=1
     write /proc/perfmgr/tchbst/user/usrtch "enable 1"
     write /proc/perfmgr/tchbst/user/usrtch "eas_boost 100"
     write /proc/perfmgr/tchbst/user/usrtch "touch_opp 0"

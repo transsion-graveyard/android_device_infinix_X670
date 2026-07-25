@@ -67,3 +67,19 @@ PRODUCT_PRODUCT_PROPERTIES += persist.sys.ax_debug_enabled=1
 
 TARGET_NEEDS_VULKAN_MEDIA_FIX := true
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    activity_anim_perf_override=true
+
+# lunaris prop
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.lunaris.maintainer=R
+
+# infinity props
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.product.marketname="Infinix NOTE 12" \
+    ro.infinity.soc="Mediatek Helio G96" \
+    ro.camera.sound.forced=0 \
+    ro.mtk_cam_dualzoom_support=1 \
+    ro.mtk_cam_stereo_camera_support=1 \
+    ro.infinity.camera="50MP + 16MP"
+

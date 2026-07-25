@@ -62,13 +62,9 @@ ro.vendor.mm.defrag.support=1
 # Display
 media.c2.hal.selection=aidl
 debug.cpurend.vsync=false
-debug.hwui.skia_tracing_enabled=false
-debug.hwui.skia_use_perfetto_track_events=false
 graphics.gpu.profiler.support=true
-ro.vendor.build.dont_use_vabc=true
 debug.mediatek.appgamepq_compress=1
 debug.mediatek.disp_decompress=1
-ro.vendor.sdr2hdr.by.layer.support=true
 persist.vendor.sys.mtkaal.function=0
 persist.vendor.uxcompaction_enable=true
 ro.hardware.egl=meow
@@ -256,7 +252,6 @@ ro.hardware.kmsetkey=trustonic
 ro.hardware.paytrigger=trustonic
 ro.vendor.mtk_trustonic_tee_support=1
 ro.vendor.mtk_tee_gp_support=1
-ro.vendor.mtk_svp_on_mtee_support=1
 ro.vendor.keymaster_version=4.1
 
 # VPU

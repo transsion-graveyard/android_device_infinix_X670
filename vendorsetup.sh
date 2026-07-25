@@ -51,3 +51,16 @@ fi
 # ── system/core (fenrir) ──
 apply_patch "$d/patches/0001-libfs_avb-Allow-LKs-patched-with-fenrir-to-boot-on-A.patch" "$root/system/core"
 apply_patch "$d/patches/0002-fastbootd-Always-return-false-for-GetDeviceLockStatu.patch" "$root/system/core"
+
+# ── fuck-bpf ──
+FUCK_BPF_DIR="$root/fuck-bpf"
+if [ ! -d "$FUCK_BPF_DIR" ]; then
+    echo "[fuck-bpf] cloning..."
+    git clone https://github.com/ardiandideyashidiq/fuck-bpf "$FUCK_BPF_DIR"
+fi
+
+if [ -f "$FUCK_BPF_DIR/apply.py" ]; then
+    echo "[fuck-bpf] applying patches..."
+    python3 "$FUCK_BPF_DIR/apply.py" --mb
+    echo "[fuck-bpf] done"
+fi

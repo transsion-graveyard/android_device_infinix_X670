@@ -31,26 +31,25 @@ apply_patch() {
     echo "[patch] $name... FAILED (context mismatch, patch may need rebasing)"
 }
 
-# ── axion_sdk ──
+# ── axion_sdk (optional) ──
 AXION_PATCH="$d/patches/0001-ax_deviceinfo-use-power-profile-for-battery-capacity.patch"
-AXION_TARGET="$root/axion_sdk/ax_deviceinfo/src/com/android/axion/deviceinfo/DeviceInfoProvider.kt"
 
-if [ -f "$AXION_PATCH" ] && [ -f "$AXION_TARGET" ]; then
-    pushd "$root/axion_sdk" > /dev/null || return
-    if [ -f "$(git rev-parse --git-dir)/shallow" ]; then
-        echo "- Unshallowing axion_sdk"
-        git fetch --unshallow
+if [ -f "$AXION_PATCH" ]; then
+    if [ -d "$root/axion_sdk" ]; then
+        if [ -f "$(git -C "$root/axion_sdk" rev-parse --git-dir 2>/dev/null)/shallow" ]; then
+            echo "- Unshallowing axion_sdk"
+            git -C "$root/axion_sdk" fetch --unshallow
+        fi
+        git -C "$root/axion_sdk" revert --abort 2>/dev/null || true
+        apply_patch "$AXION_PATCH" "$root/axion_sdk"
+    else
+        echo "[patch] ax_deviceinfo... SKIPPED (target dir not found)"
     fi
-    git revert --abort 2>/dev/null || true
-    apply_patch "$AXION_PATCH" "$root/axion_sdk"
-    popd > /dev/null || return
-elif [ ! -f "$AXION_PATCH" ]; then
-    echo "[patch] ax_deviceinfo... SKIPPED (patch not found)"
 fi
 
 # ── system/core (fenrir) ──
-apply_patch "$d/patches/0001-libfs_avb-Allow-LKs-patched-with-fenrir-to-boot-on-A.patch" "$root/system/core"
-apply_patch "$d/patches/0002-fastbootd-Always-return-false-for-GetDeviceLockStatu.patch" "$root/system/core"
+apply_patch "$d/patches/0001-libfs_avb-Allow-LKs-patched-with-fenrir-to-boot-on-A.patch" "$root/system/core" || true
+apply_patch "$d/patches/0002-fastbootd-Always-return-false-for-GetDeviceLockStatu.patch" "$root/system/core" || true
 
 # ── fuck-bpf ──
 FUCK_BPF_DIR="$root/fuck-bpf"
@@ -61,6 +60,9 @@ fi
 
 if [ -f "$FUCK_BPF_DIR/apply.py" ]; then
     echo "[fuck-bpf] applying patches..."
-    python3 "$FUCK_BPF_DIR/apply.py" --mb
-    echo "[fuck-bpf] done"
+    if python3 "$FUCK_BPF_DIR/apply.py" --mb; then
+        echo "[fuck-bpf] done"
+    else
+        echo "[fuck-bpf] FAILED!!!"
+    fi
 fi

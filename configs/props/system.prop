@@ -79,7 +79,8 @@ sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 persist.sys.usic.support=true
 
-# RKP
+# Remote Provisioning
+remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
 # TEE

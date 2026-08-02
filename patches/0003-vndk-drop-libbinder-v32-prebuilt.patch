@@ -1,0 +1,45 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: X670 Maintainer <maintainer@example.com>
+Date: Sun, 02 Aug 2026 00:00:00 +0000
+Subject: [PATCH] vndk: drop device-local libbinder-v32 prebuilt
+
+hardware/lineage/compat also ships a vendor libbinder-v32 prebuilt, so
+defining it here collides with it at build time:
+
+  MODULE.TARGET.SHARED_LIBRARIES.libbinder-v32 already defined by
+  hardware/lineage/compat
+
+Drop the device-local module; libbinder-v32 is still provided by
+hardware/lineage/compat when present (vendorsetup.sh only applies this
+patch in that case). Keep libssl-v33 as-is.
+
+Change-Id: I11111f0b657a47a19f8e07cee31db2fd5f4c5555
+---
+ vndk/Android.bp | 15 ---------------
+ 1 file changed, 15 deletions(-)
+
+diff --git a/vndk/Android.bp b/vndk/Android.bp
+index 725de72..bf6ec70 100644
+--- a/vndk/Android.bp
++++ b/vndk/Android.bp
+@@ -1,18 +1,3 @@
+-cc_prebuilt_library_shared {
+-    name: "libbinder-v32",
+-    vendor: true,
+-    strip: {
+-        none: true,
+-    },
+-    target: {
+-        android_arm64: {
+-            srcs: ["v32/arm64/libbinder-v32.so"],
+-        },
+-    },
+-    compile_multilib: "64",
+-    check_elf_files: false,
+-}
+-
+ cc_prebuilt_library_shared {
+     name: "libssl-v33",
+     vendor: true,
+-- 
+2.53.0

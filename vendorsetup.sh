@@ -51,6 +51,11 @@ fi
 apply_patch "$d/patches/0001-libfs_avb-Allow-LKs-patched-with-fenrir-to-boot-on-A.patch" "$root/system/core" || true
 apply_patch "$d/patches/0002-fastbootd-Always-return-false-for-GetDeviceLockStatu.patch" "$root/system/core" || true
 
+# ── vndk: drop device-local libbinder-v32 if lineage compat provides it ──
+if [ -f "$root/hardware/lineage/compat/vndk/v32/arm64/libbinder-v32.so" ]; then
+    apply_patch "$d/patches/0003-vndk-drop-libbinder-v32-prebuilt.patch" "$d"
+fi
+
 # ── fuck-bpf ──
 FUCK_BPF_DIR="$root/fuck-bpf"
 if [ ! -d "$FUCK_BPF_DIR" ]; then

@@ -47,7 +47,7 @@ AXION_MAINTAINER := R
 # Processor name (use "_" for spaces)
 AXION_PROCESSOR := Mediatek_Helio_G96
 
-AXION_DEBUGGING_ENABLED := true
+# AXION_DEBUGGING_ENABLED := true
 
 TARGET_INCLUDES_LOS_PREBUILTS := true
 
@@ -63,7 +63,7 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 TARGET_ENABLE_BLUR := false
 TARGET_INCLUDE_AXFX := true
 
-PRODUCT_PRODUCT_PROPERTIES += persist.sys.ax_debug_enabled=1
+# PRODUCT_PRODUCT_PROPERTIES += persist.sys.ax_debug_enabled=1
 
 TARGET_NEEDS_VULKAN_MEDIA_FIX := true
 

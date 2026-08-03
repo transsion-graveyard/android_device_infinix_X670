@@ -26,12 +26,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=X670 \
     BuildFingerprint=Infinix/X670-GL/Infinix-X670:12/SP1A.210812.016/240224V150:user/release-keys
 
-PERF_ANIM_OVERRIDE := true
 WITH_GMS := true
-WITH_GAPPS := false
+WITH_GAPPS := true
 
 # Time
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+
+PERF_ANIM_OVERRIDE := true
 
 # AxionOS
 
@@ -73,13 +74,3 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # lunaris prop
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.lunaris.maintainer=R
-
-# infinity props
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.product.marketname="Infinix NOTE 12" \
-    ro.infinity.soc="Mediatek Helio G96" \
-    ro.camera.sound.forced=0 \
-    ro.mtk_cam_dualzoom_support=1 \
-    ro.mtk_cam_stereo_camera_support=1 \
-    ro.infinity.camera="50MP + 16MP"
-

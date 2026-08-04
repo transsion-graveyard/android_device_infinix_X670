@@ -62,15 +62,8 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_high,60)
 $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 TARGET_ENABLE_BLUR := false
-TARGET_INCLUDE_AXFX := true
+# TARGET_INCLUDE_AXFX := true
 
 # PRODUCT_PRODUCT_PROPERTIES += persist.sys.ax_debug_enabled=1
 
 TARGET_NEEDS_VULKAN_MEDIA_FIX := true
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    activity_anim_perf_override=true
-
-# lunaris prop
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.lunaris.maintainer=R

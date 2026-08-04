@@ -3,6 +3,10 @@ ro.product.marketname=Infinix NOTE 12
 ro.infinity.soc=Mediatek Helio G96
 ro.infinity.camera=50MP + 16MP
 
+# lunaris
+ro.lunaris.maintainer=R
+
+activity_anim_perf_override=true
 
 # Audio
 ro.audio.silent=0

@@ -20,6 +20,8 @@ on init
     write /sys/kernel/ged/hal/dvfs_margin_value 130
     write /sys/kernel/ged/hal/timer_base_dvfs_margin 798
     write /sys/kernel/ged/hal/loading_base_dvfs_step 4
+    # Let GPU DVFS ramp above idle freq under load (default boost target pins it to min)
+    write /sys/kernel/ged/hal/custom_boost_gpu_freq 0
 
     # sched
     write /proc/sys/kernel/sched_migration_cost_ns 250000

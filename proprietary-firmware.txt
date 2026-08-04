@@ -5,6 +5,7 @@ lk.img;AB|2005c0d5a1bb76a6bb6b7b2f84588abfa5528bf3
 logo.bin:logo.img;AB|2a665a876fc4e39c97ae1e7c45be49dab9ca4ca5
 md1img.img;AB
 pi_img.img;AB
+preloader_x670_h814.bin:preloader_raw.img;AB
 scp.img;AB
 spmfw.img;AB
 sspm.img;AB

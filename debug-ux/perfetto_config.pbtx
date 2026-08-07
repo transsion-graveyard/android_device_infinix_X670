@@ -1,0 +1,117 @@
+duration_ms: __DURATION_MS__
+
+buffers {
+  size_kb: 262144
+  fill_policy: RING_BUFFER
+}
+
+buffers {
+  size_kb: 16384
+  fill_policy: RING_BUFFER
+}
+
+data_sources {
+  config {
+    name: "linux.ftrace"
+    target_buffer: 0
+    ftrace_config {
+      buffer_size_kb: 8192
+      drain_period_ms: 250
+      ftrace_events: "sched/sched_switch"
+      ftrace_events: "sched/sched_wakeup"
+      ftrace_events: "sched/sched_waking"
+      ftrace_events: "sched/sched_blocked_reason"
+      ftrace_events: "power/cpu_frequency"
+      ftrace_events: "power/cpu_idle"
+      ftrace_events: "power/suspend_resume"
+      ftrace_events: "irq/irq_handler_entry"
+      ftrace_events: "irq/irq_handler_exit"
+      ftrace_events: "binder/binder_transaction"
+      ftrace_events: "binder/binder_transaction_received"
+      ftrace_events: "binder/binder_transaction_alloc_buf"
+      ftrace_events: "binder/binder_transaction_buffer_release"
+      ftrace_events: "systrace/0"
+      ftrace_events: "systrace/1"
+      ftrace_events: "vmscan/mm_vmscan_direct_reclaim_begin"
+      ftrace_events: "vmscan/mm_vmscan_direct_reclaim_end"
+      ftrace_events: "vmscan/mm_vmscan_memcg_reclaim_begin"
+      ftrace_events: "vmscan/mm_vmscan_memcg_reclaim_end"
+      ftrace_events: "vmscan/mm_vmscan_kswapd_wake"
+      ftrace_events: "vmscan/mm_vmscan_kswapd_sleep"
+      ftrace_events: "vmscan/mm_vmscan_wakeup_kswapd"
+      ftrace_events: "vmscan/mm_shrink_slab_start"
+      ftrace_events: "vmscan/mm_shrink_slab_end"
+      ftrace_events: "compaction/mm_compaction_begin"
+      ftrace_events: "compaction/mm_compaction_end"
+      ftrace_events: "compaction/mm_compaction_wakeup_kcompactd"
+      ftrace_events: "kmem/mm_page_pcpu_drain"
+    }
+  }
+}
+
+data_sources {
+  config {
+    name: "track_event"
+    target_buffer: 0
+    track_event_config {
+      disabled_categories: "*"
+      enabled_categories: "gfx"
+      enabled_categories: "view"
+      enabled_categories: "rendering"
+      enabled_categories: "android"
+      enabled_categories: "hal"
+      enabled_categories: "app"
+      enabled_categories: "aidl"
+      enabled_categories: "binder_driver"
+      enabled_categories: "performance"
+      enabled_categories: "memory"
+    }
+  }
+}
+
+data_sources {
+  config {
+    name: "android.surfaceflinger.frametimeline"
+    target_buffer: 0
+  }
+}
+
+data_sources {
+  config {
+    name: "android.log"
+    target_buffer: 1
+  }
+}
+
+data_sources {
+  config {
+    name: "linux.process_stats"
+    target_buffer: 1
+    process_stats_config {
+      scan_all_processes_on_start: true
+      proc_stats_poll_ms: 250
+      record_thread_names: true
+    }
+  }
+}
+
+data_sources {
+  config {
+    name: "linux.sys_stats"
+    target_buffer: 1
+  }
+}
+
+data_sources {
+  config {
+    name: "android.cpu_per_uid"
+    target_buffer: 1
+  }
+}
+
+data_sources {
+  config {
+    name: "android.packages_list"
+    target_buffer: 1
+  }
+}

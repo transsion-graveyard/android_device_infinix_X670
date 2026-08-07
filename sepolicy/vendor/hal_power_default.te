@@ -23,3 +23,14 @@ allow hal_power_default sysfs_dvfsrc_devfreq:file rw_file_perms;
 # Allow libperfmgr to control task turbo
 r_dir_file(hal_power_default, sysfs_task_turbo)
 allow hal_power_default sysfs_task_turbo:file w_file_perms;
+
+# Allow libperfmgr to write ged sysfs nodes (gpu_boost_level)
+rw_dir_file(hal_power_default, sysfs_ged)
+
+# Allow libperfmgr to write FPSGO nodes
+# /sys/kernel/fpsgo/fbt/boost_ta
+allow hal_power_default sysfs_fpsgo:dir search;
+allow hal_power_default sysfs_fpsgo:file { write open };
+# /sys/module/mtk_fpsgo/parameters/bhr_opp
+allow hal_power_default sysfs_mtk_fpsgo:dir search;
+allow hal_power_default sysfs_mtk_fpsgo:file { write open };

@@ -61,6 +61,9 @@ FUCK_BPF_DIR="$root/fuck-bpf"
 if [ ! -d "$FUCK_BPF_DIR" ]; then
     echo "[fuck-bpf] cloning..."
     git clone https://github.com/ardiandideyashidiq/fuck-bpf "$FUCK_BPF_DIR"
+elif [ -d "$FUCK_BPF_DIR/.git" ]; then
+    echo "[fuck-bpf] updating..."
+    git -C "$FUCK_BPF_DIR" pull --ff-only 2>/dev/null || echo "[fuck-bpf] update skipped (offline or dirty)"
 fi
 
 if [ -f "$FUCK_BPF_DIR/apply.py" ]; then

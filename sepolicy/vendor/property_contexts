@@ -5,9 +5,6 @@ vendor.debug.seninf.hs_trail                u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.camera_tran_hal_server_support    u:object_r:vendor_mtk_camera_prop:s0
 ro.vendor.camera_tran_fake_stereo_support   u:object_r:vendor_mtk_camera_prop:s0
 
-# ROM version props read by the camera HAL (PlugProc) as default_prop
-ro.modversion                               u:object_r:vendor_camera_prop:s0
-
 # Display
 ro.vendor.mtk_hdr_video_support             u:object_r:vendor_mtk_default_prop:s0
 ro.vendor.mtk_crossmount_support                   u:object_r:vendor_mtk_crossmount_prop:s0

@@ -175,8 +175,11 @@
       "Name": "GPUBlockBoost",
       "Path": "/sys/kernel/ged/hal/gpu_boost_level",
       "Values": [
-        "101",
+        "80",
+        "70",
+        "60",
         "50",
+        "30",
         "0",
         "-1"
       ],
@@ -186,13 +189,19 @@
     {
       "Name": "PowerHALAudioState",
       "Path": "vendor.powerhal.audio",
-      "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
+      "Values": [
+        "AUDIO_STREAMING_LOW_LATENCY",
+        ""
+      ],
       "Type": "Property"
     },
     {
       "Name": "PowerHALRenderingState",
       "Path": "vendor.powerhal.rendering",
-      "Values": ["EXPENSIVE_RENDERING", ""],
+      "Values": [
+        "EXPENSIVE_RENDERING",
+        ""
+      ],
       "Type": "Property"
     },
     {
@@ -216,7 +225,10 @@
     {
       "Name": "FBTBoostTA",
       "Path": "/sys/kernel/fpsgo/fbt/boost_ta",
-      "Values": ["0", "1"],
+      "Values": [
+        "0",
+        "1"
+      ],
       "ResetOnInit": true,
       "DefaultIndex": 0
     },
@@ -228,6 +240,37 @@
         "cc1"
       ],
       "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUDVFSMargin",
+      "Path": "/sys/kernel/ged/hal/timer_base_dvfs_margin",
+      "Values": [
+        "75",
+        "45",
+        "50",
+        "60"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUDVFSLoadingStep",
+      "Path": "/sys/kernel/ged/hal/loading_base_dvfs_step",
+      "Values": [
+        "16",
+        "15",
+        "4",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUDVFSLoadingMode",
+      "Path": "/sys/kernel/ged/hal/dvfs_loading_mode",
+      "Values": [
+        "0",
+        "1"
+      ],
       "ResetOnInit": true
     }
   ],
@@ -283,8 +326,8 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "GPUBlockBoost",
-      "Duration": 700,
-      "Value": "101"
+      "Duration": 600,
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
@@ -337,8 +380,8 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUBlockBoost",
-      "Duration": 3000,
-      "Value": "101"
+      "Duration": 2000,
+      "Value": "70"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -368,7 +411,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUDVFSInterval",
       "Duration": 0,
-      "Value": "75"
+      "Value": "50"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -380,7 +423,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUBlockBoost",
       "Duration": 0,
-      "Value": "101"
+      "Value": "70"
     },
     {
       "PowerHint": "DEVICE_IDLE",
@@ -399,6 +442,66 @@
       "Node": "DoubleTapToWake",
       "Duration": 0,
       "Value": "cc1"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUDVFSLoadingMode",
+      "Duration": 600,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUDVFSInterval",
+      "Duration": 600,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUDVFSMargin",
+      "Duration": 600,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUDVFSLoadingStep",
+      "Duration": 600,
+      "Value": "4"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUDVFSLoadingMode",
+      "Duration": 2000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUDVFSMargin",
+      "Duration": 2000,
+      "Value": "75"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUDVFSLoadingStep",
+      "Duration": 2000,
+      "Value": "16"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUDVFSLoadingMode",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUDVFSMargin",
+      "Duration": 0,
+      "Value": "45"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUDVFSLoadingStep",
+      "Duration": 0,
+      "Value": "15"
     }
   ]
 }

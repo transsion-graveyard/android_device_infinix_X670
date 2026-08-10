@@ -1,3 +1,11 @@
 allow untrusted_app unlabeled:filesystem getattr;
 
+# MTK camera background service (HwBinder): app binds it for BG algorithms.
+# Must use hal_client_domain: hal_attribute_hwservice(hal_mtk_bgs, ...)
+# emits a build_test_only neverallow that a plain allow would violate.
+hal_client_domain(untrusted_app, hal_mtk_bgs)
+
+# Transsion camera thermal node read by the app's ThermalThrottle thread
+allow untrusted_app sysfs_tran_cam_file:file r_file_perms;
+
 get_prop(untrusted_app, vendor_camera_prop)

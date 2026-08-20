@@ -8,6 +8,9 @@ ro.lunaris.maintainer=R
 
 activity_anim_perf_override=true
 
+# UI
+persist.sys.activity_anim_perf_override=true
+
 # Audio
 ro.audio.silent=0
 ro.audio.usb.period_us=16000

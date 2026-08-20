@@ -255,7 +255,6 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libtinyxml2-v34 \
     libbinder-v32 \
     libhidlbase-v32 \
     libutils-v32

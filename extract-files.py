@@ -56,7 +56,6 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'fpsensor_fingerprint', b'fingerprint\x00\x00\x00\x00\x00\x00\x00\x00\x00'),
     "vendor/lib64/hw/audio.primary.mt6781.so": blob_fixup()
         .replace_needed("libutils.so", "libutils-v32.so")
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
         .replace_needed("libalsautils.so", "libalsautils-v32.so"),
     "vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc": blob_fixup().regex_replace(
         "on property:vts(.|\n)*", ""
@@ -106,7 +105,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so')
         .replace_needed('libbinder.so', 'libbinder-v32.so')
         .replace_needed('libutils.so', 'libutils-v32.so')
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     (
         "vendor/lib64/libmtkcam_stdutils.so",
@@ -123,8 +121,7 @@ blob_fixups: blob_fixups_user_type = {
         .patchelf_version(patchelf_version)
         .add_needed("libcutils.so"),
     "vendor/lib64/librt_extamp_intf.so": blob_fixup()
-        .patchelf_version(patchelf_version)
-        .replace_needed("libtinyxml2.so", "libtinyxml2-v34.so"),
+        .patchelf_version(patchelf_version),
     (
         "vendor/lib/libnvram.so",
         "vendor/lib64/libnvram.so",

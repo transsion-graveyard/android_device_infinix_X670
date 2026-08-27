@@ -157,38 +157,37 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Audio
-$(call soong_config_set,android_hardware_audio,run_64bit,true)
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.0-impl:64 \
-    android.hardware.audio.effect@7.0-impl:64 \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.3-impl:64
+    android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
-    audio.primary.default:64 \
-    audio.r_submix.default:64 \
-    audio.usb.default:64
+    audio.primary.default \
+    audio.r_submix.default \
+    audio.usb.default
 
 PRODUCT_PACKAGES += \
-    audio_policy.stub:64 \
-    libopus.vendor:64 \
-    audioclient-types-aidl-cpp.vendor:64 \
-    libaudioroute.vendor:64 \
-    libaudiofoundation.vendor:64 \
-    libbundlewrapper:64 \
-    libaudiopreprocessing:64 \
-    libalsautils:64 \
-    libdownmix:64 \
-    libeffectproxy:64 \
-    libnbaio_mono:64 \
-    libtinycompress:64 \
-    libdynproc:64 \
-    libhapticgenerator:64 \
-    libldnhncr:64 \
-    libreverbwrapper:64 \
-    libprocessgroup.vendor:64 \
-    libunwindstack.vendor:64
+    audio_policy.stub \
+    libopus.vendor \
+    audioclient-types-aidl-cpp.vendor \
+    libaudioroute.vendor \
+    libaudiofoundation.vendor \
+    libbundlewrapper \
+    libaudiopreprocessing \
+    libalsautils \
+    libdownmix \
+    libeffectproxy \
+    libnbaio_mono \
+    libtinycompress \
+    libdynproc \
+    libhapticgenerator \
+    libldnhncr \
+    libreverbwrapper \
+    libprocessgroup.vendor \
+    libunwindstack.vendor
 
 PRODUCT_PACKAGES += \
     MtkInCallService

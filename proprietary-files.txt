@@ -201,6 +201,11 @@ vendor/etc/audio_param/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
+vendor/etc/audio_param/preset_default.bin
+vendor/etc/audio_param/preset_music.bin
+vendor/etc/audio_param/preset_ringtone.bin
+vendor/etc/audio_param/preset_voice.bin
+vendor/etc/audio_param/preset_voip.bin
 vendor/etc/AudioLog_dynamic.xml
 
 # Bluetooth

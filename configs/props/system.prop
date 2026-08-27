@@ -67,9 +67,15 @@ pm.dexopt.install=speed-profile
 
 # Display
 debug.sf.enable_transaction_tracing=false
-debug.sf.predict_hwc_composition_strategy=0
+debug.sf.predict_hwc_composition_strategy=1
+debug.sf.use_phase_offsets_as_durations=0
 ro.opengles.version=196610
 vendor.debug.sf.display_dejitter=0
+debug.sf.hwc.min.duration=23000000
+debug.sf.late.sf.duration=27600000
+debug.sf.late.app.duration=20000000
+debug.sf.early.sf.duration=27600000
+debug.sf.early.app.duration=20000000
 
 # Disable mtk aggressive_dex2oat
 pm.dexopt.aggressive_dex2oat.enable=false

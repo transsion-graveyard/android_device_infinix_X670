@@ -32,5 +32,7 @@ persist.vendor.sys.fp.fod.size.width_height    u:object_r:vendor_fingerprint_pro
 # Key manager
 ro.vendor.mtk_key_manager_support                  u:object_r:vendor_mtk_default_prop:s0
 
+# PowerHAL - use standard vendor_power_prop (as in aosp/device/mediatek) so hal_power_default set_prop is allowed
+vendor.powerhal.                                     u:object_r:vendor_power_prop:s0
 # TEE property
 vendor.tee.googlekey.status                          u:object_r:vendor_mtk_trustonic_tee_prop:s0

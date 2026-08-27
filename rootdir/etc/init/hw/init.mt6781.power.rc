@@ -101,6 +101,40 @@ on property:sys.boot_completed=1
 on post-fs-data
     chown system system /proc/perfmgr/tchbst/user/usrtch
     chmod 0664 /proc/perfmgr/tchbst/user/usrtch
+    # PowerHAL libperfmgr - ensure system HAL can write boost nodes (fixes Permission denied for INTERACTION/LAUNCH)
+    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_uclamp_min
+    chmod 0660 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_uclamp_min
+    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ta_uclamp_min
+    chmod 0660 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ta_uclamp_min
+    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/sched_boost
+    chmod 0660 /proc/perfmgr/boost_ctrl/eas_ctrl/sched_boost
+    chown system system /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
+    chmod 0660 /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
+    chown system system /sys/kernel/ged/hal/gpu_boost_level
+    chmod 0660 /sys/kernel/ged/hal/gpu_boost_level
+    chown system system /sys/kernel/ged/hal/custom_boost_gpu_freq
+    chmod 0660 /sys/kernel/ged/hal/custom_boost_gpu_freq
+    chown system system /sys/kernel/ged/hal/timer_base_dvfs_margin
+    chmod 0660 /sys/kernel/ged/hal/timer_base_dvfs_margin
+    chown system system /sys/kernel/ged/hal/loading_base_dvfs_step
+    chmod 0660 /sys/kernel/ged/hal/loading_base_dvfs_step
+    chown system system /sys/kernel/ged/hal/dvfs_loading_mode
+    chmod 0660 /sys/kernel/ged/hal/dvfs_loading_mode
+    chown system system /sys/kernel/ged/hal/dvfs_margin_value
+    chmod 0660 /sys/kernel/ged/hal/dvfs_margin_value
+    chown system system /sys/module/task_turbo/parameters/feats
+    chmod 0660 /sys/module/task_turbo/parameters/feats
+    chown system system /sys/kernel/fpsgo/fbt/boost_ta
+    chmod 0660 /sys/kernel/fpsgo/fbt/boost_ta
+    chown system system /proc/gesture_function
+    chmod 0660 /proc/gesture_function
+    # mali sysfs for HWC/GPU hints
+    chown system system /sys/devices/platform/13000000.mali/js_ctx_scheduling_mode
+    chmod 0660 /sys/devices/platform/13000000.mali/js_ctx_scheduling_mode
+    chown system system /sys/devices/platform/13000000.mali/js_scheduling_period
+    chmod 0660 /sys/devices/platform/13000000.mali/js_scheduling_period
+    chown system system /sys/devices/platform/13000000.mali/dvfs_period
+    chmod 0660 /sys/devices/platform/13000000.mali/dvfs_period
 
 on boot
     wait /proc/perfmgr/tchbst/user/usrtch 10

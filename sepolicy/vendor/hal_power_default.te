@@ -3,7 +3,10 @@ allow hal_power_default proc_gesture_function:dir search;
 allow hal_power_default proc_gesture_function:file rw_file_perms;
 
 # Allow libperfmgr to control cgroups
+allow hal_power_default cgroup:dir search;
 allow hal_power_default cgroup:file rw_file_perms;
+# Allow property set for PowerHAL game/rendering states (vendor.powerhal.*)
+set_prop(hal_power_default, vendor_power_prop);
 
 # Allow libperfmgr to write GPU nodes
 allow hal_power_default sysfs_gpu:dir r_dir_perms;
@@ -12,6 +15,9 @@ allow hal_power_default vendor_sysfs_mali:file rw_file_perms;
 
 # Allow libperfmgr to control cpu frequencies
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+# Allow libperfmgr to write MTK perfmgr boost nodes (INTERACTION/LAUNCH)
+allow hal_power_default proc_perfmgr:file rw_file_perms;
+allow hal_power_default proc_perfmgr:dir r_dir_perms;
 
 r_dir_file(hal_power_default, proc_gpufreqv2)
 allow hal_power_default proc_gpufreqv2:file rw_file_perms;
@@ -30,7 +36,7 @@ rw_dir_file(hal_power_default, sysfs_ged)
 # Allow libperfmgr to write FPSGO nodes
 # /sys/kernel/fpsgo/fbt/boost_ta
 allow hal_power_default sysfs_fpsgo:dir search;
-allow hal_power_default sysfs_fpsgo:file { write open };
+allow hal_power_default sysfs_fpsgo:file { read write open };
 # /sys/module/mtk_fpsgo/parameters/bhr_opp
 allow hal_power_default sysfs_mtk_fpsgo:dir search;
 allow hal_power_default sysfs_mtk_fpsgo:file { write open };

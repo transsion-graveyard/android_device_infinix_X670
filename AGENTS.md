@@ -34,7 +34,7 @@ It patches other repos and is required for the tree to build/boot. Applies are i
 - `vndk/` ships arm64 prebuilts `libbinder-v32` and `libssl-v33` as `cc_prebuilt_library_shared`; `device.mk` also pulls the v32/v34 vendor libs.
 - SELinux lives in `sepolicy/{vendor,private,public}`; `BoardConfig.mk` includes `device/mediatek/sepolicy_vndr/SEPolicy.mk`. See the android-selinux-repair skill for AVC/build triage.
 - Overlays in `overlay/` are RROs (`PRODUCT_ENFORCE_RRO_TARGETS := *`); `TetheringConfigTarget` is `product_specific`, `FrameworksResTarget` is `vendor: true`.
-- Audio is a 64-bit-only HAL (`android.hardware.audio@7.0-impl:64`); Dolby via `vendor/sony/dolby`, IMS via `vendor/mediatek/ims`, GMS branding via `AXION_*`/`ro.lunaris` props.
+- Audio is a 64-bit-only HAL (`android.hardware.audio@7.0-impl:64`); IMS via `vendor/mediatek/ims`, GMS branding via `AXION_*`/`ro.lunaris` props.
 
 ## Active project context
 

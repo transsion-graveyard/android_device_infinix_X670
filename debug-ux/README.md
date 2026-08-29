@@ -49,6 +49,36 @@ python3 debug-ux/analyze_gfxinfo.py debug-ux/out/TAG/framestats_<pkg>.txt
 python3 debug-ux/analyze_gfxinfo.py debug-ux/out/TAG/gfxinfo_summary.txt --summary
 ```
 
+## SF/hwui prop sweep
+
+`sf_prop_bench.sh` + `summarize.py` are a separate harness for
+A/B-testing `debug.sf.*` props against a fixed workload under
+battery saver. See `docs/session-2026-08-30-prop-sweep.md` for
+the methodology that produced the `disable_client_composition_cache=0`
+and `frame_rate_multiple_threshold=60` wins.
+
+```bash
+# Pre-flight: saver ON, ADPF ON
+adb shell dumpsys battery unplug
+adb shell cmd power set-mode 1
+adb shell setprop debug.sf.enable_adpf_cpu_hint true
+
+# Run a baseline config (3-10 runs, label as you go)
+for i in 1 2 3 4 5; do
+  debug-ux/sf_prop_bench.sh base-$i
+done
+
+# Try a config
+adb shell setprop debug.sf.disable_client_composition_cache 0
+for i in 1 2 3 4 5; do
+  debug-ux/sf_prop_bench.sh compcache0-$i
+done
+
+# Compare (drops cold runs, reports warm-only medians)
+python3 debug-ux/summarize.py /tmp/sf_prop_bench/rounds/results.txt
+```
+
+
 For the trace: open `trace.perfetto-trace` in https://ui.perfetto.dev, then:
 
 1. **SurfaceFlinger → DisplayCompositor / frame timeline** — look for `FrameMissed`

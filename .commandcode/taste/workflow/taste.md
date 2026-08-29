@@ -1,0 +1,13 @@
+# Workflow Preferences
+
+- When asked to "analyze" or investigate (vs. "fix"), treat it as a read-only/diagnostic task — do not implement changes or enter write-mode without explicit confirmation. Confidence: 0.85
+- Distrust sub-agent results when they report as "blocked" / unavailable — fall back to direct tool use (read_file, grep, read_directory, shell_command) immediately rather than retrying sub-agents. Confidence: 0.8
+- When investigating a config bug, cross-reference tree files with project session docs (e.g. `docs/session-*.md`) before concluding — they often contain prior-tuning context that explains why specific values look "wrong" out of context. Confidence: 0.9
+- Prefer thorough investigation before offering fixes: gather exact file paths + line numbers + values for every prop/rc/json claim in the diagnosis. Confidence: 0.9
+- After diagnosis, propose a fix direction and explicitly ask before implementing ("Want me to write a plan for one of those?"). Confidence: 0.8
+- Before finalizing a perf diagnosis, suggest on-device verification commands (adb shell dumpsys / sysfs reads) the user can run to confirm the hypothesis. Confidence: 0.85
+- Run diagnostic adb probes directly (numbered `=== N. ===` blocks in a single shell_command) and dump raw output to a timestamped scratchpad directory under `/tmp/commandcode-.../scratchpad/<topic>-<timestamp>/` for reproducible before/after diffs. Confidence: 0.85
+- When one lever doesn't toggle the target state (e.g. battery saver suppressed while plugged in), try the next-stronger lever in the same session rather than asking the user — chain `settings put` → `cmd power set-mode` → `dumpsys battery unplug` + retry, narrating each failure inline. Confidence: 0.8
+- For prop/config fixes, live-apply via `adb shell setprop` (or equivalent) and run an A/B measurement with the *same workload script* before committing — then reset device state, commit the tree change with the A/B table in the commit message, and note that a rebuild+flash is still needed for persistence. Confidence: 0.9
+- When a session doc / AGENTS.md note contradicts newly-verified evidence (e.g. "ADPF not compiled in" disproved by `dumpsys SurfaceFlinger | grep use_adpf`), update the doc inline as part of the same change — don't leave stale guidance for the next pass. Confidence: 0.9
+- For kernel/HAL/SF config fixes, prefer the smallest/safest change first (single prop flip over restructuring powerhint.json) and verify on-device before proposing larger refactors. Confidence: 0.85

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(adb:*)",
+      "Shell(OUT=/tmp/commandcode-1000/-home-rd-Projects-android-oprek-x670-android-device-infinix-X670/fefd22a5-b33d-4eea-b5df-5faf038c4a64/scratchpad/bsm-$(date +%Y%m%d-%H%M%S) mkdir -p \"$OUT\" cd \"$OUT\" echo \"=== OUT: $OUT ===\" echo \"=== 0. device + battery state BEFORE ===\" adb shell getprop ro.product.model adb shell dumpsys battery | grep -E \"level|status|power.saver|present\" | head -10 adb shell settings get global low_power echo echo \"=== 1. SurfaceFlinger (normal) ===\" adb shell dumpsys SurfaceFlinger 2>&1 | grep -E \"refresh|FrameRate|early|late|hwc.min|use_phase|uclamp|content_detection\" | head -40 > sf-before.txt cat sf-before.txt echo echo \"=== 2. Power HAL active hints (normal) ===\" adb shell dumpsys android.hardware.power.IPower/default 2>&1 | head -60 > power-before.txt cat power-before.txt echo echo \"=== 3. Thermal (normal) ===\" adb shell dumpsys thermalservice 2>&1 | head -50 > therm-before.txt head -30 therm-before.txt echo echo \"=== 4. CPU/GPU clocks (normal) ===\" adb shell \"cat /sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq /sys/devices/system/cpu/cpufreq/policy0/scaling_available_frequencies\" 2>&1 echo \"---\" adb shell \"cat /sys/devices/system/cpu/cpufreq/policy6/scaling_cur_freq\" 2>&1 echo \"---\" adb shell \"cat /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_uclamp_min /proc/perfmgr/boost_ctrl/eas_ctrl/sched_boost /sys/kernel/ged/hal/gpu_boost_level 2>&1\" echo \"---\" adb shell \"cat /sys/devices/platform/13000000.mali/clock 2>&1\")"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

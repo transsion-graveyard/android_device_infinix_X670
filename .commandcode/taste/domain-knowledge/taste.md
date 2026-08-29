@@ -1,0 +1,12 @@
+# Domain Knowledge (Android device-tree tuning)
+
+- Knows that AOSP framework, not device tree, owns battery-saver state (`sys.power.*`, `PowerManager.isPowerSaveMode()`); device tree should not have an `onproperty` trigger for it. Confidence: 0.9
+- Knows MediaTek-specific knobs: `13000000.mali` clock, `powerhint.json` hint actions (INTERACTION/LAUNCH/GAME/PowerHAL), `GPUBlockBoost` index semantics, `js_scheduling_period`, `perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_uclamp_min`. Confidence: 0.85
+- Knows SurfaceFlinger phase-offset vs duration knobs: `debug.sf.early.sf.duration`, `debug.sf.hwc.min.duration`, `use_phase_offsets_as_durations` — and that `use_phase=1` causes `hwc.min.duration` to be ignored (a known tuning gotcha). Confidence: 0.9
+- Knows `ro.surface_flinger.use_content_detection_for_refresh_rate` + `enable_frame_rate_override=false` interact with `set_idle_timer_ms` to throttle SF to lower rates, which can cause perceived "lag" when content is touch-driven but policy considers it idle. Confidence: 0.85
+- Knows that boosting for too short a duration (e.g. INTERACTION = 1000 ms) is worse than no boost, because CPU/GPU oscillate between boost and idle during sustained UI interaction (scrolling). Confidence: 0.85
+- Knows standard on-device debug commands for SF/perf: `dumpsys SurfaceFlinger`, `dumpsys gfxinfo <pkg> framestats`, `dumpsys thermalservice`, `/sys/devices/platform/13000000.mali/clock`, `dumpsys android.hardware.power.IPower/default`. Confidence: 0.9
+- Knows that `settings put global low_power 1` / `cmd power set-power-saver-mode true` are suppressed when `mIsPowered=true`; must use `dumpsys battery unplug` (or set ac=0/status=3) first to force battery saver on via `cmd power set-mode 1`. Confidence: 0.9
+- Knows that protected sysfs/procfs nodes (perfmgr, ged, fpsgo, cpufreq min/max) require `adb shell "su -c '...'"` — shell user is denied by default on userdebug builds. Confidence: 0.85
+- Knows that `debug.sf.enable_adpf_cpu_hint=true` enables SF→kernel CPU preemption hints (`use_adpf_cpu_hint` + `adpf_gpu_sf` flags in `dumpsys SurfaceFlinger`), and that disabling it under battery saver causes ~22% SystemUI jank (99p ~105ms) because SF can't preempt CPU for the next vsync once the INTERACTION boost expires. Confidence: 0.9
+- Knows that on apatch/permissive userdebug builds `adb shell setprop` can mutate persistent sysprops live (without `resetprop`); verify with `getprop` + restart the affected service only if it doesn't pick up the change on the next vsync. Confidence: 0.8

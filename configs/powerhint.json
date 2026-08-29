@@ -566,6 +566,60 @@
       "Value": "60"
     },
     {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1375000"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1530000"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "perfservFGClampMin",
+      "Duration": 0,
+      "Value": "70"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "perfservTAClampMin",
+      "Duration": 0,
+      "Value": "70"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "SchedBoost",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "DRAMOppMin",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "GPUBlockBoost",
+      "Duration": 0,
+      "Value": "60"
+    },
+    {
       "PowerHint": "DEVICE_IDLE",
       "Node": "RestrictedCpuset",
       "Duration": 0,

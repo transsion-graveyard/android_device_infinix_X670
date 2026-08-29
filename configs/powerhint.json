@@ -278,20 +278,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "GpuCustomBoostFreq",
-      "Path": "/sys/kernel/ged/hal/custom_boost_gpu_freq",
-      "Values": [
-        "0",
-        "30",
-        "50",
-        "70",
-        "90",
-        "100"
-      ],
-      "ResetOnInit": true,
-      "DefaultIndex": 0
-    },
-    {
       "Name": "TopAppCpuset",
       "Path": "/dev/cpuset/top-app/cpus",
       "Values": [
@@ -498,12 +484,6 @@
     },
     {
       "PowerHint": "GAME",
-      "Node": "GpuCustomBoostFreq",
-      "Duration": 0,
-      "Value": "70"
-    },
-    {
-      "PowerHint": "GAME",
       "Node": "GPUDVFSMargin",
       "Duration": 0,
       "Value": "45"
@@ -566,12 +546,6 @@
       "Node": "GPUBlockBoost",
       "Duration": 3000,
       "Value": "80"
-    },
-    {
-      "PowerHint": "GAME_LOADING",
-      "Node": "GpuCustomBoostFreq",
-      "Duration": 3000,
-      "Value": "90"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",

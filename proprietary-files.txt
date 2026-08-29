@@ -11,6 +11,12 @@ vendor/lib64/s5kjn1_mipi_raw_tuning.so
 vendor/lib/libaedv.so
 vendor/lib64/libaedv.so
 
+# Audio — MediaTek HAL impls (voice call routing via modem; generic AOSP impl cannot create voice patches)
+vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
+vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
+
 # Audio
 vendor/bin/mt6660_calibration
 vendor/bin/rt5512_calibration

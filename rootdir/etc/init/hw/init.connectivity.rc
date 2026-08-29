@@ -20,6 +20,10 @@ on post-fs-data
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
+    # Force MT6631 WiFi CAM mode (Continuously Active) to prevent RX throughput collapse
+    # Fast PS (PowerSave|0x3) causes RX to drop to 1Mbps on 2.4GHz; setCAM=1 forces CAM
+    write /proc/net/wlan/setCAM 1
+
     # BT relayer mode used VCOM
     chown bluetooth bluetooth /dev/ttyGS2
     chmod 0660 /dev/ttyGS2

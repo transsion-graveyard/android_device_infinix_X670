@@ -23,10 +23,6 @@ PRODUCT_MODEL := Infinix X670
 PRODUCT_GMS_CLIENTID_BASE := android-transsion
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DeviceName=X670 \
-    BuildFingerprint=Infinix/X670-GL/Infinix-X670:12/SP1A.210812.016/240224V150:user/release-keys
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="sys_tssi_64_infinix-user 13 TP1A.220624.014 548390 release-key" \
     BuildFingerprint=Infinix/X670-GL/Infinix-X670:13/TP1A.220624.014/240224V556:user/release-keys \
     SystemModel=$(PRODUCT_SYSTEM_DEVICE) \

@@ -157,23 +157,40 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Audio
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl:32 \
-    android.hardware.audio.effect@7.0-impl:32
+    android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.3-impl:32
+    audio.primary.default \
+    audio.r_submix.default \
+    audio.usb.default
 
 PRODUCT_PACKAGES += \
-    audio.usb.default:32 \
-    audio_policy.stub:32 \
-    libspeexresampler.vendor:32
+    audio_policy.stub \
+    libopus.vendor \
+    audioclient-types-aidl-cpp.vendor \
+    libaudioroute.vendor \
+    libaudiofoundation.vendor \
+    libbundlewrapper \
+    libaudiopreprocessing \
+    libalsautils \
+    libdownmix \
+    libeffectproxy \
+    libnbaio_mono \
+    libtinycompress \
+    libdynproc \
+    libhapticgenerator \
+    libldnhncr \
+    libreverbwrapper \
+    libprocessgroup.vendor \
+    libunwindstack.vendor
 
 PRODUCT_PACKAGES += \
     MtkInCallService
-
-$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -188,15 +205,17 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek \
-    android.hardware.bluetooth.audio-impl:32 \
-    audio.bluetooth.default:32
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default \
+    libbluetooth_audio_session
 
 PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.bluetooth.audio@2.1.vendor \
     vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
 
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml
 
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk

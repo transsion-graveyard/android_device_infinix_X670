@@ -20,13 +20,19 @@ allow hal_power_default sysfs_task_turbo:file w_file_perms;
 # Allow libperfmgr to write ged sysfs nodes (gpu_boost_level)
 rw_dir_file(hal_power_default, sysfs_ged)
 
-# Allow libperfmgr to write FPSGO nodes
-# /sys/kernel/fpsgo/fbt/boost_ta
-allow hal_power_default sysfs_fpsgo:dir search;
-allow hal_power_default sysfs_fpsgo:file { write open };
-# /sys/module/mtk_fpsgo/parameters/bhr_opp
-allow hal_power_default sysfs_mtk_fpsgo:dir search;
-allow hal_power_default sysfs_mtk_fpsgo:file { write open };
+# Allow libperfmgr read/write FPSGO nodes (incl. /sys/kernel/fpsgo/common/gpu_block_boost, /sys/kernel/fpsgo/fbt/boost_ta)
+allow hal_power_default sysfs_fpsgo:dir r_dir_perms;
+allow hal_power_default sysfs_fpsgo:file rw_file_perms;
+# /sys/module/mtk_fpsgo/parameters/*
+allow hal_power_default sysfs_mtk_fpsgo:dir r_dir_perms;
+allow hal_power_default sysfs_mtk_fpsgo:file rw_file_perms;
+# /sys/module/fbt_cpu/parameters/* (floor_bound, bhr_opp, bhr, kmin, variance)
+allow hal_power_default sysfs_fbt_cpu:dir r_dir_perms;
+allow hal_power_default sysfs_fbt_cpu:file rw_file_perms;
+
+# Allow libperfmgr read/write perfmgr boost ctrl nodes (perfserv_fg_boost, perfserv_ta_boost, perfserv_prefer_idle, *_uclamp_min, sched_boost)
+allow hal_power_default proc_perfmgr:dir r_dir_perms;
+allow hal_power_default proc_perfmgr:file rw_file_perms;
 
 # Allow libperfmgr to get/set powerhal state property
 set_prop(hal_power_default, vendor_power_prop)

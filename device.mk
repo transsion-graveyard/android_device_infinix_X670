@@ -159,18 +159,18 @@ PRODUCT_COPY_FILES += \
 # Audio
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl:32
 
 PRODUCT_PACKAGES += \
-    audio.primary.default \
-    audio.r_submix.default \
-    audio.usb.default
+    audio.primary.default:32 \
+    audio.r_submix.default:32 \
+    audio.usb.default:32
 
 PRODUCT_PACKAGES += \
-    audio_policy.stub \
+    audio_policy.stub:32 \
     libopus.vendor \
     audioclient-types-aidl-cpp.vendor \
     libaudioroute.vendor \
@@ -210,8 +210,8 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek \
-    android.hardware.bluetooth.audio-impl \
-    audio.bluetooth.default \
+    android.hardware.bluetooth.audio-impl:32 \
+    audio.bluetooth.default:32 \
     libbluetooth_audio_session
 
 PRODUCT_PACKAGES += \

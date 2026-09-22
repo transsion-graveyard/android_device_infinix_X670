@@ -8,15 +8,9 @@
 # 146 "vendor/mediatek/proprietary/hardware/fstab/mt6768/fstab.in.mt6768"
 system /system ext4 ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 
-
-
 system_ext /system_ext ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
-
-
-
 vendor /vendor ext4 ro wait,slotselect,avb,logical,first_stage_mount
-
 
 product /product ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
@@ -118,3 +112,6 @@ product /product ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
 
 /dev/block/platform/bootdevice/by-name/vbmeta /vbmeta emmc defaults defaults
+
+# zram
+/dev/block/zram0             none         swap    defaults     zramsize=50%,max_comp_streams=8

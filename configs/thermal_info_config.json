@@ -326,22 +326,6 @@
     },
     {
       "Type": "MODEM",
-      "Name": "mtk-cl-mutt04"
-    },
-    {
-      "Type": "MODEM",
-      "Name": "mtk-cl-mutt05"
-    },
-    {
-      "Type": "MODEM",
-      "Name": "mtk-cl-mutt06"
-    },
-    {
-      "Type": "MODEM",
-      "Name": "mtk-cl-mutt07"
-    },
-    {
-      "Type": "MODEM",
       "Name": "mtk-cl-noIMS"
     },
     {
@@ -351,22 +335,6 @@
     {
       "Type": "MODEM",
       "Name": "mtk-cl-adp-mutt"
-    },
-    {
-      "Type": "MODEM",
-      "Name": "mtk-cl-tx-pwr00-nr"
-    },
-    {
-      "Type": "MODEM",
-      "Name": "mtk-cl-tx-pwr01-nr"
-    },
-    {
-      "Type": "MODEM",
-      "Name": "mtk-cl-tx-pwr02-nr"
-    },
-    {
-      "Type": "MODEM",
-      "Name": "mtk-cl-scg-off"
     },
     {
       "Type": "COMPONENT",

@@ -18,8 +18,14 @@ Additionally scans dst / SYMLINK= install names for SoC tokens that don't
 match the device (derived from dump lib/hw paths); --fix rewrites those too.
 
 --fix rewrites SRC paths of fixable matches to the exact dump path (backup
-written first). Comments, flags, ordering preserved; aliasing rewrites print
-a warning with both line numbers.
+written first), then removes physical lines whose src duplicates an earlier
+line (aliasing rewrites and pre-existing repeats). Comments, flags, and
+ordering otherwise preserved; aliasing rewrites print a warning.
+
+extract-files.py blob_fixups keys are audited against the git HEAD manifest
+(valid-then, invalid-now = stale) and the current manifest; --fix-extract
+rewrites stale keys whose cascade match resolves to a current manifest path.
+Keys never present in either manifest are reported as dead (manual review).
 """
 
 from __future__ import annotations
@@ -30,6 +36,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -312,6 +319,16 @@ def print_report(manifest: Manifest, report: dict, out=sys.stdout) -> None:
         print(f"  {e['src']}", file=out)
         for s in e["suggestions"]:
             print(f"      closest: {s}", file=out)
+    extract = report.get("extract")
+    if extract:
+        stale, dead = extract["stale"], extract["dead"]
+        note = "" if extract["old_available"] else "  [git HEAD unavailable: stale/dead not distinguished]"
+        print(f"EXTRACT-KEYS: {len(stale)} stale / {len(dead)} dead  (extract-files.py){note}", file=out)
+        for s in stale:
+            target = f"  ->  {s['to']}" if s["to"] else "  (no unique match; manual)"
+            print(f"  [{s['rule']:<8}] {s['key']}{target}", file=out)
+        for k in dead:
+            print(f"  dead (never in HEAD or current manifest): {k}", file=out)
     if manifest.duplicates:
         print(f"DUPLICATES: {len(manifest.duplicates)}", file=out)
         for src, linenos in manifest.duplicates.items():
@@ -319,10 +336,13 @@ def print_report(manifest: Manifest, report: dict, out=sys.stdout) -> None:
     if manifest.disabled:
         print(f"disabled  : {len(manifest.disabled)} (lines {', '.join(map(str, manifest.disabled))})", file=out)
     c = report["counts"]
+    extract_note = (
+        f" | {c['extract_stale']} extract-stale" if "extract_stale" in c else ""
+    )
     print(
         f"\nsummary: {c['entries']} unique entries | {c['exact']} exact | "
         f"{c['equivalent']} equivalent | {c['install_name']} install-name | "
-        f"{c['ambiguous']} ambiguous | {c['missing']} missing",
+        f"{c['ambiguous']} ambiguous | {c['missing']} missing{extract_note}",
         file=out,
     )
 
@@ -391,11 +411,29 @@ def collect_src_fixes(manifest: Manifest, results: list[tuple[Entry, Match]]) ->
             other = [n for n in src_lines[match.dump_path] if n != entry.lineno]
             if other:
                 print(
-                    f"warning: line {entry.lineno} now aliases existing "
-                    f"line(s) {', '.join(map(str, other))}: {match.dump_path}"
+                    f"warning: rewrite of line {entry.lineno} duplicates line(s) "
+                    f"{', '.join(map(str, other))}; duplicate line will be removed: "
+                    f"{match.dump_path}"
                 )
         replacements[entry.lineno] = new_body
     return replacements
+
+
+def find_duplicate_lines(manifest: Manifest, replacements: dict[int, str]) -> list[int]:
+    """Later physical lines whose effective src (after pending replacements)
+    duplicates an earlier one — kept only the first occurrence."""
+    seen: dict[str, int] = {}
+    drop: list[int] = []
+    for i, raw in enumerate(manifest.lines, 1):
+        text = replacements.get(i, raw.rstrip("\r\n")).strip()
+        if not text or text.startswith("#"):
+            continue
+        src = FLAG_RE.sub("", text).split(":", 1)[0].strip()
+        if src in seen:
+            drop.append(i)
+        else:
+            seen[src] = i
+    return drop
 
 
 def apply_fixes(
@@ -426,7 +464,8 @@ def apply_fixes(
             )
         replacements[lineno] = entry.src + (f":{new_dst}" if new_dst else "") + new_flags
 
-    if not replacements:
+    drops = find_duplicate_lines(manifest, replacements)
+    if not replacements and not drops:
         print("nothing to fix")
         return 0
 
@@ -447,9 +486,121 @@ def apply_fixes(
                 ending = eol
                 break
         lines[idx] = new_body + ending
+    # line numbers are stable during rewrites; delete duplicates afterwards
+    for lineno in sorted(drops, reverse=True):
+        del lines[lineno - 1]
     manifest_path.write_text("".join(lines), encoding="utf-8")
-    print(f"fixed {len(replacements)} entries; backup: {backup}")
-    return len(replacements)
+    msg = f"fixed {len(replacements)} entries"
+    if drops:
+        msg += f", removed {len(drops)} duplicate line(s)"
+    print(f"{msg}; backup: {backup}")
+    return len(replacements) + len(drops)
+
+
+# --- extract-files audit ---------------------------------------------------
+
+EXTRACT_KEY_RE = re.compile(r"""["']((?:vendor|system_ext|system|product|odm)/[^"']+)["']""")
+
+
+def manifest_paths(manifest: Manifest) -> set[str]:
+    """Every src and dst path referenced by the current manifest."""
+    paths = set()
+    for e in manifest.entries:
+        paths.add(e.src)
+        if e.dst:
+            paths.add(e.dst)
+    return paths
+
+
+def load_head_manifest_paths(manifest_path: Path) -> set[str] | None:
+    """src + dst paths from the git HEAD version of the manifest (pre-fix
+    authority: a key valid there but not in the current file is 'stale')."""
+    try:
+        res = subprocess.run(
+            ["git", "show", f"HEAD:{manifest_path.name}"],
+            cwd=manifest_path.parent,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    paths: set[str] = set()
+    for raw in res.stdout.splitlines():
+        s = raw.strip()
+        if not s or s.startswith("#"):
+            continue
+        body = FLAG_RE.sub("", s)
+        src, sep, dst = body.partition(":")
+        paths.add(src.strip())
+        if sep and dst:
+            paths.add(dst.strip())
+    return paths
+
+
+def extract_keys(extract_path: Path) -> list[str]:
+    """Ordered unique partition-prefixed path strings (blob_fixups keys and
+    tuple members; value-side strings never use partition prefixes)."""
+    text = extract_path.read_text(encoding="utf-8")
+    return list(dict.fromkeys(EXTRACT_KEY_RE.findall(text)))
+
+
+def classify_extract_keys(
+    keys: list[str],
+    current: set[str],
+    old: set[str] | None,
+    dump: set[str],
+    indexes: dict,
+) -> dict:
+    ok_keys: list[str] = []
+    stale: list[dict] = []
+    dead: list[str] = []
+    for k in keys:
+        if k in current:
+            ok_keys.append(k)
+            continue
+        if old is not None and k in old:
+            m = match_entry(k, dump, indexes, indexes["suggestions_pool"])
+            to = m.dump_path if m.dump_path in current else None
+            stale.append({"key": k, "rule": m.rule, "to": to})
+        else:
+            dead.append(k)
+    return {
+        "ok": len(ok_keys),
+        "stale": stale,
+        "dead": dead,
+        "old_available": old is not None,
+    }
+
+
+def apply_extract_fixes(extract_path: Path, stale: list[dict]) -> int:
+    fixes = [(s["key"], s["to"]) for s in stale if s["to"]]
+    for s in stale:
+        if not s["to"]:
+            print(f"warning: extract key has no unique current-manifest match; review manually: {s['key']}")
+    if not fixes:
+        print("no extract fixes applicable")
+        return 0
+
+    backup = extract_path.with_suffix(extract_path.suffix + ".bak")
+    if backup.exists():
+        from datetime import datetime
+        stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+        backup = extract_path.with_suffix(f"{extract_path.suffix}.bak.{stamp}")
+    shutil.copy2(extract_path, backup)
+
+    text = extract_path.read_text(encoding="utf-8")
+    applied = 0
+    for old_k, new_k in fixes:
+        if old_k not in text:
+            print(f"warning: key not found in {extract_path.name}: {old_k}")
+            continue
+        text = text.replace(old_k, new_k)
+        print(f"extract: {old_k}  ->  {new_k}")
+        applied += 1
+    extract_path.write_text(text, encoding="utf-8")
+    print(f"fixed {applied} extract key(s); backup: {backup}")
+    return applied
 
 
 # --- cli -------------------------------------------------------------------
@@ -468,13 +619,20 @@ def main(argv: list[str] | None = None) -> int:
     )
     ap.add_argument("--list", type=Path, default=def_manifest, help="manifest path")
     ap.add_argument("--dump", type=Path, default=def_dump, help="dump listing path (all_files.txt)")
-    ap.add_argument("--fix", action="store_true", help="rewrite fuzzy-matched SRC paths to dump paths (backup first)")
+    ap.add_argument("--fix", action="store_true", help="rewrite fuzzy-matched SRC paths to dump paths, then dedupe (backup first)")
+    ap.add_argument("--fix-extract", action="store_true", help="rewrite stale blob_fixups keys in extract-files.py (backup first)")
+    ap.add_argument("--extract", type=Path, default=None, help="path to extract-files.py (default: alongside --list)")
     ap.add_argument("--json", action="store_true", help="emit machine-readable JSON report")
     args = ap.parse_args(argv)
 
     for p in (args.list, args.dump):
         if not p.is_file():
             ap.error(f"file not found: {p}")
+    extract_path = args.extract or args.list.parent / "extract-files.py"
+    if not extract_path.is_file():
+        if args.fix_extract:
+            ap.error(f"file not found: {extract_path}")
+        extract_path = None
 
     manifest = parse_manifest(args.list)
     dump = load_dump(args.dump)
@@ -496,6 +654,19 @@ def main(argv: list[str] | None = None) -> int:
     report["install_names"] = install_names
     report["counts"]["install_name"] = len(install_names)
 
+    extract_data = None
+    if extract_path is not None:
+        indexes = build_indexes(dump)
+        extract_data = classify_extract_keys(
+            extract_keys(extract_path),
+            manifest_paths(manifest),
+            load_head_manifest_paths(args.list),
+            dump,
+            indexes,
+        )
+        report["extract"] = extract_data
+        report["counts"]["extract_stale"] = len(extract_data["stale"])
+
     if args.json:
         print(json.dumps(report, indent=2))
     else:
@@ -503,9 +674,14 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.fix:
         apply_fixes(args.list, manifest, results, device_soc)
+    if args.fix_extract and extract_data is not None:
+        apply_extract_fixes(extract_path, extract_data["stale"])
 
     c = report["counts"]
-    unresolved = c["missing"] + c["ambiguous"] + c["equivalent"] + c["install_name"]
+    unresolved = (
+        c["missing"] + c["ambiguous"] + c["equivalent"]
+        + c["install_name"] + c.get("extract_stale", 0)
+    )
     return 1 if unresolved else 0
 
 

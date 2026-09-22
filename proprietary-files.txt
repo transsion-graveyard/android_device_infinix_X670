@@ -53,7 +53,6 @@ vendor/lib/hw/sound_trigger.primary.default.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 
-vendor/lib/libbluetooth_audio_session.so
 vendor/lib/libfsmaudio.so
 vendor/lib/libnbaio_mono.so
 vendor/lib64/hw/audio.primary.mt6781.so

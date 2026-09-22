@@ -1,22 +1,8 @@
-# BatteryInfo
-/sys/devices/platform/soc/11017000.i2c/i2c-5/5-006b/power_supply/charger(/.*)?						u:object_r:sysfs_batteryinfo:s0
-
 # Charging sysfs - Pump Express / charging nodes
 /sys/devices/platform/charger/Pump_Express                                                          u:object_r:sysfs_pump_express:s0
-/sys/devices/platform/battery/Pump_Express                                                          u:object_r:sysfs_pump_express:s0
-/sys/devices/platform/charger/fast_chg_indicator                                                    u:object_r:sysfs_fs_chg_file:s0
-/sys/devices/platform/charger/Charger_Config                                                        u:object_r:sysfs_chg_cfg:s0
-/sys/devices/platform/charger/adapter_capacity                                                      u:object_r:sysfs_pump_express:s0
-/sys/devices/platform/charger/chr_type                                                              u:object_r:sysfs_pump_express:s0
 /sys/devices/platform/charger/Charger_Type                                                          u:object_r:sysfs_pump_express:s0
-/sys/devices/platform/charger/power_supply/mtk-slave-charger/present                                u:object_r:sysfs_chg2_present:s0
-/sys/devices/platform/pca_dv2_algo/super_fast_charge_thermal                                        u:object_r:sysfs_sfc_thermal_file:s0
-/sys/devices/platform/charger/tran_aichg_bigdata                                                    u:object_r:sysfs_aichg_file:s0
-/sys/devices/platform/charger/tran_aichg_disable_charger                                            u:object_r:sysfs_aichg_file:s0
 
 # Camera
-/dev/cml421_ois(/.*)?                                                                   u:object_r:cml421_ois_device:s0
-/dev/cwvi5300                                                                           u:object_r:cwvi5300_device:s0
 /data/vendor/anc_yuvnight/working_dir(/.*)?                                             u:object_r:vendor_megvii_data_file:s0
 /data/vendor/arcsoft(/.*)?                                                              u:object_r:vendor_arcsoft_data_file:s0
 /data/vendor/camera(/.*)?                                                               u:object_r:transsion_camera_data_file:s0
@@ -26,13 +12,9 @@
 # Data
 /data/storage_dbg(/.*)?                                                                 u:object_r:storage_dbg_data_file:s0
 
-# Extcon
-/sys/devices/platform/extcon_usb/extcon/extcon0/cable.1/state                           u:object_r:sysfs_OTG_STATE_file:s0
-
 # Fingerprint
 /(system\/vendor|vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.focaltech\.hardware\.biometrics\.fingerprint@1\.0-service u:object_r:hal_fingerprint_default_exec:s0
-/dev/kfp u:object_r:fpsensor_fp_device:s0
 /dev/fpsensor u:object_r:fpsensor_fp_device:s0
 /dev/biometric u:object_r:biometric_device:s0
 /dev/m_bio_misc u:object_r:m_bio_misc_device:s0
@@ -42,26 +24,22 @@
 
 # Power
 /vendor/bin/hw/android\.hardware\.power-service\.lineage-libperfmgr                      u:object_r:hal_power_default_exec:s0
-/sys/devices/platform/soc/11017000.i2c/i2c-5/5-0053/power_supply/charger(/.*)?                     u:object_r:sysfs_batteryinfo:s0
 
 # Sensor stuff
-/(vendor|system\/vendor)/bin/hw/android\.hardware\.sensors-service(\.multihal)?  u:object_r:hal_sensors_default_exec:s0
+/(vendor|system\/vendor)/bin/hw/android\.hardware\.sensors@2\.0-service(\.multihal)?  u:object_r:hal_sensors_default_exec:s0
 
 # Trancam
 /(system\/vendor|vendor)/bin/hw/vendor\.transsion\.hardware\.trancam\.trancamserver@1\.0-service     u:object_r:trancamserver_exec:s0
 /sys/devices/platform/(odm/odm:tran_battery|tran_battery)/tran_cam                              u:object_r:sysfs_tran_cam_file:s0
 
-# tkv block device
-/dev/block/by-name/tkv(_[ab])?                                                      u:object_r:tkv_block_device:s0
-
 # Tranfs
 /dev/block/by-name/tranfs                                                                        u:object_r:tranfs_block_device:s0
 
 # Trustonic
-/(vendor|system/vendor)/bin/kmsetkey_ca.trustonic                                                  u:object_r:trustonic_kmsetkey_ca_exec:s0
+/(vendor|system/vendor)/bin/trustonic_kmsetkey_ca                                                  u:object_r:trustonic_kmsetkey_ca_exec:s0
 
 # USB OTG
-/sys/devices/platform/odm/odm:tran_battery/OTG_CTL                                     u:object_r:sysfs_OTG_CTL_file:s0
+/sys/devices/platform/tran_battery/OTG_CTL                                             u:object_r:sysfs_OTG_CTL_file:s0
 
 # Vibrator
-/sys/devices/platform/soc/1101a000.i2c/i2c-6/6-005a/leds/vibrator_single(/.*)?           u:object_r:sysfs_vibrator:s0
+/sys/devices/platform/odm/odm:vibrator@0/leds/vibrator(/.*)?                          u:object_r:sysfs_vibrator:s0

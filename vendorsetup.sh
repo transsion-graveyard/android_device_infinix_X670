@@ -56,21 +56,3 @@ if [ -f "$root/hardware/lineage/compat/vndk/v32/arm64/libbinder-v32.so" ]; then
     apply_patch "$d/patches/0003-vndk-drop-libbinder-v32-prebuilt.patch" "$d"
 fi
 
-# ── fuck-bpf ──
-FUCK_BPF_DIR="$root/fuck-bpf"
-if [ ! -d "$FUCK_BPF_DIR" ]; then
-    echo "[fuck-bpf] cloning..."
-    git clone https://github.com/ardiandideyashidiq/fuck-bpf "$FUCK_BPF_DIR"
-elif [ -d "$FUCK_BPF_DIR/.git" ]; then
-    echo "[fuck-bpf] updating..."
-    git -C "$FUCK_BPF_DIR" pull --ff-only 2>/dev/null || echo "[fuck-bpf] update skipped (offline or dirty)"
-fi
-
-if [ -f "$FUCK_BPF_DIR/apply.py" ]; then
-    echo "[fuck-bpf] applying patches..."
-    if python3 "$FUCK_BPF_DIR/apply.py" --mb; then
-        echo "[fuck-bpf] done"
-    else
-        echo "[fuck-bpf] FAILED!!!"
-    fi
-fi

@@ -8,8 +8,8 @@
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-DEVICE_PATH := device/infinix/X670
-KERNEL_PATH := device/infinix/X670-kernel
+DEVICE_PATH := device/infinix/X6812B
+KERNEL_PATH := device/infinix/X6812B-kernel
 CONFIGS_PATH := $(DEVICE_PATH)/configs
 
 # Architecture
@@ -38,10 +38,10 @@ TARGET_2ND_CPU_VARIANT := cortex-a55
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # OTA Updates
-TARGET_OTA_ASSERT_DEVICE := X670
+TARGET_OTA_ASSERT_DEVICE := X6812B
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := X670
+TARGET_BOOTLOADER_BOARD_NAME := X6812B
 TARGET_NO_BOOTLOADER := true
 
 # Plaform
@@ -71,7 +71,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_NO_KERNEL_OVERRIDE := true
 
 # Workaround to make lineage's soong generator work
-TARGET_KERNEL_SOURCE := device/infinix/X670-kernel/kernel-headers
+TARGET_KERNEL_SOURCE := device/infinix/X6812B-kernel/kernel-headers
 
 LOCAL_KERNEL := $(KERNEL_PATH)/Image.gz
 PRODUCT_COPY_FILES += \
@@ -195,4 +195,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit from the proprietary version
-include vendor/infinix/X670/BoardConfigVendor.mk
+include vendor/infinix/X6812B/BoardConfigVendor.mk

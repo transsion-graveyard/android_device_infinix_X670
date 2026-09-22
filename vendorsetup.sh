@@ -31,28 +31,6 @@ apply_patch() {
     echo "[patch] $name... FAILED (context mismatch, patch may need rebasing)"
 }
 
-# ── axion_sdk (optional) ──
-AXION_PATCH="$d/patches/0001-ax_deviceinfo-use-power-profile-for-battery-capacity.patch"
-
-if [ -f "$AXION_PATCH" ]; then
-    if [ -d "$root/axion_sdk" ]; then
-        if [ -f "$(git -C "$root/axion_sdk" rev-parse --git-dir 2>/dev/null)/shallow" ]; then
-            echo "- Unshallowing axion_sdk"
-            git -C "$root/axion_sdk" fetch --unshallow
-        fi
-        git -C "$root/axion_sdk" revert --abort 2>/dev/null || true
-        apply_patch "$AXION_PATCH" "$root/axion_sdk"
-    else
-        echo "[patch] ax_deviceinfo... SKIPPED (target dir not found)"
-    fi
-fi
-
 # ── system/core (fenrir) ──
 apply_patch "$d/patches/0001-libfs_avb-Allow-LKs-patched-with-fenrir-to-boot-on-A.patch" "$root/system/core" || true
 apply_patch "$d/patches/0002-fastbootd-Always-return-false-for-GetDeviceLockStatu.patch" "$root/system/core" || true
-
-# ── vndk: drop device-local libbinder-v32 if lineage compat provides it ──
-if [ -f "$root/hardware/lineage/compat/vndk/v32/arm64/libbinder-v32.so" ]; then
-    apply_patch "$d/patches/0003-vndk-drop-libbinder-v32-prebuilt.patch" "$d"
-fi
-

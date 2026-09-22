@@ -408,4 +408,4 @@ PRODUCT_PACKAGES += \
     fstab.mt6781.ramdisk
 
 # Inherit our proprietary vendor
-$(call inherit-product, vendor/infinix/X670/X670-vendor.mk)
+$(call inherit-product, vendor/infinix/X6812B/X6812B-vendor.mk)

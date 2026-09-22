@@ -195,11 +195,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# Axion Kernel Manager
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/kernel/ax_kernel_manager_mt6781.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ax_kernel_manager.xml \
-    $(LOCAL_PATH)/init/ax_init_mt6781.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ax_init_mt6781.rc
-
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
@@ -396,16 +391,16 @@ PRODUCT_COPY_FILES += \
 # Init scripts
 PRODUCT_PACKAGES += \
     init.connectivity.rc \
-    init.mt6781.rc \
-    init.mt6781.power.rc \
-    init.mt6781.usb.rc \
+    init.mt6768.rc \
+    init.mt6768.power.rc \
+    init.mt6768.usb.rc \
     init.project.rc \
     init.modem.rc \
     init.sensor_1_0.rc \
-    ueventd.mt6781.rc \
+    ueventd.mt6768.rc \
     init.recovery.usb.rc \
-    fstab.mt6781 \
-    fstab.mt6781.ramdisk
+    fstab.mt6768 \
+    fstab.mt6768.ramdisk
 
 # Inherit our proprietary vendor
 $(call inherit-product, vendor/infinix/X6812B/X6812B-vendor.mk)

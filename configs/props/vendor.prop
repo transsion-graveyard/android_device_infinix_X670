@@ -162,7 +162,7 @@ ro.vendor.jpeg_decode_sw_opt=1
 
 # MediaTek
 ro.soc.manufacturer=Mediatek
-ro.vendor.mediatek.platform=MT6781
+ro.vendor.mediatek.platform=MT6768
 ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
 ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V15.20.2_reallytek.s0mp1rc.k61v1.64.bsp_P40
 
@@ -263,7 +263,7 @@ ro.hardware.kmsetkey=trustonic
 ro.hardware.paytrigger=trustonic
 ro.vendor.mtk_trustonic_tee_support=1
 ro.vendor.mtk_tee_gp_support=1
-ro.vendor.keymaster_version=4.1
+ro.vendor.keymaster_version=4.0
 
 # VPU
 ro.vendor.mtk_mvpu_security_support=0
